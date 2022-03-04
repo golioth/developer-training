@@ -9,13 +9,13 @@ const config = {
   title: 'Developer Training',
   tagline: 'Learning about Golioth with Zephyr and CircuitPython',
   url: 'https://golioth.github.io',
-  baseUrl: '/project-docstest/',
+  baseUrl: '/developer-training/',
   trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'golioth', // Usually your GitHub org/user name.
-  projectName: 'project-docstest', // Usually your repo name.
+  projectName: 'developer-training', // Usually your repo name.
 
   presets: [
     [
@@ -25,7 +25,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/golioth/project-docstest',
+          editUrl: 'https://github.com/golioth/developer-training',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -51,7 +51,7 @@ const config = {
             label: 'Tutorial',
           },
           {
-            href: 'https://github.com/golioth/project-docstest',
+            href: 'https://github.com/golioth/developer-training',
             label: 'Project Repo',
             position: 'left',
           },
