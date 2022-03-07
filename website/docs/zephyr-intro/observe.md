@@ -38,14 +38,12 @@ Note that on some machines you will only have a few seconds to run the `west fla
 
 ## Setup the LightDB State endpoint
 
-1. Go to the Golioth Console and choose Management&rarr;Devices sidebar menu
-2. Click on the name of your device to enter the device view
-3. Click the LightDB State icon to open up the right sidebar dialog
-4. Hover your mouse over the empty JSON object and click the green plus sign that is revealed
-5. Type in `leds` as the key name (no quotes)
-6. Hover over `NULL` and click the green pencil icon to edit the value
-7. Enter replace `NULL` with `15` and click the lower green check mark to save it as an integer value. If successful you will not see quotation marks around this value.
-8. **Important**: Click the "Submit" button at the bottom right of this dialog to save your changes.
+1. Go to the Golioth Console and choose Management&rarr;Devices from the sidebar menu
+2. Click on the name of your device to enter the device view, the click the LightDB State icon to open up the right sidebar dialog
+3. Hover your mouse over the empty JSON object and click the green plus sign that is revealed
+4. Type in `leds` as the key name (no quotes)
+5. Hover over `NULL` and click the green pencil icon to edit the value, replace `NULL` with `15` and click the lower green check mark to save it as an integer value. If successful you will not see quotation marks around this value.
+6. **Important**: Click the "Submit" button at the bottom right of this dialog to save your changes.
 
     ![Setting up the LightDB State endpoint](assets/golioth-lightdb-state-endpoint.png)
 
@@ -57,7 +55,7 @@ The LEDs will remain green until a change to the `leds` endpoint is detected, in
 
 ## Further Learning
 
-Of course the device can also write to the LightDB state endpoint. One example of this is to have the MagTag set the `leds` endpoint to 15 at power up. Here's a code block you can insert just before the `while(true) {` line of this example:
+Of course the device can also write to the LightDB State endpoint. One example of this is to have the MagTag set the `leds` endpoint to 15 at power up. Here's a code block you can insert just before the `while(true) {` line of this example:
 
 ```c
 uint8_t endpoint_value[3];
@@ -71,6 +69,6 @@ err = golioth_lightdb_set(
 LOG_INF("Set endpoint return code: %d", err);
 ```
 
-With this code we are converting an integer value (15) to a string so that we can send it over the CoAP protocol as text. The `leds` endpoint is selected using the `GOLIOTH_LIGHTDB_PATH("leds")` helper macro, and it's all taken care of by the `golioth_lightdb_set()` function from the Golioth SDK.
+With this code we are converting an integer value (15) to a string so that we can send it over the CoAP protocol as text. The `leds` endpoint is selected using the `GOLIOTH_LIGHTDB_PATH("leds")` helper macro, and it's all taken care of by the `golioth_lightdb_set()` function from the Golioth SDK. If everything went according to plan, you should see a log message in the Golioth Console that shows an endpoint return code of 0, which means no errors.
 
 Compare this to the code that was [used to write accelerometer data](https://github.com/golioth/magtag-demo/blob/a168bcea548edcdf8e5102ded2d295dea2aa2b94/src/main.c#L25-L50) to LightDB Stream in the Stream example and you will see a more complex payload string built using `snprintk()`, and a different endpoint helper macro: `GOLIOTH_LIGHTDB_STREAM_PATH()`.
