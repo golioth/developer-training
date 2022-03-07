@@ -29,8 +29,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`This is the ${siteConfig.title} | Made by Golioth`}
-      description="Description will go into a meta tag in <head />">
+      title={`${siteConfig.title} | Made by Golioth`}
+      description="This is a training site for Developers who will use Golioth <head />">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

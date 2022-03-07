@@ -19,7 +19,7 @@ const FeatureList = [
     description: (
       <>
         This dual track training includes a pre-configured hardware example using CircuitPython that lets the user start investigating Golioth features immediately. 
-        Trial Golioth by trying out a high level interface to our various APIs.
+        Trial Golioth by trying out a high level interface to our various APIs. After understanding the web components of Golioth, try out the device side examples using Zephyr.
       </>
     ),
   },
@@ -28,7 +28,7 @@ const FeatureList = [
     Svg: require('../../static/img/zephyr.svg').default,
     description: (
       <>
-        Our users find that Zephyr RTOS provides maximum hardware control and flexibility for their client or company projects.
+        Our users find that <a href="https://zephyrproject.org/">Zephyr RTOS</a> provides maximum hardware control and flexibility for their client or company projects.
         After getting started quickly, users will learn how to properly set up a Zephyr project and be ready to deploy a professional project.
       </>
     ),
