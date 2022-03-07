@@ -6,10 +6,10 @@ sidebar_position: 5
 
 The Stream example sends accelerometer sensor data to the Golioth Cloud every few seconds. Each JSON object receives a timestamp and is stored in a database we refer to as LightDB stream.
 
-1. Go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo) and checkout the `blinky` example:
+1. Go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo) and checkout the `stream` example:
 
     ```bash
-    git checkout blinky
+    git checkout stream
     ```
 
 2. Create a file for WiFi and Golioth credentials
