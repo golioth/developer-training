@@ -2,7 +2,7 @@
 sidebar_position: 6
 ---
 
-# Observe Example
+# Golioth Observe Example
 
 The Observe example configures the MagTag to watch a LightDB state endpoint on the Golioth servers for changes. When data is updated on the could, the device recognizes this quickly and a callback is executed. For this example, a LightDB State endpoint called `leds` will monitor a value from 0 to 15 to control the on/off state of the LEDs on the MagTag.
 

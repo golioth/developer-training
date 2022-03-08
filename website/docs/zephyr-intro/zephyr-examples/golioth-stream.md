@@ -2,7 +2,7 @@
 sidebar_position: 5
 ---
 
-# Stream Example
+# Golioth Stream Example
 
 The Stream example sends accelerometer sensor data to the Golioth Cloud every few seconds. Each JSON object receives a timestamp and is stored in a database we refer to as LightDB stream.
 
