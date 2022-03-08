@@ -25,7 +25,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/golioth/developer-training',
+          //editUrl: 'https://github.com/golioth/developer-training',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -108,7 +108,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Golioth, Inc.<br />Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
