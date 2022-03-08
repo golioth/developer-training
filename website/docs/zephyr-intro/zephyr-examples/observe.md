@@ -46,7 +46,7 @@ Note that on some machines you will only have a few seconds to run the `west fla
 5. Hover over `NULL` and click the green pencil icon to edit the value, replace `NULL` with `15` and click the lower green check mark to save it as an integer value. If successful you will not see quotation marks around this value.
 6. **Important**: Click the "Submit" button at the bottom right of this dialog to save your changes.
 
-    ![Setting up the LightDB State endpoint](assets/golioth-lightdb-state-endpoint.png)
+    ![Setting up the LightDB State endpoint](../assets/golioth-lightdb-state-endpoint.png)
 
 ## Expected Results
 

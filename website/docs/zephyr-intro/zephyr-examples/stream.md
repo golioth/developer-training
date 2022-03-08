@@ -46,7 +46,7 @@ Sensor data can be viewed on [the Golioth Console](https://console.golioth.io/)
 3. The Refresh button in the upper right also includes an option to auto-refresh every few seconds
 4. Use the green arrows in the "data" column to unfold the nested JSON objects for viewing
 
-![Accelerometer data show in the Golioth Console LightDB stream view](assets/golioth-stream-data.png)
+![Accelerometer data show in the Golioth Console LightDB stream view](../assets/golioth-stream-data.png)
 
 This streaming data can be queried using the [Golioth REST API](https://docs.golioth.io/reference/rest-api/overview), or accessed on a number of different external platforms/services using our [Output Streams](https://docs.golioth.io/cloud/output-streams). This allows timestamped stream data to be graphed and visualized to meet your needs.
 

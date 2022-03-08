@@ -41,4 +41,4 @@ After flashing the example you need to press the Reset button to run the program
 
 When a connection is established, all four LEDs will turn green and the MagTag will being sending Hello messages to Golioth once every five seconds. The ePaper screen will display a connected message, and will print a Hello messages when log messages are sent. Each log message in this demo is sent to the Golioth servers, and can be be viewed on [the Golioth Console](https://console.golioth.io/) by selecting Monitor&rarr;Logs from the sidebar menu.
 
-![Golioth Hello output shown on the Logs in Golioth Console](assets/golioth-hello.png)
+![Golioth Hello output shown on the Logs in Golioth Console](../assets/golioth-hello.png)
