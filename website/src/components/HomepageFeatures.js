@@ -8,8 +8,8 @@ const FeatureList = [
     Svg: require('../../static/img/logo.svg').default,
     description: (
       <>
-        This guide is for Developers to understand the various features of Golioth and how they can assist developers in their
-        IoT deployments. Along the way, Developers will learn skills for making resiliant IoT systems on both the embedded and Cloud side.
+        This guide is for Developers to understand the various features of Golioth and how we can assist IoT deployments.
+        Along the way, Developers will learn skills for making resiliant IoT systems on both the embedded and Cloud side.
       </>
     ),
   },
@@ -18,8 +18,9 @@ const FeatureList = [
     Svg: require('../../static/img/magtag.svg').default,
     description: (
       <>
-        This dual track training includes a pre-configured hardware example using CircuitPython that lets the user start investigating Golioth features immediately. 
-        Trial Golioth by trying out a high level interface to our various APIs. After understanding the web components of Golioth, try out the device side examples using Zephyr.
+        This dual track training includes pre-configured hardware examples to start investigating Golioth's features. 
+        After using CircuitPython's high level interfaces to interact with our various Golioth APIs, we will explore the
+        device side examples using the Zephyr RTOS.
       </>
     ),
   },
@@ -28,8 +29,10 @@ const FeatureList = [
     Svg: require('../../static/img/zephyr.svg').default,
     description: (
       <>
-        Our users find that <a href="https://zephyrproject.org/">Zephyr RTOS</a> provides maximum hardware control and flexibility for their client or company projects.
-        After getting started quickly, users will learn how to properly set up a Zephyr project and be ready to deploy a professional project.
+        Our users find that <a href="https://zephyrproject.org/">Zephyr RTOS</a> provides maximum hardware control and
+        flexibility for their client or company projects.
+        After getting started quickly, users will learn how to properly set up a Zephyr project and be ready to deploy
+        a professional project.
       </>
     ),
   },
