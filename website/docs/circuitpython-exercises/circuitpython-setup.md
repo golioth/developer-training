@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # CircuitPython Setup
 
-While there are very few things that are required for this demo to run, the main focus is on the "drag and drop" nature of this experience. Below you will install an interpreter, load a library, load code onto your device, and add credentials in about as many steps. 
+The reason we are interested in CircuitPython is the "drag and drop" nature of this experience. Below you will install an interpreter, load a library, load code onto your device, and add credentials by dropping files onto a drive and then modifying one of those files.
 
 ## Install CircuitPython on top of UF2 Bootloader
 
@@ -47,8 +47,10 @@ Open `secrets.py` in VS Code or another editor that protects line endings (see [
 Insert your:
 * Local SSID info
 * Local Wifi Password
-* Golioth PSK ID (found on the [devices tab of the Console](https://console.golioth.io/devices))
-* Golioth PSK ID (found on the [devices tab of the Console](https://console.golioth.io/devices))
+* Golioth PSK ID
+* Golioth PSK  
+
+Recall that the PSK ID and PSK are what we generated in [the signup section of this tutorial](/docs/golioth-intro/signup). If you don't remember your credentials or if they were generated for you, you can find them on the [devices tab of the Console](https://console.golioth.io/devices).
 
 ![PSK and PSK ID location](psk_location.jpg)
 
