@@ -13,5 +13,4 @@ We will be reviewing 3 of the 4 Golioth features currently available:
 * LightDB State
 * LightDB Stream
 
-## Installing the pre-configured CircuitPython bootloader
 
