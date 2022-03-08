@@ -11,6 +11,7 @@ The Observe example configures the MagTag to watch a LightDB state endpoint on t
 1. Go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo) and checkout the `observe` example:
 
     ```bash
+    cd ~/zephyrproject/modules/lib/golioth/samples/magtag-demo
     git checkout observe
     ```
 

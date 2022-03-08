@@ -9,6 +9,7 @@ The Hello example is the most basic network-connected example. It shows not only
 1. Go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo) and ensure you are on the `main` branch which is the hello example
 
     ```bash
+    cd ~/zephyrproject/modules/lib/golioth/samples/magtag-demo
     git checkout main
     ```
 

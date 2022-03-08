@@ -9,6 +9,7 @@ The Stream example sends accelerometer sensor data to the Golioth Cloud every fe
 1. Go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo) and checkout the `stream` example:
 
     ```bash
+    cd ~/zephyrproject/modules/lib/golioth/samples/magtag-demo
     git checkout stream
     ```
 

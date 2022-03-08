@@ -9,6 +9,7 @@ The Blinky example is the most basic application possible&ndash;one blinking LED
 1. Go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo) and checkout the `blinky` example:
 
     ```bash
+    cd ~/zephyrproject/modules/lib/golioth/samples/magtag-demo
     git checkout blinky
     ```
 
