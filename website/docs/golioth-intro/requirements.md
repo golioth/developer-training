@@ -36,17 +36,14 @@ This hardware will work great on its own but will be enhanced by the following:
 * [USB to Serial cable](https://www.adafruit.com/product/954)
   * There are serial pins on the MagTag board that are the easiest debug output, but we also are working on getting USB debug output to work
 * [Lithium Battery](https://www.adafruit.com/product/4237)
-  * If they want the device to operate sans cable later, won't be part of the demo
+  * Will allow the device to function without any cables (this is not part of the demo).
 * [Magnetic standoffs](https://www.adafruit.com/product/4631)
-  * This allows users to attach the device to a fridge after the training (as is the point of a magtag)
+  * This allows users to attach the device to a fridge after the training (as is the point of a MagTag)
 
-### Computer 
+### Computer
 
 You will also need a computer for running all of the code. We support Windows / Mac / Linux, but the "happiest path" will be using a friendly Linux distro such as Ubuntu. If you are on Windows / Mac, you might want to consider installing a virtual machine for this purpose. We are evolving our methods for how we install a toolchain that is reliable and consistent across operating systems.  
 
-
 ## Software requirements
 
-In the second part of the training, you will be asked to install the Zephyr toolchain on your local machine. As stated above, this will work best on Ubuntu, but we will try to accomodate all systems. 
-
-
+In the second part of the training, you will be asked to install the Zephyr toolchain on your local machine. As stated above, this will work best on Ubuntu, but we will try to accommodate all systems.
