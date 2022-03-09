@@ -35,14 +35,14 @@ We're using just one page from the Golioth Docs for this set. When you reach the
 
 ## Configure the toolchain for the MagTag
 
-The MagTag uses the ESP32s2, a newer variant of the chip. We need to make sure we're using a very recent version of the Zephyr toolchain to include the features for this chip. We do so by changing the `revision` value in the west manifest file to `zephyr-v3.0.0`.
+The MagTag uses the ESP32s2, a newer variant of the chip. We need to make sure we're using a very recent version of the Zephyr toolchain to include the features for this chip. We do so by changing the `revision` value in the west manifest file to `main`.
 
 | ![Bottom of Golioth Docs page for installing ESP32 Zephyr toolchain](assets/golioth-docs-esp32-toolchain-change-zephyr-version.png) |
 |:--:|
-| Changing the Zephyr revision to `zephyr-v3.0.0` in the ~/zephyrproject/modules/lib/golioth/west.yml file. |
+| Changing the Zephyr revision to `main` in the ~/zephyrproject/modules/lib/golioth/west.yml file. |
 
 1. Open the `~/zephyrproject/modules/lib/golioth/west.yml` file in your preferred editor
-2. Change the Zephyr revision line to `zephyr-v3.0.0`. This should be line 4 in your file and is shown in the screenshots above
+2. Change the Zephyr revision line to `main`. This should be line 4 in your file and is shown in the screenshots above
 3. To incorporate this change, run `west update` from the `~/zephyrproject/modules/lib/golioth/` directory.
 
 ## Clone the magtag-demo repository
