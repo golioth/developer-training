@@ -84,3 +84,15 @@ LOG_INF("Set endpoint return code: %d", err);
 With this code we are converting an integer value (15) to a string so that we can send it over the CoAP protocol as text. The `leds` endpoint is selected using the `GOLIOTH_LIGHTDB_PATH("leds")` helper macro, and it's all taken care of by the `golioth_lightdb_set()` function from the Golioth SDK. If everything went according to plan, you should see a log message in the Golioth Console that shows an endpoint return code of 0, which means no errors.
 
 Compare this to the code that was [used to write accelerometer data](https://github.com/golioth/magtag-demo/blob/a168bcea548edcdf8e5102ded2d295dea2aa2b94/src/main.c#L25-L50) to LightDB Stream in the Stream example and you will see a more complex payload string built using `snprintk()`, and a different endpoint helper macro: `GOLIOTH_LIGHTDB_STREAM_PATH()`.
+
+The endpoints that send data to either LightDB State or LightDB stream differ by just one letter. While we use macros in the above example, those simply add a prefix of `.d/` for State or `.s/` for Stream.
+
+```c
+/* These two lines evaluate to the same string */
+uint8_t state_endpoint_1 = GOLIOTH_LIGHTDB_PATH("leds");
+uint8_t state_endpoint_2 = ".d/leds";
+
+/* These two lines also evaluate to the same string */
+uint8_t stream_endpoint_1 = GOLIOTH_LIGHTDB_STREAM_PATH("accel");
+uint8_t stream_endpoint_2 = ".s/accel";
+```
