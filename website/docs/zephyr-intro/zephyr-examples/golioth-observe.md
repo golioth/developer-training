@@ -29,21 +29,32 @@ The Observe example configures the MagTag to watch a LightDB state endpoint on t
 
 4. Flash the example
 
-    Put the MagTag into DFU bootloader mode by holding the Boot0 button and pressing the Reset button. Type the following command to start the firmware upgrade:
+    Put the MagTag into DFU bootloader mode
+
+    1. Hold down the Boot0 button
+    2. Press and release the Reset button
+
+    Type the following command to start the firmware upgrade
 
     ```bash
     west flash
     ```
 
-Note that on some machines you will only have a few seconds to run the `west flash` command after entering bootloader mode. The binary will be flashed to the MagTag and you will receive an error message telling you that you must manually reset the device.
+:::note
+If the flash is successful, **you will receive an error message** telling you that you must manually reset the device. Remember to press the reset button to run the newly flashed program. [Learn more about this](../zephyr-tips#you-must-press-the-reset-button-after-flashing-firmware).
+
+On some machines you will only have a few seconds to run the `west flash` command after entering bootloader mode. [Learn more about this](../zephyr-tips.md#errors-with-west-build-zephyr-tree-and-esp32-environmental-variables).
+:::
 
 ## Setup the LightDB State endpoint
 
 1. Go to the Golioth Console and choose Management&rarr;Devices from the sidebar menu
-2. Click on the name of your device to enter the device view, the click the LightDB State icon to open up the right sidebar dialog
+2. Click on the name of your device to enter the device view, then click the LightDB State icon to open up the right sidebar dialog
 3. Hover your mouse over the empty JSON object and click the green plus sign that is revealed
+    * If the JSON object is not empty (e.g. data from previous examples are shown), use the red X icon to delete each item before adding a new entry
 4. Type in `leds` as the key name (no quotes)
 5. Hover over `NULL` and click the green pencil icon to edit the value, replace `NULL` with `15` and click the lower green check mark to save it as an integer value. If successful you will not see quotation marks around this value.
+    * Only integers between 0 and 15 (inclusive) are valid for this example
 6. **Important**: Click the "Submit" button at the bottom right of this dialog to save your changes.
 
     ![Setting up the LightDB State endpoint](../assets/golioth-lightdb-state-endpoint.png)
@@ -52,7 +63,7 @@ Note that on some machines you will only have a few seconds to run the `west fla
 
 The Observe example will begin running after pressing the Reset button. You will see the center LEDs turn blue when the board is trying to connect to Golioth. When successful, all four LEDs will turn green, and a connected message will be shown on the ePaper display.
 
-The LEDs will remain green until a change to the `leds` endpoint is detected, including the first time it subscribes to observe this data at power up. The color of LEDs 0..3 will be set to red/green/blue/red. The on/off state of each LED is controlled by the value of the `leds` endpoint. This value is a binary mask, so changing that value to 0 will switch all LEDs off, changing it to 8 will turn on LED3 and turn all others off. Each time a new value is observed, it will be displayed on the ePaper screen.
+The LEDs will remain green until a change to the `leds` endpoint is detected, including the first time it subscribes to observe this data at power up. The color of LEDs 0..3 will be set to red/green/blue/red. The on/off state of each LED is controlled by the value of the `leds` endpoint. This value is a binary mask, so changing that value to 0 will switch all LEDs off, changing it to 8 will turn on LED3 and turn all others off. Each time a new value is observed, it will be displayed on the ePaper screen. Try changing this number and observing the behavior, noting that values outside of the 0..15 range will be ignored.
 
 ## Continued Learning
 

@@ -27,13 +27,22 @@ The Stream example sends accelerometer sensor data to the Golioth Cloud every fe
 
 4. Flash the example
 
-    Put the MagTag into DFU bootloader mode by holding the Boot0 button and pressing the Reset button. Type the following command to start the firmware upgrade:
+    Put the MagTag into DFU bootloader mode
+
+    1. Hold down the Boot0 button
+    2. Press and release the Reset button
+
+    Type the following command to start the firmware upgrade
 
     ```bash
     west flash
     ```
 
-Note that on some machines you will only have a few seconds to run the `west flash` command after entering bootloader mode. The binary will be flashed to the MagTag and you will receive an error message telling you that you must manually reset the device.
+:::note
+If the flash is successful, **you will receive an error message** telling you that you must manually reset the device. Remember to press the reset button to run the newly flashed program. [Learn more about this](../zephyr-tips#you-must-press-the-reset-button-after-flashing-firmware).
+
+On some machines you will only have a few seconds to run the `west flash` command after entering bootloader mode. [Learn more about this](../zephyr-tips.md#errors-with-west-build-zephyr-tree-and-esp32-environmental-variables).
+:::
 
 ## Expected Results
 
@@ -42,9 +51,10 @@ The Stream example will begin running after pressing the Reset button. You will 
 Sensor data can be viewed on [the Golioth Console](https://console.golioth.io/)
 
 1. Select Monitor&rarr;Stream from the sidebar menu
-2. You may need to click the Clear Filters in the upper right to show new data if you were previously viewing data
-3. The Refresh button in the upper right also includes an option to auto-refresh every few seconds
-4. Use the green arrows in the "data" column to unfold the nested JSON objects for viewing
+2. Under "Query Response" use the time/date box and choose the `Last 4h` setting
+3. To the right of the time/date box, choose the name of your device from the list
+4. Click the circle arrow icon next to the Refresh button in the upper right to auto-refresh every 1 second
+5. Use the green arrows in the "data" column to unfold the nested JSON objects for viewing
 
 ![Accelerometer data show in the Golioth Console LightDB stream view](../assets/golioth-stream-data.png)
 
