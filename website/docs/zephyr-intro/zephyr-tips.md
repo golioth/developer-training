@@ -10,6 +10,16 @@ Use this page as a reference for reminders and common gotchas.
 
 The MagTag has a toggle switch for power. When in the `on` position, a green LED will be illuminated on the underside of the board.
 
+## You must press the reset button after flashing firmware
+
+Currently, it is not possible for the `west flash` command to automatically reset the MagTag after successfully programming the firmware. 
+
+It can be confusing when you expect the program to begin running right away and it does not. Because of this, the default behavior is to display an error message to the user.
+
+![Error message after successfully flashing the MagTag](assets/golioth-west-flash-reset-error-message.png)
+
+This error is expected and serves as a helpful reminder that you need to hit the reset button after every flash.
+
 ## Errors with `west build`: Zephyr tree and ESP32 environmental variables
 
 There are a few common gotchas to calling `west build`.
