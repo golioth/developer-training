@@ -17,14 +17,14 @@ The Observe example configures the MagTag to watch a LightDB state endpoint on t
 
 2. Create a file for WiFi and Golioth credentials
 
-    * Make a copy of `credentials.overlay_example` and name it `credentials.overlay`
+    * Make a copy of `credentials.conf_example` and name it `credentials.conf`
     * Edit this new file to include your WiFi credentials and the PSK-ID/PSK from the device page on your Golioth console
     * This file will be ignored by git, and may be reused in other examples.
 
 3. Build the example, including the credentials file you just created
 
     ```bash
-    west build -b esp32s2_saola . -D OVERLAY_CONFIG=credentials.overlay -p
+    west build -b esp32s2_saola . -D OVERLAY_CONFIG=credentials.conf -p
     ```
 
 4. Flash the example
