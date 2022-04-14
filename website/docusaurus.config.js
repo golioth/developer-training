@@ -9,7 +9,7 @@ const config = {
   title: 'Developer Training',
   tagline: 'Learning about Golioth with Zephyr and CircuitPython',
   url: 'https://golioth.github.io',
-  baseUrl: '/developer-training/',
+  baseUrl: '/',
   trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
