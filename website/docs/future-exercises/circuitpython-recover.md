@@ -52,5 +52,3 @@ You need to specify `--chip esp32s2` any time you are using esptool on this boar
 Put the MagTag board into uf2 bootloader mode. This is different than the ESP32 bootloader mode explained above! Enter this mode by powering on your board and tapping the reset button twice. You might have to try this in different cadences. You will see the red LED onboard start to "breathe" when you are successful and the LEDs on the front of the board will go all green. You will also see a new drive called `MAGTAGBOOT`.
 
 Drag and drop the `.uf2` file onto that new drive and you will once again have a CircuitPython interpreter on your board. You will see the LEDs on the front of the board flashing. Once you have successfully programmed the image, you should see a new "CIRCUITPY" drive on your computer.
-
-You can now re-run all of [the CircuitPython exercises](/docs/circuitpython-exercises/circuitpython-intro)! 
