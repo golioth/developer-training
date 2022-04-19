@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Developer Training',
-  tagline: 'Learning about Golioth with Zephyr and CircuitPython',
+  tagline: 'Learn about Golioth and Zephyr, with hands-on exercises',
   url: 'https://golioth.github.io',
   baseUrl: '/',
   trailingSlash: false,
@@ -48,12 +48,12 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Start Here',
           },
           {
             href: 'https://github.com/golioth/developer-training',
-            label: 'Project Repo',
-            position: 'left',
+            label: 'Document Repo',
+            position: 'right',
           },
         ],
       },

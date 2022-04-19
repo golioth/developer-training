@@ -2,9 +2,22 @@
 sidebar_position: 4
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Golioth Hello Example
 
 The Hello example is the most basic network-connected example. It shows not only that you can build and flash a binary, but that the binary includes credentials for your WiFi and the Golioth cloud, and that the board can successfully connect to both.
+
+<Tabs
+groupId="os"
+defaultValue="linux"
+values={[
+{label: 'Linux/MacOS', value: 'linux'},
+{label: 'Windows', value: 'windows'},
+]}>
+
+<TabItem value="linux">
 
 1. Go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo) and ensure you are on the `main` branch which is the hello example
 
@@ -13,10 +26,23 @@ The Hello example is the most basic network-connected example. It shows not only
     git checkout main
     ```
 
+</TabItem>
+<TabItem value="windows">
+
+1. Go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo) and ensure you are on the `main` branch which is the hello example
+
+    ```bash
+    cd C:\zephyrproject\modules\lib\golioth\samples\magtag-demo
+    git checkout main
+    ```
+
+</TabItem>
+</Tabs>
+
 2. Create a file for WiFi and Golioth credentials
 
     * Make a copy of `credentials.conf_example` and name it `credentials.conf`
-    * Edit this new file to include your WiFi credentials and the PSK-ID/PSK from the device page on your Golioth console
+    * Edit this new file to include your WiFi credentials and the PSK-ID/PSK from the device page on your [Golioth console](https://console.golioth.io/)
     * This file will be ignored by git, and may be reused in other examples.
 
 3. Build the example, including the credentials file you just created

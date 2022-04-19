@@ -29,7 +29,7 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.title} | Made by Golioth`}
+      title={`Golioth`}
       description="This is a training site for Developers who will use Golioth <head />">
       <HomepageHeader />
       <main>
