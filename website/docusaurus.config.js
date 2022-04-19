@@ -9,7 +9,7 @@ const config = {
   title: 'Developer Training',
   tagline: 'Learn about Golioth and Zephyr, with hands-on exercises',
   url: 'https://golioth.github.io',
-  baseUrl: '/developer-training/',
+  baseUrl: '/',
   trailingSlash: false,
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
