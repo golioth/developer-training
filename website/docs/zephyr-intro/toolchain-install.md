@@ -2,6 +2,9 @@
 sidebar_position: 2
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Zephyr Toolchain Installation
 
 This section includes references to [the Golioth docs site](https://docs.golioth.io/). We are linking you there so you have the most up-to-date directions to install the Zephyr toolchain and ESP32 compiler. Once you have completed that section, you will come back to this page for further instructions.
@@ -41,19 +44,67 @@ The MagTag uses the ESP32s2, a newer variant of the chip. We need to make sure w
 |:--:|
 | Changing the Zephyr revision. |
 
+<Tabs
+groupId="os"
+defaultValue="linux"
+values={[
+{label: 'Linux/MacOS', value: 'linux'},
+{label: 'Windows', value: 'windows'},
+]}>
+
+<TabItem value="linux">
+
 1. Open the `~/zephyrproject/modules/lib/golioth/west.yml` file in your preferred editor
 2. Change the Zephyr revision line to `f613b546e0d74ef6d8ac1980944e016cfb5d6820`. This should be line 4 in your file and is shown in the screenshots above
 3. To incorporate this change, run `west update` from the `~/zephyrproject/modules/lib/golioth/` directory.
+
+</TabItem>
+<TabItem value="windows">
+
+1. Open the manifest file in your preferred editor:
+
+    ```shell
+    cd C:\zephyrproject\modules\lib\golioth
+    notepad west.yml
+    ```
+
+2. Change the Zephyr revision line to `f613b546e0d74ef6d8ac1980944e016cfb5d6820`. This should be line 4 in your file and is shown in the screenshots above
+3. To incorporate this change, run `west update` from the `C:\zephyrproject\modules\lib\golioth` directory.
+
+</TabItem>
+</Tabs>
 
 ## Clone the magtag-demo repository
 
 For the rest of this tutorial we will use the [magtag-demo](https://github.com/golioth/magtag-demo) code repository. Let's clone a local copy of it into the Golioth samples folder.
 
+<Tabs
+groupId="os"
+defaultValue="linux"
+values={[
+{label: 'Linux/MacOS', value: 'linux'},
+{label: 'Windows', value: 'windows'},
+]}>
+
+<TabItem value="linux">
+
 ```bash
 cd ~/zephyrproject/modules/lib/golioth/samples
-git clone git@github.com:golioth/magtag-demo.git
+git clone https://github.com/golioth/magtag-demo.git
 cd magtag-demo
 ```
+
+</TabItem>
+<TabItem value="windows">
+
+```bash
+cd C:\zephyrproject\modules\lib\golioth\samples
+git clone https://github.com/golioth/magtag-demo.git
+cd magtag-demo
+```
+
+</TabItem>
+</Tabs>
 
 ## Conclusion
 

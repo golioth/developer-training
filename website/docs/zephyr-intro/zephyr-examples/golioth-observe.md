@@ -2,11 +2,24 @@
 sidebar_position: 6
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Golioth Observe Example
 
 The Observe example configures the MagTag to watch a LightDB state endpoint on the Golioth servers for changes. When data is updated on the could, the device recognizes this quickly and a callback is executed. For this example, a LightDB State endpoint called `leds` will monitor a value from 0 to 15 to control the on/off state of the LEDs on the MagTag.
 
 ## Program the MagTag
+
+<Tabs
+groupId="os"
+defaultValue="linux"
+values={[
+{label: 'Linux/MacOS', value: 'linux'},
+{label: 'Windows', value: 'windows'},
+]}>
+
+<TabItem value="linux">
 
 1. Go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo) and checkout the `observe` example:
 
@@ -14,6 +27,19 @@ The Observe example configures the MagTag to watch a LightDB state endpoint on t
     cd ~/zephyrproject/modules/lib/golioth/samples/magtag-demo
     git checkout observe
     ```
+
+</TabItem>
+<TabItem value="windows">
+
+1. Go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo) and checkout the `observe` example:
+
+    ```bash
+    cd C:\zephyrproject\modules\lib\golioth\samples\magtag-demo
+    git checkout observe
+    ```
+
+</TabItem>
+</Tabs>
 
 2. Create a file for WiFi and Golioth credentials
 
@@ -67,7 +93,7 @@ The LEDs will remain green until a change to the `leds` endpoint is detected, in
 
 ## Continued Learning
 
-Of course the device can also write to the LightDB State endpoint. One example of this is to have the MagTag set the `leds` endpoint to 15 at power up. Here's a code block you can insert just before the `while(true) {` line of this example:
+Of course the device can also write to the LightDB State endpoint. One example of this is to have the MagTag set the `leds` endpoint to 15 at power up. Edit the `src/main.c` file and insert this code block just before the `while(true)` line of this example:
 
 ```c
 uint8_t endpoint_value[3];
