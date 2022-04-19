@@ -2,9 +2,22 @@
 sidebar_position: 5
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Golioth Stream Example
 
 The Stream example sends accelerometer sensor data to the Golioth Cloud every few seconds. Each JSON object receives a timestamp and is stored in a database we refer to as LightDB stream.
+
+<Tabs
+groupId="os"
+defaultValue="linux"
+values={[
+{label: 'Linux/MacOS', value: 'linux'},
+{label: 'Windows', value: 'windows'},
+]}>
+
+<TabItem value="linux">
 
 1. Go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo) and checkout the `stream` example:
 
@@ -12,6 +25,19 @@ The Stream example sends accelerometer sensor data to the Golioth Cloud every fe
     cd ~/zephyrproject/modules/lib/golioth/samples/magtag-demo
     git checkout stream
     ```
+
+</TabItem>
+<TabItem value="windows">
+
+1. Go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo) and checkout the `stream` example:
+
+    ```bash
+    cd C:\zephyrproject\modules\lib\golioth\samples\magtag-demo
+    git checkout stream
+    ```
+
+</TabItem>
+</Tabs>
 
 2. Create a file for WiFi and Golioth credentials
 
