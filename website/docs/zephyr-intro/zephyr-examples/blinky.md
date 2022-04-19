@@ -41,3 +41,12 @@ On some machines you will only have a few seconds to run the `west flash` comman
 ## Expected Results
 
 The Blinky app will make the red LED on the underside of the MagTag board blink on and off about once every two seconds.
+
+## Challenge: Modifying Blinky
+
+* Find the source files for blinky. 
+* Modify the blink period in the source files 
+* Recompile/reflash -- Try leaving off the `-p` command for a faster recompile.
+
+### Questions:
+1. What do you notice about directory structure for Zephyr projects?
