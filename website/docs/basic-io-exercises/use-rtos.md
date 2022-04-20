@@ -29,14 +29,18 @@ values={[
 <TabItem value="linux">
 
 ```shell
-cd ~/zephyrproject/modules/lib/golioth/samples/button-training
+cd ~/zephyrproject/modules/lib/golioth/samples
+cp -r button-training rtos-training
+cd ~/zephyrproject/modules/lib/golioth/samples/rtos-training
 ```
 
 </TabItem>
 <TabItem value="windows">
 
 ```shell
-cd %HOMEPATH%\zephyrproject\modules\lib\golioth\samples\button-training
+cd C:\zephyrproject\modules\lib\golioth\samples
+Xcopy button-training\ rtos-training /E
+cd rtos-training
 ```
 
 </TabItem>
@@ -70,7 +74,7 @@ In the `src/main.c` file:
     k_timer_start(&my_timer, K_SECONDS(1), K_SECONDS(1));
     ```
 
-<details><summary>Click to reveal the expected esp32s2_saola.overlay file</summary>
+<details><summary>Click to reveal the expected main.c file</summary>
 
 ```c excerpts from main.c
 void my_timer_handler(struct k_timer *dummy) {
