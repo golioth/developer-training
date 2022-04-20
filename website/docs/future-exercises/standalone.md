@@ -14,7 +14,7 @@ Once you are ready to create a custom application, you may wish to start from a 
 
 This section is based around content contained within our blog about [Improving Zephyr Project Structure with Manifest Files](https://blog.golioth.io/improving-zephyr-project-structure-with-manifest-files/)
 
-[![Improving Zephyr Project Structure With Manifest Files (blog post)](assets/ImprovingZephyrManifestStructure-650x366.png)]((https://blog.golioth.io/improving-zephyr-project-structure-with-manifest-files/))
+[![Improving Zephyr Project Structure With Manifest Files (blog post)](assets/ImprovingZephyrManifestStructure-650x366.png)](https://blog.golioth.io/improving-zephyr-project-structure-with-manifest-files/)
 
 ## Putting it in practice
 
