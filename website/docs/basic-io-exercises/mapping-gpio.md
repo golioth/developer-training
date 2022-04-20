@@ -37,8 +37,8 @@ cd blinky-training
 <TabItem value="windows">
 
 ```shell
-cd %HOMEPATH%\zephyrproject\modules\lib\golioth\samples
-Xcopy %HOMEPATH%\zephyrproject\zephyr\samples\basic\blinky blinky-training\
+cd C:\zephyrproject\modules\lib\golioth\samples
+Xcopy C:\zephyrproject\zephyr\samples\basic\blinky blinky-training\ /E
 cd blinky-training
 ```
 

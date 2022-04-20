@@ -37,8 +37,8 @@ cd button-training
 <TabItem value="windows">
 
 ```shell
-cd %HOMEPATH%\zephyrproject\modules\lib\golioth\samples
-Xcopy %HOMEPATH%\zephyrproject\zephyr\samples\basic\button button-training\
+cd C:\zephyrproject\modules\lib\golioth\samples
+Xcopy C:\zephyrproject\zephyr\samples\basic\button button-training\ /E
 cd button-training
 ```
 
