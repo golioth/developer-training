@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ## Overview
 
-Golioth makes it easy to manage Over-the-Air (OTA) updates. Binaries are cryptographically signed, assigned a version number, and managed in the Golioth Console. Any device in the field that has been set up to observe firmware updates will automatically detect when a new version becomes available, then download and install it. This feature is highly configurable, using Blueprints and Tags to assign firmware packages to different groups of hardware. The [Golioth example code for DFU](https://github.com/golioth/zephyr-sdk/tree/main/samples/dfu) can be found in our SDK samples directory.
+Golioth makes it easy to manage Over-the-Air (OTA) updates. Binaries are cryptographically signed, assigned a version number, and managed in the Golioth Console. Any device in the field that has been set up to observe firmware updates will automatically detect when a new version becomes available, then download and install it. This feature is highly configurable, using Blueprints and Tags to assign firmware packages to different groups of hardware. The [Golioth example code for DFU](https://github.com/golioth/golioth-zephyr-sdk/tree/main/samples/dfu) can be found in our SDK samples directory.
 
 ## OTA DFU for Nordic nRF9160 and ESP32
 
