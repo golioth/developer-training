@@ -105,7 +105,7 @@ void main(void)
 
 A [code sample for the DPS310](https://github.com/zephyrproject-rtos/zephyr/tree/main/samples/sensor/dps310) is available in Zephyr. It is nearly identical to the code outlined above. As an exercise:
 
-1. Make a copy of the code sample into your `zephyrproject/modules/lib/golioth/samples/` folder
+1. Make a copy of the code sample into your `golioth-zephyr-workspace/modules/lib/golioth/samples/` folder
 2. Study the `app.overlay` file from the sample and compare it to the `*dev` assignment in `main.c`.
     * Notice the different approach that was taken by the sample writers from what is outlined above. There is more than one way to get information from the devicetree.
 3. Remove the `app.overlay` file, add a `boards` directory and place your `esp32s2_saola.overlay` file inside with the devicetree entries as shown above. Alter `main.c` to work with the way your overlay file defines the sensor.

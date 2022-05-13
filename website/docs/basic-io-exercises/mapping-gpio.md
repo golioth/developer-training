@@ -28,8 +28,8 @@ values={[
 <TabItem value="linux">
 
 ```shell
-cd ~/zephyrproject/modules/lib/golioth/samples
-cp -r ~/zephyrproject/zephyr/samples/basic/blinky blinky-training
+cd ~/golioth-zephyr-workspace/modules/lib/golioth/samples
+cp -r ~/golioth-zephyr-workspace/zephyr/samples/basic/blinky blinky-training
 cd blinky-training
 ```
 
@@ -37,8 +37,8 @@ cd blinky-training
 <TabItem value="windows">
 
 ```shell
-cd C:\zephyrproject\modules\lib\golioth\samples
-Xcopy C:\zephyrproject\zephyr\samples\basic\blinky blinky-training\ /E
+cd C:\golioth-zephyr-workspace\modules\lib\golioth\samples
+Xcopy C:\golioth-zephyr-workspace\zephyr\samples\basic\blinky blinky-training\ /E
 cd blinky-training
 ```
 
@@ -55,7 +55,7 @@ The MagTag board isn't officially supported in Zephyr, so we are using the DTS f
 To populate our overlay file you can just copy the needed parts of an existing DTS file.
 
 * The ESP32 WROVER kit has LEDs on it. We can study [the DTS file for that board](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/xtensa/esp_wrover_kit/esp_wrover_kit.dts) and use the parts we need for our MagTag:
-* open `zephyrproject/zephyr/boards/xtensa/esp_wrover_kit/esp_wrover_kit.dts`
+* open `golioth-zephyr-workspace/zephyr/boards/xtensa/esp_wrover_kit/esp_wrover_kit.dts`
 
 Here is the general structure you will need:
 

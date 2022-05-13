@@ -29,16 +29,16 @@ values={[
 <TabItem value="linux">
 
 ```shell
-cd ~/zephyrproject/modules/lib/golioth/samples
+cd ~/golioth-zephyr-workspace/modules/lib/golioth/samples
 cp -r button-training rtos-training
-cd ~/zephyrproject/modules/lib/golioth/samples/rtos-training
+cd ~/golioth-zephyr-workspace/modules/lib/golioth/samples/rtos-training
 ```
 
 </TabItem>
 <TabItem value="windows">
 
 ```shell
-cd C:\zephyrproject\modules\lib\golioth\samples
+cd C:\golioth-zephyr-workspace\modules\lib\golioth\samples
 Xcopy button-training\ rtos-training /E
 cd rtos-training
 ```

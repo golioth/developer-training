@@ -28,8 +28,8 @@ values={[
 <TabItem value="linux">
 
 ```shell
-cd ~/zephyrproject/modules/lib/golioth/samples
-cp -r ~/zephyrproject/zephyr/samples/basic/button button-training
+cd ~/golioth-zephyr-workspace/modules/lib/golioth/samples
+cp -r ~/golioth-zephyr-workspace/zephyr/samples/basic/button button-training
 cd button-training
 ```
 
@@ -37,8 +37,8 @@ cd button-training
 <TabItem value="windows">
 
 ```shell
-cd C:\zephyrproject\modules\lib\golioth\samples
-Xcopy C:\zephyrproject\zephyr\samples\basic\button button-training\ /E
+cd C:\golioth-zephyr-workspace\modules\lib\golioth\samples
+Xcopy C:\golioth-zephyr-workspace\zephyr\samples\basic\button button-training\ /E
 cd button-training
 ```
 
@@ -55,7 +55,7 @@ We can reuse the `led0` configuration in the overlay file, but we need to add an
 Last time we used a DTS file from the WROVER kit as reference, but that board doesn't have any buttons on it. What we're after is the basic structure of the overlay file, so it doesn't really matter what we use as a reference. This time, let's use the Freedom K64 dev board DTS file as an example:
 
 * Study [the DTS file for the frdm_k64f board](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/arm/frdm_k64f/frdm_k64f.dts) and use the parts we need for our MagTag:
-* open `zephyrproject/zephyr/boards/arm/frdm_k64f/frdm_k64f.dts`
+* open `golioth-zephyr-workspace/zephyr/boards/arm/frdm_k64f/frdm_k64f.dts`
 
 Add the following to your overlay file:
 

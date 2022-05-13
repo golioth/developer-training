@@ -31,15 +31,15 @@ There are a few common gotchas to calling `west build`.
 ### Navigate to the magtag-demo directory which is inside the Zephyr tree
 
 ```bash
-cd ~/zephyrproject/modules/lib/golioth/samples/magtag-demo
+cd ~/golioth-zephyr-workspace/modules/lib/golioth/samples/magtag-demo
 ```
 
 ### Activate your virtual environment
 
 ```bash
-source ~/zephyrproject/.venv/bin/activate
+source ~/golioth-zephyr-workspace/.venv/bin/activate
 # OR, if you're using the fish shell, run
-source ~/zephyrproject/.venv/bin/activate.fish
+source ~/golioth-zephyr-workspace/.venv/bin/activate.fish
 ```
 
 ### Set the ESP32 environmental variables

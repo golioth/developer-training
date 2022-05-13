@@ -12,7 +12,7 @@ It won't take long for you to appreciate the power of this approach. If for some
 
 All devices that are supported in Zephyr have a devicetree source (DTS) included in the codebase. These files provide all of the hardware details Zephyr needs to interact with them&ndash;memory layout, clock speed, register addresses for peripherals for everything from GPIO to i2c, and more. These files are great for you to reference, but you will not edit them directly unless you are adding your own board/chip that lacks official support. Do you need to know the clock speed and TX/RX pins used by the Espressif Saola dev board? Look in the DTS file:
 
-```js title="excerpt from: zephyrproject/zephyr/boards/xtensa/esp32s2_saola/esp32s2_saola.dts"
+```js title="excerpt from: golioth-zephyr-workspace/zephyr/boards/xtensa/esp32s2_saola/esp32s2_saola.dts"
 &cpu0 {
 	clock-frequency = <ESP32_CLK_CPU_240M>;
 };
