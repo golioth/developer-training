@@ -22,7 +22,7 @@ values={[
 1. Go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo) and ensure you are on the `main` branch which is the hello example
 
     ```bash
-    cd ~/zephyrproject/modules/lib/golioth/samples/magtag-demo
+    cd ~/golioth-zephyr-workspace/modules/lib/golioth/samples/magtag-demo
     git checkout main
     ```
 
@@ -32,7 +32,7 @@ values={[
 1. Go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo) and ensure you are on the `main` branch which is the hello example
 
     ```bash
-    cd C:\zephyrproject\modules\lib\golioth\samples\magtag-demo
+    cd C:\golioth-zephyr-workspace\modules\lib\golioth\samples\magtag-demo
     git checkout main
     ```
 

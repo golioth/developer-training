@@ -54,9 +54,9 @@ values={[
 
 <TabItem value="linux">
 
-1. Open the `~/zephyrproject/modules/lib/golioth/west.yml` file in your preferred editor
+1. Open the `~/golioth-zephyr-workspace/modules/lib/golioth/west.yml` file in your preferred editor
 2. Change the Zephyr revision line to `f613b546e0d74ef6d8ac1980944e016cfb5d6820`. This should be line 4 in your file and is shown in the screenshots above
-3. To incorporate this change, run `west update` from the `~/zephyrproject/modules/lib/golioth/` directory.
+3. To incorporate this change, run `west update` from the `~/golioth-zephyr-workspace/modules/lib/golioth/` directory.
 
 </TabItem>
 <TabItem value="windows">
@@ -64,12 +64,12 @@ values={[
 1. Open the manifest file in your preferred editor:
 
     ```shell
-    cd C:\zephyrproject\modules\lib\golioth
+    cd C:\golioth-zephyr-workspace\modules\lib\golioth
     notepad west.yml
     ```
 
 2. Change the Zephyr revision line to `f613b546e0d74ef6d8ac1980944e016cfb5d6820`. This should be line 4 in your file and is shown in the screenshots above
-3. To incorporate this change, run `west update` from the `C:\zephyrproject\modules\lib\golioth` directory.
+3. To incorporate this change, run `west update` from the `C:\golioth-zephyr-workspace\modules\lib\golioth` directory.
 
 </TabItem>
 </Tabs>
@@ -89,7 +89,7 @@ values={[
 <TabItem value="linux">
 
 ```bash
-cd ~/zephyrproject/modules/lib/golioth/samples
+cd ~/golioth-zephyr-workspace/modules/lib/golioth/samples
 git clone https://github.com/golioth/magtag-demo.git
 cd magtag-demo
 ```
@@ -98,7 +98,7 @@ cd magtag-demo
 <TabItem value="windows">
 
 ```bash
-cd C:\zephyrproject\modules\lib\golioth\samples
+cd C:\golioth-zephyr-workspace\modules\lib\golioth\samples
 git clone https://github.com/golioth/magtag-demo.git
 cd magtag-demo
 ```
