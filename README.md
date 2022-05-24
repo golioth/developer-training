@@ -2,7 +2,23 @@
 
 This is the Developer Training Repo for Golioth. Here we have two main items:
 * [The Docusaurus v2 based website](https://golioth.github.io/developer-training/) that includes all training material
-* A submodule that is the Magtag-Demo code. This can also be [access directly and followed on GitHub](git@github.com:golioth/magtag-demo.git)
+* The [Golioth Docs](https://github.com/golioth/docs) as a submodule so that it's easy to update SDK install instructions across documentation sites.
+
+## Installing this repo locally
+
+Clone the repository (along with the submodule):
+
+```console
+git clone --recurse-submodules git@github.com:golioth/developer-training.git
+```
+
+## Update the Golioth Docs submodule
+
+When updates are made to the Golioth Docs repo, the can be pulled into this one by updating the submodule:
+
+```console
+git submodule update --recursive --remote
+```
 
 ## Testing and Deploying
 
