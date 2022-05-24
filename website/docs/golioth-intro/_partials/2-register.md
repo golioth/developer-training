@@ -1,0 +1,1 @@
+../../../../submodule-goliothdocs/docs/getting-started/1-console/2-register.md
