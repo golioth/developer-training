@@ -9,7 +9,8 @@ This is the Developer Training Repo for Golioth. Here we have two main items:
 Clone the repository (along with the submodule):
 
 ```console
-git clone --recurse-submodules git@github.com:golioth/developer-training.git
+git clone git@github.com:golioth/developer-training.git
+git submodule update --init
 ```
 
 ## Update the Golioth Docs submodule
@@ -17,7 +18,7 @@ git clone --recurse-submodules git@github.com:golioth/developer-training.git
 When updates are made to the Golioth Docs repo, the can be pulled into this one by updating the submodule:
 
 ```console
-git submodule update --recursive --remote
+git submodule foreach git pull
 ```
 
 ## Testing and Deploying
