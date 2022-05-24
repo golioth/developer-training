@@ -1,0 +1,3 @@
+[submodule "submodule-goliothdocs"]
+	path = submodule-goliothdocs
+	url = git@github.com:golioth/docs.git
