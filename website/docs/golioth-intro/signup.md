@@ -14,27 +14,25 @@ This section includes references to [the Golioth docs site](https://docs.golioth
 
 ## Signup and Provision your first device
 
-### Where you should start
+import GoliothRegister from './_partials/2-register.md'
 
-Begin by following the [Golioth Getting Started Docs](https://docs.golioth.io/getting-started) which will walk you through registering an account and creating a name and credentials for your first device.
+<GoliothRegister/>
 
-| [![Golioth Docs Platform Signup](platform_signup.png)](https://docs.golioth.io/getting-started) |
-|:--:|
-| A screenshot from the [Golioth Docs](https://docs.golioth.io/getting-started/) site. |
+## Manage Devices
 
-### Where you should finish
+import GoliothManage from './_partials/3-manage-devices.md'
 
-Once you have a single device provisioned on [the Golioth Console](https://console.golioth.io) this part of the guide is complete.
+<GoliothManage/>
 
-| [![Golioth Console One Device Provisioned](golioth_console_one_device_provisioned.png)](https://console.golioth.io) |
-|:--:|
-| A screenshot from the [Golioth Console](https://console.golioth.io). |
+## Authorize Devices
+
+import GoliothAuthorize from './_partials/4-authorize-devices.md'
+
+<GoliothAuthorize/>
 
 ### Additional exercise
 
 Create a "fleet" of 5 devices with unique credentials for each.
-
-
 
 ## Exploring features on the sidebar
 
