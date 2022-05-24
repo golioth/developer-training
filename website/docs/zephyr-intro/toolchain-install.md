@@ -18,58 +18,69 @@ This section includes references to [the Golioth docs site](https://docs.golioth
 * **Desired Outcome:** By the end of this section you will have the software tools you need to build Zephyr projects and flash binaries to the MagTag board.
 * **Approximate time:** 15-20 minutes
 
-## Follow Golioth Docs to install the toolchain
+## Install the Golioth Zephyr SDK
 
-### Where you should start
+### Install West
 
-Begin by following the [*Set up Zephyr for ESP32* docs page](https://docs.golioth.io/hardware/esp32/quickstart/set-up-zephyr) which will walk you through installing the Zephyr toolchain.
+import SetupZephyr from '/docs/partials/setup-zephyr.md'
 
-| [![Golioth Docs for installing ESP32 Zephyr toolchain](assets/golioth-docs-esp32-toolchain.png)](https://docs.golioth.io/hardware/esp32/quickstart/set-up-zephyr) |
-|:--:|
-| A screenshot from the [Golioth Docs](https://docs.golioth.io/hardware/esp32/quickstart/set-up-zephyr) site. |
+<SetupZephyr/>
 
-### Where you should finish
+### Install Golioth Zephyr SDK
 
-We're using just one page from the Golioth Docs for this set. When you reach the bottom of that page you will be able to compile ESP32 sample code.
+import InstallZephyrSDK from '/docs/partials/install-zephyr-sdk.md'
 
-| [![Bottom of Golioth Docs page for installing ESP32 Zephyr toolchain](assets/golioth-docs-esp32-toolchain-end.png)](https://docs.golioth.io/hardware/esp32/quickstart/set-up-zephyr) |
-|:--:|
-| A screenshot from the bottom of the [Set up Zephyr for ESP32 Docs](https://docs.golioth.io/hardware/esp32/quickstart/set-up-zephyr) page. |
+<InstallZephyrSDK/>
 
-## Configure the toolchain for the MagTag
+### Installing the Zephyr SDK Toolchain
 
-The MagTag uses the ESP32s2, a newer variant of the chip. We need to make sure we're using a very recent version of the Zephyr toolchain to include the features for this chip. We do so by changing the `revision` value in the west manifest file to `f613b546e0d74ef6d8ac1980944e016cfb5d6820`.
+import InstallZephyrSDKtoolchain from '/docs/partials/install-zephyr-sdk-toolchain.md'
 
-| ![Bottom of Golioth Docs page for installing ESP32 Zephyr toolchain](assets/golioth-docs-esp32-toolchain-change-zephyr-version.png) |
-|:--:|
-| Changing the Zephyr revision. |
+<InstallZephyrSDKtoolchain/>
+
+### Install the Espressif (ESP32) submodules
+
+import InstallEspressifToolchain from '/docs/partials/install-espressif-toolchain.md'
+
+<InstallEspressifToolchain />
+
+### Sample build
+
+Your system is all set up and ready to start building & flashing with Zephyr. Verify by building a minimal sample:
 
 <Tabs
 groupId="os"
 defaultValue="linux"
 values={[
-{label: 'Linux/MacOS', value: 'linux'},
+{label: 'Linux', value: 'linux'},
+{label: 'MacOS', value: 'macos'},
 {label: 'Windows', value: 'windows'},
 ]}>
 
 <TabItem value="linux">
 
-1. Open the `~/golioth-zephyr-workspace/modules/lib/golioth/west.yml` file in your preferred editor
-2. Change the Zephyr revision line to `f613b546e0d74ef6d8ac1980944e016cfb5d6820`. This should be line 4 in your file and is shown in the screenshots above
-3. To incorporate this change, run `west update` from the `~/golioth-zephyr-workspace/modules/lib/golioth/` directory.
+```shell
+cd ~/golioth-zephyr-workspace/zephyr
+west build -b esp32 samples/basic/minimal -p
+```
+
+</TabItem>
+<TabItem value="macos">
+
+```shell
+cd ~/golioth-zephyr-workspace/zephyr
+west build -b esp32 samples/basic/minimal -p
+```
 
 </TabItem>
 <TabItem value="windows">
 
-1. Open the manifest file in your preferred editor:
+1. Verify by building a minimal sample:
 
     ```shell
-    cd C:\golioth-zephyr-workspace\modules\lib\golioth
-    notepad west.yml
+    cd C:\golioth-zephyr-workspace\zephyr
+    west build -b esp32 samples\basic\minimal -p
     ```
-
-2. Change the Zephyr revision line to `f613b546e0d74ef6d8ac1980944e016cfb5d6820`. This should be line 4 in your file and is shown in the screenshots above
-3. To incorporate this change, run `west update` from the `C:\golioth-zephyr-workspace\modules\lib\golioth` directory.
 
 </TabItem>
 </Tabs>
