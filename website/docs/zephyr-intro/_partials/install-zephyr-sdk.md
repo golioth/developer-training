@@ -1,0 +1,1 @@
+../../../../submodule-goliothdocs/docs/partials/install-zephyr-sdk.md
