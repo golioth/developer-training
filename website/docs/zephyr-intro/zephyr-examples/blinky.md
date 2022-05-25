@@ -47,6 +47,8 @@ values={[
 
 3. Flash the example
 
+    ![MagTag Boot0 and Reset buttons](../assets/magtag-bootloader-mode.jpg)
+
     Put the MagTag into DFU bootloader mode
 
     1. Hold down the Boot0 button
