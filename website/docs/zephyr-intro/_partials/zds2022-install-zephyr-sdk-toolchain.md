@@ -1,8 +1,6 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Download the [latest SDK installer](https://github.com/zephyrproject-rtos/sdk-ng/releases):
-
 <Tabs
 groupId="os"
 defaultValue="linux"
@@ -13,9 +11,7 @@ values={[
 ]}>
 <TabItem value="linux">
 
-In-person training: You should have already [downloaded the Zephyr SDK Toolchain from our local storage](docs/zephyr-intro/sdk-local-download.md) and unpacked it in your home directory.
-
-Run the installer:
+You previously downloaded and unpacked the Zephyr SDK Toolchain, now run the installer:
 
 ```console
 cd ~/zephyr-sdk-0.14.2
@@ -34,9 +30,7 @@ sudo udevadm control --reload
 </TabItem>
 <TabItem value="macos">
 
-In-person training: You should have already [downloaded the Zephyr SDK Toolchain from our local storage](docs/zephyr-intro/sdk-local-download.md) and unpacked it in your home directory.
-
-Run the installer:
+You previously downloaded and unpacked the Zephyr SDK Toolchain, now run the installer:
 
 ```console
 cd ~/zephyr-sdk-0.14.2
@@ -46,9 +40,7 @@ cd ~/zephyr-sdk-0.14.2
 </TabItem>
 <TabItem value="windows">
 
-In-person training: You should have already [downloaded the Zephyr SDK Toolchain from our local storage](docs/zephyr-intro/sdk-local-download.md) and unzipped it in your `%HOMEPATH%` directory.
-
-Run the installer:
+You previously downloaded and unpacked the Zephyr SDK Toolchain, now run the installer:
 
 ```console
 cd %HOMEPATH%\zephyr-sdk-0.14.2
