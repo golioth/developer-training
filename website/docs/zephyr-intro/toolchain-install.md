@@ -27,19 +27,25 @@ import SetupZephyr from './_partials/setup-zephyr.md'
 
 ### Install Golioth Zephyr SDK
 
-import InstallZephyrSDK from './_partials/install-zephyr-sdk.md'
+<!-- Change which install instructions are used for ZDS2022 training (local download) -->
+<!-- import InstallZephyrSDK from './_partials/install-zephyr-sdk.md' -->
+import InstallZephyrSDK from './_partials/zds2022-install-zephyr-sdk.md'
 
 <InstallZephyrSDK/>
 
 ### Installing the Zephyr SDK Toolchain
 
-import InstallZephyrSDKtoolchain from './_partials/install-zephyr-sdk-toolchain.md'
+<!-- Change which install instructions are used for ZDS2022 training (local download) -->
+<!-- import InstallZephyrSDKtoolchain from './_partials/install-zephyr-sdk-toolchain.md' -->
+import InstallZephyrSDKtoolchain from './_partials/zds2022-install-zephyr-sdk-toolchain.md'
 
 <InstallZephyrSDKtoolchain/>
 
 ### Install the Espressif (ESP32) submodules
 
-import InstallEspressifToolchain from './_partials/install-espressif-toolchain.md'
+<!-- Change which install instructions are used for ZDS2022 training (local download) -->
+<!-- import InstallEspressifToolchain from './_partials/install-espressif-toolchain.md' -->
+import InstallEspressifToolchain from './_partials/zds2022-install-espressif-toolchain.md'
 
 <InstallEspressifToolchain />
 
@@ -86,7 +92,9 @@ west build -b esp32 samples/basic/minimal -p
 
 ## Clone the magtag-demo repository
 
-For the rest of this tutorial we will use the [magtag-demo](https://github.com/golioth/magtag-demo) code repository. Let's clone a local copy of it into the Golioth samples folder.
+For the rest of this tutorial we will use the [magtag-demo](https://github.com/golioth/magtag-demo) code repository. This repo was already included in the SDK local download and can be found in the `golioth-zephyr-sdk/modules/lib/golioth/samples/magtag-demo` directory.
+
+<!-- For the rest of this tutorial we will use the [magtag-demo](https://github.com/golioth/magtag-demo) code repository. Let's clone a local copy of it into the Golioth samples folder.
 
 <Tabs
 groupId="os"
@@ -114,7 +122,7 @@ cd magtag-demo
 ```
 
 </TabItem>
-</Tabs>
+</Tabs> -->
 
 ## Conclusion
 
