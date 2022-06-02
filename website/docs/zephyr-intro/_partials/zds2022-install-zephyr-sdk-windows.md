@@ -1,57 +1,34 @@
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-1. With `west` installed, download the Zephyr SDK:
+You previously downloaded and unpacked the `golioth-zephyr-workspace`. Tell `west` to automatically configure CMake:
 
-    :::info
-    In-person training: You should have already [downloaded the SDK archive from our local storage.](docs/zephyr-intro/sdk-local-download.md).
+```shell
+cd c:\golioth-zephyr-workspace
+west zephyr-export
+```
 
-    Because of this, **we will not** be using the `west init` command to checkout the SDK repositories. But for learning purposes, here you can see here what a normal zephyr project checkout process looks like:
+Install the remaining dependencies:
 
-    <details><summary>Click to reveal normal Zephyr project initialization</summary>
+<Tabs
+groupId="west-installation"
+defaultValue="virtualenv"
+values={[
+{label: 'Install within a virtualenv', value: 'virtualenv'},
+{label: 'Install globally', value: 'global'},
+]}>
+<TabItem value="virtualenv">
 
-    ```shell
-    cd c:\
-    west init -m https://github.com/golioth/golioth-zephyr-sdk.git --mf west-zephyr.yml golioth-zephyr-workspace
-    cd golioth-zephyr-workspace
-    west update
-    ```
-    </details>
-    :::
+```
+pip install -r C:\golioth-zephyr-workspace\zephyr\scripts\requirements.txt
+```
 
-    Navigate to your workspace folder
+</TabItem>
+<TabItem value="global">
 
-    ```
-    cd c:\golioth-zephyr-workspace
-    ```
+```
+pip3 install -r C:\golioth-zephyr-workspace\zephyr\scripts\requirements.txt
+```
 
-2. Tell `west` to automatically configure CMake:
-
-    ```
-    west zephyr-export
-    ```
-
-3. Install the remaining dependencies:
-
-    <Tabs
-    groupId="west-installation"
-    defaultValue="virtualenv"
-    values={[
-    {label: 'Install within a virtualenv', value: 'virtualenv'},
-    {label: 'Install globally', value: 'global'},
-    ]}>
-    <TabItem value="virtualenv">
-
-    ```
-    pip install -r C:\golioth-zephyr-workspace\zephyr\scripts\requirements.txt
-    ```
-
-    </TabItem>
-    <TabItem value="global">
-
-    ```
-    pip3 install -r C:\golioth-zephyr-workspace\zephyr\scripts\requirements.txt
-    ```
-
-    </TabItem>
-    </Tabs>
+</TabItem>
+</Tabs>
