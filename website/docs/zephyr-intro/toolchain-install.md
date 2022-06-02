@@ -7,14 +7,13 @@ import TabItem from '@theme/TabItem';
 
 # Zephyr Toolchain Installation
 
-This section includes references to [the Golioth docs site](https://docs.golioth.io/). We are linking you there so you have the most up-to-date directions to install the Zephyr toolchain and ESP32 compiler. Once you have completed that section, you will come back to this page for further instructions.
+This page includes sections from [the Golioth docs site](https://docs.golioth.io/) that walk through the installation of the SDKs and Toolchains necessary to build Zephyr firmware.
 
 ## Overview
 
 * **Summary:**
-  1. Follow Golioth Docs to install `west` (the Zephyr meta tool), the Golioth Zephyr SDK, and the Espressif (ESP32) toolchain.
-  2. Update the Zephyr version to ensure we have support fo the ESP32s2
-  3. Clone the code repository that will be used for this training
+  1. Install `west` (the Zephyr meta tool), the Golioth Zephyr SDK, and the Espressif (ESP32) toolchain.
+  2. Clone the [magtag-demo](https://github.com/golioth/magtag-demo) code repository that will be used for this training
 * **Desired Outcome:** By the end of this section you will have the software tools you need to build Zephyr projects and flash binaries to the MagTag board.
 * **Approximate time:** 15-20 minutes
 
