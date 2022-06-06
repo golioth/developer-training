@@ -2,6 +2,9 @@
 sidebar_position: 4
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Zephyr Tips and Gotchas
 
 Use this page as a reference for reminders and common gotchas.
@@ -20,44 +23,52 @@ It can be confusing when you expect the program to begin running right away and 
 
 This error is expected and serves as a helpful reminder that you need to hit the reset button after every flash.
 
-## Errors with `west build`: Zephyr tree and ESP32 environmental variables
+## Errors with `west build`: Zephyr tree and virtual environment
 
 There are a few common gotchas to calling `west build`.
 
 * You need to be in a subdirectory of the Zephyr tree
 * If you followed our recommendations during install, you need to enable your Python Virtual Environment
-* For ESP32 development, you need to have your environmental variables set.
 
-### Navigate to the magtag-demo directory which is inside the Zephyr tree
+<Tabs
+groupId="os"
+defaultValue="linux"
+values={[
+{label: 'Linux/MacOS', value: 'linux'},
+{label: 'Windows', value: 'windows'},
+]}>
 
-```bash
-cd ~/golioth-zephyr-workspace/modules/lib/golioth/samples/magtag-demo
-```
+<TabItem value="linux">
 
-### Activate your virtual environment
+1. Navigate to the magtag-demo directory which is inside the Zephyr tree
 
-```bash
-source ~/golioth-zephyr-workspace/.venv/bin/activate
-# OR, if you're using the fish shell, run
-source ~/golioth-zephyr-workspace/.venv/bin/activate.fish
-```
+    ```bash
+    cd ~/golioth-zephyr-workspace/modules/lib/golioth/samples/magtag-demo
+    ```
 
-### Set the ESP32 environmental variables
+2. Activate your virtual environment
 
-These will look something like this:
+    ```bash
+    source ~/golioth-zephyr-workspace/.venv/bin/activate
+    ```
 
-```bash
-export ZEPHYR_TOOLCHAIN_VARIANT="espressif"
-export ESPRESSIF_TOOLCHAIN_PATH="${HOME}/.espressif/tools/xtensa-esp32-elf/esp-2020r3-8.4.0/xtensa-esp32-elf"
-export PATH=$PATH:$ESPRESSIF_TOOLCHAIN_PATH/bin
-```
+</TabItem>
+<TabItem value="windows">
 
-You can see the the commands specific to your installation by running the `west espressif install` command and looking at the end of the 
-output
+1. Navigate to the magtag-demo directory which is inside the Zephyr tree
 
-| ![Finding the ESP32 environment settings](assets/golioth-west-espressif-install.png) |
-|:--:|
-| The end of the `west espressif install` command displays the environment settings for your system. |
+    ```bash
+    cd C:\golioth-zephyr-workspace\modules\lib\golioth\samples\magtag-demo
+    ```
+
+2. Activate your virtual environment
+
+    ```bash
+    C:\golioth-zephyr-workspace\.venv\Scripts\activate.bat
+    ```
+
+</TabItem>
+</Tabs>
 
 ## Errors when flashing the MagTag
 
