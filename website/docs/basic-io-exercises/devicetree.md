@@ -42,10 +42,10 @@ Each project can specify one or more devicetree overlay files. This is where you
 
 ## The pinctrl subsystem
 
-Special function pins like the SDA/SCL lines are specified using the pinctrl subsystem of Zephyr. The syntax for these pins varies from one chip manufacturer to the next, so it is good to peruse the documentations. By consulting [the Zephyr bindings index](https://docs.zephyrproject.org/latest/build/dts/api/bindings.html), we find [useful documentation on the Espressif pinctrl page](https://docs.zephyrproject.org/latest/build/dts/api/bindings/pinctrl/espressif%2Cesp32-pinctrl.html
+Special function pins like the SDA/SCL lines are specified using the pinctrl subsystem of Zephyr. The syntax for these pins varies from one chip manufacturer to the next, so it is good to peruse the documentation. By consulting [the Zephyr bindings index](https://docs.zephyrproject.org/latest/build/dts/api/bindings.html), we find [useful documentation on the Espressif pinctrl page](https://docs.zephyrproject.org/latest/build/dts/api/bindings/pinctrl/espressif%2Cesp32-pinctrl.html
 ).
 
-Espressif has approached pinctrl by making a definition for every possible configuration of every pin. These definitions are found in the include folder of the Espressif hardware abstraction layer module. For the MagTag demo, the i2c1 pins needed remapping, here is an excerpt of the relevant define for SDA on pin :
+Espressif has approached pinctrl by making a definition for every possible configuration of every pin. These definitions are found in the include folder of the Espressif hardware abstraction layer module. For the MagTag demo, the i2c1 pins needed remapping. Here is an excerpt of the relevant define for the SDA pin :
 
 ```js title="Espressif esp32s2 pinctrl definitions: golioth-zephyr-workspace/modules/hal/espressif/include/dt-bindings/pinctrl/esp32s2-pinctrl.h"
 #define I2C1_SDA_GPIO31 \
@@ -62,7 +62,7 @@ Espressif has approached pinctrl by making a definition for every possible confi
 
 ```
 
-The defines from the esp32s2-pinctrl.h file are used to declare subnodes inside the pinctrl node of our overlay file.
+The defines from the esp32s2-pinctrl.h file are used to declare subnodes inside the pinctrl node of our overlay file. (The anatomy of a devicetree node will be discussed in the next exercise: [Blinking an LED](./mapping-gpio.md).)
 
 ```js title="Adjusting i2c1 pin assignments in an overlay file"
 &pinctrl {
@@ -92,9 +92,9 @@ The defines from the esp32s2-pinctrl.h file are used to declare subnodes inside 
 };
 ```
 
-In the example above, the `&pinctrl` section declares pin names using the `subnode-label: sub-node-path{ };` syntax. The label and path can be anything you wish, with the pinmux define (from the Espressif hal include file) and relevant pin configuration inside the curly brackets. Once defined, the subnode-label is reference using the ampersand: `&i2c1_sda_gpio33`.
+In the example above, the `&pinctrl` section declares pin names using the `subnode-label: sub-node-path{ };` syntax. The label and path can be anything you wish, with the pinmux define (from the Espressif hal include file) and relevant pin configuration inside the curly brackets. Once defined, the subnode-label is referenced using the ampersand (`&i2c1_sda_gpio33`), similar to the "address-of" syntax used in the c language.
 
-It's normal to be a bit confused over the details. Devicetree is a complex topic that will take some time to fully understand. We recommend looking at overlay files from sample code to help build your early understanding.
+It's normal to feel a bit confused over the details at this point. Devicetree is a complex topic that will take time to fully understand. We recommend looking at overlay files from sample code to help build your early understanding.
 
 ## Devicetree files at build time
 
