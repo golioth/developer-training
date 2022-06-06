@@ -148,7 +148,7 @@ In the `src/main.c` file:
     k_thread_start(my_thread);
     ```
 
-<details><summary>Click to reveal the expected esp32s2_saola.overlay file</summary>
+<details><summary>Click to reveal the expected main.c file</summary>
 
 ```c excerpts from main.c
 static void my_thread_handler(void *dummy1, void *dummy2, void *dummy3) {
