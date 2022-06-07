@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## What is this training all about?
 
-This is a place where you're going to learn about Golioth features by playing with hardware. This training is meant to take anywhere from 60-120 minutes, depending on how deep you decide to go into each exercise. It is mainly meant as a guided training (either over video conference or in-person), but there will eventually be links to watch some of the presentation content asynchronously. The main reason to take this training with an instructor is to have a guiding hand and someone to ask questions live. In the event you're taking this training asynchronously, utilize [our forum](https://forum.golioth.io) and [our Discord channel](https://golioth.io/discord) for wherever you get stuck.
+This is a place where you're going to learn about Golioth features by playing with hardware. To start this training, plan to spend anywhere from 60-120 minutes, with additional optional exercises for basic I/O and sensors when you have more time available. It is mainly meant as a guided training (either over video conference or in-person), but there will eventually be links to watch some of the presentation content asynchronously. The main reason to take this training with an instructor is to have a guiding hand and someone to ask questions live. In the event you're taking this training asynchronously, utilize [our forum](https://forum.golioth.io) and [our Discord channel](https://golioth.io/discord) for wherever you get stuck.
 
 ## How can you use this material after training is over?
 
