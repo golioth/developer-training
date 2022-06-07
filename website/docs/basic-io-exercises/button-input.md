@@ -70,7 +70,8 @@ Add the following to your overlay file:
 You will need to update the pin assignment inside of your button subnode. There are gotchas to watch out for:
 
 1. Pay close attention to the gpio port that is declared and notice that you need to alter what was used with the Freedom K64f reference DTS file to match the ESP32-style that we used when adding the LED to the overlay file.
-2. The schematic shows pull-resistors but the are marked `DNP` (Do Not Populate). We will need to use the internal pull-up resistor of the ESP32s2. Can you figure out how to add the `GPIO_PULL_UP` flag to this pin assignment?
+2. The schematic shows pull-resistors but they are marked `DNP` (Do Not Populate). We will need to use the internal pull-up resistor of the ESP32s2. Can you figure out how to add the `GPIO_PULL_UP` flag to this pin assignment?
+3. To clarify the pin naming/numbering: the MagTag has `D11` printed next to the button because it is connected to GPIO11. On the schematic this is labelled as `BUTTOND`.
 
 Once you have updated your overlay file, compare it with the example below.
 
@@ -84,7 +85,7 @@ Once you have updated your overlay file, compare it with the example below.
     };
     leds {
         compatible = "gpio-leds";
-        red_led: led_2 {
+        red_led: red_led {
             gpios =  <&gpio0 13 GPIO_ACTIVE_HIGH>;
             label = "Red - LED2";
         };
@@ -103,7 +104,7 @@ Of note:
 
 * The `compatible` property tells Zephyr the type of binding we are using
 * The Freedom board DTS file used `&gpioc` but the ESP32s2 needed `&gpio0`
-* The pull-up resistor has been enabled using the OR operator to make a bitmask: `(GPIO_ACTIVE_HIGH | GPIO_PULL_UP)`
+* The pull-up resistor has been enabled using the OR operator to make a bitmask: `(GPIO_ACTIVE_LOW | GPIO_PULL_UP)`
 
 </details>
 

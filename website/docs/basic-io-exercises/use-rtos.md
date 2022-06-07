@@ -30,8 +30,14 @@ values={[
 
 ```shell
 cd ~/golioth-zephyr-workspace/modules/lib/golioth/samples
-cp -r button-training rtos-training
+cp -r blinky-training rtos-training
 cd ~/golioth-zephyr-workspace/modules/lib/golioth/samples/rtos-training
+```
+
+You shouldn't reuse the build directory from a different project. Let's remove it now to avoid build errors. It will be automatically regenerated.
+
+```shell
+rm -r build
 ```
 
 </TabItem>
@@ -39,8 +45,14 @@ cd ~/golioth-zephyr-workspace/modules/lib/golioth/samples/rtos-training
 
 ```shell
 cd C:\golioth-zephyr-workspace\modules\lib\golioth\samples
-Xcopy button-training\ rtos-training /E
+Xcopy blinky-training\ rtos-training /E
 cd rtos-training
+```
+
+You shouldn't reuse the build directory from a different project. Let's remove it now to avoid build errors. It will be automatically regenerated.
+
+```shell
+rmdir /s build
 ```
 
 </TabItem>
@@ -59,7 +71,7 @@ Timers are easy to use in Zephyr. There are just three things we need to do:
 In the `src/main.c` file:
 
 1. Create a new function just above `main` to act as the timer callback
-    * Function should return `void`
+    * Function should be marked extern and return `void`
     * Function parameter should be `struct k_timer *dummy`
     * Move the LED toggle function call out of the main loop and into your new function (you do not need the sleep function)
 2. Define your timer just after your new function (replace `my_timer_handler` with the name of your function):

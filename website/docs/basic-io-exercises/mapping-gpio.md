@@ -93,7 +93,7 @@ With this family of microcontrollers, any IO number that is less-than 32 will be
     };
     leds {
         compatible = "gpio-leds";
-        red_led: led_2 {
+        red_led: red_led {
             gpios =  <&gpio0 13 GPIO_ACTIVE_HIGH>;
             label = "Red - LED2";
         };
