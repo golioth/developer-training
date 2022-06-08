@@ -115,10 +115,10 @@ The endpoints that send data to either LightDB State or LightDB stream differ by
 
 ```c
 /* These two lines evaluate to the same string */
-uint8_t state_endpoint_1 = GOLIOTH_LIGHTDB_PATH("leds");
-uint8_t state_endpoint_2 = ".d/leds";
+uint8_t* state_endpoint_1 = GOLIOTH_LIGHTDB_PATH("leds");
+uint8_t* state_endpoint_2 = ".d/leds";
 
 /* These two lines also evaluate to the same string */
-uint8_t stream_endpoint_1 = GOLIOTH_LIGHTDB_STREAM_PATH("accel");
-uint8_t stream_endpoint_2 = ".s/accel";
+uint8_t* stream_endpoint_1 = GOLIOTH_LIGHTDB_STREAM_PATH("accel");
+uint8_t* stream_endpoint_2 = ".s/accel";
 ```
