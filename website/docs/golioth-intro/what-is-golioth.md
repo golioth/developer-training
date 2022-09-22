@@ -2,29 +2,31 @@
 sidebar_position: 1
 ---
 
-# What is Golioth?
+# What is Golioth and how can I use it?
+When we describe Golioth to engineers, we talk about two distinct pieces:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AkEKJ873tsk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+* The Cloud side services that make up our commercial offering
+* The Device side support we offer to users to make it easier to connect IoT devices to the Cloud. 
 
-Golioth is a straightforward commercial IoT platform, built for scale. What that means for you, the Developer, is that we want to help get your deployment prototyped quickly and then use that same tooling to be able to expand your application from 1 device to thousands or millions of devices in the field.
+## Cloud side services
 
-## Where is Golioth a good fit?
+Golioth's main product is a set of APIs and endpoints for IoT devices to connect to. We think this is the easiest way to add different functions to a fleet of IoT devices (details on how to do that further down). You can choose to use just one or all of these services in your projects.
 
-Golioth is capable of working on any device that has:
+Once you set up your device to exchange data Golioth, you get access to an entire suite of new functionalities:
+* **Over-the-air updates** - Push and manage new firmware images, including targeting specific devices.
+* **Time-series database tracking** - easy management of sensor data on the cloud.
+* **Command and control capabilities** -  Push and pull data from a device using state-based databases on the cloud. Interact with the data via our REST API.
+* **Device logging** - pass troubleshooting messages off of individual devices (fewer debug probes and USB cables involved!)
+* **Easy export of all cloud side data** - Interface to 3rd party visualization and cloud platforms.
+* **Device Management** - A clean interface for interacting with one (or all) of your devices.
 
-* Firmware built with Zephyr (recent versions)
-* A network interface. Currently these are best understood to be:
-  * Ethernet
-  * WiFi
-  * Cellular
-* Sufficient memory to include the Golioth libraries with their Zephyr build (less than 10% of most builds)
 
-This is not the *only* way that Golioth works (you'll see this later in the training), but is a guideline to devices that will be a good target.
+## Device side support 
+Our mission is to not only make Cloud services more accessible, but also to make it easier to connect your devices to those services.
 
-### Custom Hardware
+For us, that includes creating and releasing open source Software Development Kits (SDKs) for different platforms. We now have three:
+* [**Zephyr RTOS**](https://github.com/golioth/golioth-zephyr-sdk)
+* [**nRF Connect SDK (NCS)**](https://github.com/golioth/golioth-zephyr-sdk)
+* [**Espressif IoT Development Framwork (ESP-IDF)**](https://github.com/golioth/golioth-esp-idf-sdk)
 
-What about your custom device? You have taken a chip company's reference design or dev board and expanded that to fit your end customers' needs? This will work great! You'll still need a network interface and Zephyr to fit the mold, but because Golioth lives at the top of the Zephyr stack, your hardware can almost certainly work with Golioth. As you get deeper into the requirements of the Real Time Operating System's (RTOS) requirements (e.g. tasks, priorities, etc) you might realize some resource constraints, but it should be able to work with Golioth all the same.
-
-## Where isn't Golioth a good fit?
-
-As of right now, Golioth and our Zephyr-based SDK is not a great fit for devices that are set up in a hub and spoke system. Examples of this are Bluetooth and LoRa based devices. If you are using a phone or a base station to connect a range of different devices to the internet, there will be a significant amount of work on your end to fit Zephyr to your needs. Again, Golioth sits up very high in the stack, so it's possible to do just about anything, but it's not a good initial target. We hope to showcase more examples serving these applications in the near future.
+Each of these SDKs include libraries to connect to Golioth and take advantage of the Cloud features explained above. We also publish samples which showcase the individual Cloud features, while also utilizing the Device SDK elements. Our goal is to get you connected and using the Cloud as quickly as possible.
