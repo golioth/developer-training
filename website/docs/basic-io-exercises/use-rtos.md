@@ -1,5 +1,6 @@
 ---
 sidebar_position: 5
+description: "Zephyr can blink with timers or threads!"
 ---
 
 import Tabs from '@theme/Tabs';

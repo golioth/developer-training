@@ -1,4 +1,8 @@
 {
   "label": "Zephyr Exercises",
-  "position": 4
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "title": "Getting Started with Zephyr"
+  }
 }

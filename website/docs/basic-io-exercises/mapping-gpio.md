@@ -1,5 +1,6 @@
 ---
 sidebar_position: 3
+description: "Learn basic I/O by blinking an LED!"
 ---
 
 import Tabs from '@theme/Tabs';
