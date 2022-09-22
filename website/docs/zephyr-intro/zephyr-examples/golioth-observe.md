@@ -11,39 +11,21 @@ The Observe example configures the MagTag to watch a LightDB state endpoint on t
 
 ## Program the MagTag
 
-<Tabs
-groupId="os"
-defaultValue="linux"
-values={[
-{label: 'Linux/MacOS', value: 'linux'},
-{label: 'Windows', value: 'windows'},
-]}>
-
-<TabItem value="linux">
-
 1. Go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo) and checkout the `observe` example:
 
     ```bash
-    cd ~/golioth-zephyr-workspace/modules/lib/golioth/samples/magtag-demo
+    cd ~/magtag-training/app
     git checkout observe
     ```
-
-</TabItem>
-<TabItem value="windows">
-
-1. Go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo) and checkout the `observe` example:
-
-    ```bash
-    cd C:\golioth-zephyr-workspace\modules\lib\golioth\samples\magtag-demo
-    git checkout observe
-    ```
-
-</TabItem>
-</Tabs>
 
 2. Create a file for WiFi and Golioth credentials
 
     * Make a copy of `credentials.conf_example` and name it `credentials.conf`
+
+        ```
+        cp credentials.conf_example credentials.conf
+        ```
+
     * Edit this new file to include your WiFi credentials and the PSK-ID/PSK from the device page on your Golioth console
     * This file will be ignored by git, and may be reused in other examples.
 

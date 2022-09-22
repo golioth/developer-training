@@ -9,39 +9,21 @@ import TabItem from '@theme/TabItem';
 
 The Stream example sends accelerometer sensor data to the Golioth Cloud every few seconds. Each JSON object receives a timestamp and is stored in a database we refer to as LightDB stream.
 
-<Tabs
-groupId="os"
-defaultValue="linux"
-values={[
-{label: 'Linux/MacOS', value: 'linux'},
-{label: 'Windows', value: 'windows'},
-]}>
-
-<TabItem value="linux">
-
 1. Go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo) and checkout the `stream` example:
 
     ```bash
-    cd ~/golioth-zephyr-workspace/modules/lib/golioth/samples/magtag-demo
+    cd ~/magtag-training/app
     git checkout stream
     ```
-
-</TabItem>
-<TabItem value="windows">
-
-1. Go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo) and checkout the `stream` example:
-
-    ```bash
-    cd C:\golioth-zephyr-workspace\modules\lib\golioth\samples\magtag-demo
-    git checkout stream
-    ```
-
-</TabItem>
-</Tabs>
 
 2. Create a file for WiFi and Golioth credentials
 
     * Make a copy of `credentials.conf_example` and name it `credentials.conf`
+
+        ```
+        cp credentials.conf_example credentials.conf
+        ```
+
     * Edit this new file to include your WiFi credentials and the PSK-ID/PSK from the device page on your Golioth console
     * This file will be ignored by git, and may be reused in other examples.
 
