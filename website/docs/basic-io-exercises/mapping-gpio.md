@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-description: "Learn basic I/O by blinking an LED!"
+description: "Fetch and use the pin assignments from the Devicetree in C code"
 ---
 
 import Tabs from '@theme/Tabs';

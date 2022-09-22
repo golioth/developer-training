@@ -3,6 +3,7 @@
   "position": 5,
   "link": {
     "type": "generated-index",
-    "title": "Learn Basic Zephyr Input/Output"
+    "title": "Learn Basic Zephyr Input/Output",
+    "description": "The Basic I/O section dives into how Zephyr handles hardware abstraction. We'll focus on the basics of LEDs and Buttons, but understanding these concepts prepares you for working with complex peripherals on any architecture."
   }
 }

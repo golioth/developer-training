@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+description: "Using Devicetree to map pins for input or output"
 ---
 
 # Zephyr Devicetree
