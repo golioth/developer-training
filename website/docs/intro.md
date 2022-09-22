@@ -6,7 +6,11 @@ sidebar_position: 1
 
 ## What is this training all about?
 
-This is a place where you're going to learn about Golioth features by playing with hardware. To start this training, plan to spend anywhere from 60-120 minutes, with additional optional exercises for basic I/O and sensors when you have more time available. It is mainly meant as a guided training (either over video conference or in-person), but there will eventually be links to watch some of the presentation content asynchronously. The main reason to take this training with an instructor is to have a guiding hand and someone to ask questions live. In the event you're taking this training asynchronously, utilize [our forum](https://forum.golioth.io) and [our Discord channel](https://golioth.io/discord) for wherever you get stuck.
+This is a place where you're going to learn about Golioth features by programming real hardware using the Golioth Zephyr SDK.
+
+Plan to spend anywhere about 120 minutes to get through the majority of these demos and associated content. There are optional exercises for basic I/O and sensors when you have more time available. This is mainly meant as a guided training (either over video conference or in-person), but there will eventually be links to watch some of the presentation content asynchronously. 
+
+Instructors are here to offer a guiding hand and to answer questions live. In the event you're taking this training asynchronously, utilize [our forum](https://forum.golioth.io) and [our Discord channel](https://golioth.io/discord) for wherever you get stuck.
 
 ## How can you use this material after training is over?
 
@@ -14,6 +18,18 @@ Developers who successfully complete this training should feel confident that th
 
 ## What is Zephyr RTOS? Why are we learning it?
 
-[Zephyr](https://zephyrproject.org/) is an open source Real Time Operating System (RTOS) with wide support among industry leading chip vendors. At Golioth, we build [the Golioth SDK](https://github.com/golioth/golioth-zephyr-sdk) on top of the Zephyr SDK in order to take advantage of the wide hardware support. What's amazing about the project is that you can switch between different hardware platforms with a command line switch and a file that tells the application which pins are assigned to which function.
+[Zephyr](https://zephyrproject.org/) is an open source Real Time Operating System (RTOS) with wide support among industry leading chip vendors. At Golioth, we build [the Golioth Zephyr SDK](https://github.com/golioth/golioth-zephyr-sdk) on top of the Zephyr SDK in order to take advantage of the wide hardware support. What's amazing about the project is that you can switch between different hardware platforms with a command line switch and a file that tells the application which pins are assigned to which function.
 
-Golioth lives at the top of the Zephyr stack, meaning that we take advantage of all of the networking capabilities built into Zephyr. When Golioth needs to talk to the internet, it simply communicates with the networking layer's APIs. From this perspective, we can switch between Cellular, WiFi, and Ethernet implementations easily. In the future, we hope to also tap into more "hub and spoke" model devices such as LoRa and Bluetooth as well. The main thing for you to know, as the Developer, is that you have maximum flexibility when trying out or deploying new systems.
+Golioth lives at the top of the Zephyr stack, meaning that we take advantage of all of the networking capabilities built into Zephyr. When Golioth needs to talk to the internet, it simply communicates with the networking layer's APIs. From this perspective, we can switch between Cellular, WiFi, Ethernet, and Thread implementations easily. The main thing for you to know, as the Developer, is that you have maximum flexibility when trying out or deploying new systems.
+
+## What is Kasm?
+
+Kasm is a tool with a virtual desktop workspace in a browser, preconfigured with Golioth tools. We believe this is the fastest way to get new developers building Zephyr projects and interacting with Golioth. 
+
+![Kasm](./assets/Kasm.png)
+
+However, this also means that the trainee will need to set up the Zephyr toolchain after this training is over. Golioth staff is available to help make this process smoother. 
+
+## Command Line 
+
+Golioth training expects that commands will be run from the command line. In Kasm, we will be working from the built in terminal, which approximates a Linux system with a command line terminal. Users are free to use VScode as a code editor, but all commands will be run from the command line. Later, these commands could be run from the terminal inside of VScode. 
