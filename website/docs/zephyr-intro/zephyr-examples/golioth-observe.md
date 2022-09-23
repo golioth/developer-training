@@ -69,7 +69,7 @@ to the ePaper display.
 
 Navigate to your device on [the Golioth Console](https://console.golioth.io/)
 
-1. Select Remote Procedure Call foom the table along the top of the device view
+1. Select Remote Procedure Call from the table along the top of the device view
 2. Input "epaper" as the Method name
 3. Click on Add Parameter and type your message
 4. Click the Call Method button to execute the RPC
@@ -84,7 +84,7 @@ instead of a string?
 
 Of course the device can also write to the LightDB State endpoint. One example
 of this is when the endpoint doesn't exist, the MagTag will set the `leds`
-endpoint to 15 as teh default. Look in the `src/main.c` and find the following
+endpoint to 15 as the default. Look in the `src/main.c` and find the following
 code:
 
 ```c
