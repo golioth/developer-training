@@ -1,8 +1,4 @@
 {
   "label": "Golioth Exercises",
-  "position": 3,
-  "link": {
-    "type": "generated-index",
-    "title": "Golioth Zephyr Exercises"
-  }
+  "position": 3
 }
