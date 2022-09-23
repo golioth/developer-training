@@ -33,7 +33,7 @@ The Stream example sends accelerometer sensor data to the Golioth Cloud every fe
     west build -b esp32s2_saola . -D OVERLAY_CONFIG=credentials.conf -p
     ```
 
-import HowToFlash from '/docs/_partials/flash-the-example-kasm.md'
+import HowToFlash from '/docs/\_partials/flash-the-example-kasm.md'
 
 <HowToFlash/>
 
