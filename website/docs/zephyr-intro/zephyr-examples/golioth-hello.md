@@ -33,7 +33,7 @@ The Hello example is the most basic network-connected example. It shows not only
     west build -b esp32s2_saola . -D OVERLAY_CONFIG=credentials.conf -p
     ```
 
-import HowToFlash from '/docs/_partials/flash-the-example-kasm.md'
+import HowToFlash from '/docs/\_partials/flash-the-example-kasm.md'
 
 <HowToFlash/>
 

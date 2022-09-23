@@ -35,7 +35,7 @@ The Observe example configures the MagTag to watch a LightDB state endpoint on t
     west build -b esp32s2_saola . -D OVERLAY_CONFIG=credentials.conf -p
     ```
 
-import HowToFlash from '/docs/_partials/flash-the-example-kasm.md'
+import HowToFlash from '/docs/\_partials/flash-the-example-kasm.md'
 
 <HowToFlash/>
 
