@@ -58,25 +58,56 @@ The Observe example will begin running after pressing the Reset button. You will
 
 The LEDs will remain green until a change to the `leds` endpoint is detected, including the first time it subscribes to observe this data at power up. The color of LEDs 0..3 will be set to red/green/blue/red. The on/off state of each LED is controlled by the value of the `leds` endpoint. This value is a binary mask, so changing that value to 0 will switch all LEDs off, changing it to 8 will turn on LED3 and turn all others off. Each time a new value is observed, it will be displayed on the ePaper screen. Try changing this number and observing the behavior, noting that values outside of the 0..15 range will be ignored.
 
+## Remote Procedure Call: Write to ePaper display
+
+Remote Precedure Call (RPC) is a Golioth feature that allows you to remotely
+execute a function, including sending parameters to the device and receiving
+data back from it.
+
+We've implemented a simple RPC that reads a string as a parameter and writes it
+to the ePaper display.
+
+Navigate to your device on [the Golioth Console](https://console.golioth.io/)
+
+1. Select Remote Procedure Call foom the table along the top of the device view
+2. Input "epaper" as the Method name
+3. Click on Add Parameter and type your message
+4. Click the Call Method button to execute the RPC
+
+![Golioth Remote Procedure Call](../assets/golioth-rpc.png)
+
+In the above example, I executed the RPC once when the MagTag was powered off,
+and again when it was powered on. What happens if you try to send a number
+instead of a string?
+
 ## Continued Learning
 
-Of course the device can also write to the LightDB State endpoint. One example of this is to have the MagTag set the `leds` endpoint to 15 at power up. Edit the `src/main.c` file and insert this code block just before the `while(true)` line of this example:
+Of course the device can also write to the LightDB State endpoint. One example
+of this is when the endpoint doesn't exist, the MagTag will set the `leds`
+endpoint to 15 as teh default. Look in the `src/main.c` and find the following
+code:
 
 ```c
-uint8_t endpoint_value[3];
-snprintk(endpoint_value, 3, "%d", 15);
-err = golioth_lightdb_set(
-        client,
-        GOLIOTH_LIGHTDB_PATH("leds"),
-        COAP_CONTENT_FORMAT_TEXT_PLAIN,
-        endpoint_value,
-        strlen(endpoint_value));
-LOG_INF("Set endpoint return code: %d", err);
+snprintk(str, 6, "%d", LEDS_DEFAULT_MASK);
+
+err = golioth_lightdb_set(client,
+        GOLIOTH_LIGHTDB_PATH(LEDS_ENDPOINT),
+        GOLIOTH_CONTENT_FORMAT_APP_JSON,
+        str,
+        strlen(str));
 ```
 
-With this code we are converting an integer value (15) to a string so that we can send it over the CoAP protocol as text. The `leds` endpoint is selected using the `GOLIOTH_LIGHTDB_PATH("leds")` helper macro, and it's all taken care of by the `golioth_lightdb_set()` function from the Golioth SDK. If everything went according to plan, you should see a log message in the Golioth Console that shows an endpoint return code of 0, which means no errors.
+With this code we are converting an integer value (LEDS_DEFAULT_MASK) to a
+string so that we can send it over the CoAP protocol as text. The `leds`
+endpoint is selected using the `GOLIOTH_LIGHTDB_PATH(LEDS_ENDPOINT)` helper
+macro, and it's all taken care of by the `golioth_lightdb_set()` function from
+the Golioth SDK.
 
-Compare this to the code that was [used to write accelerometer data](https://github.com/golioth/magtag-demo/blob/a168bcea548edcdf8e5102ded2d295dea2aa2b94/src/main.c#L25-L50) to LightDB Stream in the Stream example and you will see a more complex payload string built using `snprintk()`, and a different endpoint helper macro: `GOLIOTH_LIGHTDB_STREAM_PATH()`.
+Compare this to the code that was [used to write accelerometer
+data](https://github.com/golioth/magtag-demo/blob/e6b75a65e4c3a2863ae208dd8707cc7ecfefcfa8/src/main.c#L70-L93)
+to LightDB Stream in the Stream example and you will see a more complex payload
+string built using `snprintk()`, and a different endpoint helper macro:
+`GOLIOTH_LIGHTDB_STREAM_PATH()`.
 
 The endpoints that send data to either LightDB State or LightDB stream differ by just one letter. While we use macros in the above example, those simply add a prefix of `.d/` for State or `.s/` for Stream.
 
