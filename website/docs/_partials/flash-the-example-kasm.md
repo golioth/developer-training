@@ -1,18 +1,13 @@
-4. Flash the example
+4. Download and flash
 
-    Put the MagTag into DFU bootloader mode
+    * On KASM, run `merge_bin`, then download merged.bin using the left sidebar
+      menu
+    * Put the MagTag into bootloader mode by holding the Boot0 button, then
+      press and release the Reset button
+    * Run the flash command on your local machine:
 
-    1. Hold down the Boot0 button
-    2. Press and release the Reset button
+        ```
+        esptool.py --chip esp32s2 --port /dev/ttyACM0 write_flash 0x0 merged.bin
+        ```
 
-    Type the following command to start the firmware upgrade
-
-    ```bash
-    west flash
-    ```
-
-:::note
-If the flash is successful, **you will receive an error message** telling you that you must manually reset the device. Remember to press the reset button to run the newly flashed program. [Learn more about this](../zephyr-tips#you-must-press-the-reset-button-after-flashing-firmware).
-
-On some machines you will only have a few seconds to run the `west flash` command after entering bootloader mode. [Learn more about this](../zephyr-tips.md#errors-with-west-build-zephyr-tree-and-esp32-environmental-variables).
-:::
+    * Press the MagTag Reset button to start the new firmware
