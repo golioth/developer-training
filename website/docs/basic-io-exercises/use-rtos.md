@@ -19,20 +19,10 @@ In this exercise you will use two different approaches to having the RTOS blink 
 
 For this exercise we'll use the code we ended up with in the [Blinking an LED](mapping-gpio.md) exercise.
 
-<Tabs
-groupId="os"
-defaultValue="linux"
-values={[
-{label: 'Linux/MacOS', value: 'linux'},
-{label: 'Windows', value: 'windows'},
-]}>
-
-<TabItem value="linux">
-
 ```shell
-cd ~/golioth-zephyr-workspace/modules/lib/golioth/samples
+cd ~/magtag-training
 cp -r blinky-training rtos-training
-cd ~/golioth-zephyr-workspace/modules/lib/golioth/samples/rtos-training
+cd ~/magtag-training/deps/modules/lib/golioth/samples/rtos-training
 ```
 
 You shouldn't reuse the build directory from a different project. Let's remove it now to avoid build errors. It will be automatically regenerated.
@@ -40,24 +30,6 @@ You shouldn't reuse the build directory from a different project. Let's remove i
 ```shell
 rm -r build
 ```
-
-</TabItem>
-<TabItem value="windows">
-
-```shell
-cd C:\golioth-zephyr-workspace\modules\lib\golioth\samples
-Xcopy blinky-training\ rtos-training /E
-cd rtos-training
-```
-
-You shouldn't reuse the build directory from a different project. Let's remove it now to avoid build errors. It will be automatically regenerated.
-
-```shell
-rmdir /s build
-```
-
-</TabItem>
-</Tabs>
 
 You should already have a `boards` directory with the `esp32s2_saola.overlay` file inside it that sets up `led0`. We will not need to change anything in the devicetree.
 
