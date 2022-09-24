@@ -55,6 +55,28 @@ This streaming data can be queried using the [Golioth REST API](https://docs.gol
 
 Golioth also includes a LightDB State for persistent, mutable data. We will look at that feature in the next example.
 
+## Device Services: Change the frequency of readings
+
+Imagine you have 100 sensors in the field and wanted to update the rate at which
+they take their readings. This demo is set up to take advantage of the Golioth
+Settings Service, which can update a setting for all devices in the fleet with a
+single click, or target them individually or in groups.
+
+Navigate to your device on [the Golioth Console](https://console.golioth.io/)
+
+1. Select Device Settings from the left sidebar
+2. Click the Create button and set the key as `LOOP_DELAY_S`
+3. Choose Integer for data type
+4. Enter the desired delay between sensor readings (in seconds)
+
+![Setting up the LightDB State endpoint](../assets/golioth-device-settings-service.png)
+
+Your MagTag will immediately recognize the change and display a message.
+
+Settings can be adjusted from the project, blueprint, or device level. Try
+adjusting this value from the device-view Settings tab. Also notice that the state of
+the settings synchronization is reported in the summary page for your device.
+
 ## Continued Learning
 
 The Query Builder found in the LightDB Stream view of the Golioth Console is a powerful tool for visualizing your incoming data and for testing how the data you collect will be used. You can see [our post on Query Builder](https://blog.golioth.io/prototype-your-data-outputs-with-the-golioth-query-builder/) to learn more about this feature.
