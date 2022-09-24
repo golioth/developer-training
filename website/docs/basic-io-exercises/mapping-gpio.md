@@ -3,48 +3,23 @@ sidebar_position: 3
 description: "Fetch and use the pin assignments from the Devicetree in C code"
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 # Blinking an LED
 
 | ![MagTag LED on pin D13](assets/d13-LED.jpg) |
 |:--:|
 | Make this LED blink! |
 
-Making an LED blink is the "Hello World!" of the hardware universe. This exercise challenges you to set up the red LED on the underside of the MagTag board in devicetree. If you map it correctly with the alias `led0`, the stock Zephyr blinky example will do the rest.
+Making an LED blink is the "Hello World!" of the hardware universe. This exercise challenges you to set up the red LED on the underside of the MagTag board in Devicetree. If you map it correctly with the alias `led0`, the stock Zephyr blinky example will do the rest.
 
 ## Copy the Zephyr Blinky example
 
 Make a copy of the Zephyr Blinky example to work from
 
-<Tabs
-groupId="os"
-defaultValue="linux"
-values={[
-{label: 'Linux/MacOS', value: 'linux'},
-{label: 'Windows', value: 'windows'},
-]}>
-
-<TabItem value="linux">
-
 ```shell
-cd ~/golioth-zephyr-workspace/modules/lib/golioth/samples
-cp -r ~/golioth-zephyr-workspace/zephyr/samples/basic/blinky blinky-training
+cd ~/magtag-training/
+cp -r ~/magtag-training/deps/zephyr/samples/basic/blinky blinky-training
 cd blinky-training
 ```
-
-</TabItem>
-<TabItem value="windows">
-
-```shell
-cd C:\golioth-zephyr-workspace\modules\lib\golioth\samples
-Xcopy C:\golioth-zephyr-workspace\zephyr\samples\basic\blinky blinky-training\ /E
-cd blinky-training
-```
-
-</TabItem>
-</Tabs>
 
 1. Create a `boards` directory in your `blinky-training` folder
 2. Create a new file in the boards folder called `esp32s2_saola.overlay`
@@ -56,7 +31,7 @@ The MagTag board isn't officially supported in Zephyr, so we are using the DTS f
 To populate our overlay file you can just copy the needed parts of an existing DTS file.
 
 * The ESP32 WROVER kit has LEDs on it. We can study [the DTS file for that board](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/xtensa/esp_wrover_kit/esp_wrover_kit.dts) and use the parts we need for our MagTag:
-* open `golioth-zephyr-workspace/zephyr/boards/xtensa/esp_wrover_kit/esp_wrover_kit.dts`
+* open `~/magtag-training/deps/zephyr/boards/xtensa/esp_wrover_kit/esp_wrover_kit.dts`
 
 Here is the general structure you will need:
 
@@ -134,11 +109,11 @@ gpio_pin_set_dt(&led, 1);
 
 Here is the relevant code the from `main.c` file of the blinky example. Let's walk through what is happening:
 
-1. A macro is used to look at the devicetree and get the node information from the `led0` alias
+1. A macro is used to look at the Devicetree and get the node information from the `led0` alias
 2. Create a struct instance called `led` that contains the relevant pin information for led0
-3. The pin is configured. This function automatically pulls in any flags specified in the devicetree
+3. The pin is configured. This function automatically pulls in any flags specified in the Devicetree
 4. The pin is set to high (as an example we've shown the set function instead of the toggle function used in the blinky example)
 
-Notice that the macros and functions used all contain `dt` to indicate these operate on a devicetree node. There are equivalent functions/macros that operate directly, but we recommend always using the devicetree.
+Notice that the macros and functions used all contain `dt` to indicate these operate on a Devicetree node. There are equivalent functions/macros that operate directly, but we recommend always using the Devicetree.
 
 For more information on the Zephyr GPIO system, consult [the GPIO driver API reference](https://docs.zephyrproject.org/apidoc/latest/group__gpio__interface.html).
