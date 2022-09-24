@@ -3,48 +3,23 @@ sidebar_position: 4
 description: "Use interrupts to detect button pushes"
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
 # Add Button Input
 
 | ![MagTag Buttons on pins D11 and D12](assets/d11-d12-buttons.jpg) |
 |:--:|
 | Make button D11 work! |
 
-The Zephyr button example demonstrates interrupt-based button input. But you need to have a `sw0` (switch zero) defined in the devicetree to test it out. This exercise will build upon our progress from blinking the LED
+The Zephyr button example demonstrates interrupt-based button input. But you need to have a `sw0` (switch zero) defined in the Devicetree to test it out. This exercise will build upon our progress from blinking the LED
 
 ## Copy the Zephyr Button example
 
 Make a copy of the Zephyr Button example to work from
 
-<Tabs
-groupId="os"
-defaultValue="linux"
-values={[
-{label: 'Linux/MacOS', value: 'linux'},
-{label: 'Windows', value: 'windows'},
-]}>
-
-<TabItem value="linux">
-
 ```shell
-cd ~/golioth-zephyr-workspace/modules/lib/golioth/samples
-cp -r ~/golioth-zephyr-workspace/zephyr/samples/basic/button button-training
+cd ~/magtag-training/
+cp -r ~/magtag-training/deps/zephyr/samples/basic/button button-training
 cd button-training
 ```
-
-</TabItem>
-<TabItem value="windows">
-
-```shell
-cd C:\golioth-zephyr-workspace\modules\lib\golioth\samples
-Xcopy C:\golioth-zephyr-workspace\zephyr\samples\basic\button button-training\ /E
-cd button-training
-```
-
-</TabItem>
-</Tabs>
 
 1. Create a `boards` directory in your `button-training` folder
 2. Copy the `esp32s2_saola.overlay` from your LED example to the new `boards` directory
@@ -56,7 +31,7 @@ We can reuse the `led0` configuration in the overlay file, but we need to add an
 Last time we used a DTS file from the WROVER kit as reference, but that board doesn't have any buttons on it. What we're after is the basic structure of the overlay file, so it doesn't really matter what we use as a reference. This time, let's use the Freedom K64 dev board DTS file as an example:
 
 * Study [the DTS file for the frdm_k64f board](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/arm/frdm_k64f/frdm_k64f.dts) and use the parts we need for our MagTag:
-* open `golioth-zephyr-workspace/zephyr/boards/arm/frdm_k64f/frdm_k64f.dts`
+* open `~/magtag-training/deps/zephyr/boards/arm/frdm_k64f/frdm_k64f.dts`
 
 Add the following to your overlay file:
 
@@ -134,14 +109,14 @@ gpio_add_callback(button.port, &button_cb_data);
 
 Here is the button-related code the from `main.c` file of the button example. Let's walk through what is happening:
 
-1. A macro is used to look at the devicetree and get the node information from the `sw0` alias
+1. A macro is used to look at the Devicetree and get the node information from the `sw0` alias
 2. Create a struct instance called `button` that contains the relevant pin information for sw0
 3. Create a struct instance to pass information to the interrupt callback
-4. The pin is configured. This function automatically pulls in any flags specified in the devicetree
+4. The pin is configured. This function automatically pulls in any flags specified in the Devicetree
 5. The pin interrupt is configured
 6. The callback is initialized
 7. The callback is added
 
-Notice that the macros and functions used all contain `dt` to indicate these operate on a devicetree node. There are equivalent functions/macros that operate directly, but we recommend always using the devicetree.
+Notice that the macros and functions used all contain `dt` to indicate these operate on a Devicetree node. There are equivalent functions/macros that operate directly, but we recommend always using the Devicetree.
 
 For more information on the Zephyr GPIO system, consult [the GPIO driver API reference](https://docs.zephyrproject.org/apidoc/latest/group__gpio__interface.html).
