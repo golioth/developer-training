@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+description: Set up and use a sensor that has a driver built-in to Zephyr
 ---
 
 # Using Zephyr Sensor Drivers
