@@ -8,13 +8,13 @@ sidebar_position: 1
 
 This is a place where you're going to learn about Golioth features by programming real hardware using the Golioth Zephyr SDK.
 
-Plan to spend anywhere about 120 minutes to get through the majority of these demos and associated content. There are optional exercises for basic I/O and sensors when you have more time available. This is mainly meant as a guided training (either over video conference or in-person), but there will eventually be links to watch some of the presentation content asynchronously. 
+Plan to spend about 120 minutes to get through the majority of these demos and associated content. There are optional exercises for basic I/O and sensors when you have more time available. This is mainly meant as a guided training (either over video conference or in-person), but there will eventually be links to watch some of the presentation content asynchronously. 
 
 Instructors are here to offer a guiding hand and to answer questions live. In the event you're taking this training asynchronously, utilize [our forum](https://forum.golioth.io) and [our Discord channel](https://golioth.io/discord) for wherever you get stuck.
 
-## How can you use this material after training is over?
+## How can you use this information in your work?
 
-Developers who successfully complete this training should feel confident that they will be able to program and deploy a simple IoT system to the field in their application. Future training modules around more in-depth Zephyr RTOS utilization will better prepare them for creating even more custom embedded applications.
+Developers who successfully complete this training should be able to program and deploy a simple IoT system to the field in their application. Future training modules around more in-depth Zephyr RTOS utilization will better prepare them for creating even more custom embedded applications.
 
 ## What is Zephyr RTOS? Why are we learning it?
 
@@ -24,11 +24,12 @@ Golioth lives at the top of the Zephyr stack, meaning that we take advantage of 
 
 ## What is Kasm?
 
-Kasm is a tool with a virtual desktop workspace in a browser, preconfigured with Golioth tools. We believe this is the fastest way to get new developers building Zephyr projects and interacting with Golioth. 
+Kasm is a tool with a virtual desktop workspace in a browser, preconfigured with Golioth tools and the Zephyr toolchain. We believe this is the fastest way to get new developers building Zephyr projects and interacting with Golioth. You should be able to build a Zephyr + Golioth project almost immediate after entering the development environment.
 
 ![Kasm](./assets/Kasm.png)
 
-However, this also means that the trainee will need to set up the Zephyr toolchain after this training is over. Golioth staff is available to help make this process smoother. 
+
+Because this training uses a virtual build environment, this also means that the trainee will need to set up the Zephyr toolchain after this training is over. Golioth staff is available to help make this process smoother. All documentation to install the toolchain is included on [the Golioth Getting Started Guildes](https://docs.golioth.io).
 
 ## Command Line 
 
