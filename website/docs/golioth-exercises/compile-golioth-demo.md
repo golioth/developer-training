@@ -2,6 +2,9 @@
 sidebar_position: 2
 ---
 
+import HowToDownload from '/docs/\_partials/download-from-kasm.md'
+import VerboseFlash from '/docs/\_partials/flash-the-example-kasm-verbose.md';
+
 # Add Credentials to the Golioth Demo
 
 We begin with a full-featured demo! But for the MagTag to connect we must give
@@ -25,7 +28,9 @@ We are doing this so you can use this hardware and firmware on the MagTag to exp
 
 ## Workflow
 
-1. Go to your local copy of [the magtag-demo
+### Build in the KASM container
+
+1. In the KASM container, go to your local copy of [the magtag-demo
    repository](https://github.com/golioth/magtag-demo) and ensure you are on the
    `main` branch which is the hello example
 
@@ -53,11 +58,16 @@ We are doing this so you can use this hardware and firmware on the MagTag to exp
     west build -b esp32s2_saola . -D OVERLAY_CONFIG=credentials.conf -p
     ```
 
-import VerbostDownloadFlash from '/docs/\_partials/flash-the-example-kasm-verbose.md';
+4. Download the binary
 
-4. Download and flash
+    * Run `getbin` to package the compiled code and make it available for download
+    * Use the Download option in KASM's left sidebar to download `merged.bin` to your local machine.
 
-  <VerbostDownloadFlash/>
+  <HowToDownload/>
+
+### Update MagTag firmware from your local machine
+
+<VerboseFlash/>
 
 ## Expected Results
 

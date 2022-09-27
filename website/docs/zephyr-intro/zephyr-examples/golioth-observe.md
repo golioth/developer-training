@@ -4,6 +4,9 @@ sidebar_position: 6
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import CreateCredentials from '/docs/\_partials/create-credentials.md';
+import HowToDownload from '/docs/\_partials/download-from-kasm.md'
+import HowToFlash from '/docs/\_partials/flash-the-example-kasm.md'
 
 # Golioth Observe Example
 
@@ -26,20 +29,17 @@ We are learning to use the "state" version of Golioth's database services (Light
 
 ## Workflow
 
-### Program the MagTag
+### Build in the KASM container
 
-1. Go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo) and checkout the `observe` example:
+1. In the KASM container, go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo) and checkout the `observe` example:
 
     ```bash
     cd ~/magtag-training/app
     git checkout observe
     ```
+2. Create a file for WiFi and Golioth credentials
 
-import CreateCredentials from '/docs/\_partials/create-credentials.md';
-
-<CreateCredentials/>
-
-
+  <CreateCredentials/>
 
 3. Build the example, including the credentials file you just created
 
@@ -47,13 +47,18 @@ import CreateCredentials from '/docs/\_partials/create-credentials.md';
     west build -b esp32s2_saola . -D OVERLAY_CONFIG=credentials.conf -p
     ```
 
-import HowToFlash from '/docs/\_partials/flash-the-example-kasm.md'
+4. Download the binary
 
-4. Download and flash
+    * Run `getbin` to package the compiled code and make it available for download
+    * Use the Download option in KASM's left sidebar to download `merged.bin` to your local machine.
 
-  <HowToFlash/>
+  <HowToDownload/>
 
-### Setup the LightDB State endpoint
+### Update MagTag firmware from your local machine
+
+<HowToFlash/>
+
+## Setup the LightDB State endpoint
 
 1. Go to the Golioth Console and choose Management&rarr;Devices from the sidebar menu
 2. Click on the name of your device to enter the device view, then click the LightDB State icon to open up the right sidebar dialog
@@ -66,7 +71,7 @@ import HowToFlash from '/docs/\_partials/flash-the-example-kasm.md'
 
     ![Setting up the LightDB State endpoint](../assets/golioth-lightdb-state-endpoint.png)
 
-### Expected Results
+## Expected Results
 
 The Observe example will begin running after pressing the Reset button. You will see the center LEDs turn blue when the board is trying to connect to Golioth. When successful, all four LEDs will turn green, and a connected message will be shown on the ePaper display.
 

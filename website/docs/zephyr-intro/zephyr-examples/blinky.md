@@ -4,6 +4,8 @@ sidebar_position: 3
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import HowToDownload from '/docs/\_partials/download-from-kasm.md'
+import VerboseFlash from '/docs/\_partials/flash-the-example-kasm-verbose.md';
 
 # Blinky Example
 
@@ -22,7 +24,9 @@ Blinky shows that your toolchain is capable of building code correctly, that you
 
 ## Workflow
 
-1. Go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo) and checkout the `blinky` example:
+### Build in the KASM container
+
+1. In the KASM container, go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo) and checkout the `blinky` example:
 
     ```bash
     cd ~/Desktop/magtag-training/app
@@ -35,12 +39,16 @@ Blinky shows that your toolchain is capable of building code correctly, that you
     west build -b esp32s2_saola . -p
     ```
 
+3. Download the binary
 
-import VerbostDownloadFlash from '/docs/\_partials/flash-the-example-kasm-verbose.md';
+    * Run `getbin` to package the compiled code and make it available for download
+    * Use the Download option in KASM's left sidebar to download `merged.bin` to your local machine.
 
-3. Download and flash
+  <HowToDownload/>
 
-  <VerbostDownloadFlash/>
+### Update MagTag firmware from your local machine
+
+<VerboseFlash/>
 
 ## Expected Results
 

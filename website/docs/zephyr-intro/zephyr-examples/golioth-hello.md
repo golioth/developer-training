@@ -4,6 +4,8 @@ sidebar_position: 4
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import HowToDownload from '/docs/\_partials/download-from-kasm.md'
+import HowToFlash from '/docs/\_partials/flash-the-example-kasm.md'
 
 # Golioth Hello Example
 
@@ -21,9 +23,9 @@ The Hello example is the most basic network-connected example: a 'hello world' w
 
 ## Workflow
 
-### Program the MagTag
+### Build in the KASM container
 
-1. Go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo) and ensure you are on the `main` branch which is the hello example
+1. In the KASM container, go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo) and ensure you are on the `main` branch which is the hello example
 
     ```bash
     cd ~/Desktop/magtag-training/app
@@ -47,13 +49,18 @@ The Hello example is the most basic network-connected example: a 'hello world' w
     west build -b esp32s2_saola . -D OVERLAY_CONFIG=credentials.conf -p
     ```
 
-import HowToFlash from '/docs/\_partials/flash-the-example-kasm.md'
+4. Download the binary
 
-4. Download and flash
+    * Run `getbin` to package the compiled code and make it available for download
+    * Use the Download option in KASM's left sidebar to download `merged.bin` to your local machine.
 
-  <HowToFlash/>
+  <HowToDownload/>
 
-### Expected Results
+### Update MagTag firmware from your local machine
+
+<HowToFlash/>
+
+## Expected Results
 
 After flashing the example you need to press the Reset button to run the program. Your MagTag may not visibly react for a few seconds as it initializes the WiFi hardware. The two center LEDs will turn blue as the board attempts to connect to the internet and establish a secure connection with Golioth. The Golioth logo will be displayed on the ePaper screen during this time.
 
