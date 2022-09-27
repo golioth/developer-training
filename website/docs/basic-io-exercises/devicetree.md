@@ -8,13 +8,22 @@ description: "Using Devicetree to map pins for input or output"
 Zephyr uses Devicetree bindings to associate pins, peripherals, and external
 hardware with an abstract definition in your code.
 
-It won't take long for you to appreciate the power of this approach. If for some
-reason you need to change which pins are being used for a project, or you need
-to update the type of sensor you are using, it can be as easy as changing a few
-lines in your Devicetree overlay file, and leaving your C code completely
-untouched.
+It won't take long for you to appreciate the power of this approach. If for some reason you need to change which pins are being used for a project, or you need to update the type of sensor you are using, it can be as easy as changing a few lines in your Devicetree overlay file, and leaving your C code completely untouched.
 
-## DTS Files
+## Learning Objectives
+Understanding DeviceTree will allow you to work with a wider range of development boards than just the MagTag. It will also allow you to create custom hardware and interface to the peripherals on that hardware. 
+
+### Desired outcome(s)
+* Understand the formatting of DeviceTree
+* Understand inheritance of "overlay files" and how they impact the DeviceTree
+
+### Time Estimate
+
+* 5 minutes
+
+
+## Workflow
+### DTS Files
 
 All devices that are supported in Zephyr have a Devicetree source (DTS) included
 in the codebase. These files provide all of the hardware details Zephyr needs to
@@ -56,7 +65,7 @@ those pins is configured with a pull-up resistor enabled.
 };
 ```
 
-## Changing pin assignments with and overlay file
+### Changing pin assignments with and overlay file
 
 Each project can specify one or more Devicetree overlay files. This is where
 your application code will declare its intention to use pins and peripherals.
@@ -85,7 +94,7 @@ Overlay files are located in a `boards/` subdirectory of your application code.
 };
 ```
 
-## The pinctrl subsystem
+### The pinctrl subsystem
 
 Special function pins like the SDA/SCL lines are specified using the pinctrl
 subsystem of Zephyr. The syntax for these pins varies from one chip manufacturer
@@ -128,14 +137,14 @@ overlay files from sample code, and review [the pinctrl post on the Golioth
 blog](https://blog.golioth.io/how-to-use-zephyr-pin-control-pinctrl-for-pin-multiplexing-and-configuration/)
 to help build your early understanding.
 
-## Devicetree files at build time
+### Devicetree files at build time
 
 All Devicetree files are merged together at build time. Anything your overlay
 files change will be incorporated with inherited settings from the board and/or
 chip DTS files. Notice that a lot of properties from the chip's `esp32s2.dtsi`
 file have joined the i2c settings we saw in the overlay file:
 
-```js title="Excerpts from ~/magtag-training/app/build/zephyr/zepyr.dts whosing i2c1 pins and configuration"
+```js title="Excerpts from ~/Desktop/magtag-training/app/build/zephyr/zepyr.dts whosing i2c1 pins and configuration"
 / {
 	#address-cells = < 0x1 >;
 	#size-cells = < 0x1 >;
@@ -193,7 +202,7 @@ the ESP32s2), you add your overlay file for that variant and the Devicetree will
 pull in the correct register address and other settings for the new part without
 anything more than changing the board name in the build command.
 
-## Some Devicetree resources to keep in mind
+### Some Devicetree resources to keep in mind
 
 Today's training will guide you through your first small steps in using
 Devicetree. As you advance, consider reading through [the Zephyr Devicetree

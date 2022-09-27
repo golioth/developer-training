@@ -7,19 +7,19 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 # Try the RTOS
+## Learning Objectives
 
-When you made the red LED blink, it was using a sleep function in the main loop.
-For actual embedded development this is almost never allowed, and timers are
-used instead. One benefit of using a Real Time Operating System (RTOS) like
-Zephyr is that it will take care of scheduling for you.
+When you made the red LED blink, it was using a sleep function in the main loop. For actual embedded development this is almost never allowed, and timers are used instead. One benefit of using a Real Time Operating System (RTOS) like
+Zephyr is that it will take care of scheduling for you. In this exercise you will use two different approaches to having the RTOS blink the red LED for you.
+### Desired outcome(s)
+* Understand how to Blink using a timer in the RTOS
+* Understand how to Blink using a dedicated thread in the RTOS
+### Time Estimate
+* 20 minutes
 
-In this exercise you will use two different approaches to having the RTOS blink
-the red LED for you:
+## Workflow 1 - Timer
 
-* Blink using a timer
-* Blink using a dedicated thread
-
-## Use the blinky-training example
+### Use the blinky-training example
 
 For this exercise we'll use the code we ended up with in the [Blinking an
 LED](mapping-gpio.md) exercise.
@@ -41,7 +41,7 @@ You should already have a `boards` directory with the `esp32s2_saola.overlay`
 file inside it that sets up `led0`. We will not need to change anything in the
 devicetree.
 
-## Blinking with a timer
+### Blinking with a timer
 
 Timers are easy to use in Zephyr. There are just three things we need to do:
 
@@ -109,10 +109,11 @@ the second value to `K_NO_WAIT`.
 
 ### Build and flash the Timers example
 
-```shell
-west build -b esp32s2_saola . -p
-west flash
-```
+import HowToFlash from '/docs/\_partials/flash-the-example-kasm.md'
+
+<HowToFlash/>
+
+### Expected outcome
 
 Make sure the LED blinks as expected, then play around with different timer
 values to see how they work.
@@ -120,7 +121,7 @@ values to see how they work.
 For more information on Zephyr Timers, consult [the Timers
 documentation](https://docs.zephyrproject.org/latest/kernel/services/timing/timers.html).
 
-## Blinking as a thread
+## Workflow 2 - Thread
 
 You can also blink the LED by giving it its own thread. Once started, the
 scheduler will monitor the thread, servicing it when needed, and returing to
@@ -130,6 +131,8 @@ need to do:
 * Make a function that will run as its own thread
 * Define the thread
 * Start the thread
+
+### Add a thread
 
 In the `src/main.c` file:
 
@@ -199,10 +202,11 @@ whenever the thread is serviced, and the priority level.
 
 ### Build and flash the Threads example
 
-```shell
-west build -b esp32s2_saola . -p
-west flash
-```
+import HowToFlash2 from '/docs/\_partials/flash-the-example-kasm.md'
+
+<HowToFlash2/>
+
+### Expected outcome
 
 Make sure the LED blinks as expected. Delving deeply into how these threads work
 is beyond the scope of this session. But an important lesson is that you
