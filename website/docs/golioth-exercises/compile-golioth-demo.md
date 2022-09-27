@@ -53,9 +53,11 @@ We are doing this so you can use this hardware and firmware on the MagTag to exp
     west build -b esp32s2_saola . -D OVERLAY_CONFIG=credentials.conf -p
     ```
 
-import HowToFlash from "/docs/\_partials/flash-the-example-kasm.md"
+import VerbostDownloadFlash from '/docs/\_partials/flash-the-example-kasm-verbose.md';
 
-<HowToFlash/>
+4. Download and flash
+
+  <VerbostDownloadFlash/>
 
 ## Expected Results
 

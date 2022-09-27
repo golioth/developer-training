@@ -35,9 +35,7 @@ We are learning to use the "state" version of Golioth's database services (Light
     git checkout observe
     ```
 
-2. Create a file for WiFi and Golioth credentials
-
-import CreateCredentials from '/docs/\_partials/create-credentials.md'
+import CreateCredentials from '/docs/\_partials/create-credentials.md';
 
 <CreateCredentials/>
 
