@@ -9,7 +9,24 @@ import TabItem from '@theme/TabItem';
 
 The Observe example configures the MagTag to watch a LightDB state endpoint on the Golioth servers for changes. When data is updated on the could, the device recognizes this quickly and a callback is executed. For this example, a LightDB State endpoint called `leds` will monitor a value from 0 to 15 to control the on/off state of the LEDs on the MagTag.
 
-## Program the MagTag
+## Learning Objectives
+We are learning to use the "state" version of Golioth's database services (LightDB state), because it represents another way to send data down to devices in the field. This is part of a broader "command and control" (C&C) need for IoT devices. Golioth services that fall under the heading of C&C are:
+* LightDB State - part of this Observe Example
+* Remote Procedure Call (RPC)- part of this Observe Example
+* Settings Service- part of [the Stream Example](/docs/zephyr-intro/zephyr-examples/golioth-stream)
+
+### Desired outcome(s)
+* Understand how to create LightDB State variables
+* Understand what an "endpoint" is
+* Understand how to use Callbacks in Zephyr
+
+### Time Estimate
+
+* 15 minutes 
+
+## Workflow
+
+### Program the MagTag
 
 1. Go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo) and checkout the `observe` example:
 
@@ -20,14 +37,11 @@ The Observe example configures the MagTag to watch a LightDB state endpoint on t
 
 2. Create a file for WiFi and Golioth credentials
 
-    * Make a copy of `credentials.conf_example` and name it `credentials.conf`
+import CreateCredentials from '/docs/\_partials/create-credentials.md'
 
-        ```
-        cp credentials.conf_example credentials.conf
-        ```
+<CreateCredentials/>
 
-    * Edit this new file to include your WiFi credentials and the PSK-ID/PSK from the device page on your Golioth console
-    * This file will be ignored by git, and may be reused in other examples.
+
 
 3. Build the example, including the credentials file you just created
 
@@ -35,11 +49,13 @@ The Observe example configures the MagTag to watch a LightDB state endpoint on t
     west build -b esp32s2_saola . -D OVERLAY_CONFIG=credentials.conf -p
     ```
 
+4. Download and flash
+
 import HowToFlash from '/docs/\_partials/flash-the-example-kasm.md'
 
 <HowToFlash/>
 
-## Setup the LightDB State endpoint
+### Setup the LightDB State endpoint
 
 1. Go to the Golioth Console and choose Management&rarr;Devices from the sidebar menu
 2. Click on the name of your device to enter the device view, then click the LightDB State icon to open up the right sidebar dialog
@@ -52,13 +68,13 @@ import HowToFlash from '/docs/\_partials/flash-the-example-kasm.md'
 
     ![Setting up the LightDB State endpoint](../assets/golioth-lightdb-state-endpoint.png)
 
-## Expected Results
+### Expected Results
 
 The Observe example will begin running after pressing the Reset button. You will see the center LEDs turn blue when the board is trying to connect to Golioth. When successful, all four LEDs will turn green, and a connected message will be shown on the ePaper display.
 
 The LEDs will remain green until a change to the `leds` endpoint is detected, including the first time it subscribes to observe this data at power up. The color of LEDs 0..3 will be set to red/green/blue/red. The on/off state of each LED is controlled by the value of the `leds` endpoint. This value is a binary mask, so changing that value to 0 will switch all LEDs off, changing it to 8 will turn on LED3 and turn all others off. Each time a new value is observed, it will be displayed on the ePaper screen. Try changing this number and observing the behavior, noting that values outside of the 0..15 range will be ignored.
 
-## Remote Procedure Call: Write to ePaper display
+### Remote Procedure Call: Write to ePaper display
 
 Remote Precedure Call (RPC) is a Golioth feature that allows you to remotely
 execute a function, including sending parameters to the device and receiving
@@ -80,7 +96,7 @@ In the above example, I executed the RPC once when the MagTag was powered off,
 and again when it was powered on. What happens if you try to send a number
 instead of a string?
 
-## Continued Learning
+### Continued Learning
 
 Of course the device can also write to the LightDB State endpoint. One example
 of this is when the endpoint doesn't exist, the MagTag will set the `leds`
