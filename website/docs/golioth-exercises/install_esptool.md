@@ -9,7 +9,7 @@ We are using `esptool.py` to interact with the MagTag hardware directly from you
 
 ### Desired outcome(s)
 * Be able to connect to the device using `esptool.py`
-### Approximate time
+### Time Estimate
 * This section should take approximately 1-2 minutes.
 
 ## Workflow

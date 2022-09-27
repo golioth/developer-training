@@ -18,7 +18,7 @@ We are doing this so you can use this hardware and firmware on the MagTag to exp
 * Build a binary containing those credentials.
 * Download the built binary and load it onto the MagTag hardware.
 * See the device connect to Golioth over WiFi
-### Approximate time
+### Time Estimate
 
 * This section will take 5-20 minutes
   * Depending on experience with Zephyr and the `west` meta tool.
