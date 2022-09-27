@@ -22,7 +22,7 @@ Understanding DeviceTree will allow you to work with a wider range of developmen
 * 5 minutes
 
 
-## Workflow
+## Background Information
 ### DTS Files
 
 All devices that are supported in Zephyr have a Devicetree source (DTS) included
