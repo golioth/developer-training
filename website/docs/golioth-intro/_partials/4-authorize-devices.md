@@ -1,1 +1,1 @@
-../../../../submodule-goliothdocs/docs/getting-started/1-console/4-authorize-devices.md
+../../../../submodule-goliothdocs/docs/getting-started/2-console/4-authorize-devices.md
