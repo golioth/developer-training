@@ -11,6 +11,23 @@ The Stream example sends accelerometer sensor data to the Golioth Cloud every
 few seconds. Each JSON object receives a timestamp and is stored in a database
 we refer to as LightDB stream.
 
+## Learning Objectives
+
+We want to understand time-series data and how to interact with it in Zephyr. 
+
+### Desired outcome(s)
+* See time-series data delivered to the Golioth cloud.
+* Understand the APIs sending to the time series database.
+* Try out the Settings Service.
+
+### Time Estimate
+
+* 10 minutes 
+
+## Workflow
+
+### Program the MagTag
+
 1. Go to your local copy of [the magtag-demo
    repository](https://github.com/golioth/magtag-demo) and checkout the `stream`
    example:
@@ -22,27 +39,22 @@ we refer to as LightDB stream.
 
 2. Create a file for WiFi and Golioth credentials
 
-    * Make a copy of `credentials.conf_example` and name it `credentials.conf`
+import CreateCredentials from '/docs/\_partials/create-credentials.md'
 
-        ```
-        cp credentials.conf_example credentials.conf
-        ```
-
-    * Edit this new file to include your WiFi credentials and the PSK-ID/PSK
-      from the device page on your Golioth console
-    * This file will be ignored by git, and may be reused in other examples.
+<CreateCredentials/>
 
 3. Build the example, including the credentials file you just created
 
     ```bash
     west build -b esp32s2_saola . -D OVERLAY_CONFIG=credentials.conf -p
     ```
+4. Download and flash
 
 import HowToFlash from '/docs/\_partials/flash-the-example-kasm.md'
 
 <HowToFlash/>
 
-## Expected Results
+### Expected Results
 
 The Stream example will begin running after pressing the Reset button. You will
 see the center LEDs turn blue when the board is trying to connect to Golioth.
@@ -72,12 +84,9 @@ stream data to be graphed and visualized to meet your needs.
 Golioth also includes a LightDB State for persistent, mutable data. We will look
 at that feature in the next example.
 
-## Device Services: Change the frequency of readings
+### Settings Service: Change the frequency of readings
 
-Imagine you have 100 sensors in the field and wanted to update the rate at which
-they take their readings. This demo is set up to take advantage of the Golioth
-Settings Service, which can update a setting for all devices in the fleet with a
-single click, or target them individually or in groups.
+Imagine you have 100 sensors in the field and wanted to update the rate at which they take their readings. This demo is set up to take advantage of the Golioth Settings Service, which can update a setting for all devices in the fleet with a single click, or target them individually or in groups.
 
 Navigate to your device on [the Golioth Console](https://console.golioth.io/)
 
@@ -91,13 +100,22 @@ Navigate to your device on [the Golioth Console](https://console.golioth.io/)
 Your MagTag will immediately recognize the change and display a message.
 
 Settings can be adjusted from the project, blueprint, or device level. Try
-adjusting this value from the device-view Settings tab. Also notice that the state of
-the settings synchronization is reported in the summary page for your device.
+adjusting this value from the device-view Settings tab. Also notice that the state of the settings synchronization is reported in the summary page for your device.
 
-## Continued Learning
+### Continued Learning
 
 The Query Builder found in the LightDB Stream view of the Golioth Console is a
 powerful tool for visualizing your incoming data and for testing how the data
 you collect will be used. You can see [our post on Query
 Builder](https://blog.golioth.io/prototype-your-data-outputs-with-the-golioth-query-builder/)
 to learn more about this feature.
+
+## Challenge: Modifying Stream
+
+* Find the source files for Stream. 
+* Modify the JSON message going back to the Golioth cloud
+* Recompile/reflash -- Try leaving off the `-p` command for a faster recompile.
+
+### Questions:
+1. What are the inputs to send data to the Stream API?
+2. How do you format sensor data to send to the Stream API?
