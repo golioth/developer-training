@@ -47,11 +47,11 @@ The Hello example is the most basic network-connected example: a 'hello world' w
     west build -b esp32s2_saola . -D OVERLAY_CONFIG=credentials.conf -p
     ```
 
-4. Download and flash
-
 import HowToFlash from '/docs/\_partials/flash-the-example-kasm.md'
 
-<HowToFlash/>
+4. Download and flash
+
+  <HowToFlash/>
 
 ### Expected Results
 
