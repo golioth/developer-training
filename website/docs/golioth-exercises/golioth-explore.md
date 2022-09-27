@@ -14,7 +14,7 @@ Now that we have a piece of hardware/firmware that can connect to Golioth, we ar
 
 ### Approximate time
 
-* This section will take approximately 5-10 minutes
+* This section will take 5-10 minutes
 
 
 ## LightDB State vs Stream: A brief overview

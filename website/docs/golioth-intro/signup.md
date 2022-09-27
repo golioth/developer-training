@@ -8,9 +8,14 @@ This section includes references to [the Golioth docs site](https://docs.golioth
 
 ## Learning Objectives
 
-* **Summary:** Sign up for the Console to get your Golioth account. Go through the wizard steps outlined on the Docs page and on the Console itself in order to provision your first device. The credentials created here allow your device (MagTag for these examples) to authenticate on the Golioth Cloud.
-* **Desired Outcome:** By the end of this section you should understand how to add a single device to the console and access the credentials for use on your device.
-* **Approximate time:** 5 minutes
+This section is to get you signed up with a Golioth account, which is required for getting credentials so your device can authenticate to Golioth and later accessing device data on the Console. There is a 'wizard' that will guide you through creating your first device on the platform.
+
+### Desired Outcome 
+
+* Understand how to add a single device to the console
+* Be able to access the credentials for use on your device.
+### Time Estimate
+* 5 minutes
 
 ## Signup and Provision your first device
 

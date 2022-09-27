@@ -12,7 +12,7 @@ The goal of this section of training is to learn more about the Golioth platform
 * View and filter remote logging messages
 * View and query Stream data received from devices
 
-### Approximate time
+### Time Estimate
 This section should take approximately 10-20 minutes.
 
 ## Workflow overview
