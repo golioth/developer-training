@@ -15,11 +15,36 @@ As a reminder, this is a two step process, involving the Kasm (browser based bui
 
 3. Run the flash command on your local machine:
 
-   ```
-   esptool.py --chip esp32s2 --port /dev/ttyACM0 write_flash 0x0 merged.bin
-   ```
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs
+groupId="os"
+defaultValue="linux"
+values={[
+{label: 'Linux/MacOS', value: 'linux'},
+{label: 'Windows', value: 'windows'},
+]}>
+
+<TabItem value="linux">
+
+  ```
+  esptool.py --chip esp32s2 --port /dev/ttyACM0 write_flash 0x0 merged.bin
+  ```
+
+</TabItem>
+<TabItem value="windows">
+
+  ```
+  python -m esptool --chip esp32s2 --port com3 write_flash 0x0 merged.bin
+  ```
+
+</TabItem>
+</Tabs>
 
 4. Press the MagTag **Reset** button to start the new firmware
+
+<br />
 
 :::note
 If the flash is successful, **you will receive an error message** telling you that you must manually reset the device. Remember to press the reset button to run the newly flashed program. [Learn more about this](/docs/zephyr-intro/zephyr-tips#you-must-press-the-reset-button-after-flashing-firmware).
