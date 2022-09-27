@@ -12,7 +12,7 @@ Now that we have a piece of hardware/firmware that can connect to Golioth, we ar
 * Understand different ways of sending a chunk of data back to Golioth.
 * Understand how to simplify streaming data views using the Query builder.
 
-### Approximate time
+### Time Estimate
 
 * This section will take 5-10 minutes
 
