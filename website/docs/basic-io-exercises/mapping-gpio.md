@@ -5,19 +5,32 @@ description: "Fetch and use the pin assignments from the Devicetree in C code"
 
 # Blinking an LED
 
+
 | ![MagTag LED on pin D13](assets/d13-LED.jpg) |
 |:--:|
 | Make this LED blink! |
 
-Making an LED blink is the "Hello World!" of the hardware universe. This exercise challenges you to set up the red LED on the underside of the MagTag board in Devicetree. If you map it correctly with the alias `led0`, the stock Zephyr blinky example will do the rest.
 
-## Copy the Zephyr Blinky example
+## Learning Objectives
+Making an LED blink is the "Hello World!" of the hardware universe. This exercise challenges you to set up the red LED on the underside of the MagTag board in Devicetree. If you map it correctly with the alias `led0`, the stock Zephyr blinky example will do the rest.
+### Desired outcome(s)
+* Modify the Zephyr blinky example
+* Create an overlay file
+* Load the new binary to your board
+* See an LED blinking!
+
+### Time Estimate
+* 10 minutes
+
+## Workflow
+
+### Copy the Zephyr Blinky example
 
 Make a copy of the Zephyr Blinky example to work from
 
 ```shell
-cd ~/magtag-training/
-cp -r ~/magtag-training/deps/zephyr/samples/basic/blinky blinky-training
+cd ~/Desktop/magtag-training/
+cp -r ~/Desktop/magtag-training/deps/zephyr/samples/basic/blinky blinky-training
 cd blinky-training
 ```
 
@@ -26,7 +39,7 @@ cd blinky-training
 
 The MagTag board isn't officially supported in Zephyr, so we are using the DTS files for the Espressif Saola dev board which uses the same ESP32s2 module.
 
-## Exercise: Add `led0` to your empty overlay file
+### Exercise: Add `led0` to your empty overlay file
 
 To populate our overlay file you can just copy the needed parts of an existing DTS file.
 
@@ -89,14 +102,11 @@ Of note:
 
 </details>
 
-## Build and flash the example
+### Build and flash the example
 
-Now that we set up our LED in the overlay file, let's build and run the app to make sure it blinks:
+import HowToFlash from '/docs/\_partials/flash-the-example-kasm.md'
 
-```shell
-west build -b esp32s2_saola . -p
-west flash
-```
+<HowToFlash/>
 
 ## C code walkthrough
 

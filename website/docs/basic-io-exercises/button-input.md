@@ -13,13 +13,25 @@ The Zephyr button example demonstrates interrupt-based button input. But you
 need to have a `sw0` (switch zero) defined in the Devicetree to test it out.
 This exercise will build upon our progress from blinking the LED
 
-## Copy the Zephyr Button example
+## Learning Objectives
+We are learning about interrupts and how to map pins that trigger interrupts (in this case with a button press). This is an important part of any RTOS and a common element of custom hardware you will build.
+### Desired outcome(s)
+* Understand how to map an arbitrary pin input in the DeviceTree
+* Understand how to work with interrupts in Zephyr
+
+### Time Estimate
+* 15 minutes
+
+
+## Workflow
+
+### Copy the Zephyr Button example
 
 Make a copy of the Zephyr Button example to work from
 
 ```shell
-cd ~/magtag-training/
-cp -r ~/magtag-training/deps/zephyr/samples/basic/button button-training
+cd ~/Desktop/magtag-training/
+cp -r ~/Desktop/magtag-training/deps/zephyr/samples/basic/button button-training
 cd button-training
 ```
 
@@ -27,7 +39,7 @@ cd button-training
 2. Copy the `esp32s2_saola.overlay` from your LED example to the new `boards`
    directory
 
-## Exercise: Add `sw0` to your existing overlay file
+### Exercise: Add `sw0` to your existing overlay file
 
 We can reuse the `led0` configuration in the overlay file, but we need to add an
 alias and binding for `sw0`
@@ -102,15 +114,13 @@ Of note:
 
 </details>
 
-## Build and flash the example
+### Build and flash the example
 
-Now that we set up our LED in the overlay file, let's build and run the app to
-make sure it blinks:
+import HowToFlash from '/docs/\_partials/flash-the-example-kasm.md'
 
-```shell
-west build -b esp32s2_saola . -p
-west flash
-```
+<HowToFlash/>
+
+### Expected outcome
 
 The red led on the underside of the MagTag will illuminate when the button is
 pressed and go out when it is released. This is done with polling, but if you
