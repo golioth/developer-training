@@ -37,8 +37,6 @@ We want to understand time-series data and how to interact with it in Zephyr.
     git checkout stream
     ```
 
-2. Create a file for WiFi and Golioth credentials
-
 import CreateCredentials from '/docs/\_partials/create-credentials.md'
 
 <CreateCredentials/>

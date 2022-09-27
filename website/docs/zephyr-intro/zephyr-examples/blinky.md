@@ -35,12 +35,12 @@ Blinky shows that your toolchain is capable of building code correctly, that you
     west build -b esp32s2_saola . -p
     ```
 
+
+import VerbostDownloadFlash from '/docs/\_partials/flash-the-example-kasm-verbose.md';
+
 3. Download and flash
 
-import HowToFlash from '/docs/\_partials/flash-the-example-kasm.md'
-
-<HowToFlash/>
-
+  <VerbostDownloadFlash/>
 
 ## Expected Results
 
