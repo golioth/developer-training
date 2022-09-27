@@ -4,6 +4,9 @@ sidebar_position: 5
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import CreateCredentials from '/docs/\_partials/create-credentials.md';
+import HowToDownload from '/docs/\_partials/download-from-kasm.md'
+import HowToFlash from '/docs/\_partials/flash-the-example-kasm.md'
 
 # Golioth Stream Example
 
@@ -26,9 +29,9 @@ We want to understand time-series data and how to interact with it in Zephyr.
 
 ## Workflow
 
-### Program the MagTag
+### Build in the KASM container
 
-1. Go to your local copy of [the magtag-demo
+1. In the KASM container, go to your local copy of [the magtag-demo
    repository](https://github.com/golioth/magtag-demo) and checkout the `stream`
    example:
 
@@ -36,8 +39,6 @@ We want to understand time-series data and how to interact with it in Zephyr.
     cd ~/magtag-training/app
     git checkout stream
     ```
-
-import CreateCredentials from '/docs/\_partials/create-credentials.md'
 
 <CreateCredentials/>
 
@@ -47,13 +48,18 @@ import CreateCredentials from '/docs/\_partials/create-credentials.md'
     west build -b esp32s2_saola . -D OVERLAY_CONFIG=credentials.conf -p
     ```
 
-import HowToFlash from '/docs/\_partials/flash-the-example-kasm.md'
+4. Download the binary
 
-4. Download and flash
+    * Run `getbin` to package the compiled code and make it available for download
+    * Use the Download option in KASM's left sidebar to download `merged.bin` to your local machine.
 
-  <HowToFlash/>
+  <HowToDownload/>
 
-### Expected Results
+### Update MagTag firmware from your local machine
+
+<HowToFlash/>
+
+## Expected Results
 
 The Stream example will begin running after pressing the Reset button. You will
 see the center LEDs turn blue when the board is trying to connect to Golioth.

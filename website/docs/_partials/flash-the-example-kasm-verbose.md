@@ -1,46 +1,41 @@
-:::tip
-As a reminder, this is a two step process, involving the Kasm (browser based build tool) and your local machine.
-:::
-
-1. On KASM, run `getbin` (preconfigured bash command in), then download merged.bin using the left sidebar
-      menu
-
-      ![How to download binaries from Kasm](./assets/kasm_download_binary.png)
-
+1. Use the USB cable to plug the MagTag into your local computer. Ensure the
+   power switch is in the 'On' position.
 2. Put the MagTag into DFU bootloader mode
-      1. Hold down the Boot0 button
-      2. Press and release the Reset button
+    1. Hold down the Boot0 button
+    2. Press and release the Reset button
 
       ![MagTag Boot0 and Reset buttons](./assets/magtag-bootloader-mode.jpg)
-
-3. Run the flash command on your local machine:
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-<Tabs
-groupId="os"
-defaultValue="linux"
-values={[
-{label: 'Linux/MacOS', value: 'linux'},
-{label: 'Windows', value: 'windows'},
-]}>
+2. Run the flash command on your local machine:
 
-<TabItem value="linux">
+  <Tabs
+  groupId="os"
+  defaultValue="linux"
+  values={[
+  {label: 'Linux/MacOS', value: 'linux'},
+  {label: 'Windows', value: 'windows'},
+  ]}>
+
+  <TabItem value="linux">
 
   ```
+  cd ~/Downloads
   esptool.py --chip esp32s2 --port /dev/ttyACM0 write_flash 0x0 merged.bin
   ```
 
-</TabItem>
-<TabItem value="windows">
+  </TabItem>
+  <TabItem value="windows">
 
   ```
+  cd %HOMEPATH%/Downloads
   python -m esptool --chip esp32s2 --port com3 write_flash 0x0 merged.bin
   ```
 
-</TabItem>
-</Tabs>
+  </TabItem>
+  </Tabs>
 
 4. Press the MagTag **Reset** button to start the new firmware
 
