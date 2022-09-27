@@ -11,13 +11,25 @@ For this exercise you will be building an app that reads temperature and
 humidity data from an [Infineon
 DPS310](https://www.infineon.com/cms/en/product/sensor/pressure-sensors/pressure-sensors-for-iot/dps310/)
 pressure and temperature sensor. The concepts are similar for any supported
-sensor, so if you don't have this part you can still follow along, assuming that
-there is a driver for the sensor you do have on hand. The best place to look for
-driver support is in the
-[driver/sensor](https://github.com/zephyrproject-rtos/zephyr/tree/main/drivers/sensor)
-folder of the Zephyr toolchain.
+sensor, so if you don't have this part you can still follow along, assuming that there is a driver for the sensor you do have on hand. The best place to look for driver support is in the [driver/sensor](https://github.com/zephyrproject-rtos/zephyr/tree/main/drivers/sensor) folder of the Zephyr toolchain.
+## Learning Objectives
+When you want to implement a new sensor on a piece of hardware, you need to write firmware for it. If you choose a sensor that already has a device driver in Zephyr, you can cut down on the overall amount of code you write, but you will need to understand how to hook up the sensor firmware to utilize the driver (non-intuitive, unfortunately).
 
-## Connecting the Sensor
+### Desired outcome(s)
+* Understand where to find Zephyr sensor driver code
+* Understand how to hook up the sensor driver code to your application
+* Understand how to utilize the data coming back from the sensor driver code
+* Understand how to pipe that data to other parts of your application, like sending it to the Golioth Cloud.
+
+### Time Estimate
+* 20 minutes
+
+
+
+
+## Background information
+
+### Connecting the Sensor
 
 This sensor includes an i2c interface which is easy to connect to the MagTag
 using a QWiic cable.
@@ -28,7 +40,7 @@ After referencing [the MagTag schematic](https://learn.adafruit.com/assets/96946
 we see the SDA and SCL pins are on IO33 and IO34. With this information in hand,
 we can create an overlay file that defines the DPS310 in the Devicetree.
 
-## Devicetree and Pin Control
+### Devicetree and Pin Control
 
 We need to use an i2c peripheral. An entry already exists for `i2c1` in the
 esp32s2_saola dts file:
@@ -115,7 +127,7 @@ Devicetree entries are all that is needed to set up the hardware abstraction for
 the i2c peripheral, and the DPS310 part itself. But remapping peripheral pins
 requires the use of a pinctrl node too.
 
-## Using Kconfig to build in the necessary libraries
+### Using Kconfig to build in the necessary libraries
 
 Up to this point we've spent quite a bit of time on Devicetree but have not even
 touched on the other half of Zephyr configuration. Kconfig is a series of files
@@ -133,7 +145,7 @@ CONFIG_SENSOR=y
 CONFIG_DPS310=y
 ```
 
-## Getting the sensor node from Devicetree and using it
+### Getting the sensor node from Devicetree and using it
 
 It is surprisingly easy to pull in the sensor node and use it. This is thanks to
 the uniformed API that Zephyr has implemented for sensors.
@@ -180,8 +192,8 @@ void main(void)
 	}
 }
 ```
-
-## Exercise: Run DSP310 Code Sample
+## Workflow
+### Exercise: Run DSP310 Code Sample
 
 A [code sample for the
 DPS310](https://github.com/zephyrproject-rtos/zephyr/tree/main/samples/sensor/dps310)
@@ -201,7 +213,7 @@ Alter `main.c` to work with the way your overlay file defines the sensor.
 4. Build, flash, and run the sample. Verify it is printing pressure and
 temperature data to the serial console.
 
-## Exercise: Stream DPS310 Data to Golioth LightDB
+### Exercise: Stream DPS310 Data to Golioth LightDB
 
 Make this example into an IoT device by sending the senor readings to Golioth's
 LightDB Stream. To be successful at this, you will need to combine a few
