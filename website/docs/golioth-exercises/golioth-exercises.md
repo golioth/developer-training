@@ -6,13 +6,12 @@ title: Golioth Exercises
 ### Summary
 The goal of this section of training is to learn more about the Golioth platform and to allow trainees to interact with the [Golioth Console](https://console.golioth.io) using preconfigured code. 
 
-### Prior knowledge required
-No knowledge of Zephyr nor Golioth is necessary for this segment of training.
 ### Desired outcome(s)
 * Learn how to assign device credentials
 * Use State data to interact with devices
 * View and filter remote logging messages
 * View and query Stream data received from devices
+
 ### Approximate time
 This section should take approximately 10-20 minutes.
 

@@ -4,16 +4,33 @@ sidebar_position: 2
 
 # Add Credentials to the Golioth Demo
 
-We begin with a full-featured demo. But for the MagTag to connect we must give
+We begin with a full-featured demo! But for the MagTag to connect we must give
 it one set of credentials to connect to your WiFi and another set of credentials
-to connect to Golioth.
+to connect to Golioth that you created in the [Golioth Signup and Exploration](/docs/golioth-intro/signup) section.
+
+## Learning Objectives
+We are building your muscles around compiling Zephyr binaries, by starting with pre-configured code. All you need to do is add credentials, compile, and load the binary onto your device. 
+
+We are doing this so you can use this hardware and firmware on the MagTag to experiment with features on Golioth in the next section. 
+
+### Desired outcome(s)
+* Create a customized file containing your credentials for Wi-Fi and Golioth.
+* Build a binary containing those credentials.
+* Download the built binary and load it onto the MagTag hardware.
+* See the device connect to Golioth over WiFi
+### Approximate time
+
+* This section will take 5-20 minutes
+  * Depending on experience with Zephyr and the `west` meta tool.
+
+## Workflow
 
 1. Go to your local copy of [the magtag-demo
    repository](https://github.com/golioth/magtag-demo) and ensure you are on the
    `main` branch which is the hello example
 
     ```bash
-    cd ~/magtag-training/app
+    cd ~/Desktop/magtag-training/app
     git checkout golioth-demo
     ```
 
@@ -51,5 +68,5 @@ connect to the internet and establish a secure connection with Golioth. The
 Golioth logo will be displayed on the ePaper screen during this time.
 
 When a connection is established, the four LEDs will turn to yellow, blue,
-green, and red and the MagTag show a "Connected to Golioht!"
+green, and red and the MagTag show a "Connected to Golioth!"
 

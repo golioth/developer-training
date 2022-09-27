@@ -4,6 +4,19 @@ sidebar_position: 8
 
 # Exploring Golioth using the MagTag
 
+
+## Learning Objectives
+Now that we have a piece of hardware/firmware that can connect to Golioth, we are going to use it to explore the differences between features on the [Golioth Console](https://console.golioth.io). 
+
+### Desired outcome(s)
+* Understand different ways of sending a chunk of data back to Golioth.
+* Understand how to simplify streaming data views using the Query builder.
+
+### Approximate time
+
+* This section will take approximately 5-10 minutes
+
+
 ## LightDB State vs Stream: A brief overview
 
 "LightDB" is a generic term we use for the database capabilities on the Golioth cloud. The two functionalities and use cases are somewhat different:
