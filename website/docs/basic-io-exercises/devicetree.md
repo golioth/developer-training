@@ -33,7 +33,7 @@ you to reference, but you will not edit them directly unless you are adding your
 own board/chip that lacks official support. Do you need to know the clock speed
 and TX/RX pins used by the Espressif Saola dev board? Look in the DTS file:
 
-```js title="excerpt from: ~/magtag-training/deps/zephyr/boards/xtensa/esp32s2_saola/esp32s2_saola.dts"
+```js title="excerpt from: ~/Desktop/magtag-training/deps/zephyr/boards/xtensa/esp32s2_saola/esp32s2_saola.dts"
 &cpu0 {
 	clock-frequency = <ESP32_CLK_CPU_240M>;
 };
@@ -51,7 +51,7 @@ structure named `uart0_default`. If we look in the `<board>-pinctrl.dtsi` file
 we can see exactly which pins are assigned in that structure, and that one of
 those pins is configured with a pull-up resistor enabled.
 
-```js title="excerpt from ~/magtag-training/deps/zephyr/boards/xtensa/esp32s2_saola/esp32s2_saola-pinctrl.dtsi"
+```js title="excerpt from ~/Desktop/magtag-training/deps/zephyr/boards/xtensa/esp32s2_saola/esp32s2_saola-pinctrl.dtsi"
 &pinctrl {
 	uart0_default: uart0_default {
 		group1 {
@@ -111,7 +111,7 @@ the Espressif hardware abstraction layer module. For the MagTag demo, the i2c1
 pins needed remapping. Here is an excerpt of the relevant define for the SDA
 pin. Compare this to what is found in the overlay file above.
 
-```js title="Espressif esp32s2 pinctrl definitions: ~/magtag-training/deps/modules/hal/espressif/include/dt-bindings/pinctrl/esp32s2-pinctrl.h"
+```js title="Espressif esp32s2 pinctrl definitions: ~/Desktop/magtag-training/deps/modules/hal/espressif/include/dt-bindings/pinctrl/esp32s2-pinctrl.h"
 #define I2C1_SDA_GPIO31 \
 	ESP32_PINMUX(31, ESP_I2CEXT1_SDA_IN, ESP_I2CEXT1_SDA_OUT)
 

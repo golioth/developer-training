@@ -45,7 +45,7 @@ we can create an overlay file that defines the DPS310 in the Devicetree.
 We need to use an i2c peripheral. An entry already exists for `i2c1` in the
 esp32s2_saola dts file:
 
-```js title="excerpt from ~/magtag-training/deps/zephyr/boards/xtensa/esp32s2_saola/esp32s2_saola.dts"
+```js title="excerpt from ~/Desktop/magtag-training/deps/zephyr/boards/xtensa/esp32s2_saola/esp32s2_saola.dts"
 &i2c1 {
 	clock-frequency = <I2C_BITRATE_STANDARD>;
 	pinctrl-0 = <&i2c1_default>;
@@ -58,7 +58,7 @@ means the peripheral is not enabled, and the pinctrl-0 entry tells us to look
 for the `i2c1_default` node in the pinctrl.dtsi file to see how the pins are
 mapped and configured:
 
-```js title="excerpt from ~/magtag-training/deps/zephyr/boards/xtensa/esp32s2_saola/esp32s2_saola-pinctrl.dtsi"
+```js title="excerpt from ~/Desktop/magtag-training/deps/zephyr/boards/xtensa/esp32s2_saola/esp32s2_saola-pinctrl.dtsi"
 &pinctrl {
 	i2c1_default: i2c1_default {
 		group1 {

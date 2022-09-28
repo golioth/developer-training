@@ -27,7 +27,7 @@ LED](mapping-gpio.md) exercise.
 ```shell
 cd ~/magtag-training
 cp -r blinky-training rtos-training
-cd ~/magtag-training/deps/modules/lib/golioth/samples/rtos-training
+cd ~/Desktop/magtag-training/deps/modules/lib/golioth/samples/rtos-training
 ```
 
 You shouldn't reuse the build directory from a different project. Let's remove
