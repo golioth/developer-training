@@ -44,7 +44,10 @@ The light and sound aren't the only things happening when you press a button on 
 ### 1. Logging Message
 
 1. Check the logging messages on your device page. Is it connecting?
-2. Set up recurring checks of the logs by clicking the green circle next to the "refresh" button and select the "1 s" refresh rate.
+2. Refresh the log display by clicking the circular arrow icon in the upper
+   right
+3. Auto-Refresh can also be used. Selecting "Real-time" will hide all existing
+   logs and display new ones as soon as they arrive
 
     ![Refresh Settings](assets/refresh_settings.png)
 
@@ -64,8 +67,9 @@ The light and sound aren't the only things happening when you press a button on 
 ### 2. LightDB State
 
 1. Navigate to your device page
-2. Click on the "LightDB State" button to open the drawer
-3. Turn on "Refresh" every second, same as in the logging section
+2. Click on the "LightDB State" tab along the top
+    * Note: the "Auto-Refresh: Real-time" option is selected by default
+3. Press some buttons and observe the behavior
 
 #### Expected outcome
 
@@ -81,8 +85,8 @@ The light and sound aren't the only things happening when you press a button on 
 ### 3. LightDB Stream
 
 1. Navigate to the LightDB stream page
-    * Navigate to the device page first and click on "LightDB Stream" to have it prefilter for the device you're looking at
-    * Notice the 'Select a device' box now lists your device and will filter only for the device data you want
+    * In the right sidebar, choose Monitor&rarr;LightDB Stream
+    * Notice the 'Select a device' box can be used to filter data by device
 2. Set the time frame to be the last 4 hours
 
     ![Timeframe](assets/lightdb_stream_timeframe.png)
@@ -100,7 +104,9 @@ The light and sound aren't the only things happening when you press a button on 
 
         ![Query builder after](assets/query_builder_after.png)
 
-    * How does it look different now?
+    * Change the fields of the Query Builder to match the image shown above.
+      Click 'Run' to execute the new changes. How does the data look different
+      now?
 
 #### Expected outcome
 
