@@ -44,7 +44,7 @@ The MagTag board isn't officially supported in Zephyr, so we are using the DTS f
 To populate our overlay file you can just copy the needed parts of an existing DTS file.
 
 * The ESP32 WROVER kit has LEDs on it. We can study [the DTS file for that board](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/xtensa/esp_wrover_kit/esp_wrover_kit.dts) and use the parts we need for our MagTag:
-* open `~/magtag-training/deps/zephyr/boards/xtensa/esp_wrover_kit/esp_wrover_kit.dts`
+* open `~/Desktop/magtag-training/deps/zephyr/boards/xtensa/esp_wrover_kit/esp_wrover_kit.dts`
 
 Here is the general structure you will need:
 

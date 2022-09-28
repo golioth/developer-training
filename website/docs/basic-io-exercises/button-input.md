@@ -52,7 +52,7 @@ let's use the Freedom K64 dev board DTS file as an example:
 * Study [the DTS file for the frdm_k64f
   board](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/arm/frdm_k64f/frdm_k64f.dts)
   and use the parts we need for our MagTag:
-* open `~/magtag-training/deps/zephyr/boards/arm/frdm_k64f/frdm_k64f.dts`
+* open `~/Desktop/magtag-training/deps/zephyr/boards/arm/frdm_k64f/frdm_k64f.dts`
 
 Add the following to your overlay file:
 
