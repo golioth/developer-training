@@ -40,7 +40,9 @@ We want to understand time-series data and how to interact with it in Zephyr.
     git checkout stream
     ```
 
-<CreateCredentials/>
+2. Create a file for WiFi and Golioth credentials
+
+  <CreateCredentials/>
 
 3. Build the example, including the credentials file you just created
 
