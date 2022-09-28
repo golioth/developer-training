@@ -34,6 +34,12 @@ import TabItem from '@theme/TabItem';
   python -m esptool --chip esp32s2 --port com3 write_flash 0x0 merged.bin
   ```
 
+  :::tip
+  The port for your MagTag may be different from the `com3` shown above.
+  Find this value in the Device Manager. Here's [a video walkthrough of the
+  process](https://www.loom.com/share/cde8204ea8b341d892f6ad21ed43ac82).
+  :::
+
   </TabItem>
   </Tabs>
 
