@@ -25,17 +25,16 @@ We are learning to use the "state" version of Golioth's database services (Light
 
 ### Time Estimate
 
-* 15 minutes 
+* 15 minutes
 
 ## Workflow
 
 ### Build in the KASM container
 
-1. In the KASM container, go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo) and checkout the `observe` example:
+1. In the KASM container, go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo).
 
     ```bash
     cd ~/magtag-training/app
-    git checkout observe
     ```
 2. Create a file for WiFi and Golioth credentials
 
@@ -44,7 +43,7 @@ We are learning to use the "state" version of Golioth's database services (Light
 3. Build the example, including the credentials file you just created
 
     ```bash
-    west build -b esp32s2_saola . -D OVERLAY_CONFIG=credentials.conf -p
+    west build -b esp32s2_saola observe -p
     ```
 
 4. Download the binary

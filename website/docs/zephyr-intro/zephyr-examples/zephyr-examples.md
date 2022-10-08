@@ -11,4 +11,4 @@ The code examples take trainees through the basics of using the Golioth platform
 
 ## Logistics
 
-You will be going through the exercises below and then switching to different branches in the MagTag repo. Your credentials file will remain. If you are newer to revision control and development branches using Git, feel free to reach out to the instructors (or the forum, for those taking this training asynchronously).
+You will be going through the exercises below using the MagTag repo. Your credentials file can remain the same for all examples.
