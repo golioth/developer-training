@@ -26,17 +26,16 @@ Blinky shows that your toolchain is capable of building code correctly, that you
 
 ### Build in the KASM container
 
-1. In the KASM container, go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo) and checkout the `blinky` example:
+1. In the KASM container, go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo).
 
     ```bash
     cd ~/Desktop/magtag-training/app
-    git checkout blinky
     ```
 
 2. Build the example
 
     ```bash
-    west build -b esp32s2_saola . -p
+    west build -b esp32s2_saola blinky -p
     ```
 
 3. Download the binary

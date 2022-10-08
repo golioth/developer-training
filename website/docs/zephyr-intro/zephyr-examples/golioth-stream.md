@@ -32,12 +32,10 @@ We want to understand time-series data and how to interact with it in Zephyr.
 ### Build in the KASM container
 
 1. In the KASM container, go to your local copy of [the magtag-demo
-   repository](https://github.com/golioth/magtag-demo) and checkout the `stream`
-   example:
+   repository](https://github.com/golioth/magtag-demo).
 
     ```bash
     cd ~/magtag-training/app
-    git checkout stream
     ```
 
 2. Create a file for WiFi and Golioth credentials
@@ -47,7 +45,7 @@ We want to understand time-series data and how to interact with it in Zephyr.
 3. Build the example, including the credentials file you just created
 
     ```bash
-    west build -b esp32s2_saola . -D OVERLAY_CONFIG=credentials.conf -p
+    west build -b esp32s2_saola stream -p
     ```
 
 4. Download the binary
