@@ -25,11 +25,10 @@ The Hello example is the most basic network-connected example: a 'hello world' w
 
 ### Build in the KASM container
 
-1. In the KASM container, go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo) and ensure you are on the `main` branch which is the hello example
+1. In the KASM container, go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo).
 
     ```bash
     cd ~/Desktop/magtag-training/app
-    git checkout main
     ```
 
 2. Create a file for WiFi and Golioth credentials
@@ -46,7 +45,7 @@ The Hello example is the most basic network-connected example: a 'hello world' w
 3. Build the example, including the credentials file you just created
 
     ```bash
-    west build -b esp32s2_saola . -D OVERLAY_CONFIG=credentials.conf -p
+    west build -b esp32s2_saola hello -p
     ```
 
 4. Download the binary

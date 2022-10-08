@@ -31,12 +31,10 @@ We are doing this so you can use this hardware and firmware on the MagTag to exp
 ### Build in the KASM container
 
 1. In the KASM container, go to your local copy of [the magtag-demo
-   repository](https://github.com/golioth/magtag-demo) and ensure you are on the
-   `main` branch which is the hello example
+   repository](https://github.com/golioth/magtag-demo).
 
     ```bash
     cd ~/Desktop/magtag-training/app
-    git checkout golioth-demo
     ```
 
 2. Create a file for WiFi and Golioth credentials
@@ -55,7 +53,7 @@ We are doing this so you can use this hardware and firmware on the MagTag to exp
 3. Build the example, including the credentials file you just created
 
     ```bash
-    west build -b esp32s2_saola . -D OVERLAY_CONFIG=credentials.conf -p
+    west build -b esp32s2_saola golioth-demo -p
     ```
 
 4. Download the binary

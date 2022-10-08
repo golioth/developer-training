@@ -53,7 +53,7 @@ esp32s2_saola dts file:
 };
 ```
 
-Two important things to not from the node above: there is no status listed which
+Two important things to note from the node above: there is no status listed which
 means the peripheral is not enabled, and the pinctrl-0 entry tells us to look
 for the `i2c1_default` node in the pinctrl.dtsi file to see how the pins are
 mapped and configured:
@@ -200,17 +200,22 @@ DPS310](https://github.com/zephyrproject-rtos/zephyr/tree/main/samples/sensor/dp
 is available in Zephyr. It is nearly identical to the code outlined above. As an
 exercise:
 
-1. Make a copy of the code sample into your
-   `golioth-zephyr-workspace/modules/lib/golioth/samples/` folder
+1. Make a copy of the code sample into your `app` directory:
+
+    ```
+    cd ~/magtag-training/app
+    cp -r ../deps/zephyr/samples/sensor/dps310
+    ```
+
 2. Study the `app.overlay` file from the sample and compare it to the `*dev`
 assignment in `main.c`.
     * Notice the different approach that was taken by the sample writers from
       what is outlined above. There is more than one way to get information from
       the Devicetree.
-3. Remove the `app.overlay` file, add a `boards` directory and place your
+3. Remove the `app.overlay` file and add a `boards` directory. Place your
 `esp32s2_saola.overlay` file inside with the Devicetree entries as shown above.
-Alter `main.c` to work with the way your overlay file defines the sensor.
-4. Build, flash, and run the sample. Verify it is printing pressure and
+4. Alter `main.c` to work with the way your overlay file defines the sensor.
+5. Build, flash, and run the sample. Verify it is printing pressure and
 temperature data to the serial console.
 
 ### Exercise: Stream DPS310 Data to Golioth LightDB
