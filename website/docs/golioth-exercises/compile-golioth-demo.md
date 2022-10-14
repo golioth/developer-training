@@ -58,8 +58,10 @@ We are doing this so you can use this hardware and firmware on the MagTag to exp
 
 4. Download the binary
 
-    * Run `getbin` to package the compiled code and make it available for download
-    * Use the Download option in KASM's left sidebar to download `merged.bin` to your local machine.
+    * Run `west kasm download` to package the compiled code and make it
+      available for download
+    * Use the Download option in KASM's left sidebar to download
+      `merged_yymmdd_hhmmss.bin` to your local machine.
 
   <HowToDownload/>
 
