@@ -15,7 +15,11 @@ Golioth's main product is a set of APIs and endpoints for IoT devices to connect
 Once you set up your device to exchange data Golioth, you get access to an entire suite of new functionalities:
 * **Over-the-air updates** - Push and manage new firmware images, including targeting specific devices.
 * **Time-series database tracking** - easy management of sensor data on the cloud.
-* **Command and control capabilities** -  Push and pull data from a device using state-based databases on the cloud. Interact with the data via our REST API.
+* **Command and control capabilities**
+  * **LightDB State** - Push and pull data from a device using state-based databases on the cloud
+  * **Settings Service** - Adjust settings for entire fleet, groups, or per-device
+  * **Remote Procedure Call** - Execute functions remotely including input parameters and returned data
+  * **Extensible Control** - Interact with the data via our REST API.
 * **Device logging** - pass troubleshooting messages off of individual devices (fewer debug probes and USB cables involved!)
 * **Easy export of all cloud side data** - Interface to 3rd party visualization and cloud platforms.
 * **Device Management** - A clean interface for interacting with one (or all) of your devices.
