@@ -35,6 +35,17 @@ experiment with features on Golioth in the next section.
 
 ## Workflow
 
+:::tip Using VScode
+
+In this exercise we detail how to use VScode when editing, building, and
+flashing a Zephyr project. This process may also be reused with all other
+exercises.
+
+Of course, VScode is optional and you may choose to use any editor of your
+choice and to build/flash from the command line.
+
+:::
+
 ### Build in the KASM container
 
 1. In the KASM container, open the magtag-demo project in VScode
