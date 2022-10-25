@@ -5,22 +5,29 @@ sidebar_position: 2
 import HowToDownload from '/docs/\_partials/download-from-kasm.md'
 import VerboseFlash from '/docs/\_partials/flash-the-example-kasm-verbose.md';
 
-# Add Credentials to the Golioth Demo
+# Build the Golioth Demo
 
 We begin with a full-featured demo! But for the MagTag to connect we must give
-it one set of credentials to connect to your WiFi and another set of credentials
-to connect to Golioth that you created in the [Golioth Signup and Exploration](/docs/golioth-intro/signup) section.
+it one set of credentials to connect to your WiFi and another set of
+credentials to connect to Golioth that you created in the [Golioth Signup and
+Exploration](/docs/golioth-intro/signup) section.
 
-## Learning Objectives
-We are building your muscles around compiling Zephyr binaries, by starting with pre-configured code. All you need to do is add credentials, compile, and load the binary onto your device. 
+## Learning objectives
 
-We are doing this so you can use this hardware and firmware on the MagTag to experiment with features on Golioth in the next section. 
+We are building your muscles around compiling Zephyr binaries, by starting with
+pre-configured code. All you need to do is add credentials, compile, and load
+the binary onto your device.
+
+We are doing this so you can use this hardware and firmware on the MagTag to
+experiment with features on Golioth in the next section.
 
 ### Desired outcome(s)
+
 * Create a customized file containing your credentials for Wi-Fi and Golioth.
 * Build a binary containing those credentials.
 * Download the built binary and load it onto the MagTag hardware.
 * See the device connect to Golioth over WiFi
+
 ### Time Estimate
 
 * This section will take 5-20 minutes
@@ -30,36 +37,55 @@ We are doing this so you can use this hardware and firmware on the MagTag to exp
 
 ### Build in the KASM container
 
-1. In the KASM container, go to your local copy of [the magtag-demo
-   repository](https://github.com/golioth/magtag-demo).
+1. In the KASM container, open the magtag-demo project in VScode
 
-    ```bash
-    cd ~/Desktop/magtag-training/app
-    ```
+    ![Open magtag-demo/app folder in VScode](assets/kasm-vscode-open-folder-trust.png)
+
+    * use the icon on the desktop to open vscode
+    * Choose File&rarr;Open Folder
+    * Navigate to `~/Desktop/magtag-demo/app` and open it
+    * Confirm that you trust the authors in the window that appears
 
 2. Create a file for WiFi and Golioth credentials
 
-    * Make a copy of `credentials.conf_example` and name it `credentials.conf`
+    ![Create a credentials file](assets/kasm-vscode-credentials.png)
 
-        ```
-        cp credentials.conf_example credentials.conf
-        ```
-
+    * Create `credentials.conf`
+      * Right click on the credentials.conf_example in the Explorer sidebar and
+        choose Copy
+      * Right click on and empty space in the Explorer sidebar and choose Paste
+      * Right click on the `credentials copy.conf_example` and choose Rename
+      * Name the file `credentials.conf`. The file will now be open in an editor
+        window
     * Edit this new file to include your WiFi credentials and the PSK-ID/PSK
       from the device page on your [Golioth
       console](https://console.golioth.io/)
-    * This file will be ignored by git, and may be reused in other examples.
+    * Save the file
+      * This file will be ignored by git, and may be reused in other examples.
 
 3. Build the example, including the credentials file you just created
+
+  ![Create a credentials file](assets/kasm-vscode-compile.png)
+
+    * To open a terminal window in VScode click on Terminal&rarr;New Terminal
+    * Run the following code in the terminal to build the `golioth-demo` app
 
     ```bash
     west build -b esp32s2_saola golioth-demo -p
     ```
 
+    :::tip Use the app folder for builds
+
+    We want to build all of the sample code from the `~/Desktop/magtag-demo/app`
+    folder. The VScode terminal should automatically begin in this folder
+    because that is the folder we already opened in the Explorer sidebar
+
+    :::
+
 4. Download the binary
 
-    * Run `west kasm download` to package the compiled code and make it
-      available for download
+    * In the VScode terminal, run `west kasm download` to package the compiled
+      code and make it available for download
     * Use the Download option in KASM's left sidebar to download
       `merged_yymmdd_hhmmss.bin` to your local machine.
 
@@ -69,9 +95,9 @@ We are doing this so you can use this hardware and firmware on the MagTag to exp
 
 <VerboseFlash/>
 
-## Expected Results
+## Expected results
 
-![Golioth Demo connected to Wifi and the Golioth Servers](assets/magtag-golioth-connected.jpg)
+![Golioth Demo connected to WiFi and the Golioth Servers](assets/magtag-golioth-connected.jpg)
 
 After flashing the example you need to press the Reset button to run the
 program. Your MagTag may not visibly react for a few seconds as it initializes
