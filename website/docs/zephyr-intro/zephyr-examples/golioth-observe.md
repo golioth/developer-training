@@ -62,9 +62,9 @@ We are learning to use the "state" version of Golioth's database services (Light
 ## Setup the LightDB State endpoint
 
 1. Go to the Golioth Console and choose Management&rarr;Devices from the sidebar menu
-2. Click on the name of your device to enter the device view, then click the LightDB State icon to open up the right sidebar dialog
+2. Click on the name of your device to enter the device view, then click the LightDB State icon which opens up LightDB State tab
 3. Hover your mouse over the empty JSON object and click the green plus sign that is revealed
-    * If the JSON object is not empty (e.g. data from previous examples are shown), use the red X icon to delete each item before adding a new entry
+    * If the JSON object is not empty (e.g. data from previous examples are shown), use the "Clean" button to delete all items
 4. Type in `leds` as the key name (no quotes)
 5. Hover over `NULL` and click the green pencil icon to edit the value, replace `NULL` with `15` and click the lower green check mark to save it as an integer value. If successful you will not see quotation marks around this value.
     * Only integers between 0 and 15 (inclusive) are valid for this example
