@@ -25,9 +25,9 @@ For this exercise we'll use the code we ended up with in the [Blinking an
 LED](mapping-gpio.md) exercise.
 
 ```shell
-cd ~/Desktop/magtag-training
+cd ~/Desktop/magtag-training/app
 cp -r blinky-training rtos-training
-cd ~/Desktop/magtag-training/deps/modules/lib/golioth/samples/rtos-training
+cd rtos-training
 ```
 
 You shouldn't reuse the build directory from a different project. Let's remove

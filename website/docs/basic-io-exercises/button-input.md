@@ -30,7 +30,7 @@ We are learning about interrupts and how to map pins that trigger interrupts (in
 Make a copy of the Zephyr Button example to work from
 
 ```shell
-cd ~/Desktop/magtag-training/
+cd ~/Desktop/magtag-training/app
 cp -r ~/Desktop/magtag-training/deps/zephyr/samples/basic/button button-training
 cd button-training
 ```
