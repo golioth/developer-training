@@ -29,7 +29,7 @@ Making an LED blink is the "Hello World!" of the hardware universe. This exercis
 Make a copy of the Zephyr Blinky example to work from
 
 ```shell
-cd ~/Desktop/magtag-training/
+cd ~/Desktop/magtag-training/app
 cp -r ~/Desktop/magtag-training/deps/zephyr/samples/basic/blinky blinky-training
 cd blinky-training
 ```
