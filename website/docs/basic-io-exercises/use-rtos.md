@@ -25,7 +25,7 @@ For this exercise we'll use the code we ended up with in the [Blinking an
 LED](mapping-gpio.md) exercise.
 
 ```shell
-cd ~/magtag-training
+cd ~/Desktop/magtag-training
 cp -r blinky-training rtos-training
 cd ~/Desktop/magtag-training/deps/modules/lib/golioth/samples/rtos-training
 ```
