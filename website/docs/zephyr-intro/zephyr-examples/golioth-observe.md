@@ -45,7 +45,7 @@ heading of C&C are:
    repository](https://github.com/golioth/magtag-demo).
 
     ```bash
-    cd ~/magtag-training/app
+    cd ~/Desktop/magtag-training/app
     ```
 2. Create a file for WiFi and Golioth credentials
 

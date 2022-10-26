@@ -73,7 +73,7 @@ For instance, the MagTag sample code turns on an i2c bus and selects the pins
 for the SDA and SCL lines signals that are connected to the accelerometer.
 Overlay files are located in a `boards/` subdirectory of your application code.
 
-```js title="MagTag accelerometer excerpt from: ~/magtag-training/app/boards/esp32s2_saola.overlay"
+```js title="MagTag accelerometer excerpt from: ~/Desktop/magtag-training/app/boards/esp32s2_saola.overlay"
 &i2c1 {
 	pinctrl-0 = <&i2c1_default>;
 	status = "okay";
