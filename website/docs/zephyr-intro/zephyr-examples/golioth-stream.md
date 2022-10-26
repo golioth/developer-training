@@ -35,7 +35,7 @@ We want to understand time-series data and how to interact with it in Zephyr.
    repository](https://github.com/golioth/magtag-demo).
 
     ```bash
-    cd ~/magtag-training/app
+    cd ~/Desktop/magtag-training/app
     ```
 
 2. Create a file for WiFi and Golioth credentials

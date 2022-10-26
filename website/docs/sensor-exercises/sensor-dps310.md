@@ -203,7 +203,7 @@ exercise:
 1. Make a copy of the code sample into your `app` directory:
 
     ```
-    cd ~/magtag-training/app
+    cd ~/Desktop/magtag-training/app
     cp -r ../deps/zephyr/samples/sensor/dps310
     ```
 
