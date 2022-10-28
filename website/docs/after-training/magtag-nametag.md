@@ -46,7 +46,7 @@ generate your own images for the display, and place text on them.
 3. Build the example, including the credentials file you just created
 
     ```bash
-    west build -b esp32s2_saola observe -p
+    west build -b esp32s2_saola nametag -p
     ```
 
 4. Download the binary
