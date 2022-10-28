@@ -48,13 +48,13 @@ choice and to build/flash from the command line.
 
 ### Build in the KASM container
 
-1. In the KASM container, open the magtag-demo project in VScode
+1. In the KASM container, open the magtag-training project in VScode
 
-    ![Open magtag-demo/app folder in VScode](assets/kasm-vscode-open-folder-trust.png)
+    ![Open magtag-training/app folder in VScode](assets/kasm-vscode-open-folder-trust.png)
 
     * use the icon on the desktop to open vscode
     * Choose File&rarr;Open Folder
-    * Navigate to `~/Desktop/magtag-demo/app` and open it
+    * Navigate to `~/Desktop/magtag-training/app` and open it
     * Confirm that you trust the authors in the window that appears
 
 2. Create a file for WiFi and Golioth credentials
@@ -87,7 +87,7 @@ choice and to build/flash from the command line.
 
     :::tip Use the app folder for builds
 
-    We want to build all of the sample code from the `~/Desktop/magtag-demo/app`
+    We want to build all of the sample code from the `~/Desktop/magtag-training/app`
     folder. The VScode terminal should automatically begin in this folder
     because that is the folder we already opened in the Explorer sidebar
 
