@@ -4,6 +4,7 @@ sidebar_position: 4
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import CreateCredentials from '/docs/\_partials/create-credentials.md';
 import HowToDownload from '/docs/\_partials/download-from-kasm.md'
 import HowToFlash from '/docs/\_partials/flash-the-example-kasm.md'
 
@@ -33,14 +34,7 @@ The Hello example is the most basic network-connected example: a 'hello world' w
 
 2. Create a file for WiFi and Golioth credentials
 
-    * Make a copy of `credentials.conf_example` and name it `credentials.conf`
-
-        ```
-        cp credentials.conf_example credentials.conf
-        ```
-
-    * Edit this new file to include your WiFi credentials and the PSK-ID/PSK from the device page on your [Golioth console](https://console.golioth.io/)
-    * This file will be ignored by git, and may be reused in other examples.
+  <CreateCredentials/>
 
 3. Build the example, including the credentials file you just created
 
