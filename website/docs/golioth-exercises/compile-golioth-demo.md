@@ -50,16 +50,14 @@ choice and to build/flash from the command line.
 
 1. In the Kasm container, open the magtag-training project in VScode
 
-    ![Open magtag-training/app folder in VScode](assets/kasm-vscode-open-folder-trust.png)
-
     * use the icon on the desktop to open vscode
     * Choose File&rarr;Open Folder
     * Navigate to `~/Desktop/magtag-training/app` and open it
     * Confirm that you trust the authors in the window that appears
 
-2. Create a file for WiFi and Golioth credentials
+    ![Open magtag-training/app folder in VScode](assets/kasm-vscode-open-folder-trust.png)
 
-    ![Create a credentials file](assets/kasm-vscode-credentials.png)
+2. Create a file for WiFi and Golioth credentials
 
     * Create `credentials.conf`
       * Right click on the credentials.conf_example in the Explorer sidebar and
@@ -74,9 +72,9 @@ choice and to build/flash from the command line.
     * Save the file
       * This file will be ignored by git, and may be reused in other examples.
 
-3. Build the example, including the credentials file you just created
+    ![Create a credentials file](assets/kasm-vscode-credentials.png)
 
-  ![Create a credentials file](assets/kasm-vscode-compile.png)
+3. Build the example, including the credentials file you just created
 
     * To open a terminal window in VScode click on Terminal&rarr;New Terminal
     * Run the following code in the terminal to build the `golioth-demo` app
@@ -84,6 +82,8 @@ choice and to build/flash from the command line.
     ```bash
     west build -b esp32s2_saola golioth-demo -p
     ```
+
+    ![Create a credentials file](assets/kasm-vscode-compile.png)
 
     :::tip Use the app folder for builds
 
