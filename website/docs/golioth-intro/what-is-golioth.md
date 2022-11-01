@@ -17,8 +17,8 @@ connect to. We think this is the easiest way to add different functions to a
 fleet of IoT devices (details on how to do that further down). You can choose
 to use just one or all of these services in your projects.
 
-Once you set up your device to exchange data Golioth, you get access to an
-entire suite of new functionalities:
+Once you connect your device to Golioth, you get access to an entire suite of
+new functionality:
 
 * **Over-the-air updates** - Push and manage new firmware images, including
   targeting specific devices.
@@ -50,7 +50,7 @@ Kits (SDKs) for different platforms. We now have three:
 
 * [**Zephyr RTOS**](https://github.com/golioth/golioth-zephyr-sdk)
 * [**nRF Connect SDK (NCS)**](https://github.com/golioth/golioth-zephyr-sdk)
-* [**Espressif IoT Development Framwork
+* [**Espressif IoT Development Framework
   (ESP-IDF)**](https://github.com/golioth/golioth-esp-idf-sdk)
 
 Each of these SDKs include libraries to connect to Golioth and take advantage
