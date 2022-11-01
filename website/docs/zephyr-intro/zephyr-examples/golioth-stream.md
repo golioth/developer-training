@@ -53,7 +53,7 @@ We want to understand time-series data and how to interact with it in Zephyr.
     * Run `west kasm download` to package the compiled code and make it
       available for download
     * Use the Download option in Kasm's left sidebar to download
-      `merged_yymmdd_hhmmss.bin` to your local machine.
+      `merged_<appfolder>_<hhmmss>.bin` to your local machine.
 
   <HowToDownload/>
 
