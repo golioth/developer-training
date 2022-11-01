@@ -23,7 +23,7 @@ import TabItem from '@theme/TabItem';
 
   ```
   cd ~/Downloads
-  esptool.py --chip esp32s2 --port /dev/ttyACM0 write_flash 0x0 merged.bin
+  esptool.py --chip esp32s2 --port /dev/ttyACM0 write_flash 0x0 merged_yymmdd_hhmmss.bin
   ```
 
   </TabItem>
@@ -31,7 +31,7 @@ import TabItem from '@theme/TabItem';
 
   ```
   cd %HOMEPATH%/Downloads
-  python -m esptool --chip esp32s2 --port com3 write_flash 0x0 merged.bin
+  python -m esptool --chip esp32s2 --port com3 write_flash 0x0 merged_yymmdd_hhmmss.bin
   ```
 
   :::tip
