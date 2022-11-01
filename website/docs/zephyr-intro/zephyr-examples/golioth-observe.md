@@ -11,16 +11,17 @@ import HowToFlash from '/docs/\_partials/flash-the-example-kasm.md'
 # Golioth Observe Example
 
 The Observe example configures the MagTag to watch a LightDB state endpoint on
-the Golioth servers for changes. When data is updated on the could, the device
+the Golioth servers for changes. When data is updated on the cloud, the device
 recognizes this quickly and a callback is executed. For this example, a LightDB
 State endpoint called `leds` will monitor a value from 0 to 15 to control the
 on/off state of the LEDs on the MagTag.
 
-## Learning Objectives We are learning to use the "state" version of Golioth's
-database services (LightDB state), because it represents another way to send
-data down to devices in the field. This is part of a broader "command and
-control" (C&C) need for IoT devices. Golioth services that fall under the
-heading of C&C are:
+## Learning Objectives
+
+We are learning to use the "state" version of Golioth's database services
+(LightDB state), because it represents another way to send data down to devices
+in the field. This is part of a broader "command and control" (C&C) need for IoT
+devices. Golioth services that fall under the heading of C&C are:
 
 * LightDB State - part of this Observe Example
 * Remote Procedure Call (RPC)- part of this Observe Example
