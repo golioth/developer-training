@@ -47,7 +47,7 @@ The Hello example is the most basic network-connected example: a 'hello world' w
     * Run `west kasm download` to package the compiled code and make it
       available for download
     * Use the Download option in Kasm's left sidebar to download
-      `merged_yymmdd_hhmmss.bin` to your local machine.
+      `merged_<appfolder>_<hhmmss>.bin` to your local machine.
 
   <HowToDownload/>
 
