@@ -87,3 +87,10 @@ include a set of Windows instructions using this approach.
 
 </TabItem>
 </Tabs>
+
+:::tip Update previously installed versions
+
+If `esptool.py` is already installed on your system, please check that it is a
+recent version that supports the ESP32s2. Now is a great time for an upgrade!
+
+:::
