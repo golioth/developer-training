@@ -24,13 +24,14 @@ Golioth lives at the top of the Zephyr stack, meaning that we take advantage of 
 
 ## What is Kasm?
 
-Kasm is a tool with a virtual desktop workspace in a browser, preconfigured with Golioth tools and the Zephyr toolchain. We believe this is the fastest way to get new developers building Zephyr projects and interacting with Golioth. You should be able to build a Zephyr + Golioth project almost immediate after entering the development environment.
+Kasm is a virtual desktop workspace in a browser. For this training we have preconfigured a Kasm instance with Golioth tools and the Zephyr toolchain so that you can build Zephyr projects without first installing the tools on your local machine.
+
+We believe this is the fastest way to get new developers building Zephyr projects and interacting with Golioth. You should be able to build a Zephyr + Golioth project almost immediate after entering the development environment.
 
 ![Kasm](./assets/Kasm.png)
 
+Because this training uses a virtual build environment, to continue working with Zephyr after this training is over you will need to [install the Zephyr toolchain on your local machine](after-training/local-toolchain-install). Golioth staff is available to help make this process smoother. Documentation for installing the toolchain is included in [the Golioth Getting Started Guides](https://docs.golioth.io).
 
-Because this training uses a virtual build environment, this also means that the trainee will need to set up the Zephyr toolchain after this training is over. Golioth staff is available to help make this process smoother. All documentation to install the toolchain is included on [the Golioth Getting Started Guildes](https://docs.golioth.io).
+## Command Line
 
-## Command Line 
-
-Golioth training expects that commands will be run from the command line. In Kasm, we will be working from the built in terminal, which approximates a Linux system with a command line terminal. Users are free to use VScode as a code editor, but all commands will be run from the command line. Later, these commands could be run from the terminal inside of VScode. 
+Golioth training expects that commands will be run from the command line. In Kasm, we will be using VScode as a code editor, running these commands from the terminal inside of VScode.
