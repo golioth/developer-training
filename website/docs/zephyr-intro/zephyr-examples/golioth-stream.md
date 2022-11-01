@@ -29,9 +29,9 @@ We want to understand time-series data and how to interact with it in Zephyr.
 
 ## Workflow
 
-### Build in the KASM container
+### Build in the Kasm container
 
-1. In the KASM container, go to your local copy of [the magtag-demo
+1. In the Kasm container, go to your local copy of [the magtag-demo
    repository](https://github.com/golioth/magtag-demo).
 
     ```bash
@@ -52,7 +52,7 @@ We want to understand time-series data and how to interact with it in Zephyr.
 
     * Run `west kasm download` to package the compiled code and make it
       available for download
-    * Use the Download option in KASM's left sidebar to download
+    * Use the Download option in Kasm's left sidebar to download
       `merged_yymmdd_hhmmss.bin` to your local machine.
 
   <HowToDownload/>

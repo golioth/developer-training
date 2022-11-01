@@ -46,9 +46,9 @@ choice and to build/flash from the command line.
 
 :::
 
-### Build in the KASM container
+### Build in the Kasm container
 
-1. In the KASM container, open the magtag-training project in VScode
+1. In the Kasm container, open the magtag-training project in VScode
 
     ![Open magtag-training/app folder in VScode](assets/kasm-vscode-open-folder-trust.png)
 
@@ -97,7 +97,7 @@ choice and to build/flash from the command line.
 
     * In the VScode terminal, run `west kasm download` to package the compiled
       code and make it available for download
-    * Use the Download option in KASM's left sidebar to download
+    * Use the Download option in Kasm's left sidebar to download
       `merged_yymmdd_hhmmss.bin` to your local machine.
 
   <HowToDownload/>

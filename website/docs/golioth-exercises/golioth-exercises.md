@@ -17,19 +17,19 @@ This section should take approximately 10-20 minutes.
 
 ## Workflow overview
 
-During this training we are using a web-based Docker container called KASM that
+During this training we are using a web-based Docker container called Kasm that
 has all of the necessary Zephyr tools and Golioth repositories installed. You
-must have a login for KASM, and a copy of esptool.py installed on your local
+must have a login for Kasm, and a copy of esptool.py installed on your local
 machine.
 
 Throughout these exercies, we will follow the same workflow to edit, build, and
 flash firmware.
 
-* In KASM container:
+* In Kasm container:
 
     1. Make changes to sourcecode
     2. Build app using `west`, the Zephyr meta-tool
-    3. Download binary file from KASM to your local machine
+    3. Download binary file from Kasm to your local machine
 
 * On your local machine:
 

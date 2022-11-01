@@ -32,9 +32,9 @@ generate your own images for the display, and place text on them.
 
 ## Workflow
 
-### Build in the KASM container
+### Build in the Kasm container
 
-1. In the KASM container, go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo).
+1. In the Kasm container, go to your local copy of [the magtag-demo repository](https://github.com/golioth/magtag-demo).
 
     ```bash
     cd ~/Desktop/magtag-training/app
@@ -53,7 +53,7 @@ generate your own images for the display, and place text on them.
 
     * Run `west kasm download` to package the compiled code and make it
       available for download
-    * Use the Download option in KASM's left sidebar to download
+    * Use the Download option in Kasm's left sidebar to download
       `merged_yymmdd_hhmmss.bin` to your local machine.
 
   <HowToDownload/>
@@ -110,7 +110,7 @@ Zephyr Settings subsystem. This feature will be available soon.
 Design your own background and layout for the MagTag! To accomplish this:
 
 1. Create a 296x128 image file in the XBM format
-2. Upload the header to KASM, include it in your code
+2. Upload the header to Kasm, include it in your code
 3. Use the helper script to convert from XBM to a c header file
 4. Show the header and write text over the top of it.
 
@@ -133,7 +133,7 @@ the conversion.
 
 ### Upload and convert to a header file
 
-Use the left sidebar menu on the KASM desktop to upload your XBM file. From the
+Use the left sidebar menu on the Kasm desktop to upload your XBM file. From the
 `nametag` directory, use the helper script to convert this to a c header file.
 
 ```bash
