@@ -144,35 +144,28 @@ code:
 ```c
 snprintk(str, 6, "%d", LEDS_DEFAULT_MASK);
 
-err = golioth_lightdb_set(client,
-        GOLIOTH_LIGHTDB_PATH(LEDS_ENDPOINT),
-        GOLIOTH_CONTENT_FORMAT_APP_JSON,
-        str,
-        strlen(str));
+/* Use async set because you cannot call a synchronous set from inside
+ * of a callback */
+err = golioth_lightdb_set_cb(client,
+       LEDS_ENDPOINT,
+       GOLIOTH_CONTENT_FORMAT_APP_JSON,
+       str, strlen(str),
+       lightdb_set_handler, NULL);
 ```
 
-With this code we are converting an integer value (LEDS_DEFAULT_MASK) to a
-string so that we can send it over the CoAP protocol as text. The `leds`
-endpoint is selected using the `GOLIOTH_LIGHTDB_PATH(LEDS_ENDPOINT)` helper
-macro, and it's all taken care of by the `golioth_lightdb_set()` function from
-the Golioth SDK.
+With this code we use `snprintk()` to convert an integer value
+(`LEDS_DEFAULT_MASK`) to a string so that we can send it over the CoAP protocol
+as text. The  `LEDS_ENDPOINT` is defined as `leds`, the string that will be used
+as the JSON key for this value. The `golioth_lightdb_set_cb()` function is an
+asynchronous call to the Golioth SDK which registers a callback
+function (`lightdb_set_handler()`) that will run once a response is received
+from the Golioth servers. The callback can be used to log errors or for more
+complex work.
 
 Compare this to the code that was [used to write accelerometer
-data](https://github.com/golioth/magtag-demo/blob/e6b75a65e4c3a2863ae208dd8707cc7ecfefcfa8/src/main.c#L70-L93)
+data](https://github.com/golioth/magtag-demo/blob/6f59c1b83c06fbf156a297555c8464b838c7bb12/stream/src/main.c#L88-L110)
 to LightDB Stream in the Stream example and you will see a more complex payload
-string built using `snprintk()`, and a different endpoint helper macro:
-`GOLIOTH_LIGHTDB_STREAM_PATH()`.
+string built using `snprintk()`, and a different API call. The
+`golioth_stream_push_cb()` function is formatted in a similar way but is used to
+send time-series data to Golioth where the example above sends stateful data.
 
-The endpoints that send data to either LightDB State or LightDB stream differ by
-just one letter. While we use macros in the above example, those simply add a
-prefix of `.d/` for State or `.s/` for Stream.
-
-```c
-/* These two lines evaluate to the same string */
-uint8_t* state_endpoint_1 = GOLIOTH_LIGHTDB_PATH("leds");
-uint8_t* state_endpoint_2 = ".d/leds";
-
-/* These two lines also evaluate to the same string */
-uint8_t* stream_endpoint_1 = GOLIOTH_LIGHTDB_STREAM_PATH("accel");
-uint8_t* stream_endpoint_2 = ".s/accel";
-```
