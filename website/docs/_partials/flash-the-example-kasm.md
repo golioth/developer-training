@@ -9,7 +9,8 @@ import VerbostDownloadFlash from './flash-the-example-kasm-verbose.md';
   groupId="os"
   defaultValue="linux"
   values={[
-  {label: 'Linux/MacOS', value: 'linux'},
+  {label: 'MacOS', value: 'linux'},
+  {label: 'MacOS', value: 'macos'},
   {label: 'Windows', value: 'windows'},
   ]}>
 
@@ -18,6 +19,14 @@ import VerbostDownloadFlash from './flash-the-example-kasm-verbose.md';
   ```
   cd ~/Downloads
   esptool.py --chip esp32s2 --port /dev/ttyACM0 write_flash 0x0 merged_<appfolder>_<hhmmss>.bin
+  ```
+
+  </TabItem>
+  <TabItem value="macos">
+
+  ```
+  cd ~/Downloads
+  esptool.py --chip esp32s2 --port /dev/cu.usbmodem01 write_flash 0x0 merged_<appfolder>_<hhmmss>.bin
   ```
 
   </TabItem>
