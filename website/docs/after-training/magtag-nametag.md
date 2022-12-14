@@ -95,13 +95,15 @@ four buttons will cycle through different display layouts.
 If you choose "NO" at boot time, the name tag will enter into display mode using
 stored information, and once again the layout may be chosen with the buttons.
 
-:::note Persistent storage coming soon
+:::note Persistent storage
 
-At this time, name information downloaded from Golioth will be lost between
-power cycles. However, it is possible to store persistent settings using the
-Zephyr Settings subsystem. This feature will be available soon.
+Name information downloaded from Golioth should be stored in persistent memory.
+This works if you compile and flash this app from your local machine. However,
+if you compile on KASM then download and flash a merged binary, this does not
+currently work.
 
-**Pro-level challenge:** Add persistent storage and submit a pull request!
+**Pro-level challenge:** Debug the persistent storage issue. We'd
+love to see you submit a pull request!
 
 :::
 
