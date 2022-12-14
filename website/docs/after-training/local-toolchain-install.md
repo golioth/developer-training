@@ -13,6 +13,15 @@ to give Zephyr another try?
 
 Here are some options for installing a local version of Zephyr.
 
+:::tip Install the Zephyr SDK
+
+In all cases, you must have the Zephyr SDK bundle installed. If you have not yet
+done so, please [use this section of the Zephyr getting-started
+guide](https://docs.zephyrproject.org/latest/develop/getting_started/index.html#install-zephyr-sdk)
+before continuing with the steps below.
+
+:::
+
 * Option A: [Use the MagTag repo as a Zephyr installation](#magtag-zephyr)
 * Option B: [Follow the Golioth Quickstart to install Zephyr](#golioth-zephyr)
 * Option C: [Follow the Zephyr Getting Started Guide to install Zephyr](#standard-zephyr)
