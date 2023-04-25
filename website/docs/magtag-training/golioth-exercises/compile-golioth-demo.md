@@ -10,7 +10,7 @@ import VerboseFlash from '/docs/\_partials/flash-the-example-kasm-verbose.md';
 We begin with a full-featured demo! But for the MagTag to connect we must give
 it one set of credentials to connect to your WiFi and another set of
 credentials to connect to Golioth that you created in the [Golioth Signup and
-Exploration](/docs/golioth-intro/signup) section.
+Exploration](/docs/magtag-training/golioth-intro/signup) section.
 
 ## Learning objectives
 

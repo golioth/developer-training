@@ -1,0 +1,1 @@
+../../../../../submodule-goliothdocs/docs/partials/install-espressif-toolchain.md
