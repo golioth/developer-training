@@ -26,7 +26,7 @@ devices. Golioth services that fall under the heading of C&C are:
 * LightDB State - part of this Observe Example
 * Remote Procedure Call (RPC)- part of this Observe Example
 * Settings Service- part of [the Stream
-  Example](/docs/zephyr-intro/zephyr-examples/golioth-stream)
+  Example](/docs/magtag-training/zephyr-intro/zephyr-examples/golioth-stream)
 
 ### Desired outcome(s)
 

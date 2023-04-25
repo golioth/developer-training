@@ -1,1 +1,0 @@
-../../../../submodule-goliothdocs/docs/partials/setup-zephyr.md

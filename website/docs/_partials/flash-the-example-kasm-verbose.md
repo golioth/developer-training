@@ -57,7 +57,7 @@ import TabItem from '@theme/TabItem';
 <br />
 
 :::note
-If the flash is successful, **you will receive an error message** telling you that you must manually reset the device. Remember to press the reset button to run the newly flashed program. [Learn more about this](/docs/zephyr-intro/zephyr-tips#you-must-press-the-reset-button-after-flashing-firmware).
+If the flash is successful, **you will receive an error message** telling you that you must manually reset the device. Remember to press the reset button to run the newly flashed program. [Learn more about this](/docs/magtag-training/zephyr-intro/zephyr-tips#you-must-press-the-reset-button-after-flashing-firmware).
 
-On some machines you will only have a few seconds to run the `esptool.py` command after entering bootloader mode. [Learn more about this](/docs/zephyr-intro/zephyr-tips.md#errors-with-west-build-zephyr-tree-and-esp32-environmental-variables).
+On some machines you will only have a few seconds to run the `esptool.py` command after entering bootloader mode. [Learn more about this](/docs/magtag-training/zephyr-intro/zephyr-tips.md#errors-with-west-build-zephyr-tree-and-esp32-environmental-variables).
 :::
