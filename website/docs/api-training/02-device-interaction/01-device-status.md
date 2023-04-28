@@ -9,7 +9,8 @@ description: |
 First and foremost, you need to know the state of your fleet. To view individual
 device status:
 
-1. Click the `Devices` option in the left sidebar
+1. Click the `Devices` option in the left sidebar of [the Golioth
+   Console](https://console.golioth.io)
 2. Click on the device `Name` in the resulting list
 
 ![Golioth Device Status](./assets/golioth-device-status.jpg)
@@ -30,6 +31,22 @@ On this page you can view the following information:
 * `Firmware`: Displays current package and version of OTA firmware. (This
   precompiled example doesn't implement OTA, so no firmware has been reported to
   the cloud)
+
+## Why is my device "Out of sync"?
+
+You may have notices that the `Setting Sync` for your device reports `Out of
+sync`:
+
+![Settings out of sync](./assets/status-out-of-sync.jpg)
+
+This indicates that there is a mismatch between what settings the device expects
+and those provided by the cloud. Hovering over the red `i` will provide further
+information.
+
+In this particular case, the application we are running expects two specific
+keys to be available from the Settings Service. These have not yet been set up
+on your Golioth project, but we will remedy that when we get to [the Settings
+Service section](05-settings-service.md) of this training.
 
 ## Additional Exercises
 
