@@ -1,5 +1,6 @@
 ---
-sidebar_position: 1
+id: what-is-golioth
+description: Learn about Golioth, your Instant IoT Cloud
 ---
 
 # What is Golioth and how can I use it?
