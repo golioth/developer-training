@@ -1,5 +1,7 @@
 ---
-sidebar_position: 2
+id: golioth-console
+description: |
+  Login to Golioth and create a device with credentials.
 ---
 
 # Console Signup and Exploration
