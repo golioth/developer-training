@@ -74,7 +74,7 @@ Zephyr.
 
     :::info
     Golioth Device Credentials were created during the [Console Signup and
-    Exploration](./signup.md) step. You can return to the [Golioth
+    Exploration](./02-signup.md) step. You can return to the [Golioth
     Console](https://console.golioth.io/) to retrieve the PSK-ID/PSK.
 
     WiFi credentials come from your home or business WiFi. It is also possible
