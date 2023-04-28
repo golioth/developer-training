@@ -1,5 +1,7 @@
 ---
-sidebar_position: 3
+id: connect-nRF7002-to-golioth
+description: |
+   Use a precompiled application to connect an nRF7002-DK to Golioth
 ---
 
 # Connect Hardware to Golioth
