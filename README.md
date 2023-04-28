@@ -10,6 +10,7 @@ Clone the repository (along with the submodule):
 
 ```console
 git clone git@github.com:golioth/developer-training.git
+cd developer-training
 git submodule update --init
 ```
 
