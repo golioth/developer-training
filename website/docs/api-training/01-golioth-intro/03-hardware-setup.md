@@ -70,10 +70,10 @@ properly. This is accomplished over USB using the Shell built into Zephyr.
     1. Plug a USB cable into your computer and your Thingy:91
     2. Place the Thingy:91 power switch in the `On` position
     3. Choose `Nordic Thingy:91` from the upper left `SELECT DEVICE` dialog
-    4. Select the second of two available serial ports
+    4. Select the first of two available serial ports
     5. Click `Connect to Port`
 
-    You can now turn the Tingy:91 power switch off and back on to see the serial
+    You can now turn the Thingy:91 power switch off and back on to see the serial
     output as it runs. We expect that the device will not be able to connect as
     it does not yet have credentials.
 
