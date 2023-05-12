@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "golioth"
+  },
+  "targets": {
+    "golioth": {
+      "hosting": {
+        "training": [
+          "golioth-training"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
