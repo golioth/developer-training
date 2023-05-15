@@ -1,8 +1,10 @@
 ---
-sidebar_position: 1
+id: zephyr-training
+sidebar_position: -1
+title: Zephyr Training
 ---
 
-# Developer Training Overview
+# Zephyr Training Overview
 
 ## What is this training all about?
 
@@ -28,7 +30,7 @@ Kasm is a virtual desktop workspace in a browser. For this training we have prec
 
 We believe this is the fastest way to get new developers building Zephyr projects and interacting with Golioth. You should be able to build a Zephyr + Golioth project almost immediate after entering the development environment.
 
-![Kasm](./magtag-training/assets/Kasm.png)
+![Kasm](./assets/Kasm.png)
 
 Because this training uses a virtual build environment, to continue working with Zephyr after this training is over you will need to [install the Zephyr toolchain on your local machine](./magtag-training/after-training/local-toolchain-install). Golioth staff is available to help make this process smoother. Documentation for installing the toolchain is included in [the Golioth Getting Started Guides](https://docs.golioth.io).
 
