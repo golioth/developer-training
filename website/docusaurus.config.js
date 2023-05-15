@@ -37,6 +37,10 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        defaultMode: "dark",
+        respectPrefersColorScheme: false,
+      },
       navbar: {
         title: 'Developer Training',
         logo: {
@@ -45,10 +49,16 @@ const config = {
         },
         items: [
           {
-            type: 'doc',
-            docId: 'intro',
+            to: "docs/api-training",
+            activeBasePath: "api-training",
+            label: "API Training",
             position: 'left',
-            label: 'Start Here',
+          },
+          {
+            to: "docs/magtag-training",
+            activeBasePath: "magtag-training",
+            label: "Zephyr Training",
+            position: 'left',
           },
           {
             href: 'https://github.com/golioth/developer-training',
