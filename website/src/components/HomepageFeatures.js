@@ -14,18 +14,20 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Get Started Quickly',
-    Svg: require('../../static/img/magtag.svg').default,
+    title: 'Golioth API Training',
+    Svg: require('../../static/img/golioth-g-gradient-cloud.svg').default,
     description: (
       <>
-        This dual track training includes pre-configured hardware examples to start investigating Golioth's features. 
-        After using CircuitPython's high level interfaces to interact with our various Golioth APIs, we will explore the
-        device side examples using the Zephyr RTOS.
+        Golioth makes it easy to interact with your IoT devices and their data.
+        This REST API training module will familiarize you with how devices are
+        represented in the cloud. You'll learn how monitor and control your
+        fleet, and access the time-series and stateful data being collected from
+        it.
       </>
     ),
   },
   {
-    title: 'Go in depth on Zephyr',
+    title: 'Zephyr Training',
     Svg: require('../../static/img/zephyr.svg').default,
     description: (
       <>
