@@ -11,14 +11,11 @@ description: |
 In this section you'll learn what the Golioth OpenAPI docs are, as well as how
 to create an API key for your project and use it to authenticate.
 
-### Desired outcome(s)
-
-* Authenticate the OpenAPI Docs page so you may use it in the rest of the pages
-  of this module.
-
-### Time Estimate
-
-* 5 minutes
+* **Desired outcome(s)**
+  1. Authenticate the OpenAPI Docs page so you may use it in the rest of the
+     pages of this module.
+  2. Understand the process of testing API calls using the OpenAPI Docs
+* **Time Estimate:** 5 minutes
 
 ## What are the Golioth OpenAPI Docs?
 

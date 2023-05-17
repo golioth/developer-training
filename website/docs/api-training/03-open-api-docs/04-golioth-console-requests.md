@@ -20,13 +20,9 @@ your preferred browser.
 
 :::
 
-### Desired outcome(s)
-
-* Understand how to view the REST API calls made by the Golioth Web Console
-
-### Time Estimate
-
-* 5 minutes
+* **Desired outcome(s)**
+  1. Understand how to view the REST API calls made by the Golioth Web Console
+* **Time Estimate:** 10 minutes
 
 ## Inspect the Golioth Web Console for REST API Queries
 
