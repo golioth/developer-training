@@ -11,14 +11,11 @@ description: |
 In the previous step we authenticated the OpenAPI Docs. Let's use them now to
 return a list of the devices from this project.
 
-### Desired outcome(s)
-
-* Know where to find the `projectId` and `deviceId` needed for most REST API queries
-* Understand the process of testing API calls using the OpenAPI Docs
-
-### Time Estimate
-
-* 5 minutes
+* **Desired outcome(s)**
+  1. Know where to find the `projectId` and `deviceId` needed for most REST API
+     queries
+  2. Understand the process of testing API calls using the OpenAPI Docs
+* **Time Estimate:** 10 minutes
 
 ## Query the `Devices` endpoint
 

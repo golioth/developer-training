@@ -13,15 +13,11 @@ parameters like the start and ends times. We'll walk through the process by
 quering the temperature data that is currently stream from your device to
 Golioth.
 
-### Desired outcome(s)
-
-* Successfully retrieve historic sensor data from Golioth
-* Understand how to look up the parameters the Golioth REST API needs for more
-  complex calls
-
-### Time Estimate
-
-* 10 minutes
+* **Desired outcome(s)**
+  1. Successfully retrieve historic sensor data from Golioth
+  2. Understand how to look up the parameters the Golioth REST API needs for
+     more complex calls
+* **Time Estimate:** 10 minutes
 
 ## Query the LightDB Stream endpoint
 
