@@ -5,7 +5,8 @@ description: |
 ---
 
 import InstallNrfConnect from './\_partials/install_nrf_connect.md'
-import UseNrfConnectSerial from './\_partials/use_nrf_connect_serial.md'
+import FlashWithNrfConnect from '/docs/\_partials/flash-the-example-nrf.md'
+import ConnectToSerial7002 from '/docs/\_partials/connect-to-serial.md'
 
 # Connect Hardware to Golioth
 
@@ -35,14 +36,7 @@ programmer/debugger via a USB connection.
    from our Zephyr Training nRF7002dk repository.
 
 4. Flash the precompiled binary to the nRF7002-DK
-
-    1. In the nRF Connect Desktop Programmer, choose nRF7002 from the upper left
-       `SELECT DEVICE` dialog.
-    2. Click `Add file` and choose `Golioth_nRF7002_kitchen_sink_vX.X.X.hex` you
-       previously downloaded
-    3. Click the "Erase & write" button
-
-    ![Nordic nRF Connect for Desktop Programmer after flashing firmware](./assets/nrf-connect-desktop-programmer-after-flashing.jpg)
+<FlashWithNrfConnect/>
 
 ### Adding WiFi and Device Credentials
 
@@ -50,21 +44,15 @@ WiFi and Golioth Device Credentials must be added to the device for it to
 connect properly. This is accomplished over USB using the Shell built into
 Zephyr.
 
-<UseNrfConnectSerial/>
+<ConnectToSerial7002/>
 
-2. Connect the Serial Terminal to your device
-
-    1. Choose nRF7002 from the upper left `SELECT DEVICE` dialog
-    2. Select the second of two available serial ports
-    3. Click `Connect to Port`
-
-    You can now press the reset button on the nRF7002-DK to see the serial
-    output as it runs. We expect that the device will not be able to connect as
-    it does not yet have credentials.
+3. You can now press the reset button on the nRF7002-DK to see the serial output
+   as it runs. We expect that the device will not be able to connect as it does
+   not yet have credentials.
 
     ![Nordic nRF Connect for Desktop Serial Terminal connected](./assets/nrf-connect-desktop-serial-terminal-connected.jpg)
 
-3. Use the serial connection to assign WiFi and Golioth Device Credentials
+4. Use the serial connection to assign WiFi and Golioth Device Credentials
 
     :::info
     Golioth Device Credentials were created during the [Console Signup and
@@ -89,7 +77,7 @@ Zephyr.
     uart:~$ kernel reboot cold
     ```
 
-4. Observe the device connecting to Golioth
+5. Observe the device connecting to Golioth
 
     After the nRF7002-DK reboots, the serial terminal will remain connected. You
     should see the device connect to WiFi, then Golioth, and begin streaming
