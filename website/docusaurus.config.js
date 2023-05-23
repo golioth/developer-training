@@ -49,6 +49,12 @@ const config = {
         },
         items: [
           {
+            to: "docs/golioth-exploration",
+            activeBasePath: "golioth-exploration",
+            label: "Intro to Golioth",
+            position: 'left',
+          },
+          {
             to: "docs/api-training",
             activeBasePath: "api-training",
             label: "API Training",
