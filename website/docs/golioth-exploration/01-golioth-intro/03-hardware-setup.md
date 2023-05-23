@@ -4,6 +4,9 @@ description: |
    Use a precompiled application to connect an nRF7002-DK to Golioth
 ---
 
+import InstallNrfConnect from './\_partials/install_nrf_connect.md'
+import UseNrfConnectSerial from './\_partials/use_nrf_connect_serial.md'
+
 # Connect Hardware to Golioth
 
 ## Optional Hardware
@@ -25,17 +28,11 @@ programmer/debugger via a USB connection.
 
 ### Programming the Binary
 
-1. [Download the latest Release](https://github.com/golioth/zephyr-training-nrf7002dk/releases/latest) from our Zephyr Training nRF7002dk
-   repository.
+<InstallNrfConnect/>
 
-2. Download Nordic's [nRF Connect for
-   Desktop](https://www.nordicsemi.com/Products/Development-tools/nRF-Connect-for-desktop)
-   software.
-
-3. Launch nRF Connect for Desktop. From that application, install and open the
-   Programmer.
-
-    ![Nordic nRF Connect for Desktop launch the Programmer](./assets/nrf-connect-desktop-programmer-launch.jpg)
+3. [Download the latest
+   Release](https://github.com/golioth/zephyr-training-nrf7002dk/releases/latest)
+   from our Zephyr Training nRF7002dk repository.
 
 4. Flash the precompiled binary to the nRF7002-DK
 
@@ -53,10 +50,7 @@ WiFi and Golioth Device Credentials must be added to the device for it to
 connect properly. This is accomplished over USB using the Shell built into
 Zephyr.
 
-1. Launch nRF Connect for Desktop. From that application, install and open the
-   Serial Terminal.
-
-    ![Nordic nRF Connect for Desktop launch the Serial Terminal](./assets/nrf-connect-desktop-serial-terminal-launch.jpg)
+<UseNrfConnectSerial/>
 
 2. Connect the Serial Terminal to your device
 
