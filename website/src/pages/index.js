@@ -16,7 +16,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/api-training">
+            to="/docs/golioth-exploration">
             Start the {siteConfig.title}!
           </Link>
         </div>
