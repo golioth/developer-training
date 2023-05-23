@@ -61,8 +61,8 @@ const config = {
             position: 'left',
           },
           {
-            to: "docs/magtag-training",
-            activeBasePath: "magtag-training",
+            to: "docs/zephyr-training",
+            activeBasePath: "zephyr-training",
             label: "Zephyr Training",
             position: 'left',
           },

@@ -13,6 +13,6 @@ matches your training session today:
 
 Learn how to access data and control fleet devices using the Golioth REST APIs.
 
-## [Zephyr Training](/docs/magtag-training)
+## [Zephyr Training](/docs/zephyr-training)
 
 Wrap your head around Zephyr with this quickstart training.
