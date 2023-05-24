@@ -6,7 +6,16 @@ description: |
 
 # Build Your First Zephyr App
 
-- Explain complete lack of board specific code
-- Add logging
-    - Use menuconfig to turn on symbol
-    - Add symbol to prj.conf
+In this module we will build, flash, and run our first Zephyr App. Along the way
+you will learn:
+
+* Familiarity with the Kasm build container used throughout this training
+* How to build a Zephyr application using the `west` meta tool
+* How to add an in-tree library (Logging) to a project
+  * How to use `menuconfig` to adjust Kconfig symbols
+  * How to make Kconfig changes permanent in your application
+* How to use the Zephyr Logging system
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />

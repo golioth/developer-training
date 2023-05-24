@@ -1,5 +1,7 @@
 ---
 sidebar_position: 3
+description:
+    Learn about Logging, KConfig, and menuconfig
 ---
 
 import FirmwareFlash from '/docs/\_partials/flash-the-example-nrf.md'
