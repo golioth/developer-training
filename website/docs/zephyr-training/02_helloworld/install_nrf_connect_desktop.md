@@ -2,7 +2,7 @@
 id: nrf-connect-desktop
 sidebar_position: 1
 description: |
-  We will use Nordic's tools for flashing binaries and opening a serial terminal
+  Using Nordic's tools for programming and serial terminal
 ---
 
 import InstallNrfConnect from '/docs/golioth-exploration/01-golioth-intro/\_partials/install_nrf_connect.md'
