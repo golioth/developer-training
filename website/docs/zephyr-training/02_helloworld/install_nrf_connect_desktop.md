@@ -1,12 +1,12 @@
 ---
 id: nrf-connect-desktop
-position: 1
+sidebar_position: 1
 description: |
   We will use Nordic's tools for flashing binaries and opening a serial terminal
 ---
 
 import InstallNrfConnect from '/docs/golioth-exploration/01-golioth-intro/\_partials/install_nrf_connect.md'
-import UseNrfConnectSerial from '/docs/golioth-exploration/01-golioth-intro/\_partials/use_nrf_connect_serial.md'
+import UseNrfConnectSerial from '/docs/\_partials/connect-to-serial.md'
 
 # Install Nordic's nRF Connect for Desktop
 
