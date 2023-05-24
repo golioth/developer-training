@@ -15,8 +15,7 @@ import ConnectToSerial7002 from '/docs/\_partials/connect-to-serial.md'
 While hardware is not required for this training, it is nice to have a real
 device sending data back to Golioth to see how everything works. With that in
 mind, we recommend downloading the latest binary from the releases section of
-[our Zephyr Training nRF7002dk
-repository](https://github.com/golioth/zephyr-training-nrf7002dk).
+[our Zephyr Training repository](https://github.com/golioth/zephyr-training).
 
 ## Nordic nRF7002 Development Kit
 
@@ -32,7 +31,7 @@ programmer/debugger via a USB connection.
 <InstallNrfConnect/>
 
 3. [Download the latest
-   Release](https://github.com/golioth/zephyr-training-nrf7002dk/releases/latest)
+   Release](https://github.com/golioth/zephyr-training/releases/latest)
    from our Zephyr Training nRF7002dk repository.
 
 4. Flash the precompiled binary to the nRF7002-DK
