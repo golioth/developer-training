@@ -1,5 +1,7 @@
 ---
 sidebar_position: 2
+description:
+    Get familiar with VScode, Kasm, and `west`
 ---
 
 import HowToDownload from '/docs/\_partials/download-from-kasm.md'
@@ -8,7 +10,7 @@ import ConnectSerial from '/docs/\_partials/connect-to-serial.md'
 
 # Build Hello World
 
-Engineering tradition dictates we must begin Hello World!
+Engineering tradition dictates we must begin with Hello World!
 
 ## Learning objectives
 
