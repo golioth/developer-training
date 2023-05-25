@@ -12,12 +12,10 @@ This section includes references to [the Golioth docs site](https://docs.golioth
 
 This section is to get you signed up with a Golioth account, which is required for getting credentials so your device can authenticate to Golioth and later accessing device data on the Console. There is a 'wizard' that will guide you through creating your first device on the platform.
 
-### Desired Outcome 
-
-* Understand how to add a single device to the console
-* Be able to access the credentials for use on your device.
-### Time Estimate
-* 5 minutes
+* **Desired outcome(s)**
+  1. Understand how to add a single device to the console
+  2. Be able to access the credentials for use on your device.
+* **Time Estimate:** 5 minutes
 
 ## Signup and Provision your first device
 

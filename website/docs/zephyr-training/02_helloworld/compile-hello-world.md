@@ -19,16 +19,12 @@ pre-configured, so all you need to do is build, flash, and view the output over
 serial. These step will be used constantly in your Zephyr development process.
 Now is a great time to get comfortable with the workflow.
 
-### Desired outcome(s)
-
-* Understand how to use the `west` metatool to build an application
-* Learn the process of downloading a compiled binary from the Kasm build
-  environment used in this training
-* Know how to use Nordic's graphical programmer and serial terminal tools
-
-### Time Estimate
-
-* This section will take 15 minutes
+* **Desired outcome(s)**
+  1. Understand how to use the `west` metatool to build an application
+  2. Learn the process of downloading a compiled binary from the Kasm build
+     environment used in this training
+  3. Know how to use Nordic's graphical programmer and serial terminal tools
+* **Time Estimate:** 15 minutes
 
 ## Workflow
 

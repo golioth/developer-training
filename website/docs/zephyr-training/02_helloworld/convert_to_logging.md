@@ -16,16 +16,13 @@ Logging system.
 This section will demonstrate how to turn on and use the Zephyr Logging system using
 `menuconfig`. Along the way we'll touch on kernel functions.
 
-### Desired outcome(s)
-
-* Gain exposure to `menuconfig` for adjusting Kconfig symbols
-* Understand how project-wide Kconfig is merged into a single file at build time
-* Understand how to register and send logging messages
-* Learn about kernel functions
-
-### Time Estimate
-
-* This section will take 15 minutes
+* **Desired outcome(s)**
+    1. Gain exposure to `menuconfig` for adjusting Kconfig symbols
+    2. Understand how project-wide Kconfig is merged into a single file at build
+       time
+    3. Understand how to register and send logging messages
+    4. Learn about kernel functions
+* **Time Estimate:** 15 minutes
 
 ## Exercise: Add a loop and counter
 
