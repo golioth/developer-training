@@ -213,3 +213,9 @@ properly. This is accomplished over USB using the Shell built into Zephyr.
 
 </TabItem>
 </Tabs>
+
+## Success!!
+
+Your device is now running the application and connecting to Golioth.
+Congratulations! In the next module we will use this device to illustrate
+interaction with IoT devices from the cloud.
