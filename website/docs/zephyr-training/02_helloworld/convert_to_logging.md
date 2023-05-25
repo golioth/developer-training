@@ -276,7 +276,7 @@ void main(void)
       code and make it available for download
 
     * Use the Download option in Kasm's left sidebar to download
-      `zephyr_<appfolder>_<hhmmss>.hex` to your local machine.
+      `<devicename>_<appfolder>_<hhmmss>.hex` to your local machine.
 
       :::caution
 
