@@ -3,7 +3,7 @@ id: golioth-exploration
 sidebar_position: -1
 ---
 
-# Golioth Overview
+# Intro to Golioth
 
 ## What is this training all about?
 
