@@ -6,6 +6,15 @@ description: |
 
 # Map an LED using Devicetree
 
-- You do not *need* to used DT, but you should because it's the zephyr way
-  - Use nodelabel
-  - Use alias
+In this module we will use a Devicetree overlay file to map an LED. This is the
+perfect opportunity to dig into the secret to Zephyr's hardware abstraction.
+Along the way you will learn:
+
+* A general overview of what Devicetree does
+* Learn where to look in the Zephyr tree to find existing Devicetree definitions
+* Gain exposure to how Devicetree nodes work
+* Learn how to access Devicetree nodes from C code
+
+import DocCardList from '@theme/DocCardList';
+
+<DocCardList />
