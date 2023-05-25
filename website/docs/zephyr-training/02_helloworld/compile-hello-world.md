@@ -104,7 +104,7 @@ mouse, we will build/flash from the command line to get comfortable with how the
       code and make it available for download
 
     * Use the Download option in Kasm's left sidebar to download
-      `zephyr_<appfolder>_<hhmmss>.hex` to your local machine.
+      `<devicename>_<appfolder>_<hhmmss>.hex` to your local machine.
 
     <HowToDownload/>
 
