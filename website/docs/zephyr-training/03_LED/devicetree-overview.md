@@ -8,15 +8,15 @@ description: |
 # Devicetree Overview
 
 Devicetree is the data structure that Zephyr uses to describe hardware.
-Everything from the bus addresses inside the microcontrollers to the type of
-sensors you connect to your device should be described in Devicetree.
+Everything should be described in Devicetree, from the bus addresses inside the
+microcontrollers to the type of sensors you connect to your device.
 
 It is still possible to access all MCU registers, and interact with GPIO and
-other peripherals directly. But that misses out on one of Zephyr's best features:
-portability. We live in an age of chip shortages and there's a very real
+other peripherals directly. But that misses out on one of Zephyr's best
+features: portability. We live in an age of chip shortages. There's a real
 possibility the project you're working on will need to move to a different chip
-within the same family, or to a completely different manufacturer. When done
-right, Devicetree lets you do this ***without altering any of your C code!!!***
+variant, or to a completely different manufacturer. When done right, Devicetree
+lets you do this ***without altering any of your C code!***
 
 <table>
 <tr><td>
@@ -61,9 +61,9 @@ on this board.
 </td></tr>
 </table>
 
-But with great power, comes great responsibility. It's up to you to get your
-Devicetree files right. When done wrong, the compiler errors are brutally
-punishing. (We're only partly joking here.)
+With great power, comes great responsibility. It's up to you to get your
+Devicetree files right. When done wrong, the compiler errors are difficult to
+unwind and troubleshoot.
 
 In this module we will frequently abbreviate Devicetree as DT.
 
@@ -83,8 +83,9 @@ worth having on speed-dial when you run into issues.
 
 ## Devicetree for the nRF9160dk
 
-Let's take the red pill. You've been working with our training repository. Did
-you know it's set up to have a full copy of the Zephyr tree in it?
+Let's dive in. You've been working with [our training
+repository](https://github.com/golioth/zephyr-training). Did you know it's set
+up to have a full copy of the Zephyr tree in it?
 
 1. Take a moment to explore the `deps/zephyr` folder. You'll find a ton of help
    in here (`samples` and `tests` are the next-best thing if a tutorial for what
@@ -130,8 +131,8 @@ you know it's set up to have a full copy of the Zephyr tree in it?
     ```
 
     This represents everything that's already been set up for you for this
-    particular development board, from peripheral address, to pin muxes, to Kconfig
-    symbols that enable necessary libraries.
+    particular development board, from peripheral address, to pin muxes, to
+    Kconfig symbols that enable necessary libraries.
 
 2. Browse the `nrf9160dk_nrf9160_common.dts` file
 
@@ -166,7 +167,7 @@ not understand most of this. But a few general things:
 1. The `okay` status means this node is enabled. Setting a status to `disabled`
    would remove it from the build.
 2. Note the `&` operator on `&uart0`. This tells us that this node already
-   exists on the DT and what we're doing here is making changes.
+   exists in the DT and what we're doing here is making changes.
 3. The pinout of the uart is not defined here, it's defined using Pin Control
    (which handles muxing for special-function peripherals). You can see this
    defines which Pin Control definitions to use.
@@ -176,13 +177,16 @@ not understand most of this. But a few general things:
   We will not touch on Pin Control at all in this training (we won't need it
   today). See the [Pin Control
   docs](https://docs.zephyrproject.org/latest/hardware/pinctrl/index.html) for
-  further information.
+  further information. We have written about [Pin Control on our blog as
+  well](https://blog.golioth.io/how-to-use-zephyr-pin-control-pinctrl-for-pin-multiplexing-and-configuration/).
+
   :::
 
 ### Devicetree is many files combined
 
-In point #2 above, we said the `uart0` DT node already exits. So where is
-`uart0` actually defined? The chip itself has DT files!
+In point #2 above, we said the `uart0` DT node already exits for the board files
+we're looking at. So where is `uart0` actually defined? The chip itself has DT
+files!
 
 Microcontroller specific DT files are found in the `zephyr/dts` folder. If we
 look in `zephyr/dts/arm/nordic/nrf9160_common.dtsi` we can locate the `uart0`
@@ -207,9 +211,10 @@ files) that we will be working with in this module.
 
 :::
 
-When the project is built, the microcontroller DT files will be located, the
-board DT files will be combined on top of those, and the overlay DT files from
-the application will be added on top of everything.
+When the project is built, the microcontroller DT files are located and used as
+the base, the board DT files will be combined on top of those, and the overlay
+DT files from the application will be added on top of everything. Each of these
+layers are capable of controlling different elements in the system.
 
 ## Don't Freak Out!
 

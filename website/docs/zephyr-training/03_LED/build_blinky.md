@@ -105,7 +105,7 @@ walk through the code to establish how this happens.
 ### Alias, DT Spec, API Call
 
 1. From the C side of things, the pattern is not difficult to understand. First,
-   `main.c` looks for an `alias` in the Devicetree:
+   `main.c` looks for an `alias` in the Devicetree with a macro:
 
     ```c
     /* The devicetree node identifier for the "led0" alias. */
@@ -124,6 +124,10 @@ walk through the code to establish how this happens.
     ```c
     ret = gpio_pin_toggle_dt(&led);
     ```
+
+`ret` above is the return code from the toggle function. Zephyr often sends
+return codes from functions and you can use them to determine if things went as
+planned.
 
 You don't need to know much more than that. The `west build -b <boardname>`
 command selects the proper Devicetree files. As discussed in the [Devicetree
@@ -173,8 +177,14 @@ an `led0` alias, the same C code will be able to drill down to this pin
 assignment information, even if it's a chip from a completely different
 manufacturer.
 
+## A Reminder
+
+If you're used to embedded C, some of the things might look OK to you or they
+might look *really* different. As you continue to look at more Zephyr based C
+and dig into the DT, you'll start to recognize patterns.
+
 ## Conclusion
 
 We now have a taste of how the built-in DT files help us. In the next section
-we'll pretend that these definitions doesn't exist in the DT files. We'll map an
+we'll pretend that these definitions don't exist in the DT files. We'll map an
 LED, make an alias, and reference these from our C code.
