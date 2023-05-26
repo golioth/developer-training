@@ -21,7 +21,7 @@ Write your own DT nodes in the overlay file for your board to access an LED from
 nodes are addressed from C code.
 
 * **Desired outcome(s)**
-  1. Your board blinks LED2 at 1 Hz (but you mapped that LED!!)
+  1. Your board blinks LED2 at 1 Hz (but this time, you mapped that LED!!)
 * **Time Estimate:** 15 minutes
 
 ## Anatomy of an Overlay File
@@ -61,7 +61,7 @@ child node, which contains one subnode. To add an LED to an overlay file you
 will need:
 
 * One root node that contains two child nodes: `aliases` and `trainingleds`
-* The trainingleds child node needs a subnode that declares the LED
+* The `trainingleds` child node needs a subnode that declares the LED
 * The aliases child node needs a subnode that associates an alias called
   `training-led` with your LED subnode
 
@@ -91,7 +91,7 @@ LED2.
 
 1. Open the `03_LED/boards/<yourboard>.overlay` file for your board in the
    VScode editor
-2. Replace the `child-node-path` placeholder node
+2. Try it for yourself: Replace the `child-node-path` placeholder node
 
     :::tip
 
@@ -108,7 +108,7 @@ LED2.
     4. Remove `size` from this child node as it is not a required parameter for
        this compatible
 
-    <br /><details><summary>Click to reveal solution</summary>
+    <br /><details><summary>Click to reveal solution if you need help</summary>
 
     ```
             led_childnode_path {
@@ -123,7 +123,7 @@ LED2.
     1. Use `led2_subnode_label` as the nodelabel
     2. Use `led2_path` as the nodepath
 
-    <br /><details><summary>Click to reveal solution</summary>
+    <br /><details><summary>Click to reveal solution if you need help</summary>
 
     ```
             led_childnode_path {
@@ -156,7 +156,7 @@ LED2.
     * nRF9160dk: [Buttons, slide switches, and
       LEDs](https://infocenter.nordicsemi.com/index.jsp?topic=%2Fug_nrf91_dk%2FUG%2Fnrf91_DK%2Fintro.html&cp=2_0_4)
 
-    <br /><details><summary>Click to reveal solution</summary>
+    <br /><details><summary>Click to reveal solution if you need help</summary>
 
     ```
             /* for nRF7002dk LED2 */
@@ -185,7 +185,7 @@ LED2.
     1. Create `training-led` alias and set it to the address of the LED
        nodelabel you created in step 3
 
-    <br /><details><summary>Click to reveal solution</summary>
+    <br /><details><summary>Click to reveal solution if you need help</summary>
 
     ```
             aliases {
@@ -199,7 +199,7 @@ LED2.
 
 1. Update `main.c` to use our new `training-led` alias.
 
-    <details><summary>Click to reveal solution</summary>
+    <details><summary>Click to reveal solution if you need help</summary>
 
     ```c
     #define LED0_NODE DT_ALIAS(training_led)
@@ -249,7 +249,7 @@ documentation you can see there are multiple macros for accessing DT nodes.
 While it is very common to use an alias, try updating `main.c` to use the
 nodelabel to access your LED.
 
-<details><summary>Click to reveal solution</summary>
+<details><summary>Click to reveal solution if you need help</summary>
 
 ```c
 #define LED0_NODE DT_NODELABEL(led2_subnode_label)
