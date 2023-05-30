@@ -1,9 +1,0 @@
-{
-  "label": "After Training",
-  "position": 7,
-  "link": {
-    "type": "generated-index",
-    "title": "Training is over...now what?",
-    "description": "You have now learned the basics of Zephyr and connecting devices to Golioth. Go forth and build! But also, here are some other resources for building your skills as a developer and creating more sophisticated deployments with Golioth."
-  }
-}
