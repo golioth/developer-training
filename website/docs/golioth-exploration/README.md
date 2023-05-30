@@ -11,9 +11,8 @@ This module is a training tool where you'll to learn about Golioth and the
 services available through hands-on exploration.
 
 Instructors are here to offer a guiding hand and to answer questions live. In
-the event you're taking this training asynchronously, utilize [our
-forum](https://forum.golioth.io) and [our Discord
-channel](https://golioth.io/discord) if you find you are stuck.
+the event you're taking this training asynchronously, utilize [the Golioth
+forum](https://forum.golioth.io) if you find you are stuck.
 
 ## How can you use this information in your work?
 
@@ -23,7 +22,7 @@ size.
 
 * Understand the interface options in the Golioth Web Console
 * Flash pre-compiled firmware to a device
-* Provisioning the device with credentials to securely connect to the Golioth
+* Provision the device with credentials to securely connect to the Golioth
 * Send time-series data and stateful data
 * View device logs remotely
 * Update fleet settings
