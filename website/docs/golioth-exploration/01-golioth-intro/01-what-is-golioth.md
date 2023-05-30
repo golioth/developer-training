@@ -8,7 +8,7 @@ description: Learn about Golioth, your Instant IoT Cloud
 When we describe Golioth to engineers, we talk about two distinct pieces:
 
 * The Cloud side services that make up our commercial offering
-* The Device side support we offer to users to make it easier to connect IoT
+* The open source Device SDKs we offer to users to make it easier to connect IoT
   devices to the Cloud.
 
 ## Cloud side services
@@ -47,12 +47,14 @@ Our mission is to not only make Cloud services more accessible, but also to
 make it easier to connect your devices to those services.
 
 For us, that includes creating and releasing open source Software Development
-Kits (SDKs) for different platforms. We now have three:
+Kits (SDKs) for different platforms:
 
 * [**Zephyr RTOS**](https://github.com/golioth/golioth-zephyr-sdk)
 * [**nRF Connect SDK (NCS)**](https://github.com/golioth/golioth-zephyr-sdk)
 * [**Espressif IoT Development Framework
-  (ESP-IDF)**](https://github.com/golioth/golioth-esp-idf-sdk)
+  (ESP-IDF)**](https://github.com/golioth/golioth-firmware-sdk)
+* [**Infineon ModusToolbox&trade;**](https://github.com/golioth/golioth-firmware-sdk)
+* [**Linux**](https://github.com/golioth/golioth-firmware-sdk)
 
 Each of these SDKs include libraries to connect to Golioth and take advantage
 of the Cloud features explained above. We also publish samples which showcase
