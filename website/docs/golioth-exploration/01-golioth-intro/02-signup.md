@@ -6,11 +6,14 @@ description: |
 
 # Console Signup and Exploration
 
-This section includes references to [the Golioth docs site](https://docs.golioth.io/). We are linking you there so you have the most up-to-date directions on getting started with the Golioth Cloud. Once you have completed a section, you will come back to this page for further instructions.
-
 ## Learning Objectives
 
-This section is to get you signed up with a Golioth account, which is required for getting credentials so your device can authenticate to Golioth and later accessing device data on the Console. There is a 'wizard' that will guide you through creating your first device on the platform.
+This section guides you through the Golioth account creation process. You need
+an account in order to generate credentials so your device can authenticate with
+Golioth.
+
+With the Golioth Dev tier, your first 50 devices are free. There is a 'wizard'
+that will guide you through creating your first device on the platform.
 
 * **Desired outcome(s)**
   1. Understand how to add a single device to the console
@@ -28,6 +31,15 @@ import GoliothRegister from './_partials/2-register.md'
 import GoliothManage from './_partials/3-manage-devices.md'
 
 <GoliothManage/>
+
+:::note
+
+The wizard offers links for different hardware choices at the end. These are
+convenience links to the Golioth Docs and are not an indication/limitation to
+the types of hardware that may be used with the device credentials you just
+created.
+
+:::
 
 ## Authorize Devices
 
