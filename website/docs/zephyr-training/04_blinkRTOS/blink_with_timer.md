@@ -34,7 +34,7 @@ In the `04_blinkRTOS/src/main.c` file:
 
 1. Create a new function just above `main` to act as the timer callback
     * Function should be marked extern and return `void`
-    * Function parameter should be `struct k_timer *dummy`
+    * Function parameter should be `struct k_timer *dummy` (yes, dummy variables are notated as 'dummy'!)
     * Move the LED toggle function call out of the main loop and into your new
       function
       * Do not use a `k_sleep()` in this timer function, it should return after
@@ -44,6 +44,7 @@ In the `04_blinkRTOS/src/main.c` file:
     ```c
     K_TIMER_DEFINE(my_timer, my_timer_handler, NULL);
     ```
+  For more info on what we're passing in these functions, see the [Zephyr API docs on timers](https://docs.zephyrproject.org/apidoc/latest/group__timer__apis.html)
 
 3. In `main`, before the `while` loop begins, start your timer:
 

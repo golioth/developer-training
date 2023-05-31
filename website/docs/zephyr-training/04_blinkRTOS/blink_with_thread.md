@@ -12,7 +12,7 @@ import FirmwareFlash from '/docs/\_partials/flash-the-example-nrf.md'
 
 Now we take on the real power of an RTOS: the ability to run multiple threads on
 a single processor. Simply put, each thread is like its own `main()` loop which
-shares CPU time with all other threads.
+shares CPU time with all other threads. Each has its own dedicated stack, as well. The "scheduler" of an RTOS determines which thread will run next. 
 
 * **Desired outcome(s)**
     1. LED blinking moved to a dedicated thread
@@ -61,6 +61,8 @@ In the `04_blinkRTOS/src/main.c` file:
                     my_thread_handler, NULL, NULL, NULL,
                     K_LOWEST_APPLICATION_THREAD_PRIO, 0, 0);
     ```
+
+  See [the K_THREAD_DEFINE API docs](https://docs.zephyrproject.org/apidoc/latest/group__thread__apis.html#gab3ced58648ca35788a40676e8478ecd2) to see what each of the passed parameters represent.
 
 3. This thread will start automatically
 
