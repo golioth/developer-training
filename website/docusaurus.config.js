@@ -121,6 +121,10 @@ const config = {
                 label: 'GitHub',
                 href: 'https://github.com/golioth',
               },
+              {
+                label: 'Kasm Workspace',
+                href: 'https://try.golioth.io',
+              },
             ],
           },
         ],
