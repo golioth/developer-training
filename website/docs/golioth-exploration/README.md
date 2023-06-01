@@ -7,8 +7,8 @@ sidebar_position: -1
 
 ## What is this training all about?
 
-This module is a training tool where you'll to learn about Golioth and the
-services available through hands-on exploration.
+This module is a training tool where you'll learn about Golioth and the services
+available through hands-on exploration.
 
 Instructors are here to offer a guiding hand and to answer questions live. In
 the event you're taking this training asynchronously, utilize [the Golioth
