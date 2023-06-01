@@ -79,7 +79,16 @@ C.
         west build -b nrf9160dk_nrf9160_ns 03_LED
         ```
 
-4. Download the binary
+3. Download the binary
+
+    :::note
+
+    The normal workflow when using a development environment installed locally
+    is to use `west flash` to program the board. We are using a different
+    approach here because the Kasm container doesn't have access to your local
+    USB port.
+
+    :::
 
     * In the VScode terminal, run `west kasm download` to package the compiled
       code and make it available for download
