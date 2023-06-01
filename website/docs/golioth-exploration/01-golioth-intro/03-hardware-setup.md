@@ -115,6 +115,14 @@ Zephyr.
     uart:~$ kernel reboot cold
     ```
 
+    :::tip
+
+    By default the Nordic Serial Terminal has a bar along the top for all keyboard
+    input. If you would like to type at the prompt in the terminal window, click on
+    `Terminal Settings` in the left sidebar and choose `Shell`.
+
+    :::
+
 5. Observe the device connecting to Golioth
 
     After the nRF7002-DK reboots, the serial terminal will remain connected. You
