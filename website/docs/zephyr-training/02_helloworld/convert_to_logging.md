@@ -190,6 +190,20 @@ massive web of Kconfig options. Let's use this to turn on Logging.
 
     2. Save your `prj.conf` file
 
+    :::tip Persistent Project Configuration
+
+    The `prj.conf` is the default application configuration file that Zephyr
+    will automatically look for in the project root directory during each build.
+    This file will take [precedence over other Kconfig
+    files](https://docs.zephyrproject.org/latest/build/kconfig/setting.html#the-initial-configuration)
+    that have already been added to the build.
+
+    All project-level configuraiton should be placed in `prj.conf`, which is
+    persistent across build operations and should be added to your Git
+    repository. Any board-level configuration should be placed in the
+    `boards/<boardname>.conf` files to be included in the build.
+    :::
+
 ### Include header and register the module
 
 We've told Zephyr to build the Logging library, so now we can include the APIs.
