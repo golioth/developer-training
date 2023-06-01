@@ -11,7 +11,7 @@ In this section you'll learn the basics of what makes up Zephyr RTOS and how
 major components are used when developing applications. You'll work through
 severl hands-on examples designed to explore common elements for new developers.
 
-* Learn about Zephyr SDK, Zephyr Tree, Devicetree, Kconfig, Cmake, etc.
+* Learn about Zephyr SDK, Zephyr Tree, Devicetree, Kconfig, CMake, etc.
 * Compile and run Hello World; add feature using menuconfig
 * Map an LED in a Devicetree overlay file
 * Blink and LED using Zephyr's timer and thread features
