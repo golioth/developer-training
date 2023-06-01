@@ -56,7 +56,7 @@ In this module we'll learn about the various parts that make up Zephyr:
 * **Zephyr SDK:** The [collection of toolchains for Zephyr supported
   architectures](https://docs.zephyrproject.org/latest/develop/toolchains/zephyr_sdk.html)
   that are used to build firmware
-* **Cmake:** open source software used to manage the compilation process
+* **CMake:** open source software used to manage the compilation process
 * **Kconfig:** the language used to maintain a collection of configuration
   options for the build process
 * **Devicetree:** a data structure used for describing hardware
