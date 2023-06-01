@@ -14,8 +14,8 @@ up-to-date with the latest settings changes.
 
 ## Configure Settings for this fleet
 
-The sample application running on your nRF7002-DK expects two device settings to
-be present on the cloud. Let's set those up now.
+The sample application running on your development kit expects two device
+settings to be present on the cloud. Let's set those up now.
 
 1. Click the `Device Settings` option in the left sidebar of [the Golioth
    Console](https://console.golioth.io)
