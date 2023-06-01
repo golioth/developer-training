@@ -5,7 +5,8 @@ import styles from './HomepageFeatures.module.css';
 const FeatureList = [
   {
     title: 'Learn About Golioth',
-    Svg: require('../../static/img/logo.svg').default,
+    link: '/docs/golioth-exploration',
+    img: require('../../static/img/Golioth_logo_300x300.png').default,
     description: (
       <>
         This guide is for Developers to understand the various features of Golioth and how we can assist IoT deployments.
@@ -15,7 +16,8 @@ const FeatureList = [
   },
   {
     title: 'Golioth API Training',
-    Svg: require('../../static/img/golioth-g-gradient-cloud.svg').default,
+    link: '/docs/api-training',
+    img: require('../../static/img/API_Training_logo_300x300.png').default,
     description: (
       <>
         Golioth makes it easy to interact with your IoT devices and their data.
@@ -28,7 +30,8 @@ const FeatureList = [
   },
   {
     title: 'Zephyr Training',
-    Svg: require('../../static/img/zephyr.svg').default,
+    link: '/docs/zephyr-training',
+    img: require('../../static/img/Zephyr_logo_300x300.png').default,
     description: (
       <>
         Our users find that <a href="https://zephyrproject.org/">Zephyr RTOS</a> provides maximum hardware control and
@@ -40,15 +43,21 @@ const FeatureList = [
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({Svg, img, title, description, link}) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} alt={title} />
+      <a href={link}>
+        {Svg && <Svg className={styles.featureSvg} alt={title} />}
+        {img && <img width={150} src={img} alt={title} />}
+      </a>
       </div>
       <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
+        <a href={link}>
+          <h3>{title}</h3>
+        </a>
         <p>{description}</p>
+      
       </div>
     </div>
   );
