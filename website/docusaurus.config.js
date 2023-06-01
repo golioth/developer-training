@@ -44,7 +44,7 @@ const config = {
       navbar: {
         title: 'Developer Training',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Golioth Logo',
           src: 'img/logo.svg',
         },
         items: [
@@ -123,7 +123,7 @@ const config = {
               },
               {
                 label: 'Kasm Workspace',
-                href: 'https://try.golioth.io',
+                href: 'https://try.golioth.io ',
               },
             ],
           },
