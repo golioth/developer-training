@@ -23,7 +23,7 @@ To view the LightDB State data for a device:
 
 :::info Press some buttons
 Real-time update will be selected automatically for this view. Try pressing the
-buttons on the nRF7002-DK and observe how this value is updated.
+buttons on the development kit and observe how this value is updated.
 :::
 
 ## LightDB State page overview
