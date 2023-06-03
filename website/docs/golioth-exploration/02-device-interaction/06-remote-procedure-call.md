@@ -53,7 +53,7 @@ not seem like *the future*, this is an easy way to illustrate parameter input.)
 ## Additional Exercises
 
 * Submit the `multiply` RPC without any parameters
-* Submit the `non-existant-rpc` RPC
+* Submit the `non-existent-rpc` RPC
 * Turn off your IoT device and submit the `multiply` RPC
 
 :::tip Benefits of Remote Procedure Calls

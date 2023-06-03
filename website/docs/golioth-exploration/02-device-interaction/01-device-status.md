@@ -24,7 +24,7 @@ On this page you can view the following information:
 * `Tags`: (Optional) Used to create device groups within your fleet
 * `Primary Hardware ID`: Can be generated or customized for fleet organization
   (e.g. some customer use MAC address in this field)
-* `Device Id`: Use by the Golioth API to identify this device
+* `Device Id`: Used by the Golioth API to identify this device
 * `History`: Displays when this virtual device was created and last updated
 * `Status`: Displays information on when device last checked in and if its
   Settings Service has confirmed lasted cloud-side settings
