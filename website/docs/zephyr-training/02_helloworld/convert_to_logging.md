@@ -327,13 +327,17 @@ You can immediately see some of the benefits provided by logging:
 * Log level reported (here `inf` indicates an info log)
 * Source module indicated (`log_demo`)
 
-:::tip Golioth Remote Logging
+:::tip Example of Golioth Remote Logging
 
-Golioth utilizes the Zephyr Logging system to make remote logging possible. If
-you have Zephyr Logging turned on, and have added the Golioth System Client to
-your project ([we'll get to that](../golioth) in a little while) you can
-automatically send your logs to the cloud by enabling the backend logging
-Kconfig symbol:
+In the precompiled binary we loaded during the [Intro to
+Golioth](/docs/golioth-exploration) we observed logs being sent to the Golioth
+servers.
+
+The Golioth Zephyr SDK implements a backend for the Zephyr Logging system to
+make remote logging possible. If you have Zephyr Logging turned on, and have
+added the Golioth System Client to your project ([we'll get to that](../golioth)
+in a little while) you can automatically send your logs to the cloud by enabling
+the backend logging Kconfig symbol:
 
 ```
 CONFIG_LOG_BACKEND_GOLIOTH=y
