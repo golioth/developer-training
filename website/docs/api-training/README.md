@@ -3,7 +3,7 @@ id: api-training
 sidebar_position: -1
 ---
 
-# API Training Overview
+# Golioth REST API Training Overview
 
 ## Using Golioth OpenAPI
 
