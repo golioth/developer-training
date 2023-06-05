@@ -33,15 +33,22 @@ Subfolders containing C code usually have their own `CMakeLists.txt` file in
 them that specifies header files and C files to include in the build. This
 allows code to be conditionally included in a build.
 
-For instance, in the `01_IOT` application you loaded as a precompiled binary, we
-add the following lines to include a helper file if we're building for the
-nRF7002, and also include a subdirectory that has its own `CMakeLists.txt`
-file.
+:::tip Examples of conditional file inclusion
+
+The `01_IOT` application you loaded as a precompiled binary during the [Intro to
+Golioth](/docs/golioth-exploration) section demonstrates two approaches to
+conditional inclusion of files:
+
+* only include a WiFi helper file if we're building for the nRF7002
+* include a subdirectory that has its own `CMakeLists.txt` file for gathering
+  board-specific implementation of the network connection information function
 
 ```
 zephyr_library_sources_ifdef(CONFIG_BOARD_NRF7002DK_NRF5340_CPUAPP src/wifi_util.c)
 add_subdirectory(src/network_info)
 ```
+
+:::
 
 :::note More on CMake
 
