@@ -15,7 +15,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Golioth API Training',
+    title: 'Golioth REST API Training',
     link: '/docs/api-training',
     img: require('../../static/img/API_Training_logo_300x300.png').default,
     description: (
