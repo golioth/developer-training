@@ -29,7 +29,7 @@ This section will demonstrate how to turn on and use the Zephyr Logging system u
 The Hello World application is pretty boring. Let's start spicing it up by
 adding a loop and a counter.
 
-1. Open the `main.c` file from your `01_helloworld` application
+1. Open the `main.c` file from your `02_helloworld` application
 2. In `main()` create an integer called `counter` and set it to zero
 3. Create an infinite loop around the `printk()` statement
 
