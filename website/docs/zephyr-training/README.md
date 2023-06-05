@@ -3,13 +3,13 @@ id: zephyr-training
 sidebar_position: -1
 ---
 
-# Zephry Training Overview
+# Zephyr Training Overview
 
 ## Your Quickstart for Zephyr RTOS
 
 In this section you'll learn the basics of what makes up Zephyr RTOS and how
 major components are used when developing applications. You'll work through
-severl hands-on examples designed to explore common elements for new developers.
+several hands-on examples designed to explore common elements for new developers.
 
 * Learn about Zephyr SDK, Zephyr Tree, Devicetree, Kconfig, CMake, etc.
 * Compile and run Hello World; add feature using menuconfig
