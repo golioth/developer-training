@@ -175,6 +175,36 @@ Equally important is that your thread do something that yields back (usually
 
 :::
 
+:::tip Example of Threads and resource control
+
+The `01_IOT` precompiled binary you tested during the [Intro to
+Golioth](/docs/golioth-exploration) section uses a thread to blink the LED. One
+thing to keep in mind when accessing system resources from different threads is
+that only one thread at a time should be operating on that resource. The example
+code [uses a
+mutex](https://docs.zephyrproject.org/latest/kernel/services/synchronization/mutexes.html)
+to test for GPIO availability.
+
+```c
+extern void led_blink(void) {
+	gpio_pin_configure_dt(&led0, GPIO_OUTPUT_INACTIVE);
+	gpio_pin_configure_dt(&led1, GPIO_OUTPUT_INACTIVE);
+
+	led_set_selected(1);
+
+	while (1) {
+		if (k_mutex_lock(&led_mutex, K_MSEC(5)) == 0) {
+			gpio_pin_toggle_dt(_selected_led);
+			k_mutex_unlock(&led_mutex);
+		}
+		k_sleep(K_MSEC(_blink_delay_ms));
+	}
+}
+K_THREAD_DEFINE(blink_thread_id, 1024, led_blink, NULL, NULL, NULL, 5, 0, 0);
+```
+
+:::
+
 For more information on Zephyr Threads, consult [the Threads
 documentation](https://docs.zephyrproject.org/latest/kernel/services/threads/index.html).
 
