@@ -15,7 +15,7 @@
         this serial terminal:
 
         * When choosing your device, device names sometimes change. At times you
-          will see names like "nRF7002 DK" or "nRF9160" but other time you will
+          will see names like "nRF7002 DK" or "nRF9160" but other times you will
           see "J-Link"
         * Serial ports vary by device:
            * For the nRF7002 DK, select the second of two serial port options
