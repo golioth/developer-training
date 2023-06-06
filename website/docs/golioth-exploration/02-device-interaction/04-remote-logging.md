@@ -6,7 +6,7 @@ description: |
 
 # Remote Logging
 
-The Golioth Remote Logging service allows you to access logging message from
+The Golioth Remote Logging service allows you to access log messages from
 devices in your fleet.
 
 To view the Remote Logging data for a device:
@@ -18,19 +18,19 @@ To view the Remote Logging data for a device:
 
 ![Golioth Remote Logging](./assets/remote-logging.jpg)
 
-## LightDB State page overview
+## Logs page overview
 
 On this page you can view the following information:
 
 * `Timestamp`: Time/Date at which the log was received
-* `Level`: standardized log level for this message (Error, Warning, Info, Debug)
-* `Module`: the C file (or one of a group of C files) that generated the log message
-* `Message`: the payload your code generated for this log
-* Time selector: historic logs can be access by choosing time/date from the time
+* `Level`: Standardized log level for this message (Error, Warning, Info, Debug)
+* `Module`: The C file (or one of a group of C files) that generated the log message
+* `Message`: The payload your code generated for this log
+* Time selector: Historic logs can be accessed by choosing time/date from the time
   selection box
-* Log level selector: filter messages shown by log level
-* Search tools: search by message/metadata or module
-* Refresh tools: both manual and automatic refresh buttons are available for
+* Log level selector: Filter messages by log level
+* Search tools: Search by message/metadata or module
+* Refresh tools: Both manual and automatic refresh buttons are available for
   updating the logs being displayed
 
 :::tip Controlling Log Traffic
@@ -45,7 +45,7 @@ messages when needed.
 The approach above shows log messages from a single device, but it is also
 possible to view logs from your entire fleet:
 
-1. Click the `Monitor` option in the left sidebar and select `LightDB Stream`
+1. Click the `Monitor` option in the left sidebar and select `Logs`
    from the list that unfolds
 
 ![Golioth Logging Monitor view](./assets/remote-logging-monitor.jpg)

@@ -13,7 +13,7 @@ import TabItem from '@theme/TabItem';
 
 # Connect Hardware to Golioth
 
-This training currently supports the following Hardware:
+This training currently supports the following hardware:
 
 * Nordic nRF7002 Development Kit
 * Nordic nRF9160 Development Kit

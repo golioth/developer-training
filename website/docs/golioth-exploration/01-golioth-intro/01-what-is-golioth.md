@@ -9,7 +9,7 @@ When we describe Golioth to engineers, we talk about two distinct pieces:
 
 * The Cloud side services that make up our commercial offering
 * The open source Device SDKs we offer to users to make it easier to connect IoT
-  devices to the Cloud.
+  devices to the Cloud
 
 ## Cloud side services
 
@@ -22,9 +22,9 @@ Once you connect your device to Golioth, you get access to an entire suite of
 new functionality:
 
 * **Over-the-air updates** - Push and manage new firmware images, including
-  targeting specific devices.
-* **Time-series database tracking** - easy management of sensor data on the
-  cloud.
+  targeting specific devices
+* **Time-series database tracking** - Easy management of sensor data on the
+  cloud
 * **Command and control capabilities**
   * **LightDB State** - Push and pull data from a device using state-based
     databases on the cloud
@@ -32,13 +32,13 @@ new functionality:
     per-device
   * **Remote Procedure Call** - Execute functions remotely including input
     parameters and returned data
-  * **Extensible Control** - Interact with the data via our REST API.
-* **Device logging** - pass troubleshooting messages off of individual devices
+  * **Extensible Control** - Interact with the data via our REST API
+* **Device logging** - Pass troubleshooting messages off of individual devices
   (fewer debug probes and USB cables involved!)
 * **Easy export of all cloud side data** - Interface to 3rd party visualization
-  and cloud platforms.
+  and cloud platforms
 * **Device Management** - A clean interface for interacting with one (or all)
-  of your devices.
+  of your devices
 
 
 ## Device side support

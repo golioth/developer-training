@@ -22,7 +22,7 @@ size.
 
 * Understand the interface options in the Golioth Web Console
 * Flash pre-compiled firmware to a device
-* Provision the device with credentials to securely connect to the Golioth
+* Provision the device with credentials to securely connect to the Golioth Cloud
 * Send time-series data and stateful data
 * View device logs remotely
 * Update fleet settings
