@@ -27,7 +27,7 @@ On this page you can view the following information:
 * `Device Id`: Used by the Golioth API to identify this device
 * `History`: Displays when this virtual device was created and last updated
 * `Status`: Displays information on when device last checked in and if its
-  Settings Service has confirmed lasted cloud-side settings
+  Settings Service has confirmed ~~lasted~~ cloud-side settings
 * `Firmware`: Displays current package and version of OTA firmware. (This
   precompiled example doesn't implement OTA, so no firmware has been reported to
   the cloud)

@@ -17,7 +17,7 @@ that will guide you through creating your first device on the platform.
 
 * **Desired outcome(s)**
   1. Understand how to add a single device to the console
-  2. Be able to access the credentials for use on your device.
+  2. Be able to access the credentials for use on your device
 * **Time Estimate:** 5 minutes
 
 ## Signup and Provision your first device
@@ -52,4 +52,4 @@ import GoliothAuthorize from './_partials/4-authorize-devices.md'
 
 * Create a "fleet" of 5 devices with unique credentials for each.
 * See how the menus are set up and what features exist on the Golioth [Console](https://console.golioth.io).
-* Attempt to add a "tag" and a "blueprint" to your [Console](https://console.golioth.io).
+* Add a "tag" and a "blueprint" to your [Console](https://console.golioth.io).

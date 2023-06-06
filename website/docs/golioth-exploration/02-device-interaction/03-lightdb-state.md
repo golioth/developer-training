@@ -6,7 +6,7 @@ description: |
 
 # LightDB State (Stateful)
 
-The Golioth LightDB State provides an easy way for IoT devices to save, query
+The Golioth LightDB State provides an easy way for IoT devices to save, query,
 and listen to data changes in the cloud. This bi-directional service has no
 concept of time, but stores the most recently updated value for a given
 endpoint. Devices registered to observe values will be notified every time there
@@ -35,7 +35,7 @@ On this page you can view the following information:
 * Refresh tools: both manual and automatic refresh buttons are available for
   updating the data being displayed
 * Key/Value editing: hovering over the JSON data will reveal icons for
-  editing/adding/deleting state data.
+  editing/adding/deleting state data
 * `Submit` button: manual changes are not committed until this button is clicked
 * `Reset` button: abandon manual changes not yet submitted
 * `Clean` button: remove all stateful data from this virtual device
@@ -51,4 +51,4 @@ Data may be changed from both the device side and the cloud side.
 ## Additional Exercises
 
 * Turn off `Auto-refresh`, then click the `Clean` button. Press a button on the
-  board and observe the endpoint being recreated.
+  board and observe the state data being recreated.
