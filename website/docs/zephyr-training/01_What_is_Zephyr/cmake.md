@@ -7,12 +7,17 @@ description:
 # CMake Overview
 
 Zephyr uses CMake to manage which C files will be built, and what header files
-are available for inclusion
+are available for inclusion.
 
 ## CMakeLists.txt
 
 Files are added to the build process using a CMakeLists.txt file. There will be
-one at the root of your Zephyr application that looks similar to this:
+one at the root of your Zephyr application, as shown in this file tree listing
+from a typical application:
+
+![Typical file tree for a Zephyr application](./assets/typical_tree_for_zephyr_application.jpg)
+
+The contents of the CMakeLists.txt file will look similar to this:
 
 ```
 # SPDX-License-Identifier: Apache-2.0
