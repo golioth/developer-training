@@ -21,6 +21,8 @@ Kconfig assigns key/value pairs, with the keys often being referred to as
 setting these symbols: the `prj.conf` file in the root directory of a Zephyr
 application.
 
+![Typical file tree for a Zephyr application](./assets/typical_tree_for_zephyr_application.jpg)
+
 For example, here is the `prj.conf` file from the `01_IOT` application that you
 ran as a precompiled binary in the [Intro to Golioth](/docs/golioth-exploration)
 section.
@@ -68,11 +70,11 @@ CONFIG_LOG=y
 CONFIG_LOG_BUFFER_SIZE=2048
 ```
 
-However, this is just one small part of the Kconfig chain. Symbols are pulled
-from `.conf` files in the `boards` directory of a project, from files name
-`Kconfig` in different folders in your project, from the board and chip specific
-files in the Zephyr tree, and from numerous modules, subsystems, and device
-drivers included in the build.
+There is a lot in this one file, but this is just one small part of the Kconfig
+chain. Symbols are pulled from `.conf` files in the `boards` directory of a
+project, from files named `Kconfig` in different folders in your project, from
+the board and chip specific files in the Zephyr tree, and from numerous modules,
+subsystems, and device drivers included in the build.
 
 ## menuconfig
 
