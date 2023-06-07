@@ -189,7 +189,7 @@ LED2.
 
     ```
             aliases {
-                    training-led: &led2_subnode_label;
+                    training-led = &led2_subnode_label;
             };
     ```
 
