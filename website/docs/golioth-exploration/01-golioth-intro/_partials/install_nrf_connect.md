@@ -7,7 +7,7 @@
       you also need to [install the SEGGER J-Link
       tools](https://www.segger.com/downloads/jlink/#J-LinkSoftwareAndDocumentationPack)
 
-      **MAC M1 Users:** Our testing found that you must use the `Universal
+      **Mac M1/M2 Users:** Our testing found that you must use the `Universal
       Installer` version of the SEGGER tools
 
 2. Launch nRF Connect for Desktop. From that application, install and open the

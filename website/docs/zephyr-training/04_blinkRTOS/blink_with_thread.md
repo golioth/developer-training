@@ -46,13 +46,13 @@ git restore 04_blinkRTOS/src/main.c
 In the `04_blinkRTOS/src/main.c` file:
 
 1. Create a new function just above `main` to run as its own thread
-    * Function should return `extern void`
+    * Function should be marked `static` and return `void`
     * Function should have three void pointers as parameters: `void *dummy1,
       void *dummy2, void *dummy3`
     * Place the LED initialization inside the new function
-    * Place the LED toggle function inside of your new function.
+    * Place the LED toggle function inside of your new function
       * This works just like a `while` loop in `main` and needs to include a
-        sleep command.
+        sleep command
 
 2. Define the thread just after your new function:
 
@@ -71,8 +71,8 @@ In the `04_blinkRTOS/src/main.c` file:
     Because we have defined the thread using the `K_THREAD_DEFINE` macro, it
     will start automatically at boot time. If you want more control over when
     the thread starts, [define it using
-    `k_thread_create()`](https://docs.zephyrproject.org/latest/kernel/services/threads/index.html#c.k_thread_create)
-    that use the following API to start it when needed:
+    `k_thread_create()`](https://docs.zephyrproject.org/latest/kernel/services/threads/index.html#c.k_thread_create),
+    then use the following API to start it when needed:
 
     ```c
     k_thread_start(my_thread);
@@ -124,7 +124,7 @@ whenever the thread is serviced, and the priority level.
 
 1. Build the example
 
-    * Make sure the terminal at the bottom of the VScode window is in the
+    * Make sure the terminal at the bottom of the VS Code window is in the
       `~/zephyr-training/app` folder
     * Run the following code to build the `04_blinkRTOS` app
 
@@ -147,7 +147,7 @@ whenever the thread is serviced, and the priority level.
 
     :::
 
-    * In the VScode terminal, run `west kasm download` to package the compiled
+    * In the VS Code terminal, run `west kasm download` to package the compiled
       code and make it available for download
 
     * Use the Download option in Kasm's left sidebar to download

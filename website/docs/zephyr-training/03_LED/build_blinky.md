@@ -36,9 +36,9 @@ C.
 
 ### Build in the Kasm container
 
-1. Open main.c and start the VScode terminal
+1. Open main.c and start the VS Code terminal
 
-    * In the VScode Explore, click on `app` to unfold it
+    * In the VS Code Explore, click on `app` to unfold it
     * Unfold the `03_LED` and `src` folders
     * Double click on `main.c` to open it in the editor
     * Open a terminal by right-clicking on `app` and selecting `Open in
@@ -56,18 +56,18 @@ C.
     ```
 
     The build directory was previously used for the `02_helloworld` app, and now
-    we're trying to build the `03_LED` in the same build directory. You should
+    we're trying to build the `03_LED` app in the same build directory. You should
     do one of the following:
 
     * Add `-p` to the build command for a "pristine" build
     * Remove the `build` directory before building
 
     <br />Both approaches will have the same effect of using
-    <code>app/build</code> as a clean directory with no leftover build files
+    <code>app/build</code> as a clean directory with no leftover build files.
 
     :::
 
-    * Make sure the terminal at the bottom of the VScode window is in the
+    * Make sure the terminal at the bottom of the VS Code window is in the
       `~/zephyr-training/app` folder
     * Run the following code to build the `03_LED` app
 
@@ -90,7 +90,7 @@ C.
 
     :::
 
-    * In the VScode terminal, run `west kasm download` to package the compiled
+    * In the VS Code terminal, run `west kasm download` to package the compiled
       code and make it available for download
 
     * Use the Download option in Kasm's left sidebar to download

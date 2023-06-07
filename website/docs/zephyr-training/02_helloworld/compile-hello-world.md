@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 description:
-    Get familiar with VScode, Kasm, and `west`
+    Get familiar with VS Code, Kasm, and `west`
 ---
 
 import HowToDownload from '/docs/\_partials/download-from-kasm.md'
@@ -28,13 +28,13 @@ Now is a great time to get comfortable with the workflow.
 
 ## Workflow
 
-:::tip Using VScode and `west`
+:::tip Using VS Code and `west`
 
-In this training we will use VScode when editing and building Zephyr projects.
-Of course, VScode is optional and you may choose to use any editor of your
+In this training we will use VS Code when editing and building Zephyr projects.
+Of course, VS Code is optional and you may choose to use any editor of your
 choice.
 
-While Nordic maintains VScode tools that can build/flash at the click of a
+While Nordic maintains VS Code tools that can build/flash at the click of a
 mouse, we will build/flash from the command line to get comfortable with how the
 `west` meta tool is used.
 
@@ -42,24 +42,24 @@ mouse, we will build/flash from the command line to get comfortable with how the
 
 ### Build in the Kasm container
 
-1. In the Kasm container, open the `zephyr-training` project in VScode
+1. In the Kasm container, open the `zephyr-training` project in VS Code
 
-    * use the icon on the desktop to open VScode
+    * use the icon on the desktop to open VS Code
     * Choose File&rarr;Open Folder
     * Navigate to `~/Desktop/zephyr-training/` and open it
     * Confirm that you trust the authors in the window that appears
 
-    ![Open the zephyr-training folder in VScode](./assets/kasm-vscode-open-folder-trust.jpg)
+    ![Open the zephyr-training folder in VS Code](./assets/kasm-vscode-open-folder-trust.jpg)
 
-2. Open main.c and start the VScode terminal
+2. Open main.c and start the VS Code terminal
 
-    * In the VScode Explore, click on `app` to unfold it
+    * In the VS Code Explore, click on `app` to unfold it
     * Unfold the `02_helloworld` and `src` folders
     * Double click on `main.c` to open it in the editor
     * Open a terminal by right-clicking on `app` and selecting `Open in
       Integrated Terminal`
 
-    ![Opening VScode terminal in the app folder](./assets/kasm-vscode-open-terminal.jpg)
+    ![Opening VS Code terminal in the app folder](./assets/kasm-vscode-open-terminal.jpg)
 
 3. Build the example
 
@@ -76,7 +76,7 @@ mouse, we will build/flash from the command line to get comfortable with how the
 
     :::
 
-    * The terminal at the bottom of the VScode window will open in the `app`
+    * The terminal at the bottom of the VS Code window will open in the `app`
       folder
     * Run the following code to build the `02_helloworld` app
 
@@ -105,7 +105,7 @@ mouse, we will build/flash from the command line to get comfortable with how the
 
     :::
 
-    * In the VScode terminal, run `west kasm download` to package the compiled
+    * In the VS Code terminal, run `west kasm download` to package the compiled
       code and make it available for download
 
     * Use the Download option in Kasm's left sidebar to download

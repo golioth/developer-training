@@ -6,7 +6,7 @@ description:
 
 # CMake Overview
 
-Zephyr uses CMake to manage which C files will be built, and what header files
+Zephyr uses CMake to manage which C files will be built, and which header files
 are available for inclusion.
 
 ## CMakeLists.txt

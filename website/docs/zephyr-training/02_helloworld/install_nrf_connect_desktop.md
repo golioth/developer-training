@@ -29,7 +29,7 @@ available because of USB sharing issues between the browser-based Kasm and your
 computer.
 
 The solution to this issue is to download your compiled application binary from
-the Kasm container, and flash them to the device using Nordic's Desktop tools on
+the Kasm container, and flash it to the device using Nordic's desktop tools on
 your local machine.
 
 ## Installation

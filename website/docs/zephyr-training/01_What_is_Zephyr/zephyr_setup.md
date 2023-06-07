@@ -9,12 +9,12 @@ description:
 We will not be setting up the Zephyr development environment today. Due to
 differences in operating systems (and quirks between different installs of the
 same OS), setting up the development tools takes a bit of time. Instead, we have
-set up pre-configured build environment you can access in your browser called
+set up a pre-configured build environment you can access in your browser called
 Kasm.
 
 :::tip Setup after training
 
-After training is over you will need a local install to continue working with
+After the training is over you will need a local install to continue working with
 Zephyr. You can follow [Golioth's Zephyr setup guide for the
 nRF9160](https://docs.golioth.io/hardware/nrf91/zephyr-quickstart/set-up-zephyr)
 which will work for all Nordic devices.
@@ -34,18 +34,18 @@ Golioth project almost immediately after entering the development environment.
 
 | ![Kasm](./assets/kasm-zephyr.jpg) |
 |:--:|
-| We use Kasm to load a Linux-based build environment in your browser, complete with VScode and all the Zephyr tools you needs. |
+| We use Kasm to load a Linux-based build environment in your browser, complete with VS Code and all the Zephyr tools you need. |
 
 ## Using the Command Line
 
 Golioth training expects that commands will be run from the command line. In
-Kasm, we will be using VScode as a code editor, running these commands from the
-terminal inside of VScode.
+Kasm, we will be using VS Code as a code editor, running these commands from the
+terminal inside of VS Code.
 
 :::tip
 
 While Nordic includes tools for building Zephyr projects in VScode, they miss
 out on some of the benefits of the `west` meta tool. To explore this part of
-Zephyr, its worth using command line today.
+Zephyr, its worth using the command line today.
 
 :::

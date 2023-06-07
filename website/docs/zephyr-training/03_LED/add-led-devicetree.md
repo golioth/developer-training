@@ -62,7 +62,7 @@ will need:
 
 * One root node that contains two child nodes: `aliases` and `trainingleds`
 * The `trainingleds` child node needs a subnode that declares the LED
-* The aliases child node needs a subnode that associates an alias called
+* The `aliases` child node needs a subnode that associates an alias called
   `training-led` with your LED subnode
 
 ## Exercise: Add `training-led` to your DeviceTree Overlay
@@ -90,7 +90,7 @@ LED2.
 ```
 
 1. Open the `03_LED/boards/<yourboard>.overlay` file for your board in the
-   VScode editor
+   VS Code editor
 2. Try it for yourself: Replace the `child-node-path` placeholder node
 
     :::tip
@@ -211,7 +211,7 @@ LED2.
 
 1. Build the example
 
-    * Make sure the terminal at the bottom of the VScode window is in the
+    * Make sure the terminal at the bottom of the VS Code window is in the
       `~/zephyr-training/app` folder
     * Run the following code to build the `03_LED` app
 
@@ -234,7 +234,7 @@ LED2.
 
     :::
 
-    * In the VScode terminal, run `west kasm download` to package the compiled
+    * In the VS Code terminal, run `west kasm download` to package the compiled
       code and make it available for download
 
     * Use the Download option in Kasm's left sidebar to download
