@@ -126,7 +126,7 @@ Sample](https://github.com/golioth/golioth-zephyr-sdk/blob/main/samples/lightdb_
 
 1. Build the example
 
-    * Make sure the terminal at the bottom of the VScode window is in the
+    * Make sure the terminal at the bottom of the VS Code window is in the
       `~/zephyr-training/app` folder
     * Run the following code to build the `05_golioth` app
 
@@ -149,7 +149,7 @@ Sample](https://github.com/golioth/golioth-zephyr-sdk/blob/main/samples/lightdb_
 
     :::
 
-    * In the VScode terminal, run `west kasm download` to package the compiled
+    * In the VS Code terminal, run `west kasm download` to package the compiled
       code and make it available for download
 
     * Use the Download option in Kasm's left sidebar to download

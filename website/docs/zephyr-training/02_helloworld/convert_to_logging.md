@@ -108,7 +108,7 @@ To use logging, we will need to do four things:
 Zephyr includes a configuration tool called `menuconfig` for navigating the
 massive web of Kconfig options. Let's use this to turn on Logging.
 
-1. Maximize the terminal window in your VScode
+1. Maximize the terminal window in your VS Code
 2. From the `~/zephyr-training/app` folder, launch menuconfig:
 
     ```shell
@@ -273,7 +273,7 @@ void main(void)
 
 1. Build the example
 
-    * In the terminal at the bottom of the VScode window, verify you are in the
+    * In the terminal at the bottom of the VS Code window, verify you are in the
       `app` folder
     * Build app
 
@@ -292,7 +292,7 @@ void main(void)
 
     :::
 
-    * In the VScode terminal, run `west kasm download` to package the compiled
+    * In the VS Code terminal, run `west kasm download` to package the compiled
       code and make it available for download
 
     * Use the Download option in Kasm's left sidebar to download

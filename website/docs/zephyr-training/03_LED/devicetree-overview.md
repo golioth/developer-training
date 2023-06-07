@@ -70,8 +70,8 @@ In this module we will frequently abbreviate Devicetree as DT.
 :::tip
 
 The Devicetree is the most confusing and difficult to learn part of Zephyr. This
-overview will likely be a bit of a head-scratch&ndash;especially when it comes
-to syntax&ndash;but don't worry. It's worth knowing about DT right away, even if
+overview will likely be a bit of a head-scratch &ndash; especially when it comes
+to syntax &ndash; but don't worry. It's worth knowing about DT right away, even if
 you don't understand it. This is where the rubber hits the road for Zephyr's
 vast hardware abstraction.
 
@@ -131,7 +131,7 @@ up to have a full copy of the Zephyr tree in it?
     ```
 
     This represents everything that's already been set up for you for this
-    particular development board, from peripheral address, to pin muxes, to
+    particular development board, from peripheral addresses, to pin muxes, to
     Kconfig symbols that enable necessary libraries.
 
 2. Browse the `nrf9160dk_nrf9160_common.dts` file
@@ -184,7 +184,7 @@ not understand most of this. But a few general things:
 
 ### Devicetree is many files combined
 
-In point #2 above, we said the `uart0` DT node already exits for the board files
+In point #2 above, we said the `uart0` DT node already exists for the board files
 we're looking at. So where is `uart0` actually defined? The chip itself has DT
 files!
 

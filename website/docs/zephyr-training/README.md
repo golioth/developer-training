@@ -14,8 +14,8 @@ several hands-on examples designed to explore common elements for new developers
 * Learn about Zephyr SDK, Zephyr Tree, Devicetree, Kconfig, CMake, etc.
 * Compile and run Hello World; add feature using menuconfig
 * Map an LED in a Devicetree overlay file
-* Blink and LED using Zephyr's timer and thread features
-* Add Golioth SDK to you an existing project
+* Blink an LED using Zephyr's timer and thread features
+* Add Golioth SDK to your existing project
 
 This section will take about 120 minutes to complete.
 
@@ -26,11 +26,11 @@ channel](https://golioth.io/discord) if you find you are stuck.
 
 ## How can you use this information in your work?
 
-Developers who successfully complete this training will understand that major
+Developers who successfully complete this training will understand the major
 components that make up the Zephyr ecosystem and how to use them during
 application development. The training exercises help to build a muscle memory
 for the build and flash process, and provide an opportunity to implement
-rudimentary features for a better understanding of the RTOS. These skill
+rudimentary features for a better understanding of the RTOS. These skills
 directly apply to application development for your business.
 
 :::tip Prerequisites

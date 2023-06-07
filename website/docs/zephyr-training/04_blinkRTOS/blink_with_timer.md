@@ -17,7 +17,7 @@ System (RTOS) like Zephyr is that it will take care of scheduling for you. In
 this exercise you will use Zephyr's Timers API to blink the LED for you.
 
 * **Desired outcome(s)**
-    1. Understand how to Blink using a timer in the RTOS
+    1. Understand how to blink using a timer in the RTOS
 * **Time Estimate:** 5 minutes
 
 ## Exercise: Blink Using a Timer
@@ -33,7 +33,7 @@ Timers are easy to use in Zephyr. There are just three things we need to do:
 In the `04_blinkRTOS/src/main.c` file:
 
 1. Create a new function just above `main` to act as the timer callback
-    * Function should be marked extern and return `void`
+    * Function should be marked `static` and return `void`
     * Function parameter should be `struct k_timer *dummy` (yes, dummy variables are notated as 'dummy'!)
     * Move the LED toggle function call out of the main loop and into your new
       function
@@ -55,7 +55,7 @@ In the `04_blinkRTOS/src/main.c` file:
 <details><summary>Click to reveal the expected main.c file</summary>
 
 ```c excerpts from main.c
-void my_timer_handler(struct k_timer *dummy) {
+static void my_timer_handler(struct k_timer *dummy) {
 	gpio_pin_toggle_dt(&led);
 }
 
@@ -94,7 +94,7 @@ the second value to `K_NO_WAIT`.
 
 1. Build the example
 
-    * Make sure the terminal at the bottom of the VScode window is in the
+    * Make sure the terminal at the bottom of the VS Code window is in the
       `~/zephyr-training/app` folder
     * Run the following code to build the `04_blinkRTOS` app
 
@@ -117,7 +117,7 @@ the second value to `K_NO_WAIT`.
 
     :::
 
-    * In the VScode terminal, run `west kasm download` to package the compiled
+    * In the VS Code terminal, run `west kasm download` to package the compiled
       code and make it available for download
 
     * Use the Download option in Kasm's left sidebar to download

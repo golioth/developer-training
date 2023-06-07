@@ -7,7 +7,7 @@ description:
 # Add Golioth to the West Manifest
 
 Your Zephyr install must include the Golioth Zephyr SDK in order to use Golioth
-Services. This is a simple matter of adding Golioth in your West manifest file.
+services. This is a simple matter of adding Golioth in your West manifest file.
 There are two general approaches to this:
 
 1. Use the Golioth `west-zephyr.yml` or `west-ncs.yml` manifest to install
@@ -28,7 +28,7 @@ editing of the manifest file today.
 ## Learning objectives
 
 We will discuss how the Golioth SDK can be added to new and existing projects
-using the west Manifest
+using the west manifest.
 
 * **Desired outcome(s)**
   1. Understand the different west manifests used by Golioth
@@ -117,7 +117,7 @@ of the Zephyr tree:
 
 * With the Standalone Project approach, the upstream commit hash for Zephyr and
   all dependencies are included in your west manifest. You can always restore
-  the Zephyr tree to that know working state. This a very powerful tool you
+  the Zephyr tree to that known working state. This a very powerful tool you
   should be using.
 
 :::
@@ -153,7 +153,7 @@ example.
 
 This manifest code does the following:
 
-* map the Golioth SDK to the proper folder (`modules/lib/golioth`)
+* Map the Golioth SDK to the proper folder (`modules/lib/golioth`)
 * Use the `main` branch
 * Imports the `west-external.yml` manifest from the Golioth SDK which ensures
   dependencies (like the QCBOR library needed by Golioth) are installed in the

@@ -64,7 +64,7 @@ $ west flash
 
 Which compiler should you use for the chip architecture you are working with?
 You don't need to know that, because `west` already knows and will use the
-correct option from the Zephyr SDK. It may be ARM, Xtensa, RISC-V, or x86, the
+correct option from the Zephyr SDK. It may be ARM, Xtensa, RISC-V, or x86 — the
 commands will still be `west build` and `west flash`.
 
 :::note
@@ -80,7 +80,7 @@ should use `west flash` after the `west build` command completes.
 
 ## Other West commands
 
-There are innumerable ways to use this tools, including adding your own custom
+There are innumerable ways to use this tool, including adding your own custom
 commands. To list just a few that we frequently use:
 
 ```shell
