@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-description: "Zephyr can blink with timers!"
+description: "Zephyr can blink with threads!"
 ---
 
 import HowToDownload from '/docs/\_partials/download-from-kasm.md'
