@@ -198,7 +198,7 @@ massive web of Kconfig options. Let's use this to turn on Logging.
     files](https://docs.zephyrproject.org/latest/build/kconfig/setting.html#the-initial-configuration)
     that have already been added to the build.
 
-    All project-level configuraiton should be placed in `prj.conf`, which is
+    All project-level configuration should be placed in `prj.conf`, which is
     persistent across build operations and should be added to your Git
     repository. Any board-level configuration should be placed in the
     `boards/<boardname>.conf` files to be included in the build.
