@@ -98,7 +98,7 @@ const config = {
             items: [
               {
                 label: 'Training Event Code of Conduct',
-                to: "docs/community/code-of-conduct "
+                to: "/docs/community/code-of-conduct"
               },
               {
                 label: 'Forum',
