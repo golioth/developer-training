@@ -97,6 +97,10 @@ const config = {
             title: 'Golioth Community',
             items: [
               {
+                label: 'Training Event Code of Conduct',
+                to: "/docs/community/code-of-conduct"
+              },
+              {
                 label: 'Forum',
                 href: 'https://forum.golioth.io',
               },
