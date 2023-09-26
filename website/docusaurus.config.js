@@ -1,8 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require('prism-react-renderer/themes/github')
+const darkCodeTheme = require('prism-react-renderer/themes/dracula')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -38,32 +38,32 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       colorMode: {
-        defaultMode: "dark",
+        defaultMode: 'dark',
         respectPrefersColorScheme: false,
       },
       navbar: {
         title: 'Developer Training',
         logo: {
           alt: 'Golioth Logo',
-          src: 'img/logo.svg',
+          src: 'img/Golioth_logo_300x300.png',
         },
         items: [
           {
-            to: "docs/golioth-exploration",
-            activeBasePath: "golioth-exploration",
-            label: "Intro to Golioth",
+            to: 'docs/golioth-exploration',
+            activeBasePath: 'golioth-exploration',
+            label: 'Intro to Golioth',
             position: 'left',
           },
           {
-            to: "docs/api-training",
-            activeBasePath: "api-training",
-            label: "API Training",
+            to: 'docs/api-training',
+            activeBasePath: 'api-training',
+            label: 'API Training',
             position: 'left',
           },
           {
-            to: "docs/zephyr-training",
-            activeBasePath: "zephyr-training",
-            label: "Zephyr Training",
+            to: 'docs/zephyr-training',
+            activeBasePath: 'zephyr-training',
+            label: 'Zephyr Training',
             position: 'left',
           },
           {
@@ -90,7 +90,7 @@ const config = {
               {
                 label: 'Console',
                 href: 'https://console.golioth.io',
-              }
+              },
             ],
           },
           {
@@ -98,7 +98,7 @@ const config = {
             items: [
               {
                 label: 'Training Event Code of Conduct',
-                to: "/docs/community/code-of-conduct"
+                to: '/docs/community/code-of-conduct',
               },
               {
                 label: 'Forum',
@@ -139,6 +139,6 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
-};
+}
 
-module.exports = config;
+module.exports = config

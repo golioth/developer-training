@@ -1,6 +1,7 @@
-import React from 'react';
-import clsx from 'clsx';
-import styles from './HomepageFeatures.module.css';
+import React from 'react'
+import clsx from 'clsx'
+import styles from './HomepageFeatures.module.css'
+import ThemedImage from '@theme/ThemedImage'
 
 const FeatureList = [
   {
@@ -9,15 +10,16 @@ const FeatureList = [
     img: require('../../static/img/Golioth_logo_300x300.png').default,
     description: (
       <>
-        This guide is for Developers to understand the various features of Golioth and how we can assist IoT deployments.
-        Along the way, Developers will learn skills for making resiliant IoT systems on both the embedded and Cloud side.
+        This guide is for Developers to understand the various features of
+        Golioth and how we can assist IoT deployments. Along the way, Developers
+        will learn skills for making resiliant IoT systems on both the embedded
+        and Cloud side.
       </>
     ),
   },
   {
     title: 'Golioth REST API Training',
     link: '/docs/api-training',
-    img: require('../../static/img/API_Training_logo_300x300.png').default,
     description: (
       <>
         Golioth makes it easy to interact with your IoT devices and their data.
@@ -34,45 +36,59 @@ const FeatureList = [
     img: require('../../static/img/Zephyr_logo_300x300.png').default,
     description: (
       <>
-        Our users find that <a href="https://zephyrproject.org/">Zephyr RTOS</a> provides maximum hardware control and
-        flexibility for their client or company projects.
-        After getting started quickly, users will learn how to properly set up a Zephyr project and be ready to deploy
-        a professional project.
+        Our users find that <a href='https://zephyrproject.org/'>Zephyr RTOS</a>{' '}
+        provides maximum hardware control and flexibility for their client or
+        company projects. After getting started quickly, users will learn how to
+        properly set up a Zephyr project and be ready to deploy a professional
+        project.
       </>
     ),
   },
-];
+]
 
-function Feature({Svg, img, title, description, link}) {
+function Feature({ Svg, img, title, description, link }) {
   return (
     <div className={clsx('col col--4')}>
-      <div className="text--center">
-      <a href={link}>
-        {Svg && <Svg className={styles.featureSvg} alt={title} />}
-        {img && <img width={150} src={img} alt={title} />}
-      </a>
+      <div className='text--center'>
+        <a href={link}>
+          {Svg && <Svg className={styles.featureSvg} alt={title} />}
+
+          {title === 'Golioth REST API Training' && (
+            <ThemedImage
+              height={150}
+              alt='REST API Training'
+              sources={{
+                light:
+                  require('../../static/img/API_Training_logo_300x300-coral.png')
+                    .default,
+                dark: require('../../static/img/API_Training_logo_300x300.png')
+                  .default,
+              }}
+            />
+          )}
+          {img && <img width={150} src={img} alt={title} />}
+        </a>
       </div>
-      <div className="text--center padding-horiz--md">
+      <div className='text--center padding-horiz--md'>
         <a href={link}>
           <h3>{title}</h3>
         </a>
         <p>{description}</p>
-      
       </div>
     </div>
-  );
+  )
 }
 
 export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
-      <div className="container">
-        <div className="row">
+      <div className='container'>
+        <div className='row'>
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
         </div>
       </div>
     </section>
-  );
+  )
 }
