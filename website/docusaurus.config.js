@@ -34,6 +34,8 @@ const config = {
     ],
   ],
 
+  plugins: ["@docusaurus/plugin-ideal-image"],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({

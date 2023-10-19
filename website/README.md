@@ -2,6 +2,14 @@
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
+## Golioth Docs Submodule
+
+The Golioth Docs getting started guide is used by this repository. To update, run:
+
+```
+$ git submodule update --recursive --remote
+```
+
 ### Installation
 
 ```
