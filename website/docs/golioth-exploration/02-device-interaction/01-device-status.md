@@ -33,22 +33,6 @@ On this page you can view the following information:
   precompiled example doesn't implement OTA, so no firmware has been reported to
   the cloud)
 
-## Why is my device "Out of sync"?
-
-You may have notices that the `Setting Sync` for your device reports `Out of
-sync`:
-
-![Settings out of sync](./assets/status-out-of-sync.jpg)
-
-This indicates that there is a mismatch between what settings the device expects
-and those provided by the cloud. Hovering over the red `i` will provide further
-information.
-
-In this particular case, the application we are running expects two specific
-keys to be available from the Settings Service. These have not yet been set up
-on your Golioth project, but we will remedy that when we get to [the Settings
-Service section](05-settings-service.md) of this training.
-
 ## Additional Exercises
 
 * Edit your virtual device in this window to add a Blueprint and a Tag
