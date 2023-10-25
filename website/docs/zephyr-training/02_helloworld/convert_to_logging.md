@@ -109,7 +109,7 @@ Zephyr includes a configuration tool called `menuconfig` for navigating the
 massive web of Kconfig options. Let's use this to turn on Logging.
 
 1. Maximize the terminal window in your VS Code
-2. From the `~/zephyr-training/app` folder, launch menuconfig:
+2. From the `~/Desktop/zephyr-training/app` folder, launch menuconfig:
 
     ```shell
     $ west build -t menuconfig

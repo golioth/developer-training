@@ -68,7 +68,7 @@ C.
     :::
 
     * Make sure the terminal at the bottom of the VS Code window is in the
-      `~/zephyr-training/app` folder
+      `~/Desktop/zephyr-training/app` folder
     * Run the following code to build the `03_LED` app
 
         ```bash
