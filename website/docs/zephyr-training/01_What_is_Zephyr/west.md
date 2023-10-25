@@ -39,7 +39,7 @@ the training code, **including cloning the entire Zephyr tree and all
 dependencies**:
 
 ```shell
-cd ~/zephyr-training
+cd ~/Desktop/zephyr-training
 west init -m git@github.com:golioth/zephyr-training.git .
 west update
 west zephyr-export

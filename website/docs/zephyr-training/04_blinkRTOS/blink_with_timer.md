@@ -95,7 +95,7 @@ the second value to `K_NO_WAIT`.
 1. Build the example
 
     * Make sure the terminal at the bottom of the VS Code window is in the
-      `~/zephyr-training/app` folder
+      `~/Desktop/zephyr-training/app` folder
     * Run the following code to build the `04_blinkRTOS` app
 
         ```bash
