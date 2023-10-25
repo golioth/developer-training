@@ -42,7 +42,7 @@ settings to be present on the cloud. Let's set those up now.
 
 ## Settings synchronization
 
-1. Click the `Device Settings` option in the left sidebar
+1. Click the `Devices` option in the left sidebar and chose your device from the resulting list.
 2. Notice that the settings are now in sync on the status view
 
     ![Device Settings in sync](./assets/settings-service-in-sync.jpg)
