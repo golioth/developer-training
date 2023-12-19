@@ -152,7 +152,7 @@ massive web of Kconfig options. Let's use this to turn on Logging.
 
       :::warning Menuconfig changes are saved in the build folder
 
-      Changes made in `menuconfig` are rather fleeting. The are saved to the
+      Changes made in `menuconfig` are rather fleeting. They are saved to the
       `build/zephyr/.config` file which is automatically generated. If you run a
       pristine build (`-p` when running `west build`) or delete the build folder, the
       changes you just saved will be lost.
