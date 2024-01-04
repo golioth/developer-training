@@ -128,8 +128,8 @@ const config = {
                 href: 'https://github.com/golioth',
               },
               {
-                label: 'Kasm Workspace',
-                href: 'https://try.golioth.io ',
+                label: 'Zephyr Training using Codespaces',
+                href: 'https://codespaces.new/golioth/zephyr-training',
               },
             ],
           },
