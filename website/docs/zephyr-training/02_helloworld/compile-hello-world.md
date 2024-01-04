@@ -4,7 +4,7 @@ description:
     Get familiar with VS Code, Kasm, and `west`
 ---
 
-import HowToDownload from '/docs/\_partials/download-from-kasm.md'
+import HowToDownload from '/docs/\_partials/download-from-codespaces.md'
 import FirmwareFlash from '/docs/\_partials/flash-the-example-nrf.md'
 import ConnectSerial from '/docs/\_partials/connect-to-serial.md'
 
@@ -95,21 +95,6 @@ mouse, we will build/flash from the command line to get comfortable with how the
        ![Build Hello World](./assets/kasm-vscode-build-hello-world.jpg)
 
 4. Download the binary
-
-    :::note
-
-    The normal workflow when using a development environment installed locally
-    is to use `west flash` to program the board. We are using a different
-    approach here because the Kasm container doesn't have access to your local
-    USB port.
-
-    :::
-
-    * In the VS Code terminal, run `west kasm download` to package the compiled
-      code and make it available for download
-
-    * Use the Download option in Kasm's left sidebar to download
-      `<devicename>_<appfolder>_<hhmmss>.hex` to your local machine.
 
     <HowToDownload/>
 

@@ -3,7 +3,7 @@ sidebar_position: 3
 description: "Zephyr can blink with threads!"
 ---
 
-import HowToDownload from '/docs/\_partials/download-from-kasm.md'
+import HowToDownload from '/docs/\_partials/download-from-codespaces.md'
 import FirmwareFlash from '/docs/\_partials/flash-the-example-nrf.md'
 
 # Blink Using Threads
@@ -12,7 +12,7 @@ import FirmwareFlash from '/docs/\_partials/flash-the-example-nrf.md'
 
 Now we take on the real power of an RTOS: the ability to run multiple threads on
 a single processor. Simply put, each thread is like its own `main()` loop which
-shares CPU time with all other threads. Each has its own dedicated stack, as well. The "scheduler" of an RTOS determines which thread will run next. 
+shares CPU time with all other threads. Each has its own dedicated stack, as well. The "scheduler" of an RTOS determines which thread will run next.
 
 * **Desired outcome(s)**
     1. LED blinking moved to a dedicated thread
@@ -137,21 +137,6 @@ whenever the thread is serviced, and the priority level.
         ```
 
 2. Download the binary
-
-    :::note
-
-    The normal workflow when using a development environment installed locally
-    is to use `west flash` to program the board. We are using a different
-    approach here because the Kasm container doesn't have access to your local
-    USB port.
-
-    :::
-
-    * In the VS Code terminal, run `west kasm download` to package the compiled
-      code and make it available for download
-
-    * Use the Download option in Kasm's left sidebar to download
-      `<devicename>_<appfolder>_<hhmmss>.hex` to your local machine.
 
     <HowToDownload/>
 
