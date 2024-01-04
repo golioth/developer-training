@@ -69,8 +69,8 @@ commands will still be `west build` and `west flash`.
 
 :::note
 
-We will not be using `west flash` during this training because the Kasm
-containers that serve as the build environment don't have access to the USB port
+We will not be using `west flash` during this training because the Codespaces
+container that serve as the build environment don't have access to the USB port
 on your computer.
 
 During normal workflow, your Zephyr build environment will be local and you
