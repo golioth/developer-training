@@ -10,21 +10,22 @@ We will not be setting up the Zephyr development environment today. Due to
 differences in operating systems (and quirks between different installs of the
 same OS), setting up the development tools takes a bit of time. Instead, we have
 set up a pre-configured build environment you can access in your browser called
-Kasm.
+Codespaces.
 
 :::tip Setup after training
 
-After the training is over you will need a local install to continue working with
-Zephyr. You can follow [Golioth's Zephyr setup guide for the
+After the training is over you will need a local install to continue working
+with Zephyr. You can follow [Golioth's Zephyr setup guide for the
 nRF9160](https://docs.golioth.io/hardware/nrf91/zephyr-quickstart/set-up-zephyr)
 which will work for all Nordic devices.
 
 :::
 
-## What is Kasm?
+## What is Codespaces?
 
-[Kasm is a virtual desktop workspace in a browser](https://www.kasmweb.com/). For this training we have
-preconfigured a Kasm instance with Golioth tools and the Zephyr toolchain so
+[GitHub Codespaces a container-based build system in a
+browser](https://github.com/features/codespaces). For this training we have
+preconfigured Codespaces with Golioth tools and the Zephyr toolchain so
 that you can build Zephyr projects without first installing the tools on your
 local machine.
 
@@ -32,15 +33,15 @@ We believe this is the fastest way to get new developers building Zephyr
 projects and interacting with Golioth. You should be able to build a Zephyr +
 Golioth project almost immediately after entering the development environment.
 
-| ![Kasm](./assets/kasm-zephyr.jpg) |
+| ![Codespaces](./assets/codespaces-ncs.png) |
 |:--:|
-| We use Kasm to load a Linux-based build environment in your browser, complete with VS Code and all the Zephyr tools you need. |
+| We use GitHub Codespaces to load a Linux-based build environment in your browser, complete with VS Code and all the Zephyr tools you need. |
 
 ## Using the Command Line
 
-Golioth training expects that commands will be run from the command line. In
-Kasm, we will be using VS Code as a code editor, running these commands from the
-terminal inside of VS Code.
+Golioth training expects that commands will be run from the command line.
+Codespaces uses VS Code as a code editor, so we can run our build commands from
+the terminal inside of VS Code.
 
 :::tip
 
