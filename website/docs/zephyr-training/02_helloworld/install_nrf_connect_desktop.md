@@ -22,15 +22,15 @@ then you have already installed these tools. Please move on to the next page.
 
 ## Why Do I Need These Tools?
 
-Our live Zephyr training uses a Kasm container to host the build environment. The
-good news is that the tools will already be set up for you. The bad news is that
-Zephyr's `west flash` command that is commonly used to program devices is not
-available because of USB sharing issues between the browser-based Kasm and your
-computer.
+Our live Zephyr training uses a Codespaces container to host the build
+environment. The good news is that the tools will already be set up for you. The
+bad news is that Zephyr's `west flash` command that is commonly used to program
+devices is not available because of USB sharing issues between the browser-based
+Codespaces and your computer.
 
 The solution to this issue is to download your compiled application binary from
-the Kasm container, and flash it to the device using Nordic's desktop tools on
-your local machine.
+the Codespaces container, and flash it to the device using Nordic's desktop
+tools on your local machine.
 
 ## Installation
 
@@ -40,6 +40,6 @@ On your local machine, follow these installation instructions:
 
 <InstallNrfConnect/>
 
-### Install the nRF Connect for Destkop Serial App
+### Install the nRF Connect for Desktop Serial App
 
 <UseNrfConnectSerial/>

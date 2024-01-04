@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 description:
-    Get familiar with VS Code, Kasm, and `west`
+    Get familiar with VS Code, Codespaces, and `west`
 ---
 
 import HowToDownload from '/docs/\_partials/download-from-codespaces.md'
@@ -21,8 +21,8 @@ Now is a great time to get comfortable with the workflow.
 
 * **Desired outcome(s)**
   1. Understand how to use the `west` metatool to build an application
-  2. Learn the process of downloading a compiled binary from the Kasm build
-     environment used in this training
+  2. Learn the process of downloading a compiled binary from the Codespaces
+     build environment used in this training
   3. Know how to use Nordic's graphical programmer and serial terminal tools
 * **Time Estimate:** 15 minutes
 
@@ -40,45 +40,60 @@ mouse, we will build/flash from the command line to get comfortable with how the
 
 :::
 
-### Build in the Kasm container
+### Build in the Codespaces container
 
-1. In the Kasm container, open the `zephyr-training` project in VS Code
+1. Create your codespace for Golioth's zephyr-training repository
 
-    * use the icon on the desktop to open VS Code
-    * Choose File&rarr;Open Folder
-    * Navigate to `~/Desktop/zephyr-training/` and open it
-    * Confirm that you trust the authors in the window that appears
+    * [Use this direct](https://codespaces.new/golioth/zephyr-training) link to
+      open our prebuilt Codespaces image for this training.
 
-    ![Open the zephyr-training folder in VS Code](./assets/kasm-vscode-open-folder-trust.jpg)
+      ![Create new codespace](./assets/codespaces-create-new.png)
+
+    * Leave all settings at their defaults and click "Create codespace".
+    * Give it a few seconds to finish loading.
+
+      [![VS Code running in a codespace](./assets/codespaces-vscode-first-open.png)](./assets/codespaces-vscode-first-open.png)
+
+      :::note We expect VS Code to complain a little bit
+
+      * Use the 'x' to dismiss the two dialogs on the bottom right
+      * There will be a message about failing to parse `compile_commands.json`
+        because that file will not exist until we build an app in this workspace.
+
+      :::
 
 2. Open main.c and start the VS Code terminal
 
     * In the VS Code Explore, click on `app` to unfold it
     * Unfold the `02_helloworld` and `src` folders
     * Double click on `main.c` to open it in the editor
-    * Open a terminal by right-clicking on `app` and selecting `Open in
-      Integrated Terminal`
+    * In the bottom pane, click "TERMINAL". We start in the `zephyr-training` folder
+      so be sure to move into the `app` folder:
 
-    ![Opening VS Code terminal in the app folder](./assets/kasm-vscode-open-terminal.jpg)
+        ```
+        cd app
+        ```
+
+      [![VS Code ready to compile Hello World](./assets/codespaces_vscode_ready_to_build.png)](./assets/codespaces_vscode_ready_to_build.png)
 
 3. Build the example
 
     :::tip Use the app folder for builds
 
-    We want to build all of the sample code from the
-    `~/Desktop/zephyr-training/app` folder. The build process will create a
-    `build` subfolder inside any folder where the `west build` command is used.
-    This contains all prepocessor and compiler output (including our firmware
-    binary which will be locate at `build/zephyr/zephyr.hex`).
+    We want to build all of the sample code from the `/zephyr-training/app` folder.
+    The build process will create a `build` subfolder inside any folder where
+    the `west build` command is used. This contains all prepocessor and compiler
+    output (including our firmware binary which will be locate at either
+    `build/zephyr/zephyr.hex` or `build/zephyr/merged.hex` depending on the
+    board you are using).
 
     Running all builds from the same location helps reduce the risk of human
     error when looking at or copying from the wrong build folder.
 
     :::
 
-    * The terminal at the bottom of the VS Code window will open in the `app`
-      folder
-    * Run the following code to build the `02_helloworld` app
+    * Run the following code in the VS Code terminal pane to build the
+      `02_helloworld` app
 
         ```bash
         # for nRF7002
@@ -88,23 +103,23 @@ mouse, we will build/flash from the command line to get comfortable with how the
         west build -b nrf9160dk_nrf9160_ns 02_helloworld
         ```
 
-       ![Build command for Hello World](./assets/kasm-vscode-prebuild-hello-world.jpg)
+       ![Build command for Hello World](./assets/codespaces-vscode-prebuild-hello-world.png)
 
-    * Upon successful build you will see device resource usage information
+    * Upon a successful build you will see device resource usage information
 
-       ![Build Hello World](./assets/kasm-vscode-build-hello-world.jpg)
+       ![Build Hello World](./assets/codespaces-vscode-build-hello-world.png)
 
 4. Download the binary
 
     <HowToDownload/>
 
-    :::tip `west kasm download` is a custom command
+    :::tip `west download` is a custom command
 
     The `west` metatool allows you to add custom commands called
     [Extensions](https://docs.zephyrproject.org/latest/develop/west/extensions.html).
-    We added this command in the repository to make downloading from Kasm
+    We added this command in the repository to make downloading from Codespaces
     easier. You can see how this was accomplished in the
-    `zephyr-training/utility/west-commands` folder.
+    `zephyr-training/app/utility/west-commands` folder.
 
     :::
 

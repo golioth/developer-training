@@ -109,7 +109,7 @@ Zephyr includes a configuration tool called `menuconfig` for navigating the
 massive web of Kconfig options. Let's use this to turn on Logging.
 
 1. Maximize the terminal window in your VS Code
-2. From the `~/Desktop/zephyr-training/app` folder, launch menuconfig:
+2. From the `/zephyr-training/app` folder, launch menuconfig:
 
     ```shell
     $ west build -t menuconfig
@@ -269,7 +269,7 @@ void main(void)
 
 </details>
 
-### Build in the Kasm container
+### Build in the Codespaces container
 
 1. Build the example
 
@@ -278,7 +278,11 @@ void main(void)
     * Build app
 
         ```bash
+        # for nRF7002
         west build -b nrf7002dk_nrf5340_cpuapp 02_helloworld
+
+        # for nRF9160
+        west build -b nrf9160dk_nrf9160_ns 02_helloworld
         ```
 
 2. Download the binary
@@ -287,21 +291,22 @@ void main(void)
 
     The normal workflow when using a development environment installed locally
     is to use `west flash` to program the board. We are using a different
-    approach here because the Kasm container doesn't have access to your local
-    USB port.
+    approach here because the Codespaces container doesn't have access to your
+    local USB port.
 
     :::
 
-    * In the VS Code terminal, run `west kasm download` to package the compiled
-      code and make it available for download
+    * In the VS Code terminal, run `west download` to package the compiled code
+      and make it available for download
 
-    * Use the Download option in Kasm's left sidebar to download
-      `<devicename>_<appfolder>_<hhmmss>.hex` to your local machine.
+    * Unfold the Download folder in VS Codes file explorer. Right-click on the
+      `<devicename>_<appfolder>_<hhmmss>.hex` firmware file you just build and
+      select "Download..." to download it to your local machine.
 
       :::caution
 
       Verify the filename you're downloading matches the one output by the `west
-      kasm download` command.
+      download` command.
 
       :::
 
