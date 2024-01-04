@@ -4,7 +4,7 @@ description:
     Send time series data with Golioth LightDB Stream
 ---
 
-import HowToDownload from '/docs/\_partials/download-from-kasm.md'
+import HowToDownload from '/docs/\_partials/download-from-codespaces.md'
 import FirmwareFlash from '/docs/\_partials/flash-the-example-nrf.md'
 
 # Use Golioth LightDB Stream to Send Data
@@ -53,7 +53,7 @@ Excerpts from `main.c`:
 
 	while (1) {
 		printk("This is the main loop: %d\n", counter);
-		
+
 		snprintk(sbuf, sizeof(sbuf), "{\"counter\":%d}", counter);
 ```
 
@@ -93,7 +93,7 @@ Excerpts from `main.c`:
 
 	while (1) {
 		printk("This is the main loop: %d\n", counter);
-		
+
 		snprintk(sbuf, sizeof(sbuf), "{\"counter\":%d}", counter);
 
 		golioth_stream_push_cb(client, "sensor",
@@ -139,21 +139,6 @@ Sample](https://github.com/golioth/golioth-zephyr-sdk/blob/main/samples/lightdb_
         ```
 
 2. Download the binary
-
-    :::note
-
-    The normal workflow when using a development environment installed locally
-    is to use `west flash` to program the board. We are using a different
-    approach here because the Kasm container doesn't have access to your local
-    USB port.
-
-    :::
-
-    * In the VS Code terminal, run `west kasm download` to package the compiled
-      code and make it available for download
-
-    * Use the Download option in Kasm's left sidebar to download
-      `<devicename>_<appfolder>_<hhmmss>.hex` to your local machine.
 
     <HowToDownload/>
 
