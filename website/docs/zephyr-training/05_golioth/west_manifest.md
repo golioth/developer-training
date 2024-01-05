@@ -101,8 +101,8 @@ calls to `west update` will perform the following (because of the file above):
 
   :::
 
-* This manifest sets up the custom `west kasm download` command we've been
-  using. You're not likely to need this in your own projects.
+* This manifest sets up the custom `west download` command we've been using.
+  You're not likely to need this in your own projects.
 
 :::tip Compare Standalone to building in the Zephyr tree
 
