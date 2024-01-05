@@ -34,15 +34,19 @@ C.
 
 ## Workflow
 
-### Build in the Kasm container
+### Build in the Codespaces container
 
 1. Open main.c and start the VS Code terminal
 
     * In the VS Code Explore, click on `app` to unfold it
     * Unfold the `03_LED` and `src` folders
     * Double click on `main.c` to open it in the editor
-    * Open a terminal by right-clicking on `app` and selecting `Open in
-      Integrated Terminal`
+    * In the bottom pane, click "TERMINAL". We start in the `zephyr-training` folder
+      so be sure to move into the `app` folder:
+
+        ```
+        cd app
+        ```
 
 2. Build the example
 
@@ -51,7 +55,7 @@ C.
     Try to build this sample, you should receive an error message:
 
     ```console
-    ERROR: Build directory "/home/kasm/zephyr-training/app/build" is for application "/home/kasm/zephyr-training/app/02_helloworld", but source directory "/home/kasm/zephyr-training/app/03_LED" was specified; please clean it, use --pristine, or use --build-dir to set another build directory
+    ERROR: Build directory "/zephyr-training/app/build" is for application "/zephyr-training/app/02_helloworld", but source directory "/zephyr-training/app/03_LED" was specified; please clean it, use --pristine, or use --build-dir to set another build directory
     FATAL ERROR: refusing to proceed without --force due to above error
     ```
 
@@ -68,7 +72,7 @@ C.
     :::
 
     * Make sure the terminal at the bottom of the VS Code window is in the
-      `~/Desktop/zephyr-training/app` folder
+      `/zephyr-training/app` folder
     * Run the following code to build the `03_LED` app
 
         ```bash
