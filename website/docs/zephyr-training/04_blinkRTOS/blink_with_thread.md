@@ -120,12 +120,12 @@ whenever the thread is serviced, and the priority level.
 
 </details>
 
-### Build in the Kasm container
+### Build in the Codespaces container
 
 1. Build the example
 
     * Make sure the terminal at the bottom of the VS Code window is in the
-      `~/Desktop/zephyr-training/app` folder
+      `/zephyr-traininig/app` folder
     * Run the following code to build the `04_blinkRTOS` app
 
         ```bash
