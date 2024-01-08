@@ -23,11 +23,11 @@ which will work for all Nordic devices.
 
 ## What is Codespaces?
 
-[GitHub Codespaces a container-based build system in a
+[GitHub Codespaces is a VM-based build system in a
 browser](https://github.com/features/codespaces). For this training we have
-preconfigured Codespaces with Golioth tools and the Zephyr toolchain so
-that you can build Zephyr projects without first installing the tools on your
-local machine.
+preconfigured Codespaces with Golioth tools and the Zephyr toolchain so that you
+can build Zephyr projects without first installing the tools on your local
+machine.
 
 We believe this is the fastest way to get new developers building Zephyr
 projects and interacting with Golioth. You should be able to build a Zephyr +
