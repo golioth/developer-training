@@ -14,10 +14,15 @@ Codespaces.
 
 :::tip Setup after training
 
-After the training is over you will need a local install to continue working
-with Zephyr. You can follow [Golioth's Zephyr setup guide for the
-nRF9160](https://docs.golioth.io/hardware/nrf91/zephyr-quickstart/set-up-zephyr)
-which will work for all Nordic devices.
+After the training is over you may continue using Codespaces. However,
+installing a local copy of the build tools enables direct access to the hardware
+you have connected to your machine. That means you can use `west flash`
+directly (along with other commands like `west debug`) and skip the binary
+download step unique to using Codespaces.
+
+You can follow [Golioth's NCS setup
+guide](https://docs.golioth.io/getting-started/device-examples/compile-example-code/zephyr-ncs/)
+to install the nRF Connect SDK which is Nordic's fork of Zephyr.
 
 :::
 
