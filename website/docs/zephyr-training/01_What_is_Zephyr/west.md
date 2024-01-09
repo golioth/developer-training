@@ -70,11 +70,11 @@ commands will still be `west build` and `west flash`.
 :::note
 
 We will not be using `west flash` during this training because the Codespaces
-container that serve as the build environment don't have access to the USB port
-on your computer.
+container that serves as the development environment does not have access to the
+USB port on your computer.
 
-During normal workflow, your Zephyr build environment will be local and you
-should use `west flash` after the `west build` command completes.
+During normal workflow, your Zephyr development environment will be local and
+you should use `west flash` after the `west build` command completes.
 
 :::
 
@@ -93,7 +93,7 @@ $ west flash --context
 # Open a an on-chip debugging session for this board
 $ west debug
 
-# Open the Espressif serial monitor for ES32 family of chips
+# Open the Espressif serial monitor for ESP32 family of chips
 $ west espressif monitor
 ```
 

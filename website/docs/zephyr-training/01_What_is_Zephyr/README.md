@@ -21,8 +21,8 @@ for inclusion in Zephyr.
 
 Connectivity is a particularly desirable aspect of Zephyr. It includes both an IP
 stack and a Bluetooth stack. Hardware flexibility is also a major
-benefit as moving a firmware project to a different MCU, replacing a peripheral
-with something from a different vendor, and maintaining products with different
+benefit as moving a firmware project to a different MCU, replacing a sensor
+with one from a different vendor, and maintaining products with different
 hardware options are all possible with surprising ease.
 
 The complexity of Zephyr is front loaded, and it will take some time to learn

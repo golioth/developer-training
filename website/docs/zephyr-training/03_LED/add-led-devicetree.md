@@ -21,22 +21,23 @@ Write your own DT nodes in the overlay file for your board to access an LED from
 nodes are addressed from C code.
 
 * **Desired outcome(s)**
-  1. Your board blinks LED2 at 1 Hz (but this time, you mapped that LED!!)
+  1. Your board blinks `LED2` at 1 Hz (but this time, you mapped that LED!!)
 * **Time Estimate:** 15 minutes
 
 ## Anatomy of an Overlay File
 
 ### What is an overlay file?
 
-Zephyr applications can make Devicetree changes using overlay files. By default,
-overlay files are named for the board and stored in a `boards` folder of your
-app.
+Zephyr applications can make Devicetree changes using overlay files. In this
+part of the training, we'll use board-specific overlays to customize the
+Devicetree for the board you are using. These overlay files are named for the
+board and stored in the `boards` folder of your app.
 
 Look inside the `03_LED/boards` folder and you will find overlay files for the
 boards supported by this training:
 
-* nrf7002dk_nrf5340_cpuapp.overlay
-* nrf9160dk_nrf9160_ns.overlay
+* `nrf7002dk_nrf5340_cpuapp.overlay`
+* `nrf9160dk_nrf9160_ns.overlay`
 
 Currently the contents of these files hold meaningless placeholder nodes.
 However, they are valid DT syntax or the app would not build. Let's replace
@@ -139,14 +140,14 @@ LED2.
 
 4. Add the `gpios` property inside the `led2_subnode_label` node
 
-    So far we've just been creating names for things, but this property is where
-    the actual assignment happens. Here's an example of how the nRF9160dk maps
-    Zephyr's `led0` alias in DT (confusingly, the label printed on the PCB for
-    this LED is called LED1):
+    So far we've just been creating our own names for the nodes, but this
+    property is where the actual GPIO assignment happens. Here's an example of
+    how the nRF9160 DK maps Zephyr's `led0` alias in DT (confusingly, the label
+    printed on the PCB for this LED is called LED1):
 
     | ![GPIOS DT property for nRF9160dk](./assets/dt-gpios-property.jpg) |
     |:--:|
-    | How the nRF9160dk maps to devicetree `led0` |
+    | How the nRF9160 DK maps to devicetree `led0` |
 
     Now look up the schematic and LED pinout for your board and use this
     information to add the `gpios` property for what Nordic calls LED2.

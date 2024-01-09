@@ -79,7 +79,7 @@ this exercise:
 
 In the `main()` function of `05_golioth/src/main.c`:
 
-1. Add an `golioth_stream_push_cb()` to the main loop
+1. Add a `golioth_stream_push_cb()` function call to the main loop
 2. Use `"sensor"` as the endpoint
 3. Use the `char` array from the previous step as the payload
 
@@ -156,10 +156,10 @@ click on the `LightDB Stream` tab.
 
 :::tip
 
-Your device should still have Golioth credentials from earlier exercises saved
-on the settings partition that allows it to connect to the servers. You may
-check to be sure by issuing the `settings get golioth/psk-id` command in the
-serial shell.
+The "Erase & write" operation in the firmware programming steps may have wiped
+out the settings partition containing the Golioth credentials. If your device is
+not connecting to Golioth, you can check the stored PSK-ID setting by issuing
+the `settings get golioth/psk-id` command in the serial shell.
 
 Instructions for setting device credentials are available in the [Connect
 Hardware to

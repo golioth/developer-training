@@ -125,8 +125,8 @@ application to run while waiting for a connection.
 
 ## Expected results
 
-You have added Golioth to your application. The code will build and a connection
-to Golioth will be established, but beyond that we haven't used any of the
+You have added Golioth to your application. The code will build and attempt to
+establish a connection to Golioth, but beyond that we haven't used any of the
 Golioth services. In the next section we'll send data to Golioth using the
 LightDB Steam.
 

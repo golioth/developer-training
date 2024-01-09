@@ -108,7 +108,8 @@ To use logging, we will need to do four things:
 Zephyr includes a configuration tool called `menuconfig` for navigating the
 massive web of Kconfig options. Let's use this to turn on Logging.
 
-1. Maximize the terminal window in your VS Code
+1. Maximize the terminal window in your VS Code editor by clicking the `^` icon
+   in the top right corner of the terminal pane
 2. From the `/zephyr-training/app` folder, launch menuconfig:
 
     ```shell
@@ -229,10 +230,10 @@ We also need to register any C file from which we want to make logging calls.
     :::tip
 
     There are ways to reuse the module tokens and change the log levels at run
-    time (and much more) but that is beyond the scope of this training so please
-    see the [Zephyr Logging
+    time (and much more) but that is beyond the scope of this training. See the
+    [Zephyr Logging
     Docs](https://docs.zephyrproject.org/latest/services/logging/index.html) for
-    more.
+    more info on how to configure the logging service.
 
     :::
 3. Save your `main.c` file
