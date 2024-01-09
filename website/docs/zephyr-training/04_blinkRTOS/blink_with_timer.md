@@ -11,13 +11,13 @@ import FirmwareFlash from '/docs/\_partials/flash-the-example-nrf.md'
 ## Learning Objectives
 
 When you made the LED blink in the previous module, it was using a sleep
-function in the main loop. For actual embedded development this is almost never
-allowed, and timers are used instead. One benefit of using a Real Time Operating
-System (RTOS) like Zephyr is that it will take care of scheduling for you. In
-this exercise you will use Zephyr's Timers API to blink the LED for you.
+function in the main loop. In this module we'll explore how to use a timer to
+blink the LED instead. One benefit of using a Real Time Operating System (RTOS)
+like Zephyr is that it will take care of scheduling for you. In this exercise
+you will use Zephyr's Timers API to blink the LED for you.
 
 * **Desired outcome(s)**
-    1. Understand how to blink using a timer in the RTOS
+    1. Understand how to blink an LED using a timer in the RTOS
 * **Time Estimate:** 5 minutes
 
 ## Exercise: Blink Using a Timer

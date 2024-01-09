@@ -11,13 +11,13 @@ are available for inclusion.
 
 ## CMakeLists.txt
 
-Files are added to the build process using a CMakeLists.txt file. There will be
+Files are added to the build process using a `CMakeLists.txt` file. There will be
 one at the root of your Zephyr application, as shown in this file tree listing
 from a typical application:
 
 ![Typical file tree for a Zephyr application](./assets/typical_tree_for_zephyr_application.jpg)
 
-The contents of the CMakeLists.txt file will look similar to this:
+The contents of the `CMakeLists.txt` file will look similar to this:
 
 ```
 # SPDX-License-Identifier: Apache-2.0

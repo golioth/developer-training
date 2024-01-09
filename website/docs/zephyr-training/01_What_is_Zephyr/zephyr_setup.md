@@ -6,11 +6,11 @@ description:
 
 # About the Zephyr Dev Environment
 
-We will not be setting up the Zephyr development environment today. Due to
+We will not be setting up a local Zephyr development environment today. Due to
 differences in operating systems (and quirks between different installs of the
 same OS), setting up the development tools takes a bit of time. Instead, we have
-set up a pre-configured build environment you can access in your browser called
-Codespaces.
+set up a pre-configured development environment you can access in your browser
+called Codespaces.
 
 :::tip Setup after training
 
@@ -28,7 +28,7 @@ to install the nRF Connect SDK which is Nordic's fork of Zephyr.
 
 ## What is Codespaces?
 
-[GitHub Codespaces is a VM-based build system in a
+[GitHub Codespaces is a VM-based development environment in a
 browser](https://github.com/features/codespaces). For this training we have
 preconfigured Codespaces with Golioth tools and the Zephyr toolchain so that you
 can build Zephyr projects without first installing the tools on your local
@@ -40,7 +40,7 @@ Golioth project almost immediately after entering the development environment.
 
 | ![Codespaces](./assets/codespaces-ncs.png) |
 |:--:|
-| We use GitHub Codespaces to load a Linux-based build environment in your browser, complete with VS Code and all the Zephyr tools you need. |
+| We use GitHub Codespaces to load a Linux-based development environment in your browser, complete with VS Code and all the Zephyr tools you need. |
 
 ## Using the Command Line
 
@@ -50,8 +50,8 @@ the terminal inside of VS Code.
 
 :::tip
 
-While Nordic includes tools for building Zephyr projects in VScode, they miss
-out on some of the benefits of the `west` meta tool. To explore this part of
-Zephyr, its worth using the command line today.
+While Nordic provides VS Code extensions for managing Zephyr projects in VScode,
+they miss out on some of the benefits of the `west` meta tool. To explore this
+part of Zephyr, its worth using the command line today.
 
 :::

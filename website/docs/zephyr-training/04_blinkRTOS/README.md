@@ -11,7 +11,7 @@ In this module we will blink the LED using two different RTOS approaches:
 * **timer**: a timer uses the system clock to run a callback function after a
   specific amount of time has passed
 * **thread**: using a thread is much like adding a second `main()` function to
-  your application
+  your application that runs concurrently
 
 In both cases, [the Scheduler of the Zephyr Real-Time Operating
 System](https://docs.zephyrproject.org/latest/kernel/services/scheduling/index.html)

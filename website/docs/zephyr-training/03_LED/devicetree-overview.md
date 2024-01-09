@@ -70,9 +70,9 @@ In this module we will frequently abbreviate Devicetree as DT.
 :::tip
 
 The Devicetree is the most confusing and difficult to learn part of Zephyr. This
-overview will likely be a bit of a head-scratch &ndash; especially when it comes
-to syntax &ndash; but don't worry. It's worth knowing about DT right away, even if
-you don't understand it. This is where the rubber hits the road for Zephyr's
+overview will likely be a bit of a head-scratch—especially when it comes
+to syntax—but don't worry. It's worth knowing about DT right away, even if
+you don't fully understand it. This is where the rubber hits the road for Zephyr's
 vast hardware abstraction.
 
 [Zephyr's Devicetree Docs
@@ -91,7 +91,7 @@ up to have a full copy of the Zephyr tree in it?
    in here (`samples` and `tests` are the next-best thing if a tutorial for what
    you need isn't available).
 
-    To illustrate the scope of Devicetree, look at the nRF9160dk folder
+    To illustrate the scope of Devicetree, look at the nRF9160 DK folder
     (`zephyr/boards/arm/nrf9160dk_nrf9160/`):
 
     ```shell
@@ -165,12 +165,21 @@ Learning DT is an entire set of training days, so give yourself permission to
 not understand most of this. But a few general things:
 
 1. The `okay` status means this node is enabled. Setting a status to `disabled`
-   would remove it from the build.
-2. Note the `&` operator on `&uart0`. This tells us that this node already
-   exists in the DT and what we're doing here is making changes.
-3. The pinout of the uart is not defined here, it's defined using Pin Control
-   (which handles muxing for special-function peripherals). You can see this
-   defines which Pin Control definitions to use.
+   would disable the node in the build.
+2. Note the `&` operator on `&uart0`. In Devicetree terminology, `&uart0` is
+   known as a
+   [phandle](https://docs.zephyrproject.org/latest/build/dts/phandles.html#dt-phandles)
+   and it's function is similar in concept to the way you can use pointers to
+   refer to structures in C. This allows us to reference an existing node in
+   the DT so that we can make changes to that node.
+3. The pinout of for the `uart0` peripheral is not explicitly defined here.
+   Instead, it's defined using Pin Control, which handles muxing for
+   special-function peripherals. Pin Control enables devices to use different
+   pin configurations for each operating "state". In this example, the `&uart0`
+   node refers to pin definitions for the `default` and `sleep` states defined
+   in the
+   `zephyr/boards/arm/nrf9160dk_nrf9160/nrf9160dk_nrf9160_common-pinctrl.dtsi`
+   file.
 
   :::tip
 
@@ -184,13 +193,13 @@ not understand most of this. But a few general things:
 
 ### Devicetree is many files combined
 
-In point #2 above, we said the `uart0` DT node already exists for the board files
-we're looking at. So where is `uart0` actually defined? The chip itself has DT
-files!
+In point #2 above, we said the `uart0` DT node already exists for the board
+files we're looking at. So where is `uart0` actually defined? The nRF9160 chip
+itself has DT files!
 
 Microcontroller specific DT files are found in the `zephyr/dts` folder. If we
 look in `zephyr/dts/arm/nordic/nrf9160_common.dtsi` we can locate the `uart0`
-definition (notice no `&` this time) which includes the register address,
+node label (notice no `&` this time) which includes the register address,
 offset, and interrupt configuration:
 
 ```

@@ -1,7 +1,7 @@
 ---
 id: connect-nRF7002-to-golioth
 description: |
-   Use a precompiled application to connect an nRF7002-DK to Golioth
+   Use a precompiled application to connect an nRF7002 DK to Golioth
 ---
 
 import InstallNrfConnect from './\_partials/install_nrf_connect.md'
@@ -26,8 +26,8 @@ This training currently supports the following hardware:
 groupId="devboard"
 defaultValue="nrf7002dk"
 values={[
-{label: 'nRF7002-DK', value: 'nrf7002dk'},
-{label: 'nRF9160-DK', value: 'nrf9160dk'},
+{label: 'nRF7002 DK', value: 'nrf7002dk'},
+{label: 'nRF9160 DK', value: 'nrf9160dk'},
 ]}>
 
 <TabItem value="nrf7002dk">
@@ -72,8 +72,8 @@ programmer/debugger via a USB connection.
 groupId="devboard"
 defaultValue="nrf7002dk"
 values={[
-{label: 'nRF7002-DK', value: 'nrf7002dk'},
-{label: 'nRF9160-DK', value: 'nrf9160dk'},
+{label: 'nRF7002 DK', value: 'nrf7002dk'},
+{label: 'nRF9160 DK', value: 'nrf9160dk'},
 ]}>
 
 <TabItem value="nrf7002dk">
@@ -84,7 +84,7 @@ Zephyr.
 
 <ConnectToSerial/>
 
-3. You can now press the reset button on the nRF7002-DK to see the serial output
+3. You can now press the reset button on the nRF7002 DK to see the serial output
    as it runs. We expect that the device will not be able to connect as it does
    not yet have credentials.
 
@@ -125,7 +125,7 @@ Zephyr.
 
 5. Observe the device connecting to Golioth
 
-    After the nRF7002-DK reboots, the serial terminal will remain connected. You
+    After the nRF7002 DK reboots, the serial terminal will remain connected. You
     should see the device connect to WiFi, then Golioth, and begin streaming
     simulated temperature data:
 
@@ -162,7 +162,7 @@ properly. This is accomplished over USB using the Shell built into Zephyr.
 
 <ConnectToSerial/>
 
-3. You can now press the reset button on the nRF9160-DK to see the serial output
+3. You can now press the reset button on the nRF9160 DK to see the serial output
    as it runs. We expect that the device will not be able to connect as it does
    not yet have credentials.
 
@@ -188,7 +188,7 @@ properly. This is accomplished over USB using the Shell built into Zephyr.
 
 5. Observe the device connecting to Golioth
 
-    After the nRF9160-DK reboots, the serial terminal will remain connected. You
+    After the nRF9160 DK reboots, the serial terminal will remain connected. You
     should see the device connect to WiFi, then Golioth, and begin streaming
     simulated temperature data:
 

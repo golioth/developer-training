@@ -38,7 +38,7 @@ C.
 
 1. Open main.c and start the VS Code terminal
 
-    * In the VS Code Explore, click on `app` to unfold it
+    * In the VS Code "EXPLORER" side bar, click on `app` to unfold it
     * Unfold the `03_LED` and `src` folders
     * Double click on `main.c` to open it in the editor
     * In the bottom pane, click "TERMINAL". We start in the `zephyr-training` folder
@@ -66,8 +66,10 @@ C.
     * Add `-p` to the build command for a "pristine" build
     * Remove the `build` directory before building
 
-    <br />Both approaches will have the same effect of using
-    <code>app/build</code> as a clean directory with no leftover build files.
+    <br />
+
+    Both approaches will have the same effect of using `app/build` as a clean
+    directory with no leftover build files.
 
     :::
 
@@ -134,9 +136,9 @@ Overview](devicetree-overview), DT definitions for our board already exist in th
 ### LED0 and the Devicetree
 
 By convention, all Zephyr supported boards that have LEDs should alias those
-LEDs to `LED0`, `LED1`, `...`, `LEDn`. Let's take the nRF9160dk as an example. If we
-look at [the DTS file for this
-board](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/arm/nrf9160dk_nrf9160/nrf9160dk_nrf9160_common.dts)
+LEDs to `led0`, `led1`, `...`, `led<n>` in the Devicetree. Let's take the
+nRF9160 DK as an example. If we look at [the DTS file for this
+board](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/arm/nrf9160dk_nrf9160/nrf9160dk_nrf9160_common.dtsi)
 we can find the relevant node information for the LED:
 
 ```
@@ -159,16 +161,20 @@ we can find the relevant node information for the LED:
 
 * The
   [`compatible`](https://docs.zephyrproject.org/latest/build/dts/bindings-syntax.html#compatible)
-  is a Devicetree Binding used to identify the properties of the gpio-leds type.
-  You can learn about these compatibles from the [Zephyr Bindings
+  property is a Devicetree Binding used to identify the properties of the
+  `gpio-leds` type. You can learn about these bindings from the [Zephyr
+  Bindings
   Index](https://docs.zephyrproject.org/latest/build/dts/api/bindings.html)
   &mdash;the [gpio-leds
   entry](https://docs.zephyrproject.org/latest/build/dts/api/bindings/led/gpio-leds.html#dtbinding-gpio-leds)
   explains the syntax and properties for this binding.
 * `led0: led_0` declares a child node using the `nodelabel:
   nodepath` syntax
-* `gpios = <&gpio0 2 0>` declares the port, pin, and pin settings flags
-* The alias `led0` is assigned to the address of the `led0` nodelabel.
+* `gpios = <&gpio0 2 0>` is a
+  [phandle-array](https://docs.zephyrproject.org/latest/build/dts/phandles.html#example-phandle-arrays-gpios)
+  property that declares the port, pin, and pin settings flags for the GPIO used
+  to drive the LED.
+* The alias `led0` is assigned to the `&led0` phandle of the `led0` nodelabel.
 
 This is why the Zephyr hardware abstraction works. As long as your board defines
 an `led0` alias, the same C code will be able to drill down to this pin

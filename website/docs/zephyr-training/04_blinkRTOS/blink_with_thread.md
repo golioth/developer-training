@@ -199,7 +199,7 @@ When we defined our Thread, we allocated 1024 bytes to dedicate as a stack just
 for that thread. Was that the right amount? One way you can fine-tune the stack
 sizes is by viewing usage on the running device.
 
-1. Turn on the shell by adding `CONFIG_SHELL=y` to the prj.conf file (or just use
+1. Turn on the shell by adding `CONFIG_SHELL=y` to the `prj.conf` file (or just use
    `menuconfig`!)
 2. Rebuild and flash the firmware to your device
 3. Connect to your board use the Serial Terminal

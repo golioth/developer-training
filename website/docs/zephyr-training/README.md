@@ -12,7 +12,8 @@ major components are used when developing applications. You'll work through
 several hands-on examples designed to explore common elements for new developers.
 
 * Learn about Zephyr SDK, Zephyr Tree, Devicetree, Kconfig, CMake, etc.
-* Compile and run Hello World; add feature using menuconfig
+* Compile and run Hello World
+* Add features using menuconfig
 * Map an LED in a Devicetree overlay file
 * Blink an LED using Zephyr's timer and thread features
 * Add Golioth SDK to your existing project

@@ -16,13 +16,13 @@ Engineering tradition dictates we must begin with Hello World!
 
 We are building your muscles around compiling Zephyr binaries. The code is
 pre-configured, so all you need to do is build, flash, and view the output over
-serial. These step will be used constantly in your Zephyr development process.
+serial. These steps will be used constantly in your Zephyr development process.
 Now is a great time to get comfortable with the workflow.
 
 * **Desired outcome(s)**
   1. Understand how to use the `west` metatool to build an application
   2. Learn the process of downloading a compiled binary from the Codespaces
-     build environment used in this training
+     development environment used in this training
   3. Know how to use Nordic's graphical programmer and serial terminal tools
 * **Time Estimate:** 15 minutes
 
@@ -31,8 +31,8 @@ Now is a great time to get comfortable with the workflow.
 :::tip Using VS Code and `west`
 
 In this training we will use VS Code when editing and building Zephyr projects.
-Of course, VS Code is optional and you may choose to use any editor of your
-choice.
+Of course, when you set up your own local development environment, VS Code is
+optional and you may choose to use any editor of your choice.
 
 While Nordic maintains VS Code tools that can build/flash at the click of a
 mouse, we will build/flash from the command line to get comfortable with how the
@@ -64,7 +64,7 @@ mouse, we will build/flash from the command line to get comfortable with how the
 
 2. Open main.c and start the VS Code terminal
 
-    * In the VS Code Explore, click on `app` to unfold it
+    * In the VS Code "EXPLORER" side bar, click on `app` to unfold it
     * Unfold the `02_helloworld` and `src` folders
     * Double click on `main.c` to open it in the editor
     * In the bottom pane, click "TERMINAL". We start in the `zephyr-training` folder
@@ -83,7 +83,7 @@ mouse, we will build/flash from the command line to get comfortable with how the
     We want to build all of the sample code from the `/zephyr-training/app` folder.
     The build process will create a `build` subfolder inside any folder where
     the `west build` command is used. This contains all prepocessor and compiler
-    output (including our firmware binary which will be locate at either
+    output (including our firmware binary which will be located at either
     `build/zephyr/zephyr.hex` or `build/zephyr/merged.hex` depending on the
     board you are using).
 

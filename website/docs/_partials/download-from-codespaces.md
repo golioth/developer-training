@@ -30,7 +30,7 @@ files in the VS Code file explorer, filenames should be similar to:
 `nrf9160dk_04_blinkRTOS_223209.hex`.
 
 The image above shows the file explorer in the left sidebar menu of VS Code.
-(The file explorer may be opened using Ctrl-Shift-e).
+(The file explorer may be opened by clicking `≡`→`View`→`Explorer`).
 
 Right-click on the filename you want to download and select "Download..." from
 the resulting menu.
