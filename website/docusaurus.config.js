@@ -64,15 +64,15 @@ const config = {
             position: 'left',
           },
           {
-            to: 'docs/api-training',
-            activeBasePath: 'api-training',
-            label: 'API Training',
-            position: 'left',
-          },
-          {
             to: 'docs/zephyr-training',
             activeBasePath: 'zephyr-training',
             label: 'Zephyr Training',
+            position: 'left',
+          },
+          {
+            to: 'docs/api-training',
+            activeBasePath: 'api-training',
+            label: 'API Training',
             position: 'left',
           },
           {

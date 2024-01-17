@@ -18,19 +18,6 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Golioth REST API Training',
-    link: '/docs/api-training',
-    description: (
-      <>
-        Golioth makes it easy to interact with your IoT devices and their data.
-        This REST API training module will familiarize you with how devices are
-        represented in the cloud. You'll learn how monitor and control your
-        fleet, and access the time-series and stateful data being collected from
-        it.
-      </>
-    ),
-  },
-  {
     title: 'Zephyr Training',
     link: '/docs/zephyr-training',
     img: require('../../static/img/Zephyr_logo_300x300.png'),
@@ -41,6 +28,19 @@ const FeatureList = [
         company projects. After getting started quickly, users will learn how to
         properly set up a Zephyr project and be ready to deploy a professional
         project.
+      </>
+    ),
+  },
+  {
+    title: 'Golioth REST API Training',
+    link: '/docs/api-training',
+    description: (
+      <>
+        Golioth makes it easy to interact with your IoT devices and their data.
+        This REST API training module will familiarize you with how devices are
+        represented in the cloud. You'll learn how monitor and control your
+        fleet, and access the time-series and stateful data being collected from
+        it.
       </>
     ),
   },
