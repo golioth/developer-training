@@ -54,13 +54,31 @@ mouse, we will build/flash from the command line to get comfortable with how the
 
       [![VS Code running in a codespace](./assets/codespaces-vscode-first-open.png)](./assets/codespaces-vscode-first-open.png)
 
-      :::note We expect VS Code to complain a little bit
+      :::tip We expect VS Code to complain a little bit
 
       * Use the 'x' to dismiss the two dialogs on the bottom right
       * There will be a message about failing to parse `compile_commands.json`
         because that file will not exist until we build an app in this workspace.
 
       :::
+
+      :::note Codespaces Pricing
+
+      Codespaces is free to use for individuals up to certain limits. At the
+      time of writing this is 15 GB of storage and 120 core hours per month.
+      This is more than enough for today's training.
+
+      - Please see [the GitHub Docs pricing
+        page](https://docs.github.com/en/billing/managing-billing-for-github-codespaces/about-billing-for-github-codespaces#monthly-included-storage-and-core-hours-for-personal-accounts)
+        for full details.
+      - [View Codespaces
+        usage](https://docs.github.com/en/billing/managing-billing-for-github-codespaces/viewing-your-github-codespaces-usage)
+        in the Settings section of your GitHub user profile.
+      - Codespaces instances may be deleted from the [`Your
+        codespaces`](https://github.com/codespaces) dashboard
+
+      :::
+
 
 2. Open main.c and start the VS Code terminal
 
