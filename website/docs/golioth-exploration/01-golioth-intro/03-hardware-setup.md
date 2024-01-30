@@ -1,5 +1,4 @@
 ---
-id: connect-nRF7002-to-golioth
 description: |
    Use a precompiled application to connect an nRF7002 DK to Golioth
 ---
@@ -93,9 +92,11 @@ Zephyr.
 4. Use the serial connection to assign WiFi and Golioth Device Credentials
 
     :::info
+
     Golioth Device Credentials were created during the [Console Signup and
-    Exploration](./02-signup.md) step. You can return to the [Golioth
-    Console](https://console.golioth.io/) to retrieve the PSK-ID/PSK.
+    Exploration](/docs/golioth-exploration/golioth-intro/golioth-console) step.
+    You can return to the [Golioth Console](https://console.golioth.io/) to
+    retrieve the PSK-ID/PSK.
 
     WiFi credentials come from your home or business WiFi. It is also possible
     to use your phone as a WiFi hotspot.
@@ -103,6 +104,7 @@ Zephyr.
     The precompiled binary is only
     able to connect to hotspots using WPA2 authentication (which is very
     common). This limitation can be changed if you compile your own firmware.
+
     :::
 
     Use the following command syntax to assign your credentials.
@@ -173,8 +175,9 @@ properly. This is accomplished over USB using the Shell built into Zephyr.
     :::info
 
     Golioth Device Credentials were created during the [Console Signup and
-    Exploration](./02-signup.md) step. You can return to the [Golioth
-    Console](https://console.golioth.io/) to retrieve the PSK-ID/PSK.
+    Exploration](/docs/golioth-exploration/golioth-intro/golioth-console) step.
+    You can return to the [Golioth Console](https://console.golioth.io/) to
+    retrieve the PSK-ID/PSK.
 
     :::
 
