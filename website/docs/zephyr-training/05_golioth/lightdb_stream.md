@@ -40,7 +40,8 @@ In the `main()` function of `05_golioth/src/main.c`:
     1. Use the string `"counter"` as the key
     2. Use the existing `counter` variable as the value
 
-<details><summary>Click to reveal the solution</summary>
+<details>
+    <summary>Click to reveal the solution</summary>
 
 Excerpts from `main.c`:
 * Note the quotes in JSON strings are escaped in C
@@ -83,7 +84,8 @@ In the `main()` function of `05_golioth/src/main.c`:
 2. Use `"sensor"` as the endpoint
 3. Use the `char` array from the previous step as the payload
 
-<details><summary>Click to reveal the solution</summary>
+<details>
+    <summary>Click to reveal the solution</summary>
 
 Excerpts from `main.c`:
 

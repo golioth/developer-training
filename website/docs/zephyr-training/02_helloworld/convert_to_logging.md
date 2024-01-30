@@ -41,7 +41,8 @@ adding a loop and a counter.
 
 4. Be sure to save the changes you made to `main.c`
 
-<details><summary>Click to reveal solution</summary>
+<details>
+    <summary>Click to reveal solution</summary>
 
 ```c
 #include <zephyr/kernel.h>
@@ -247,7 +248,8 @@ message over to use Logging.
 2. Remove the `\n` from the end of the string (the Logging library will take
    care of adding newline characters)
 
-<details><summary>Click to reveal the solution</summary>
+<details>
+    <summary>Click to reveal the solution</summary>
 
 ```c
 #include <zephyr/logging/log.h>

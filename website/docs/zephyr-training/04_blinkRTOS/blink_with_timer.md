@@ -52,7 +52,8 @@ In the `04_blinkRTOS/src/main.c` file:
     k_timer_start(&my_timer, K_MSEC(200), K_MSEC(200));
     ```
 
-<details><summary>Click to reveal the expected main.c file</summary>
+<details>
+    <summary>Click to reveal the expected main.c file</summary>
 
 ```c excerpts from main.c
 static void my_timer_handler(struct k_timer *dummy) {

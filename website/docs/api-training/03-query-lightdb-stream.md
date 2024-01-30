@@ -99,7 +99,8 @@ If you are having issues, check for this as it will break your query.
 
 :::
 
-<details><summary>Click for screenshot of valid request `body`</summary>
+<details>
+    <summary>Click for screenshot of valid request `body`</summary>
 
 ![Golioth OpenAPI LightDB Stream Query](./assets/golioth-openapi-docs-lightdb-stream-query.jpg)
 
@@ -137,7 +138,8 @@ indicate success.
 4. OpenAPI Docs queries will also return `curl` syntax which is useful in
    understanding how the query is being built
 
-    <details><summary>Click to show the `curl` command</summary>
+    <details>
+        <summary>Click to show the `curl` command</summary>
 
     ```shell
     curl -X 'POST' \
@@ -179,7 +181,8 @@ indicate success.
 
 ### Example output
 
-<details><summary>Click to reveal an example of returned data</summary>
+<details>
+    <summary>Click to reveal an example of returned data</summary>
 
 ```json
 {
@@ -316,7 +319,8 @@ indicate success.
 3. Run the OpenAPI LightDB Stream query again to observe the returned values
    based on your added filter.
 
-<details><summary>Click to reveal the solution to this challenge</summary>
+<details>
+    <summary>Click to reveal the solution to this challenge</summary>
 
 ```json
     "filters": [

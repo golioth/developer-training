@@ -82,7 +82,8 @@ the previous section to see how the Golioth Web Console formats this RPC.
 
 :::
 
-<details><summary>Click to reveal the solution to this challenge</summary>
+<details>
+    <summary>Click to reveal the solution to this challenge</summary>
 
 Here is the formatting for the body of the query:
 

@@ -4,7 +4,8 @@
      previously downloaded
   3. Click the "Erase & write" button
 
-  <details><summary>Click to reveal image of a successful firmware programming process</summary>
+  <details>
+    <summary>Click to reveal image of a successful firmware programming process</summary>
 
   | ![Nordic nRF Connect for Desktop Programmer after flashing firmware](./assets/nrf-connect-desktop-programmer-after-flashing.jpg) |
   |:--:|

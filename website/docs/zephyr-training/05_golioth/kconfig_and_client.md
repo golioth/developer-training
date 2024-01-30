@@ -130,7 +130,8 @@ establish a connection to Golioth, but beyond that we haven't used any of the
 Golioth services. In the next section we'll send data to Golioth using the
 LightDB Steam.
 
-<details><summary>Click to reveal solution</summary>
+<details>
+    <summary>Click to reveal solution</summary>
 
 Here is an excerpt from `main.c` that includes the added code from this section:
 ```c
