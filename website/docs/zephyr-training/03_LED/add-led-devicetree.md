@@ -109,7 +109,8 @@ LED2.
     4. Remove `size` from this child node as it is not a required parameter for
        this compatible
 
-    <br /><details><summary>Click to reveal solution if you need help</summary>
+    <br /><details>
+            <summary>Click to reveal solution if you need help</summary>
 
     ```
             led_childnode_path {
@@ -124,7 +125,8 @@ LED2.
     1. Use `led2_subnode_label` as the nodelabel
     2. Use `led2_path` as the nodepath
 
-    <br /><details><summary>Click to reveal solution if you need help</summary>
+    <br /><details>
+            <summary>Click to reveal solution if you need help</summary>
 
     ```
             led_childnode_path {
@@ -157,7 +159,8 @@ LED2.
     * nRF9160dk: [Buttons, slide switches, and
       LEDs](https://infocenter.nordicsemi.com/topic/ug_nrf91_dk/UG/nrf91_DK/hw_buttons_leds.html)
 
-    <br /><details><summary>Click to reveal solution if you need help</summary>
+    <br /><details>
+            <summary>Click to reveal solution if you need help</summary>
 
     ```
             /* for nRF7002dk LED2 */
@@ -186,7 +189,8 @@ LED2.
     1. Create `training-led` alias and set it to the address of the LED
        nodelabel you created in step 3
 
-    <br /><details><summary>Click to reveal solution if you need help</summary>
+    <br /><details>
+            <summary>Click to reveal solution if you need help</summary>
 
     ```
             aliases {
@@ -200,7 +204,8 @@ LED2.
 
 1. Update `main.c` to use our new `training-led` alias.
 
-    <details><summary>Click to reveal solution if you need help</summary>
+    <details>
+        <summary>Click to reveal solution if you need help</summary>
 
     ```c
     #define LED0_NODE DT_ALIAS(training_led)
@@ -244,7 +249,8 @@ documentation you can see there are multiple macros for accessing DT nodes.
 While it is very common to use an alias, try updating `main.c` to use the
 nodelabel to access your LED.
 
-<details><summary>Click to reveal solution if you need help</summary>
+<details>
+    <summary>Click to reveal solution if you need help</summary>
 
 ```c
 #define LED0_NODE DT_NODELABEL(led2_subnode_label)

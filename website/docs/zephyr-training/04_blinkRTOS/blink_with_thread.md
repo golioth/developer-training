@@ -80,7 +80,8 @@ In the `04_blinkRTOS/src/main.c` file:
 
     :::
 
-<details><summary>Click to reveal the expected main.c file</summary>
+<details>
+    <summary>Click to reveal the expected main.c file</summary>
 
 ```c excerpts from main.c
 static void my_thread_handler(void *dummy1, void *dummy2, void *dummy3) {
@@ -206,7 +207,8 @@ sizes is by viewing usage on the running device.
 4. Run the `kernel stacks` command in the shell to print out the largest stack
    usage seen since power-on
 
-<details><summary>Click to show example stack usage</summary>
+<details>
+    <summary>Click to show example stack usage</summary>
 
 ![Using the shell to view kernel stacks](./assets/kernel_stacks_command_output.jpg)
 

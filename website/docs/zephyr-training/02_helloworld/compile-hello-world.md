@@ -158,7 +158,8 @@ Hello World! nrf7002dk_nrf5340_cpuapp
 * To see this output, connect to the device via serial and then press the reset
 button on the board.
 
-  <details><summary>Show me how to connect via serial</summary>
+  <details>
+    <summary>Show me how to connect via serial</summary>
   <ConnectSerial/>
   </details>
 
