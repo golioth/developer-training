@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  align-items:center;
+  flex-direction: column;
+  color: white;
+  margin: 0 auto;
+  max-width: 675px;
+  width: 100%;
+  padding: 0 var(--ifm-spacing-horizontal);
+}
+
+.container em {
+  color: #f8b918;
+}
+
+.heroBanner {
+  align-items: center;
+  background-color: var(--ifm-hero-background-color);
+  display: flex;
+  padding: 4rem 2rem;
+}
+
+.signupBanner {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.signupBanner h1 {
+  font-size: 2.5rem;
+}
+
+.button {
+  background-color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+  transition-property: color, background, border-color;
+  transition-duration: var(--ifm-button-transition-duration);
+  transition-timing-function: var(--ifm-transition-timing-default);
+}
+
+.button:hover {
+  background-color: white;
+}
