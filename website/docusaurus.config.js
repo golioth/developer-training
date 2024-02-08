@@ -139,6 +139,10 @@ const config = {
                 label: 'Zephyr Training using Codespaces',
                 href: 'https://codespaces.new/golioth/zephyr-training',
               },
+              {
+                label: 'Take our live Zephyr Training course',
+                href: 'https://golioth.io/training-signup',
+              },
             ],
           },
         ],
