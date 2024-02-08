@@ -5,6 +5,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './index.module.css';
 import HomepageFeatures from '../components/HomepageFeatures';
+import HomepageTrainingSignup from '../components/HomepageTrainingSignup';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 function HomepageHeader() {
@@ -39,6 +40,7 @@ export default function Home() {
       <main>
         <HomepageFeatures />
       </main>
+      <HomepageTrainingSignup />
     </Layout>
   );
 }
