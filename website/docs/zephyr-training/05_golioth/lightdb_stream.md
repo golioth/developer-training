@@ -11,8 +11,8 @@ import FirmwareFlash from '/docs/\_partials/flash-the-example-nrf.md'
 
 ## Learning objectives
 
-With a Golioth System Client added to our C code, we can send data using the
-LightDB Stream API calls.
+With a Golioth client added to our C code, we can send data using the LightDB
+Stream API calls.
 
 * **Desired outcome(s)**
   1. Send time-series data to Golioth
@@ -25,64 +25,35 @@ messages every second. Let's pretend this counter is sensor data and report it
 to Golioth using LightDB Stream. This is a time-series database that will record
 each reading along with a timestamp for when it was received.
 
-### Format the data to send to Golioth
+## Send integer value to LightDB Stream
 
-Golioth offers a couple of options for data formatting. The most efficient is
-CBOR, however that is not human-readable. So to keep things simple, let's send
-the counter data using JSON.
-
-In the `main()` function of `05_golioth/src/main.c`:
-
-1. Outside of the loop, create a `char` array as a buffer to hold our JSON
-   string
-2. Inside the loop, use the `snprintk()` function to format the string using
-   substitution
-    1. Use the string `"counter"` as the key
-    2. Use the existing `counter` variable as the value
-
-<details>
-    <summary>Click to reveal the solution</summary>
-
-Excerpts from `main.c`:
-* Note the quotes in JSON strings are escaped in C
-* This JSON formatting is a pattern that gets used often. Don't worry if it
-  wasn't obvious this time, but keep it in your bag of tricks!
-
-```c
-	int counter = 0;
-	char sbuf[32];
-
-	while (1) {
-		printk("This is the main loop: %d\n", counter);
-
-		snprintk(sbuf, sizeof(sbuf), "{\"counter\":%d}", counter);
-```
-
-</details>
-
-### Send data buffer to LightDB Stream
-
-Now that we have a valid JSON string that contains our "sensor" data, let's send
-it to Golioth. We'll use an asynchronous call so it doesn't block our main
-function.
+We'll use an asynchronous call to send the counter data to Golioth so it doesn't
+block our main function.
 
 :::tip
 
 You may want to use either the Doxygen or LightDB Sample code as reference for
 this exercise:
 
-* [Golioth Zephyr SDK
-  Doxygen](https://zephyr-sdk-docs.golioth.io/group__golioth__stream.html)
+* [Golioth Firmware SDK
+  Doxygen](https://firmware-sdk-docs.golioth.io/group__golioth__stream.html)
 * [Golioth LightDB Stream
-  Sample](https://github.com/golioth/golioth-zephyr-sdk/blob/main/samples/lightdb_stream/src/main.c)
+  Sample](https://github.com/golioth/golioth-firmware-sdk/tree/main/examples/zephyr/lightdb_stream)
 
 :::
 
-In the `main()` function of `05_golioth/src/main.c`:
+* In the `main()` function of `05_golioth/src/main.c`:
 
-1. Add a `golioth_stream_push_cb()` function call to the main loop
-2. Use `"sensor"` as the endpoint
-3. Use the `char` array from the previous step as the payload
+    1. Add the header file for Stream data: `CONFIG_GOLIOTH_STREAM=y`
+    2. In the `main()` function:
+        1. Add a `golioth_stream_set_int_async()` function call to the main loop
+        2. Use `"sensor"` as the endpoint
+        3. Use `counter` as the payload
+        4. We'll use `NULL` as the callback for this example
+
+* In the '05_golioth/prj.conf' file:
+
+    1. Add the Kconfig symbol for Stream data: `CONFIG_GOLIOTH_STREAM=y`
 
 <details>
     <summary>Click to reveal the solution</summary>
@@ -90,18 +61,25 @@ In the `main()` function of `05_golioth/src/main.c`:
 Excerpts from `main.c`:
 
 ```c
+// highlight-next-line
+#include <golioth/stream.h>
+```
+
+```c
 	int counter = 0;
-	char sbuf[32];
 
 	while (1) {
 		printk("This is the main loop: %d\n", counter);
 
 		snprintk(sbuf, sizeof(sbuf), "{\"counter\":%d}", counter);
 
-		golioth_stream_push_cb(client, "sensor",
-				       GOLIOTH_CONTENT_FORMAT_APP_JSON,
-				       sbuf, strlen(sbuf),
-				       NULL, NULL);
+        // highlight-start
+		golioth_stream_set_int_async(client,
+					     "sensor/counter",
+					     counter,
+					     NULL,
+					     NULL);
+        // highlight-end
 
 		++counter;
 		k_msleep(SLEEP_TIME_MS);
@@ -154,7 +132,8 @@ Counter data from your device should now be streaming to Golioth. To see it,
 select your device in the [Golioth web console](https://console.golioth.io), and
 click on the `LightDB Stream` tab.
 
-![LightDB Stream data viewed on the Golioth Console](./assets/lightdb-stream-counter.jpg)
+![LightDB Stream data viewed on the Golioth
+Console](./assets/lightdb-stream-counter.png)
 
 :::tip
 
@@ -172,8 +151,8 @@ section.
 ## Additional Exercises
 
 1. Convert the `printk()` messages in the main loop to logging messages
-2. Golioth remote logging is already turned on for this app. Use `menuconfig` to
-   turn it off
-    * Rebuild and flash the firmware to verify logs are no longer sent
-   to the servers
+2. Turn on Golioth remote logging for this app by adding the
+   `CONFIG_LOG_BACKEND_GOLIOTH=y` Kconfig symbol to the build.
+    * Rebuild and flash the firmware to verify logs are no longer sent to the
+      servers
 
