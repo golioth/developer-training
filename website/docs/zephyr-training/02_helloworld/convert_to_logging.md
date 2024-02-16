@@ -341,7 +341,7 @@ In the precompiled binary we loaded during the [Intro to
 Golioth](/docs/golioth-exploration) we observed logs being sent to the Golioth
 servers.
 
-The Golioth Zephyr SDK implements a backend for the Zephyr Logging system to
+The Golioth Firmware SDK implements a backend for the Zephyr Logging system to
 make remote logging possible. If you have Zephyr Logging turned on, and have
 added the Golioth System Client to your project ([we'll get to that](../golioth)
 in a little while) you can automatically send your logs to the cloud by enabling
