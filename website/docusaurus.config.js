@@ -81,6 +81,11 @@ const config = {
             label: 'Document Repo',
             position: 'right',
           },
+          {
+            href: "https://console.golioth.io",
+            label: "Console",
+            position: "right",
+          },
         ],
       },
       footer: {
