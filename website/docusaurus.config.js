@@ -83,7 +83,7 @@ const config = {
           },
           {
             href: "https://console.golioth.io",
-            label: "Console",
+            label: "Console Login",
             position: "right",
           },
         ],
