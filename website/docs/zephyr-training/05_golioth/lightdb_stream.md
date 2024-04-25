@@ -42,18 +42,24 @@ this exercise:
 
 :::
 
-* In the `main()` function of `05_golioth/src/main.c`:
-
-    1. Add the header file for Stream data: `CONFIG_GOLIOTH_STREAM=y`
-    2. In the `main()` function:
-        1. Add a `golioth_stream_set_int_async()` function call to the main loop
-        2. Use `"sensor"` as the endpoint
-        3. Use `counter` as the payload
-        4. We'll use `NULL` as the callback for this example
-
-* In the '05_golioth/prj.conf' file:
+* In the `05_golioth/prj.conf` file:
 
     1. Add the Kconfig symbol for Stream data: `CONFIG_GOLIOTH_STREAM=y`
+
+* In `05_golioth/src/main.c` file:
+
+    1. Add the header file for Stream data: `#include <golioth/stream.h>`
+    2. In the `main()` function:
+        1. Prepare a char array and create a JSON string in it
+            1. Use `"upcount"` as the key
+            2. Use `counter` as the value
+        2. Add a `golioth_stream_set_async()` function call to the main loop
+            1. Use `"sensor"` as the endpoint
+            2. Use `GOLIOTH_CONTENT_TYPE_JSON` as the content type
+            3. Use your char array as the buffer
+            4. Use the `sizeof()` your char array as the buffer length
+            5. We'll use `NULL` as the callback for this example
+            6. We'll use `NULL` as the callback argument
 
 <details>
     <summary>Click to reveal the solution</summary>
@@ -71,14 +77,17 @@ Excerpts from `main.c`:
 	while (1) {
 		printk("This is the main loop: %d\n", counter);
 
-		snprintk(sbuf, sizeof(sbuf), "{\"counter\":%d}", counter);
-
         // highlight-start
-		golioth_stream_set_int_async(client,
-					     "sensor/counter",
-					     counter,
-					     NULL,
-					     NULL);
+		char sbuf[32];
+		snprintk(sbuf, sizeof(sbuf), "{\"upcount\":%d}", counter);
+
+		golioth_stream_set_async(client,
+					 "sensor",
+					 GOLIOTH_CONTENT_TYPE_JSON,
+					 sbuf,
+					 sizeof(sbuf),
+					 NULL,
+					 NULL);
         // highlight-end
 
 		++counter;
