@@ -1,14 +1,41 @@
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 1. Download Nordic's [nRF Connect for
    Desktop](https://www.nordicsemi.com/Products/Development-tools/nRF-Connect-for-desktop)
    software.
 
-   1. **Mac and Linux Users:** According to [the Nordic install
-      instructions](https://infocenter.nordicsemi.com/index.jsp?topic=/struct_nrftools/struct/nrftools_nrfconnect.html)
-      you also need to [install the SEGGER J-Link
-      tools](https://www.segger.com/downloads/jlink/#J-LinkSoftwareAndDocumentationPack)
+   Choose your Operating System for tips on installation:
 
-      **Mac users with Apple Silicon:** Our testing found that you must use the
-      `Universal Installer` version of the SEGGER tools with nRF Connect for Desktop.
+    <Tabs
+    groupId="nrftoolsinstall"
+    defaultValue="linux"
+    values={[
+    {label: 'Linux/Mac', value: 'linux'},
+    {label: 'Windows', value: 'windows'},
+    ]}>
+
+    <TabItem value="linux">
+
+    **Mac and Linux Users:** According to [the Nordic install
+    instructions](https://infocenter.nordicsemi.com/index.jsp?topic=/struct_nrftools/struct/nrftools_nrfconnect.html)
+    you also need to [install the SEGGER J-Link
+    tools](https://www.segger.com/downloads/jlink/#J-LinkSoftwareAndDocumentationPack).
+
+    **Mac users with Apple Silicon:** Our testing found that you must use the
+    `Universal Installer` version of the SEGGER tools with nRF Connect for Desktop.
+
+    </TabItem>
+    <TabItem value="windows">
+
+    **Windows Users** have reported that you should select "Install legacy USB
+    Driver for J-Link" during the Segger J-Link installation step of the wizard.
+    Some users are unable to connect to the dev board when this driver is not
+    installed.
+
+    ![Segger install wizard options](./assets/install_nrf_segger_windows.png)
+    </TabItem>
+    </Tabs>
 
 2. Launch nRF Connect for Desktop. From that application, install and open the
    Programmer.
