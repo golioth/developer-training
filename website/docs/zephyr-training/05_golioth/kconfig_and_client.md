@@ -28,10 +28,27 @@ example.
 
 ## Kconfig symbols required by Golioth
 
-There is one Kconfig symbol required to use the Golioth Zephyr SDK:
+There is one Kconfig symbol required to enable the Golioth Zephyr SDK.
 
 ```kconfig
 CONFIG_GOLIOTH_FIRMWARE_SDK=y
+```
+
+When enabled, your application should select dependency configuration values
+that match your needs. In our case, we're using some "boiler plate" values that
+will work for most simple demo apps:
+
+```kconfig
+# Configure Golioth SDK dependencies
+CONFIG_EVENTFD_MAX=14
+CONFIG_LOG_PROCESS_THREAD_STACK_SIZE=1536
+CONFIG_MBEDTLS_ENABLE_HEAP=y
+CONFIG_MBEDTLS_HEAP_SIZE=10240
+CONFIG_MBEDTLS_SSL_IN_CONTENT_LEN=2048
+CONFIG_MBEDTLS_SSL_OUT_CONTENT_LEN=2048
+CONFIG_NETWORKING=y
+CONFIG_NET_IPV4=y
+CONFIG_POSIX_MAX_FDS=23
 ```
 
 These will immediately allow you to connect to Golioth, however each Golioth
@@ -85,7 +102,7 @@ we're working with in this module.
   from the shell
 
     ```
-    CONFIG_GOLIOTH_SETTINGS=y
+    # Runtime credentials
     CONFIG_SETTINGS=y
     CONFIG_SETTINGS_RUNTIME=y
     CONFIG_GOLIOTH_SAMPLE_HARDCODED_CREDENTIALS=n
