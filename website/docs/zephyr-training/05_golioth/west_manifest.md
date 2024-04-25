@@ -82,7 +82,7 @@ manifest:
   projects:
     - name: golioth
       path: modules/lib/golioth-firmware-sdk
-      revision: v0.10.0
+      revision: v0.12.0
       url: https://github.com/golioth/golioth-firmware-sdk
       submodules: true
       west-commands: scripts/west-commands.yml
@@ -109,7 +109,7 @@ manifest:
 
     - name: zephyr-network-info
       path: deps/modules/lib/network-info
-      revision: v1.1.0
+      revision: v1.1.1
       url: https://github.com/golioth/zephyr-network-info
 
   self:
