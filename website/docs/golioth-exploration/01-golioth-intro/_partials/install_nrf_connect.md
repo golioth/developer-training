@@ -28,12 +28,22 @@ import TabItem from '@theme/TabItem';
     </TabItem>
     <TabItem value="windows">
 
-    **Windows Users** have reported that you should select "Install legacy USB
-    Driver for J-Link" during the Segger J-Link installation step of the wizard.
-    Some users are unable to connect to the dev board when this driver is not
-    installed.
+    1. Install newer SEGGER Tools
 
-    ![Segger install wizard options](./assets/install_nrf_segger_windows.png)
+        **Windows Users** have reported that the version of the SEGGER tools
+        included with nRF Connect for Desktop may be too old to offer the legacy
+        driver installation option and suggest installing the [newest version
+        available directly from
+        SEGGER](https://www.segger.com/downloads/jlink/#J-LinkSoftwareAndDocumentationPack).
+
+    2. Select legacy USB drivers during SEGGER install
+
+        **Windows Users** have reported that you should select "Install legacy
+        USB Driver for J-Link" during the Segger J-Link installation step of the
+        wizard. Some users are unable to connect to the dev board when this
+        driver is not installed.
+
+        ![Segger install wizard options](./assets/install_nrf_segger_windows.png)
     </TabItem>
     </Tabs>
 
