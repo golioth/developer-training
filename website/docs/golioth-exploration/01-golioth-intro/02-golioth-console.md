@@ -32,22 +32,6 @@ import GoliothManage from './_partials/3-manage-devices.md'
 
 <GoliothManage/>
 
-:::note
-
-The wizard offers links for different hardware choices at the end. These are
-convenience links to the Golioth Docs and are not an indication/limitation to
-the types of hardware that may be used with the device credentials you just
-created.
-
-:::
-
-## Authorize Devices
-
-import GoliothAuthorize from './_partials/4-authorize-devices.md'
-
-<GoliothAuthorize/>
-
-
 ## Additional exercises
 
 * Create a "fleet" of 5 devices with unique credentials for each.
