@@ -7,7 +7,7 @@ const FeatureList = [
   {
     title: 'Learn About Golioth',
     link: '/docs/golioth-exploration',
-    img: require('../../static/img/Golioth_logo_300x300.png'),
+    img: require('@site/static/img/Golioth_logo_300x300.png').default,
     description: (
       <>
         This guide is for Developers to understand the various features of
@@ -20,7 +20,7 @@ const FeatureList = [
   {
     title: 'Zephyr Training',
     link: '/docs/zephyr-training',
-    img: require('../../static/img/Zephyr_logo_300x300.png'),
+    img: require('@site/static/img/Zephyr_logo_300x300.png').default,
     description: (
       <>
         Our users find that <a href='https://zephyrproject.org/'>Zephyr RTOS</a>{' '}
@@ -59,14 +59,12 @@ function Feature({ Svg, img, title, description, link }) {
               alt='REST API Training'
               sources={{
                 light:
-                  require('../../static/img/API_Training_logo_300x300-coral.png')
-                    .src.src,
-                dark: require('../../static/img/API_Training_logo_300x300.png')
-                  .src.src,
+                  require('@site/static/img/API_Training_logo_300x300-coral.png').default,
+                dark: require('@site/static/img/API_Training_logo_300x300.png').default,
               }}
             />
           )}
-          {img && <img width={150} src={img.src.src} alt={title} />}
+          {img && <img width={150} src={img} alt={title} />}
         </a>
       </div>
       <div className='text--center padding-horiz--md'>
