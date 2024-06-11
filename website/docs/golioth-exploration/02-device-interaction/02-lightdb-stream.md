@@ -6,10 +6,26 @@ description: |
 
 # LightDB Stream (Time-series)
 
+:::info Golioth Pipelines
+
+Golioth includes [a powerful tool called
+**Pipelines**](https://docs.golioth.io/data-routing) for routing and optionally
+transforming time-series data.
+
+By default a new project will automatically route stream data to Golioth's own
+time-series database called LightDB Stream. However, it is trivial for you to
+update your pipeline to route data to a webhook, external DB services like
+Influx and Mongo, your favorite cloud platform, to any combination of those, and
+much more.
+
+:::
+
 The Golioth LightDB Stream is purpose built for collecting time-based data from
 devices in the field. Every time data is received, the server records it along
 with a timestamp. This is perfect for collecting sensor data as it creates a
 historic record of all readings.
+
+## View LightDB Stream in Device Summary
 
 To view the LightDB Stream data for a device:
 
@@ -20,13 +36,13 @@ To view the LightDB Stream data for a device:
 
 ![Golioth LightDB Stream](./assets/lightdb-stream.jpg)
 
-## LightDB Stream page overview
+### LightDB Stream page overview
 
 On this page you can view the following information:
 
 * `timestamp`: Time/Date at which the data was received (timestamps can also be
   set by adding them as [a member of the
-  dataset](https://docs.golioth.io/cloud/services/lightdb-stream/sending-data#sending-data-with-a-timestamp))
+  dataset](https://docs.golioth.io/application-services/lightdb-stream/sending-data/#timestamps))
 * `data`: The data received, displayed in JSON format. This will be "folded" by
   default
 * Time selector: historic data can be access by choosing time/date from the time
@@ -34,26 +50,10 @@ On this page you can view the following information:
 * Refresh tools: both manual and automatic refresh buttons are available for
   updating the data being displayed
 
-## Viewing LightDB Stream data from your fleet
 
-The approach above shows data from a single device, but it is also possible to
-view data from your entire fleet:
-
-1. Click the `Monitor` option in the left sidebar and select `LightDB Stream`
-   from the list that unfolds
-
-![Golioth LightDB Stream Monitor view](./assets/lightdb-stream-monitor.jpg)
-
-Notice that in this view the `deviceId` column has been added, and there is now
-an additional selector box to filter by device(s).
-
-:::tip Use the Query Builder for Viewing Specific Data
-The data displayed above looks a bit different from your live-view. We have used
-the `Query Builder` to display the `temp` endpoint with a nice column name.
-
-![LightDB Stream Query Builder](./assets/lightdb-stream-query-builder.jpg)
-
-:::
+You may also view all LightDB Stream data for you fleet by clicking the
+`Monitor` option in the left sidebar and selecting `LightDB Stream` from the
+list that unfolds.
 
 ## Additional Exercises
 
