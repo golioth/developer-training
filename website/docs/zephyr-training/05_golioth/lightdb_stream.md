@@ -57,7 +57,7 @@ this exercise:
             1. Use `"sensor"` as the endpoint
             2. Use `GOLIOTH_CONTENT_TYPE_JSON` as the content type
             3. Use your char array as the buffer
-            4. Use the `sizeof()` your char array as the buffer length
+            4. Use the `strlen()` your char array as the buffer length
             5. We'll use `NULL` as the callback for this example
             6. We'll use `NULL` as the callback argument
 
@@ -79,7 +79,7 @@ Excerpts from `main.c`:
 
         // highlight-start
 		char sbuf[32];
-		snprintk(sbuf, sizeof(sbuf), "{\"upcount\":%d}", counter);
+		snprintk(sbuf, strlen(sbuf), "{\"upcount\":%d}", counter);
 
 		golioth_stream_set_async(client,
 					 "sensor",
