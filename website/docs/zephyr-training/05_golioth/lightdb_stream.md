@@ -135,6 +135,38 @@ Sample](https://github.com/golioth/golioth-zephyr-sdk/blob/main/samples/lightdb_
 
 <FirmwareFlash/>
 
+### Add a Pipeline to route JSON data
+
+Buy default, the pipeline in a new Golioth project expects to receive CBOR data,
+but the firmware we're using sends data in JSON format. Let's add a new pipeline
+that routes JSON data to LightDB Stream.
+
+1. Click the `Pipelines` entry in the left sidebar of the [Golioth
+   console](https://console.golioth.io).
+2. Click the `Create` button in the upper right of the Pipelines windows.
+3. Rename the pipeline.
+4. Change the `content_type` in the `filter` node to `application/json`.
+5. Remove the `transformer` from `step0`.
+6. Use the slider to enable this pipeline and click `Create`.
+
+<details>
+    <summary>Click to reveal the solution</summary>
+
+Pipeline to route all JSON-formatted device stream data to LightDB Stream
+
+```yaml
+filter:
+  path: "*"
+  content_type: application/json
+steps:
+  - name: step0
+    destination:
+      type: lightdb-stream
+      version: v1
+```
+
+</details>
+
 ## Expected results
 
 Counter data from your device should now be streaming to Golioth. To see it,
