@@ -55,10 +55,74 @@ You may also view all LightDB Stream data for you fleet by clicking the
 `Monitor` option in the left sidebar and selecting `LightDB Stream` from the
 list that unfolds.
 
+## Pipelines
+
+View the data routing for your project by selecting `Pipelines` from the left
+sidebar of the Golioth console. New projects will have one Pipeline called
+`LightDB Stream CBOR`. Click on the name of the pipeline to open the edit
+window.
+
+![Golioth default LightDB stream pipeline](./assets/pipeline-default.png)
+
+Here you can see that the pipeline is targeting CBOR data on all paths (`*`). It
+applies one step that transforms the data from CBOR to JSON, then routes it to
+the Golioth LightDB stream.
+
+### Exercise: add metadata
+
+Let's make a small change to the pipeline to try it out. Let's tell Golioth to
+add metadata to the stream. This is quite useful when routing to your own
+database outside of Golioth.
+
+1. Change the current `step-0` to `step-1`.
+2. Add a new `step-0` that uses `cbor-to-json` as the `transformer` but don't
+   add a `destination` to this step. (The next step will automatically be used
+   as the destination.)
+3. Update the `transformer` in `step-1` to use the `inject-metadata`
+   transformer.
+4. Save your pipeline.
+
+Go back to the LightDB Stream view for your device and you will now see a
+`device_id`, `project_id`, and `timestamp` alongside each newly received
+temperature reading.
+
+<details>
+    <summary>Click to reveal solution</summary>
+
+```yaml title="Customized LightDB Stream CBOR pipeline"
+filter:
+  path: "*"
+  content_type: application/cbor
+steps:
+  - name: step-0
+    transformer:
+      type: cbor-to-json
+      version: v1
+  - name: step-1
+    transformer:
+      type: inject-metadata
+      version: v1
+    destination:
+      type: lightdb-stream
+      version: v1
+```
+
+![Golioth pipeline with metadata injected](./assets/pipelines-with-metadata.png)
+
+</details>
+
 ## Additional Exercises
 
-* Click on the `Query Builder` button and the `path` and `alias` values as shown
-  above
-* Restore the view in the monitor windows by using `*` as the path value
-* Return to the  `LightDB Stream` tab in the `Devices` view. Use the
-  `Auto-Refresh` selector to choose `Real-time`
+* Disable the pipeline by toggling the `Enable` slider. You should no longer see
+  stream data arriving in LightDB Stream view.
+* Add a second pipeline that doesn't inject metadata. Enable both pipelines at
+  once and you should see two entries for data set on LightDB stream (one with
+  metadata, one without)
+
+:::tip Pipelines Documentation
+
+All available transformers, destinations, and examples of how to use them are
+available on [the Pipelines Documentation
+page](https://docs.golioth.io/data-routing).
+
+:::
