@@ -85,7 +85,7 @@ Excerpts from `main.c`:
 					 "sensor",
 					 GOLIOTH_CONTENT_TYPE_JSON,
 					 sbuf,
-					 sizeof(sbuf),
+					 strlen(sbuf),
 					 NULL,
 					 NULL);
         // highlight-end
