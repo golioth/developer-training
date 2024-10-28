@@ -82,7 +82,7 @@ manifest:
   projects:
     - name: golioth
       path: modules/lib/golioth-firmware-sdk
-      revision: v0.13.1
+      revision: v0.15.0
       url: https://github.com/golioth/golioth-firmware-sdk
       submodules: true
       west-commands: scripts/west-commands.yml
@@ -97,19 +97,14 @@ manifest:
           - hostap
           - mbedtls
           - mbedtls-nrf
-          - mcuboot
-          - net-tools
           - nrfxlib
-          - qcbor
-          - segger
-          - tfm-mcuboot
-          - tinycrypt
+          - oberon-psa-crypto
           - trusted-firmware-m
           - zcbor
 
     - name: zephyr-network-info
       path: deps/modules/lib/network-info
-      revision: v1.1.1
+      revision: v1.2.1
       url: https://github.com/golioth/zephyr-network-info
 
   self:

@@ -295,13 +295,7 @@ int main(void)
 	k_timer_start(&my_timer, K_MSEC(200), K_MSEC(200));
 
 	/* Start network connection (if necessary) */
-#ifdef CONFIG_BOARD_NRF7002DK_NRF5340_CPUAPP
-	wifi_connect();
-#else
-	if (IS_ENABLED(CONFIG_GOLIOTH_SAMPLE_COMMON)) {
-		net_connect();
-	}
-#endif
+	net_connect();
 
     // highlight-start
 	const struct golioth_client_config *client_config = golioth_sample_credentials_get();
