@@ -223,10 +223,10 @@ LED2.
 
         ```bash
         # for nRF7002
-        west build -b nrf7002dk_nrf5340_cpuapp 03_LED
+        west build -b nrf7002dk/nrf5340/cpuapp 03_LED
 
         # for nRF9160
-        west build -b nrf9160dk_nrf9160_ns 03_LED
+        west build -b nrf9160dk/nrf9160/ns 03_LED
         ```
 
 2. Download the binary
