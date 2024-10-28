@@ -87,57 +87,74 @@ Let's dive in. You've been working with [our training
 repository](https://github.com/golioth/zephyr-training). Did you know it's set
 up to have a full copy of the Zephyr tree in it?
 
-1. Take a moment to explore the `deps/zephyr` folder. You'll find a ton of help
-   in here (`samples` and `tests` are the next-best thing if a tutorial for what
-   you need isn't available).
+### Exploring the nrf9160dk board definition
 
-    To illustrate the scope of Devicetree, look at the nRF9160 DK folder
-    (`zephyr/boards/arm/nrf9160dk_nrf9160/`):
+Take a moment to explore the `deps/zephyr` folder. You'll find a ton of help
+in here (`samples` and `tests` are the next-best thing if a tutorial for what
+you need isn't available).
 
-    ```shell
-    nrf9160dk_nrf9160/
-    ├── board.cmake
-    ├── CMakeLists.txt
-    ├── doc
-    │   ├── img
-    │   │   └── nrf9160dk_nrf9160.jpg
-    │   └── index.rst
-    ├── dts
-    │   ├── bindings
-    │   │   ├── nordic,nrf9160dk-nrf52840-interface.yaml
-    │   │   └── nordic,nrf9160dk-nrf52840-reset.yaml
-    │   ├── nrf9160dk_buttons_on_io_expander.dtsi
-    │   ├── nrf9160dk_leds_on_io_expander.dtsi
-    │   ├── nrf9160dk_nrf52840_reset_on_if5.dtsi
-    │   ├── nrf9160dk_nrf52840_reset_on_if9.dtsi
-    │   └── nrf9160dk_uart1_on_if0_3.dtsi
-    ├── Kconfig.board
-    ├── Kconfig.defconfig
-    ├── nrf52840_reset.c
-    ├── nrf9160dk_nrf9160_0_14_0.overlay
-    ├── nrf9160dk_nrf9160_common_0_14_0.dtsi
-    ├── nrf9160dk_nrf9160_common.dts
-    ├── nrf9160dk_nrf9160_common-pinctrl.dtsi
-    ├── nrf9160dk_nrf9160_defconfig
-    ├── nrf9160dk_nrf9160.dts
-    ├── nrf9160dk_nrf9160_ns_0_14_0.overlay
-    ├── nrf9160dk_nrf9160_ns_defconfig
-    ├── nrf9160dk_nrf9160_ns.dts
-    ├── nrf9160dk_nrf9160_ns.yaml
-    ├── nrf9160dk_nrf9160_partition_conf.dts
-    ├── nrf9160dk_nrf9160.yaml
-    ├── pre_dt_board.cmake
-    └── revision.cmake
-    ```
+To illustrate the scope of Devicetree, look at the nRF9160 DK folder
+(`zephyr/boards/nordic/nrf9160dk/`):
 
-    This represents everything that's already been set up for you for this
-    particular development board, from peripheral addresses, to pin muxes, to
-    Kconfig symbols that enable necessary libraries.
+```shell
+nrf9160dk_nrf9160/
+├── board.c
+├── board.cmake
+├── board.yml
+├── CMakeLists.txt
+├── doc
+│   ├── img
+│   │   └── nrf9160dk_nrf9160.jpg
+│   └── index.rst
+├── dts
+│   ├── bindings
+│   │   ├── nordic,nrf9160dk-nrf52840-interface.yaml
+│   │   ├── nordic,nrf9160dk-nrf52840-reset.yaml
+│   │   └── nordic,nrf9160dk-optional-routing.yaml
+│   ├── nrf52840
+│   │   ├── nrf9160dk_buttons_on_io_expander.dtsi
+│   │   ├── nrf9160dk_leds_on_io_expander.dtsi
+│   │   ├── nrf9160dk_nrf52840_reset_on_if5.dtsi
+│   │   ├── nrf9160dk_nrf52840_reset_on_if9.dtsi
+│   │   └── nrf9160dk_uart1_on_if0_3.dtsi
+│   └── nrf9160
+│       ├── nrf9160dk_buttons_on_io_expander.dtsi
+│       ├── nrf9160dk_leds_on_io_expander.dtsi
+│       ├── nrf9160dk_nrf52840_reset_on_if5.dtsi
+│       ├── nrf9160dk_nrf52840_reset_on_if9.dtsi
+│       └── nrf9160dk_uart1_on_if0_3.dtsi
+├── Kconfig
+├── Kconfig.defconfig
+├── Kconfig.nrf9160dk
+├── nrf52840_reset.c
+├── nrf9160dk_nrf52840_0_14_0.overlay
+├── nrf9160dk_nrf52840_0_14_0.yaml
+├── nrf9160dk_nrf52840_0_7_0.yaml
+├── nrf9160dk_nrf52840_defconfig
+├── nrf9160dk_nrf52840.dts
+├── nrf9160dk_nrf52840-pinctrl.dtsi
+├── nrf9160dk_nrf9160_0_14_0.overlay
+├── nrf9160dk_nrf9160_0_14_0.yaml
+├── nrf9160dk_nrf9160_0_7_0.yaml
+├── nrf9160dk_nrf9160_common_0_14_0.dtsi
+├── nrf9160dk_nrf9160_common.dtsi
+├── nrf9160dk_nrf9160_common-pinctrl.dtsi
+├── nrf9160dk_nrf9160_defconfig
+├── nrf9160dk_nrf9160.dts
+├── nrf9160dk_nrf9160_ns_0_14_0.overlay
+├── nrf9160dk_nrf9160_ns_0_14_0.yaml
+├── nrf9160dk_nrf9160_ns_0_7_0.yaml
+├── nrf9160dk_nrf9160_ns_defconfig
+├── nrf9160dk_nrf9160_ns.dts
+├── nrf9160dk_nrf9160_partition_conf.dtsi
+└── pre_dt_board.cmake
+```
 
-2. Browse the `nrf9160dk_nrf9160_common.dts` file
+This represents everything that's already been set up for you for this
+particular development board, from peripheral addresses, to pin muxes, to
+Kconfig symbols that enable necessary libraries.
 
-
-## How DT enables `uart0` for serial console
+### How DT enables `uart0` for serial console
 
 The `nrf9160dk_nrf9160_common.dts` file hosts board-specific Devicetree details.
 For instance, here are selected portions of the DT that set up the serial
@@ -151,7 +168,11 @@ console we've been using:
         zephyr,uart-mcumgr = &uart0;
     };
 };
+```
 
+Look further down this file and you can find where `&uart0;` is configured.
+
+```
 &uart0 {
     status = "okay";
     current-speed = <115200>;
@@ -178,7 +199,7 @@ not understand most of this. But a few general things:
    pin configurations for each operating "state". In this example, the `&uart0`
    node refers to pin definitions for the `default` and `sleep` states defined
    in the
-   `zephyr/boards/arm/nrf9160dk_nrf9160/nrf9160dk_nrf9160_common-pinctrl.dtsi`
+   `zephyr/boards/nordic/nrf9160dk/nrf9160dk_nrf9160_common-pinctrl.dtsi`
    file.
 
   :::tip
@@ -191,14 +212,14 @@ not understand most of this. But a few general things:
 
   :::
 
-### Devicetree is many files combined
+## Devicetree is many files combined
 
 In point #2 above, we said the `uart0` DT node already exists for the board
 files we're looking at. So where is `uart0` actually defined? The nRF9160 chip
 itself has DT files!
 
 Microcontroller specific DT files are found in the `zephyr/dts` folder. If we
-look in `zephyr/dts/arm/nordic/nrf9160_common.dtsi` we can locate the `uart0`
+look in `zephyr/dts/arm/nordic/nrf91_peripherals.dtsi` we can locate the `uart0`
 node label (notice no `&` this time) which includes the register address,
 offset, and interrupt configuration:
 
