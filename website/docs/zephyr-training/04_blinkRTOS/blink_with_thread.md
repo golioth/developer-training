@@ -131,10 +131,10 @@ whenever the thread is serviced, and the priority level.
 
         ```bash
         # for nRF7002
-        west build -b nrf7002dk_nrf5340_cpuapp 04_blinkRTOS
+        west build -b nrf7002dk/nrf5340/cpuapp 04_blinkRTOS
 
         # for nRF9160
-        west build -b nrf9160dk_nrf9160_ns 04_blinkRTOS
+        west build -b nrf9160dk/nrf9160/ns 04_blinkRTOS
         ```
 
 2. Download the binary

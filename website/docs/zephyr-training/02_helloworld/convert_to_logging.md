@@ -282,10 +282,10 @@ void main(void)
 
         ```bash
         # for nRF7002
-        west build -b nrf7002dk_nrf5340_cpuapp 02_helloworld
+        west build -b nrf7002dk/nrf5340/cpuapp 02_helloworld
 
         # for nRF9160
-        west build -b nrf9160dk_nrf9160_ns 02_helloworld
+        west build -b nrf9160dk/nrf9160/ns 02_helloworld
         ```
 
 2. Download the binary
