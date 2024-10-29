@@ -34,7 +34,7 @@ every way necessary for your business.
 
 :::tip Prerequisites
 
-You must complete the [**Intro to Golioth**](/docs/golioth-exploration) section
+You must complete the [**Intro to Golioth**](/golioth-exploration) section
 prior to beginning the API Training module. This module utilizes the device you
 set up during the exploration to learn about data monitoring and fleet control.
 

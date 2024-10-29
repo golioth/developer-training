@@ -24,6 +24,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: "/",
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           //editUrl: 'https://github.com/golioth/developer-training',
@@ -52,19 +53,19 @@ const config = {
         },
         items: [
           {
-            to: 'docs/golioth-exploration',
+            to: 'golioth-exploration',
             activeBasePath: 'golioth-exploration',
             label: 'Intro to Golioth',
             position: 'left',
           },
           {
-            to: 'docs/zephyr-training',
+            to: 'zephyr-training',
             activeBasePath: 'zephyr-training',
             label: 'Zephyr Training',
             position: 'left',
           },
           {
-            to: 'docs/api-training',
+            to: 'api-training',
             activeBasePath: 'api-training',
             label: 'API Training',
             position: 'left',
@@ -106,7 +107,7 @@ const config = {
             items: [
               {
                 label: 'Training Event Code of Conduct',
-                to: '/docs/community/code-of-conduct',
+                to: 'community/code-of-conduct',
               },
               {
                 label: 'Forum',

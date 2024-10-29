@@ -184,8 +184,7 @@ not connecting to Golioth, you can check the stored PSK-ID setting by issuing
 the `settings get golioth/psk-id` command in the serial shell.
 
 Instructions for setting device credentials are available in the [Connect
-Hardware to Golioth](/docs/golioth-exploration/golioth-intro/hardware-setup)
-section.
+Hardware to Golioth](/golioth-exploration/golioth-intro/hardware-setup) section.
 
 :::
 

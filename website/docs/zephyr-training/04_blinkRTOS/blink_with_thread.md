@@ -164,10 +164,10 @@ Equally important is that your thread do something that yields back (usually
 :::tip Example of Threads and resource control
 
 The `01_IOT` precompiled binary you tested during the [Intro to
-Golioth](/docs/golioth-exploration) section uses a thread to blink the LED. One
-thing to keep in mind when accessing system resources from different threads is
-that only one thread at a time should be operating on that resource. The example
-code [uses a
+Golioth](/golioth-exploration) section uses a thread to blink the LED. One thing
+to keep in mind when accessing system resources from different threads is that
+only one thread at a time should be operating on that resource. The example code
+[uses a
 mutex](https://docs.zephyrproject.org/latest/kernel/services/synchronization/mutexes.html)
 to test for GPIO availability.
 

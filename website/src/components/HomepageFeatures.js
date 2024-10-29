@@ -6,7 +6,7 @@ import ThemedImage from '@theme/ThemedImage'
 const FeatureList = [
   {
     title: 'Learn About Golioth',
-    link: '/docs/golioth-exploration',
+    link: 'golioth-exploration',
     img: require('@site/static/img/Golioth_logo_300x300.png').default,
     description: (
       <>
@@ -19,7 +19,7 @@ const FeatureList = [
   },
   {
     title: 'Zephyr Training',
-    link: '/docs/zephyr-training',
+    link: 'zephyr-training',
     img: require('@site/static/img/Zephyr_logo_300x300.png').default,
     description: (
       <>
@@ -33,7 +33,7 @@ const FeatureList = [
   },
   {
     title: 'Golioth REST API Training',
-    link: '/docs/api-training',
+    link: 'api-training',
     description: (
       <>
         Golioth makes it easy to interact with your IoT devices and their data.

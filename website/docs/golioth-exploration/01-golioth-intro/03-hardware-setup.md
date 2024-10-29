@@ -94,9 +94,9 @@ Zephyr.
     :::info
 
     Golioth Device Credentials were created during the [Console Signup and
-    Exploration](/docs/golioth-exploration/golioth-intro/golioth-console) step.
-    You can return to the [Golioth Console](https://console.golioth.io/) to
-    retrieve the PSK-ID/PSK.
+    Exploration](/golioth-exploration/golioth-intro/golioth-console) step. You
+    can return to the [Golioth Console](https://console.golioth.io/) to retrieve
+    the PSK-ID/PSK.
 
     WiFi credentials come from your home or business WiFi. It is also possible
     to use your phone as a WiFi hotspot.
@@ -175,9 +175,9 @@ properly. This is accomplished over USB using the Shell built into Zephyr.
     :::info
 
     Golioth Device Credentials were created during the [Console Signup and
-    Exploration](/docs/golioth-exploration/golioth-intro/golioth-console) step.
-    You can return to the [Golioth Console](https://console.golioth.io/) to
-    retrieve the PSK-ID/PSK.
+    Exploration](/golioth-exploration/golioth-intro/golioth-console) step. You
+    can return to the [Golioth Console](https://console.golioth.io/) to retrieve
+    the PSK-ID/PSK.
 
     :::
 
