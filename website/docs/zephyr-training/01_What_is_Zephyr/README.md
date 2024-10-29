@@ -69,4 +69,4 @@ In this module we'll learn about the various parts that make up Zephyr:
 In the next few pages we will learn about the main parts that make up a Zephyr
 project. It's good to have an understanding of this to understand how your
 builds work. However, we'll hold off on the hands-on activities until we reach
-the [Build Your First Zephyr App section](/docs/zephyr-training/helloworld).
+the [Build Your First Zephyr App section](/zephyr-training/helloworld).

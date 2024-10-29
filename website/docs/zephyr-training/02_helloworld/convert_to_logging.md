@@ -338,7 +338,7 @@ You can immediately see some of the benefits provided by logging:
 :::tip Example of Golioth Remote Logging
 
 In the precompiled binary we loaded during the [Intro to
-Golioth](/docs/golioth-exploration) we observed logs being sent to the Golioth
+Golioth](/golioth-exploration) we observed logs being sent to the Golioth
 servers.
 
 The Golioth Firmware SDK implements a backend for the Zephyr Logging system to

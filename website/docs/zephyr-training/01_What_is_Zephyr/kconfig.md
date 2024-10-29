@@ -24,7 +24,7 @@ application.
 ![Typical file tree for a Zephyr application](./assets/typical_tree_for_zephyr_application.jpg)
 
 For example, here is the `prj.conf` file from the `01_IOT` application that you
-ran as a precompiled binary in the [Intro to Golioth](/docs/golioth-exploration)
+ran as a precompiled binary in the [Intro to Golioth](/golioth-exploration)
 section.
 
 ```

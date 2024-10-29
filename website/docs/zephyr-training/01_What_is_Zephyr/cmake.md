@@ -41,7 +41,7 @@ allows code to be conditionally included in a build.
 :::tip Examples of conditional file inclusion
 
 The `01_IOT` application you loaded as a precompiled binary during the [Intro to
-Golioth](/docs/golioth-exploration) section demonstrates two approaches to
+Golioth](/golioth-exploration) section demonstrates two approaches to
 conditional inclusion of files:
 
 * only include a WiFi helper file if we're building for the nRF7002

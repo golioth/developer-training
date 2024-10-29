@@ -15,7 +15,7 @@ device and establish a serial connection with it.
 
 :::tip Have You Already Done This Step?
 
-If you completed the [**Intro to Golioth** module](/docs/golioth-exploration)
+If you completed the [**Intro to Golioth** module](/golioth-exploration)
 then you have already installed these tools. Please move on to the next page.
 
 :::
