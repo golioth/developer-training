@@ -42,3 +42,9 @@ you set up during the exploration.
 
 :::
 
+:::info Sample code repository
+
+All sample codes used in this module is available in [the zephyr-training
+repository](https://github.com/golioth/zephyr-training) on GitHub.
+
+:::
