@@ -36,3 +36,12 @@ Nordic nRF9160 Development Kit (nRF9160 DK) as the Target device during this
 training. We will walk through how to download a pre-compiled binary, flash it
 to the device, and add your Golioth credentials so that it can connect. You will
 interact with this board while learning about the Golioth services.
+
+:::info Sample code repository
+
+This module uses a pre-compiled binary that you will download as you work your
+way through the training. Source code for this binary is available in 01_IOT
+folder of [the zephyr-training
+repository](https://github.com/golioth/zephyr-training) on GitHub.
+
+:::
