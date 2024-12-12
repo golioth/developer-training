@@ -9,6 +9,9 @@ import HowToDownload from '/docs/\_partials/download-from-codespaces.md'
 import FirmwareFlash from '/docs/\_partials/flash-the-example-nrf.md'
 import ConnectSerial from '/docs/\_partials/connect-to-serial.md'
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Add an LED Using Devicetree
 
 Let's take our first steps into writing Devicetree (DT) overlay files by adding
@@ -221,13 +224,29 @@ LED2.
       `/zephyr-traininig/app` folder
     * Run the following code to build the `03_LED` app
 
-        ```bash
-        # for nRF7002
-        west build -b nrf7002dk/nrf5340/cpuapp 03_LED
+        <Tabs
+        groupId="devboard"
+        defaultValue="nrf7002dk"
+        values={[
+        {label: 'nRF7002 DK', value: 'nrf7002dk'},
+        {label: 'nRF9160 DK', value: 'nrf9160dk'},
+        ]}>
 
-        # for nRF9160
-        west build -b nrf9160dk/nrf9160/ns 03_LED
-        ```
+        <TabItem value="nrf7002dk">
+
+            ```bash
+            west build -b nrf7002dk/nrf5340/cpuapp 03_LED
+            ```
+
+        </TabItem>
+        <TabItem value="nrf9160dk">
+
+            ```bash
+            west build -b nrf9160dk/nrf9160/ns 03_LED
+            ```
+
+        </TabItem>
+        </Tabs>
 
 2. Download the binary
 

@@ -6,6 +6,9 @@ description: "Zephyr can blink with threads!"
 import HowToDownload from '/docs/\_partials/download-from-codespaces.md'
 import FirmwareFlash from '/docs/\_partials/flash-the-example-nrf.md'
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Blink Using Threads
 
 ## Learning Objectives
@@ -126,16 +129,32 @@ whenever the thread is serviced, and the priority level.
 1. Build the example
 
     * Make sure the terminal at the bottom of the VS Code window is in the
-      `/zephyr-traininig/app` folder
+        `/zephyr-traininig/app` folder
     * Run the following code to build the `04_blinkRTOS` app
 
-        ```bash
-        # for nRF7002
-        west build -b nrf7002dk/nrf5340/cpuapp 04_blinkRTOS
+        <Tabs
+        groupId="devboard"
+        defaultValue="nrf7002dk"
+        values={[
+        {label: 'nRF7002 DK', value: 'nrf7002dk'},
+        {label: 'nRF9160 DK', value: 'nrf9160dk'},
+        ]}>
 
-        # for nRF9160
-        west build -b nrf9160dk/nrf9160/ns 04_blinkRTOS
-        ```
+        <TabItem value="nrf7002dk">
+
+            ```bash
+            west build -b nrf7002dk/nrf5340/cpuapp 04_blinkRTOS
+            ```
+
+        </TabItem>
+        <TabItem value="nrf9160dk">
+
+            ```bash
+            west build -b nrf9160dk/nrf9160/ns 04_blinkRTOS
+            ```
+
+        </TabItem>
+        </Tabs>
 
 2. Download the binary
 

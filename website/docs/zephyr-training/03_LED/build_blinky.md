@@ -9,6 +9,9 @@ import HowToDownload from '/docs/\_partials/download-from-codespaces.md'
 import FirmwareFlash from '/docs/\_partials/flash-the-example-nrf.md'
 import ConnectSerial from '/docs/\_partials/connect-to-serial.md'
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Build Blinky
 
 Let's build and run the Zephyr blinky app to take advantage of the Devicetree
@@ -77,13 +80,29 @@ C.
       `/zephyr-training/app` folder
     * Run the following code to build the `03_LED` app
 
-        ```bash
-        # for nRF7002
-        west build -b nrf7002dk/nrf5340/cpuapp 03_LED
+        <Tabs
+        groupId="devboard"
+        defaultValue="nrf7002dk"
+        values={[
+        {label: 'nRF7002 DK', value: 'nrf7002dk'},
+        {label: 'nRF9160 DK', value: 'nrf9160dk'},
+        ]}>
 
-        # for nRF9160
-        west build -b nrf9160dk/nrf9160/ns 03_LED
-        ```
+        <TabItem value="nrf7002dk">
+
+            ```bash
+            west build -b nrf7002dk/nrf5340/cpuapp 03_LED
+            ```
+
+        </TabItem>
+        <TabItem value="nrf9160dk">
+
+            ```bash
+            west build -b nrf9160dk/nrf9160/ns 03_LED
+            ```
+
+        </TabItem>
+        </Tabs>
 
 3. Download the binary
 
@@ -129,7 +148,7 @@ walk through the code to establish how this happens.
 return codes from functions and you can use them to determine if things went as
 planned.
 
-You don't need to know much more than that. The `west build -b <boardname>`
+You don't need to know much more than that. The `west build -b boardname`
 command selects the proper Devicetree files. As discussed in the [Devicetree
 Overview](devicetree-overview), DT definitions for our board already exist in the Zephyr tree.
 

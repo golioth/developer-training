@@ -8,6 +8,9 @@ import HowToDownload from '/docs/\_partials/download-from-codespaces.md'
 import FirmwareFlash from '/docs/\_partials/flash-the-example-nrf.md'
 import ConnectSerial from '/docs/\_partials/connect-to-serial.md'
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Build Hello World
 
 Engineering tradition dictates we must begin with Hello World!
@@ -113,15 +116,31 @@ mouse, we will build/flash from the command line to get comfortable with how the
     * Run the following code in the VS Code terminal pane to build the
       `02_helloworld` app
 
-        ```bash
-        # for nRF7002
-        west build -b nrf7002dk/nrf5340/cpuapp 02_helloworld
+        <Tabs
+        groupId="devboard"
+        defaultValue="nrf7002dk"
+        values={[
+        {label: 'nRF7002 DK', value: 'nrf7002dk'},
+        {label: 'nRF9160 DK', value: 'nrf9160dk'},
+        ]}>
 
-        # for nRF9160
-        west build -b nrf9160dk/nrf9160/ns 02_helloworld
-        ```
+        <TabItem value="nrf7002dk">
 
-       ![Build command for Hello World](./assets/codespaces-vscode-prebuild-hello-world.png)
+            ```bash
+            west build -b nrf7002dk/nrf5340/cpuapp 02_helloworld
+            ```
+
+        </TabItem>
+        <TabItem value="nrf9160dk">
+
+            ```bash
+            west build -b nrf9160dk/nrf9160/ns 02_helloworld
+            ```
+
+        </TabItem>
+        </Tabs>
+
+        ![Build command for Hello World](./assets/codespaces-vscode-prebuild-hello-world.png)
 
     * Upon a successful build you will see device resource usage information
 

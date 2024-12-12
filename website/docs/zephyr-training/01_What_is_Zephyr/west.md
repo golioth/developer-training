@@ -56,7 +56,7 @@ For the most part, you will use two West commands over and over:
 
 ```shell
 # Build the project for <myboard>
-$ west build -b <myboard> <sourcedirectory>
+$ west build -b myboard sourcedirectory
 
 # Program the compiled binary onto the board
 $ west flash
