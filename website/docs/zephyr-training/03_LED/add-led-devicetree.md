@@ -158,9 +158,9 @@ LED2.
     information to add the `gpios` property for what Nordic calls LED2.
 
     * nRF7002dk: [Buttons and
-      LEDs](https://infocenter.nordicsemi.com/topic/ug_nrf7002_dk/UG/nrf7002_DK/hw_buttons_leds.html)
+      LEDs](https://docs.nordicsemi.com/bundle/ug_nrf7002_dk/page/UG/nrf7002_DK/hw_buttons_leds.html)
     * nRF9160dk: [Buttons, slide switches, and
-      LEDs](https://infocenter.nordicsemi.com/topic/ug_nrf91_dk/UG/nrf91_DK/hw_buttons_leds.html)
+      LEDs](https://docs.nordicsemi.com/bundle/ug_nrf9160_dk/page/UG/nrf91_DK/hw_description/hw_buttons_leds.html)
 
     <br /><details>
             <summary>Click to reveal solution if you need help</summary>
