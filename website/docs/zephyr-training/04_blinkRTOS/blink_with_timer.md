@@ -6,6 +6,9 @@ description: "Zephyr can blink with timers!"
 import HowToDownload from '/docs/\_partials/download-from-codespaces.md'
 import FirmwareFlash from '/docs/\_partials/flash-the-example-nrf.md'
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Blink Using Timers
 
 ## Learning Objectives
@@ -99,13 +102,29 @@ the second value to `K_NO_WAIT`.
       `/zephyr-traininig/app` folder
     * Run the following code to build the `04_blinkRTOS` app
 
-        ```bash
-        # for nRF7002
-        west build -b nrf7002dk/nrf5340/cpuapp 04_blinkRTOS
+        <Tabs
+        groupId="devboard"
+        defaultValue="nrf7002dk"
+        values={[
+        {label: 'nRF7002 DK', value: 'nrf7002dk'},
+        {label: 'nRF9160 DK', value: 'nrf9160dk'},
+        ]}>
 
-        # for nRF9160
-        west build -b nrf9160dk/nrf9160/ns 04_blinkRTOS
-        ```
+        <TabItem value="nrf7002dk">
+
+            ```bash
+            west build -b nrf7002dk/nrf5340/cpuapp 04_blinkRTOS
+            ```
+
+        </TabItem>
+        <TabItem value="nrf9160dk">
+
+            ```bash
+            west build -b nrf9160dk/nrf9160/ns 04_blinkRTOS
+            ```
+
+        </TabItem>
+        </Tabs>
 
 2. Download the binary
 

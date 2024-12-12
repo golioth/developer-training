@@ -6,6 +6,9 @@ description:
 
 import FirmwareFlash from '/docs/\_partials/flash-the-example-nrf.md'
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Convert Hello World to use Logging
 
 Explore Zephyr by converting from `printf()` style output to using Zephyr's
@@ -280,13 +283,29 @@ void main(void)
       `app` folder
     * Build app
 
-        ```bash
-        # for nRF7002
-        west build -b nrf7002dk/nrf5340/cpuapp 02_helloworld
+        <Tabs
+        groupId="devboard"
+        defaultValue="nrf7002dk"
+        values={[
+        {label: 'nRF7002 DK', value: 'nrf7002dk'},
+        {label: 'nRF9160 DK', value: 'nrf9160dk'},
+        ]}>
 
-        # for nRF9160
-        west build -b nrf9160dk/nrf9160/ns 02_helloworld
-        ```
+        <TabItem value="nrf7002dk">
+
+            ```bash
+            west build -b nrf7002dk/nrf5340/cpuapp 02_helloworld
+            ```
+
+        </TabItem>
+        <TabItem value="nrf9160dk">
+
+            ```bash
+            west build -b nrf9160dk/nrf9160/ns 02_helloworld
+            ```
+
+        </TabItem>
+        </Tabs>
 
 2. Download the binary
 

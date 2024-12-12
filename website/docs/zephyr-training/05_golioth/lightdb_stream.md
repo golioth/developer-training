@@ -7,6 +7,9 @@ description:
 import HowToDownload from '/docs/\_partials/download-from-codespaces.md'
 import FirmwareFlash from '/docs/\_partials/flash-the-example-nrf.md'
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 # Use Golioth LightDB Stream to Send Data
 
 ## Learning objectives
@@ -119,13 +122,29 @@ Sample](https://github.com/golioth/golioth-zephyr-sdk/blob/main/samples/lightdb_
       `/zephyr-traininig/app` folder
     * Run the following code to build the `05_golioth` app
 
-        ```bash
-        # for nRF7002
-        west build -b nrf7002dk/nrf5340/cpuapp 05_golioth
+        <Tabs
+        groupId="devboard"
+        defaultValue="nrf7002dk"
+        values={[
+        {label: 'nRF7002 DK', value: 'nrf7002dk'},
+        {label: 'nRF9160 DK', value: 'nrf9160dk'},
+        ]}>
 
-        # for nRF9160
-        west build -b nrf9160dk/nrf9160/ns 05_golioth
-        ```
+        <TabItem value="nrf7002dk">
+
+            ```bash
+            west build -b nrf7002dk/nrf5340/cpuapp 05_golioth
+            ```
+
+        </TabItem>
+        <TabItem value="nrf9160dk">
+
+            ```bash
+            west build -b nrf9160dk/nrf9160/ns 05_golioth
+            ```
+
+        </TabItem>
+        </Tabs>
 
 2. Download the binary
 
