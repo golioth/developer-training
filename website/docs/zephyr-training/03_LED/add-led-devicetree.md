@@ -207,6 +207,20 @@ LED2.
 
 1. Update `main.c` to use our new `training-led` alias.
 
+    :::tip Replace dashes with underscores
+
+    Devicetree allows dashes. However, when referencing something in C, we
+    cannot use dashes because the compiler recognizes them as minus signs.
+    Zephyr accounts for this by converting all dashes from devicetree to
+    underscores when used in C.
+
+    For the current example, note the difference:
+
+    - Used as a devicetree alias: `training-led`
+    - Devicetree alias referenced in a .c file: `training_led`
+
+    :::
+
     <details>
         <summary>Click to reveal solution if you need help</summary>
 
