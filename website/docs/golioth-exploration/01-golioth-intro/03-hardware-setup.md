@@ -55,15 +55,15 @@ programmer/debugger via a USB connection.
 
 <InstallNrfConnect/>
 
-3. [Visit the latest
+4. [Visit the latest
    Release](https://github.com/golioth/zephyr-training/releases/latest) of our
    Zephyr Training repository. Download the `.hex` file that matches your device
    type.
-4. In the nRF Connect for Desktop Programmer app, choose your device from the
+5. In the nRF Connect for Desktop Programmer app, choose your device from the
    upper left `SELECT DEVICE` dialog.
-5. Click `Add file`&rarr;`Browse` and choose
+6. Click `Add file`&rarr;`Browse` and choose
    `Golioth_<your_device>_kitchen_sink_v1.0.0.hex ` you previously downloaded
-6. Click the "Erase & write" button
+7. Click the "Erase & write" button
 
 ### Adding Credentials
 
