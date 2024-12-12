@@ -52,9 +52,11 @@ import TabItem from '@theme/TabItem';
 
    ![Nordic nRF Connect for Desktop launch the Programmer](../assets/nrf-connect-desktop-programmer-launch.jpg)
 
-   :::caution Plug in and turn on your board
+3. Plug in and turn on your board
 
-   Plug a USB cable into the USB port closest to the power switch on your board.
-   Make sure the power switch is in the `ON` position.
+    :::caution
 
-   :::
+    Plug a USB cable into the USB port closest to the power switch on your board.
+    Make sure the power switch is in the `ON` position.
+
+    :::
