@@ -110,10 +110,10 @@ Zephyr.
     Use the following command syntax to assign your credentials.
 
     ```
-    uart:~$ settings set wifi/ssid <my-wifi-ap-ssid>
-    uart:~$ settings set wifi/psk <my-wifi-ap-password>
-    uart:~$ settings set golioth/psk-id <my-psk-id@my-project>
-    uart:~$ settings set golioth/psk <my-psk>
+    uart:~$ settings set wifi/ssid "my-wifi-ap-ssid"
+    uart:~$ settings set wifi/psk "my-wifi-ap-password"
+    uart:~$ settings set golioth/psk-id "my-psk-id@my-project"
+    uart:~$ settings set golioth/psk "my-psk"
     uart:~$ kernel reboot cold
     ```
 
@@ -184,8 +184,8 @@ properly. This is accomplished over USB using the Shell built into Zephyr.
     Use the following command syntax to assign your credentials.
 
     ```
-    uart:~$ settings set golioth/psk-id <my-psk-id@my-project>
-    uart:~$ settings set golioth/psk <my-psk>
+    uart:~$ settings set golioth/psk-id "my-psk-id@my-project"
+    uart:~$ settings set golioth/psk "my-psk"
     uart:~$ kernel reboot cold
     ```
 
