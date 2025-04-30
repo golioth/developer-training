@@ -19,7 +19,7 @@ To view the LightDB State data for a device:
 2. Click on the device `Name` in the resulting list
 3. Click on the `LightDB State` tab
 
-![Golioth LightDB State](./assets/lightdb-state.jpg)
+![Golioth LightDB State](./assets/lightdb-state.png)
 
 :::info Press some buttons
 Real-time update will be selected automatically for this view. Try pressing the
@@ -34,11 +34,8 @@ On this page you can view the following information:
   will be shown on this page
 * Refresh tools: both manual and automatic refresh buttons are available for
   updating the data being displayed
-* Key/Value editing: hovering over the JSON data will reveal icons for
-  editing/adding/deleting state data
-* `Submit` button: manual changes are not committed until this button is clicked
+* `Save` button: manual changes are not committed until this button is clicked
 * `Reset` button: abandon manual changes not yet submitted
-* `Clean` button: remove all stateful data from this virtual device
 
 :::tip LightDB State changes apply to one device at a time
 LightDB State data is device-specific, changes here will not affect any other
@@ -50,5 +47,8 @@ Data may be changed from both the device side and the cloud side.
 
 ## Additional Exercises
 
-* Turn off `Auto-refresh`, then click the `Clean` button. Press a button on the
-  board and observe the state data being recreated.
+1. Remove all the JSON data in the LightDB State editor window, then click the
+   `Save` button.
+2. Press a button on the board.
+3. Click the refresh button (circular arrow in the upper right) and observe the
+   state data has been recreated by the device.
