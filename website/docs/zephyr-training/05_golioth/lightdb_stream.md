@@ -82,7 +82,7 @@ Excerpts from `main.c`:
 
         // highlight-start
 		char sbuf[32];
-		snprintk(sbuf, strlen(sbuf), "{\"upcount\":%d}", counter);
+		snprintk(sbuf, sizeof(sbuf), "{\"upcount\":%d}", counter);
 
 		golioth_stream_set_async(client,
 					 "sensor",
