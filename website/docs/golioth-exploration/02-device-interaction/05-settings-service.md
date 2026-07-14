@@ -1,7 +1,7 @@
 ---
 id: settings-service
-description: |
-  Change settings fleet-wide, by Blueprint, or by Device
+description: Use the Golioth Settings Service to push configuration values fleet-wide, by blueprint, or per device, and verify devices stay synchronized.
+keywords: [settings service, device settings, fleet configuration, loop_delay_s, blink_delay_ms, blueprint, settings sync, golioth console]
 ---
 
 # Device Settings

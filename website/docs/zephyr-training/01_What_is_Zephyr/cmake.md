@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
-description:
-    How CMake is used in Zephyr
+description: Learn how Zephyr uses CMake and CMakeLists.txt files to control which C and header files are compiled, including conditional file inclusion.
+keywords: [cmake, cmakelists.txt, zephyr build system, target_sources, conditional compilation, zephyr_library_sources_ifdef]
 ---
 
 # CMake Overview

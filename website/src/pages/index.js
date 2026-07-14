@@ -34,8 +34,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Golioth`}
-      description="This is a training site for Developers who will use Golioth <head />">
+      title="Golioth & Zephyr Developer Training"
+      description="Free, hands-on training for building IoT firmware with Zephyr RTOS and connecting devices to the Golioth cloud.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

@@ -1,5 +1,7 @@
 ---
 id: device-interaction
+description: View live device data and control your fleet from the Golioth Console, covering status, LightDB, logging, settings, RPCs, and OTA updates.
+keywords: [golioth console, device interaction, lightdb stream, lightdb state, remote logging, settings service, rpc, ota, fleet management]
 ---
 
 # Interacting with Devices

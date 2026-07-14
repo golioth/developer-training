@@ -1,7 +1,7 @@
 ---
 id: ota-firmware-update
-description: |
-  See how OTA firmware updates work with Golioth
+description: Understand how Golioth Over-the-Air firmware updates work, including targeted releases, secondary-slot verification, and one-click rollbacks.
+keywords: [ota, firmware update, over-the-air, golioth, rollback, firmware signature, fleet update, secondary slot]
 ---
 
 # Over-the-Air (OTA) Firmware Update

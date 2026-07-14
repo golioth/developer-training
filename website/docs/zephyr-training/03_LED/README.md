@@ -1,7 +1,7 @@
 ---
 id: led
-description: |
-  Map an LED using Devicetree and make it glow.
+description: Use a Zephyr devicetree overlay to map an LED, learn where devicetree definitions live in the Zephyr tree, and access those nodes from C code.
+keywords: [zephyr, devicetree, led, overlay, hardware abstraction, dt_alias, gpio, nodelabel]
 ---
 
 # Map an LED using Devicetree

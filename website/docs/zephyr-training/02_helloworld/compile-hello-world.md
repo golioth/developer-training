@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
-description:
-    Get familiar with VS Code, Codespaces, and `west`
+description: Build the Hello World sample in a GitHub Codespace with west, download the compiled binary, flash it to a Nordic dev kit, and view serial output.
+keywords: [zephyr, hello world, west build, codespaces, vs code, nrf7002dk, nrf9160dk, west download, serial terminal]
 ---
 
 import HowToDownload from '/docs/\_partials/download-from-codespaces.md'

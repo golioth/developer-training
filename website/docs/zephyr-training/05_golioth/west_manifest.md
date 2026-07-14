@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
-description:
-    How to add the Golioth Firmware SDK to the west manifest
+description: Add the Golioth Firmware SDK to a Zephyr west manifest, comparing standalone-project manifests against adding Golioth as a module to an existing tree.
+keywords: [golioth, west manifest, west.yml, golioth firmware sdk, standalone project, west update, ncs, zephyr, modules]
 ---
 
 # Add Golioth to the West Manifest

@@ -1,7 +1,7 @@
 ---
 id: add-golioth
-description: |
-  Add Golioth to an existing Zephyr project
+description: Add the Golioth Firmware SDK to an existing Zephyr project via the west manifest, enable services with Kconfig, and stream data to the cloud.
+keywords: [golioth, zephyr, golioth firmware sdk, west manifest, kconfig, golioth client, lightdb stream, iot]
 ---
 
 # Add Golioth to Zephyr Project

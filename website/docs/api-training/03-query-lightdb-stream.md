@@ -1,7 +1,7 @@
 ---
 id: lightb-stream
-description: |
-  Access stored time-series data on LightDB Stream
+description: Query stored time-series data from LightDB Stream using the REST API, building a JSON body with field paths, time windows, and filters.
+keywords: [lightdb stream, time-series data, golioth rest api, openapi, json query, filters, temperature, sensor data]
 ---
 
 # Querying LightDB Stream Data

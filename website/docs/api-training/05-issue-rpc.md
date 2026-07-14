@@ -1,7 +1,7 @@
 ---
 id: issue-rpc
-description: |
-  Use the REST API to issue an RPC and view the result
+description: Issue a Remote Procedure Call to a device through the Golioth REST API and receive live data such as network info back from the device.
+keywords: [rpc, remote procedure call, golioth rest api, openapi, get_network_info, device management, nrf7002dk, multiply]
 ---
 
 # Issue a Remote Procedure Call

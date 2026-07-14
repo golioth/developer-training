@@ -1,7 +1,7 @@
 ---
 id: remote-procedure-call
-description: |
-  Issue a remote procedure call and view return data
+description: Issue a Remote Procedure Call from the Golioth Console to run a function on your device with input parameters and view the returned data.
+keywords: [rpc, remote procedure call, golioth console, get_network_info, multiply, parameters, device control]
 ---
 
 # Remote Procedure Call (RPC)

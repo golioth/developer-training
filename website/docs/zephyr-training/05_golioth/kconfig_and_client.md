@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
-description:
-    Add Golioth Kconfig options and create Golioth Client
+description: Enable the Golioth Firmware SDK and its services with Kconfig symbols, then create a Golioth client and connection callback in main.c.
+keywords: [golioth, kconfig, golioth firmware sdk, golioth client, golioth_client_create, semaphore, psk, certificate auth, zephyr]
 ---
 
 # Golioth Kconfig Options and Client Creation

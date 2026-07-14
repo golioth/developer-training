@@ -1,7 +1,7 @@
 ---
 sidebar_position: 4
-description:
-    Learn about `west`, the Zephyr meta tool
+description: Learn how west, the Zephyr meta tool, manages repositories with manifest files and wraps build, flash, and debug commands across architectures.
+keywords: [west, zephyr meta tool, west manifest, west.yml, west init, west update, west build, west flash, repository management]
 ---
 
 # West Overview

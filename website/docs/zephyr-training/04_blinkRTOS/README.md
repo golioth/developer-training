@@ -1,7 +1,7 @@
 ---
 id: blink-rtos
-description: |
-  Blink an LED using features of the RTOS
+description: Blink an LED using two Zephyr RTOS approaches, a kernel timer and a dedicated thread, and learn why yielding time to the scheduler matters.
+keywords: [zephyr, rtos, timer, thread, scheduler, k_thread_define, k_timer, led, stack usage]
 ---
 
 # Using the RTOS

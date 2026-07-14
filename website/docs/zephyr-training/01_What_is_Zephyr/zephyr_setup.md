@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
-description:
-    Learn about setting up a Zephyr development environment
+description: Learn why this training uses GitHub Codespaces as a preconfigured, browser-based Zephyr development environment instead of a local toolchain install.
+keywords: [zephyr development environment, github codespaces, vs code, zephyr toolchain, ncs, nrf connect sdk, command line]
 ---
 
 # About the Zephyr Dev Environment

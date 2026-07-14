@@ -1,6 +1,8 @@
 ---
 id: zephyr-training
 sidebar_position: -1
+description: A hands-on Zephyr RTOS quickstart where you build Hello World, configure with menuconfig, blink an LED via devicetree, and add the Golioth SDK.
+keywords: [zephyr rtos, west, kconfig, devicetree, cmake, menuconfig, blinky, golioth sdk, codespaces]
 ---
 
 # Zephyr Training Overview

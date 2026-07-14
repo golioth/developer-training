@@ -1,6 +1,8 @@
 ---
 id: golioth-exploration
 sidebar_position: -1
+description: Hands-on intro to Golioth, where you flash firmware to a Nordic dev kit, connect it to the cloud, and explore device data and fleet control.
+keywords: [golioth, iot cloud, nrf7002dk, nrf9160dk, device fleet, lightdb, ota, remote logging, zephyr]
 ---
 
 # Intro to Golioth

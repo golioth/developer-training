@@ -1,7 +1,7 @@
 ---
 id: golioth-console-queries
-description: |
-  Learn from the REST API queries issued by the Golioth Console
+description: Use Chrome or Firefox developer tools to inspect the REST API requests and endpoints the Golioth Web Console uses behind the scenes.
+keywords: [golioth rest api, golioth console, developer tools, network inspector, xhr, lightdb stream, api endpoints]
 ---
 
 # Learn from the Queries of the Golioth Console
