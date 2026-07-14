@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
-description:
-    Learn about Logging, KConfig, and menuconfig
+description: Convert Hello World from printk to the Zephyr Logging system, enabling LOG with menuconfig, registering a module, and using k_msleep in a loop.
+keywords: [zephyr logging, log_module_register, log_inf, menuconfig, kconfig, prj.conf, k_msleep, printk, kernel functions]
 ---
 
 import FirmwareFlash from '/docs/\_partials/flash-the-example-nrf.md'

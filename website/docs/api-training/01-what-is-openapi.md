@@ -1,7 +1,7 @@
 ---
 id: using-openapi
-description: |
-  Use Golioth's OpenAPI Docs to Try our Rest API
+description: Learn what the Golioth OpenAPI docs are, create a project API key, and authenticate the interactive docs to test REST API calls.
+keywords: [openapi, golioth rest api, api key, authentication, golioth console, swagger, project settings]
 ---
 
 # Golioth OpenAPI Docs and Authenticating your Project

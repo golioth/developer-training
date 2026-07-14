@@ -1,6 +1,7 @@
 ---
 id: what-is-golioth
-description: Learn about Golioth, your Instant IoT Cloud
+description: Understand Golioth's cloud-side IoT services and the open source device SDKs that connect Zephyr, NCS, ESP-IDF, and Linux devices to the cloud.
+keywords: [golioth, iot cloud, device sdk, zephyr rtos, ncs, esp-idf, ota, lightdb, cloud services]
 ---
 
 # What is Golioth and how can I use it?

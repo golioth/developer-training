@@ -1,8 +1,8 @@
 ---
 id: build-blinky
 sidebar_position: 2
-description: |
-    Build and flash the Zephyr blinky app
+description: Build and flash the Zephyr blinky sample, learn how DT_ALIAS, gpio_dt_spec, and the led0 alias drive an LED, and handle pristine build errors.
+keywords: [zephyr, blinky, devicetree, led0, dt_alias, gpio_dt_spec, pristine build, west build, gpio-leds]
 ---
 
 import HowToDownload from '/docs/\_partials/download-from-codespaces.md'

@@ -1,8 +1,8 @@
 ---
 id: add-led-devicetree
 sidebar_position: 3
-description: |
-    Add your own LED node to Devicetree
+description: Write a Zephyr devicetree overlay to add a custom LED node and alias, map a GPIO pin, and reference it from main.c to blink LED2 on a Nordic board.
+keywords: [zephyr, devicetree, overlay, led, aliases, gpios, dt_alias, dt_nodelabel, nrf7002dk, nrf9160dk]
 ---
 
 import HowToDownload from '/docs/\_partials/download-from-codespaces.md'

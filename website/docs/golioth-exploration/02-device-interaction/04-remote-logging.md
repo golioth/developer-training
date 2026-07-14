@@ -1,7 +1,7 @@
 ---
 id: remote-logging
-description: |
-  View device logs from the cloud
+description: Access device log messages from the cloud in the Golioth Console, filter by level, module, and time, and view logs across your entire fleet.
+keywords: [remote logging, device logs, golioth console, log levels, golioth_system, fleet monitoring, csv export]
 ---
 
 # Remote Logging

@@ -1,7 +1,7 @@
 ---
 id: golioth-console
-description: |
-  Login to Golioth and create a device with credentials.
+description: Create a Golioth account, provision your first device through the setup wizard, and retrieve the credentials your hardware needs to authenticate.
+keywords: [golioth console, account signup, device provisioning, credentials, psk, dev tier, device management]
 ---
 
 # Console Signup and Exploration

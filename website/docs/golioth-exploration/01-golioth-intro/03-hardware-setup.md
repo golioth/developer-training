@@ -1,6 +1,6 @@
 ---
-description: |
-   Use a precompiled application to connect an nRF7002 DK to Golioth
+description: Flash a precompiled binary to an nRF7002 DK or nRF9160 DK, add WiFi and Golioth credentials over serial, and watch the device connect to Golioth.
+keywords: [nrf7002dk, nrf9160dk, nrf connect for desktop, flash firmware, device credentials, psk, wifi, serial terminal, golioth]
 ---
 
 import InstallNrfConnect from './\_partials/install_nrf_connect.md'

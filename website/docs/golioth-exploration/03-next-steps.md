@@ -1,7 +1,7 @@
 ---
 id: next-steps
-description: |
-  Show the options for where to go from here.
+description: Choose your next training module after the Golioth intro, moving on to hands-on Zephyr RTOS firmware or the Golioth REST API training track.
+keywords: [golioth training, next steps, zephyr training, api training, rest api, learning path]
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
-description:
-    How Kconfig works with Zephyr builds
+description: Understand how Kconfig configures the Zephyr kernel and subsystems at build time using prj.conf symbols, merged config files, and menuconfig.
+keywords: [kconfig, prj.conf, menuconfig, zephyr build, config symbols, autoconf.h, build configuration]
 ---
 
 # Kconfig Overview

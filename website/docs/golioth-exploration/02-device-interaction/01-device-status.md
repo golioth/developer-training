@@ -1,7 +1,7 @@
 ---
 id: device-status
-description: |
-  View live device status on Golioth
+description: View live device status in the Golioth Console, including name, blueprint, tags, hardware IDs, sync state, and reported firmware version.
+keywords: [device status, golioth console, blueprint, tags, hardware id, device id, settings sync, firmware version]
 ---
 
 # Device Status

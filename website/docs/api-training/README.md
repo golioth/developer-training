@@ -1,6 +1,8 @@
 ---
 id: api-training
 sidebar_position: -1
+description: Explore the Golioth REST API with the interactive OpenAPI tool to list devices, query time-series data, and control your IoT fleet.
+keywords: [golioth rest api, openapi, iot fleet, device list, lightdb stream, rpc, api key, golioth console]
 ---
 
 # Golioth REST API Training Overview

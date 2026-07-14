@@ -1,7 +1,7 @@
 ---
 id: what-is-zephyr
-description: |
-  Get an overview of the major components of Zephyr RTOS
+description: An overview of Zephyr RTOS and its major components, including the Zephyr tree, Zephyr SDK, CMake, Kconfig, devicetree, and the west meta tool.
+keywords: [zephyr rtos, zephyr tree, zephyr sdk, cmake, kconfig, devicetree, west, hardware abstraction, golioth]
 ---
 
 # What is Zephyr?

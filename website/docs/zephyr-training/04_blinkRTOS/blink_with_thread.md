@@ -1,6 +1,7 @@
 ---
 sidebar_position: 3
-description: "Zephyr can blink with threads!"
+description: Move LED blinking to its own Zephyr thread using K_THREAD_DEFINE, learn to yield time to the scheduler, and check thread stack usage from the shell.
+keywords: [zephyr, thread, k_thread_define, scheduler, k_sleep, k_yield, mutex, kernel stacks, led]
 ---
 
 import HowToDownload from '/docs/\_partials/download-from-codespaces.md'

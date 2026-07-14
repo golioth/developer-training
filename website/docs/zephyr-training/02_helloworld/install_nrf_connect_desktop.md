@@ -1,8 +1,8 @@
 ---
 id: nrf-connect-desktop
 sidebar_position: 1
-description: |
-  Using Nordic's tools for programming and serial terminal
+description: Install Nordic's nRF Connect for Desktop Programmer and Serial Terminal apps to flash Codespaces-built binaries and connect to your device over serial.
+keywords: [nrf connect for desktop, programmer app, serial terminal, nordic, flash firmware, codespaces, hex file]
 ---
 
 import InstallNrfConnect from '/docs/golioth-exploration/01-golioth-intro/\_partials/install_nrf_connect.md'

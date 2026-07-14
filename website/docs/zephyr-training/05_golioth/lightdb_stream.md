@@ -1,7 +1,7 @@
 ---
 sidebar_position: 3
-description:
-    Send time series data with Golioth LightDB Stream
+description: Stream time-series data to Golioth from your Zephyr app with golioth_stream_set_async, then add a JSON pipeline to route it into LightDB Stream.
+keywords: [golioth, lightdb stream, golioth_stream_set_async, time-series data, json, pipelines, zephyr, kconfig]
 ---
 
 import HowToDownload from '/docs/\_partials/download-from-codespaces.md'

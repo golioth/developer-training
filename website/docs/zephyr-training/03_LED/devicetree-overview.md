@@ -1,8 +1,8 @@
 ---
 id: devicetree-overview
 sidebar_position: 1
-description: |
-    High-level info of what Devicetree is and does
+description: A high-level overview of how Zephyr devicetree describes hardware, layering chip, board, and overlay files to enable portability across MCUs.
+keywords: [zephyr, devicetree, hardware description, overlay, phandle, compatible, bindings, pinctrl, nrf9160dk]
 ---
 
 # Devicetree Overview

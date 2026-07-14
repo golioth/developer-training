@@ -1,7 +1,7 @@
 ---
 id: hello-world
-description: |
-  Build your first Zephyr app and then improve it.
+description: Build, flash, and run your first Zephyr app, then add the in-tree Logging library using menuconfig and make the Kconfig change permanent.
+keywords: [zephyr, hello world, west build, menuconfig, kconfig, logging, codespaces, first app]
 ---
 
 # Build Your First Zephyr App

@@ -1,7 +1,7 @@
 ---
 id: get-device-list
-description: |
-  Query the Project for a list of Devices
+description: Use the Golioth OpenAPI docs to query the Devices endpoint, find your projectId and deviceId, and return a list of fleet devices.
+keywords: [openapi, golioth rest api, devices endpoint, projectid, deviceid, device list, fleet, device tags]
 ---
 
 # Query a list of Devices

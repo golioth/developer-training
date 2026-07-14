@@ -1,7 +1,7 @@
 ---
 id: lightdb-stream
-description: |
-  View time-series data as it arrives
+description: View time-series sensor data as it arrives in LightDB Stream and edit a Golioth Pipeline to route and transform that data, including injecting metadata.
+keywords: [lightdb stream, time-series data, pipelines, cbor, json, inject-metadata, sensor data, golioth console]
 ---
 
 # LightDB Stream (Time-series)

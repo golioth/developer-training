@@ -1,6 +1,7 @@
 ---
 sidebar_position: 2
-description: "Zephyr can blink with timers!"
+description: Blink an LED with a Zephyr kernel timer using K_TIMER_DEFINE and k_timer_start, moving the toggle out of the main loop into a timer callback.
+keywords: [zephyr, timer, k_timer_define, k_timer_start, callback, rtos, scheduler, led, blinky]
 ---
 
 import HowToDownload from '/docs/\_partials/download-from-codespaces.md'

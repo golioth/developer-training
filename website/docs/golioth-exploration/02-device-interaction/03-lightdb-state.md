@@ -1,7 +1,7 @@
 ---
 id: lightdb-state
-description: |
-  View stateful data
+description: Use LightDB State to view and edit a device's bi-directional stateful data in the Golioth Console and observe real-time updates from the dev kit.
+keywords: [lightdb state, stateful data, golioth console, real-time updates, key-value, device state, observe]
 ---
 
 # LightDB State (Stateful)
