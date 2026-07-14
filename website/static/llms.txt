@@ -1,0 +1,45 @@
+# Golioth & Zephyr Developer Training
+
+> Free, hands-on training for building IoT firmware with the Zephyr RTOS and
+> connecting devices to Golioth, an Instant IoT Cloud. The site is organized
+> into three self-paced tracks: an introduction to the Golioth cloud, a
+> ground-up Zephyr RTOS course, and a REST/OpenAPI fleet-management track.
+> Exercises target Nordic hardware (nRF7002 DK, nRF9160 DK) and can be run
+> entirely in a browser via GitHub Codespaces.
+
+## Intro to Golioth
+Explore the Golioth cloud using precompiled firmware — no Zephyr knowledge required.
+
+- [What is Golioth?](https://training.golioth.io/golioth-exploration/01-golioth-intro/what-is-golioth): Overview of Golioth, the Instant IoT Cloud.
+- [The Golioth Console](https://training.golioth.io/golioth-exploration/01-golioth-intro/golioth-console): Create a device and provision credentials.
+- [Hardware Setup](https://training.golioth.io/golioth-exploration/01-golioth-intro/03-hardware-setup): Flash a precompiled app and connect an nRF7002 DK.
+- [Device Status](https://training.golioth.io/golioth-exploration/02-device-interaction/device-status): View live device status.
+- [LightDB Stream](https://training.golioth.io/golioth-exploration/02-device-interaction/lightdb-stream): Stream time-series sensor data to the cloud.
+- [LightDB State](https://training.golioth.io/golioth-exploration/02-device-interaction/lightdb-state): Read and write stateful device data.
+- [Remote Logging](https://training.golioth.io/golioth-exploration/02-device-interaction/remote-logging): View device logs from the cloud.
+- [Settings Service](https://training.golioth.io/golioth-exploration/02-device-interaction/settings-service): Push configuration fleet-wide, by blueprint, or per device.
+- [Remote Procedure Call](https://training.golioth.io/golioth-exploration/02-device-interaction/remote-procedure-call): Trigger device-side functions from the cloud.
+- [OTA Firmware Update](https://training.golioth.io/golioth-exploration/02-device-interaction/ota-firmware-update): Deploy over-the-air firmware updates.
+
+## Zephyr Training
+A ground-up Zephyr RTOS course, from build system to a cloud-connected app.
+
+- [What is Zephyr?](https://training.golioth.io/zephyr-training/01_What_is_Zephyr/what-is-zephyr): Overview of Zephyr RTOS components (CMake, Kconfig, west, devicetree).
+- [Hello World](https://training.golioth.io/zephyr-training/02_helloworld/hello-world): Build your first Zephyr app and add logging.
+- [LED & Devicetree](https://training.golioth.io/zephyr-training/03_LED/led): Map an LED with devicetree and run blinky.
+- [Blink with the RTOS](https://training.golioth.io/zephyr-training/04_blinkRTOS/blink-rtos): Blink an LED using timers and threads.
+- [Add Golioth](https://training.golioth.io/zephyr-training/05_golioth/add-golioth): Add the Golioth Firmware SDK to an existing Zephyr project.
+
+## API Training
+Manage a device fleet with the Golioth REST API and OpenAPI tooling.
+
+- [What is OpenAPI?](https://training.golioth.io/api-training/using-openapi): Use Golioth's OpenAPI docs to try the REST API.
+- [Get the Device List](https://training.golioth.io/api-training/get-device-list): Query a project for its devices.
+- [Query LightDB Stream](https://training.golioth.io/api-training/lightb-stream): Access stored time-series data over REST.
+- [Console Requests](https://training.golioth.io/api-training/golioth-console-queries): Learn from the REST calls the Golioth Console makes.
+- [Issue an RPC](https://training.golioth.io/api-training/issue-rpc): Trigger a remote procedure call via REST.
+
+## More
+- [Golioth Documentation](https://docs.golioth.io): Full product documentation.
+- [Golioth Console](https://console.golioth.io): The Golioth web console.
+- [Live Zephyr Training signup](https://golioth.io/training-signup): Instructor-led course.
