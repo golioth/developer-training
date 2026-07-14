@@ -9,7 +9,7 @@ const darkCodeTheme = themes.dracula;
 const config = {
   title: 'Developer Training',
   tagline: 'Learn about Golioth and Zephyr, with hands-on exercises',
-  url: 'https://golioth.github.io',
+  url: 'https://training.golioth.io',
   baseUrl: '/',
   trailingSlash: false,
   onBrokenLinks: 'throw',
@@ -38,9 +38,53 @@ const config = {
 
   plugins: [ 'docusaurus-plugin-image-zoom' ],
 
+  themes: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      /** @type {import('@easyops-cn/docusaurus-search-local').PluginOptions} */
+      ({
+        hashed: true,
+        indexBlog: false,
+        docsRouteBasePath: '/',
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+      }),
+    ],
+  ],
+
+  // Structured data so search engines and LLMs can classify the site as a course.
+  headTags: [
+    {
+      tagName: 'script',
+      attributes: { type: 'application/ld+json' },
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Course',
+        name: 'Golioth & Zephyr Developer Training',
+        description:
+          'Free, hands-on training for building IoT firmware with Zephyr RTOS and connecting devices to the Golioth cloud.',
+        provider: {
+          '@type': 'Organization',
+          name: 'Golioth',
+          url: 'https://golioth.io',
+        },
+        url: 'https://training.golioth.io',
+      }),
+    },
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      // Default social-card image used for Open Graph / Twitter previews.
+      image: 'img/Zephyr-Classroom.jpg',
+      metadata: [
+        {
+          name: 'keywords',
+          content:
+            'Golioth, Zephyr, Zephyr RTOS, IoT, embedded firmware, nRF9160, nRF7002, LightDB, OTA firmware update, devicetree, Kconfig, west, developer training',
+        },
+      ],
       colorMode: {
         defaultMode: 'dark',
         respectPrefersColorScheme: false,
