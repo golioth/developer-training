@@ -1,0 +1,5 @@
+# https://training.golioth.io
+User-agent: *
+Allow: /
+
+Sitemap: https://training.golioth.io/sitemap.xml
