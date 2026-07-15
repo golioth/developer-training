@@ -1,8 +1,3 @@
----
-id: register
-title: Registration & Wizard
----
-
 import FlexImage from '@site/src/components/FlexImage';
 import GoliothConsoleOnboarding from './assets/console/console-onboarding.png';
 import GoliothConsoleVerifyEmail from './assets/console/console-verify-email.png';
