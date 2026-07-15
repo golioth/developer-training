@@ -16,16 +16,23 @@ import GoliothDeviceCreateConfirm from './assets/console/console-quickstart-step
 
 ## Creating your Golioth account
 
+To begin using Golioth please register for an account at
+[console.golioth.io](https://console.golioth.io/). Click "Sign up" to register
+a new account with a email/password or a Google SSO account.
+
+![Golioth Console Registration](./assets/console/register_new_golioth_account.png)
+
+### Answering Questions, Verifying Email
+
 <FlexImage column_count="2">
   <img src={GoliothConsoleOnboarding} alt="Golioth console sign-up questions"/>
   <img src={GoliothConsoleVerifyEmail} alt="Golioth console verify email"/>
 </FlexImage>
 
-To begin using Golioth please register for an account at
-[console.golioth.io](https://console.golioth.io/).
-
 Once registered, you will be asked some onboarding questions and to review our
-terms of service. You will need to verify your email address to continue.
+terms of service. You will need to verify your email address to continue. If
+you don't see the email (from Auth0) within 5 minutes tell an instructor or
+if you are taking this training asynchronously, email support@golioth.io
 
 ## Creating a new Project
 
@@ -46,7 +53,6 @@ names cannot be changed after creation so pick a good one!
 <FlexImage column_count="3">
   <img src={GoliothWizard2} alt="Golioth console wizard create a device"/>
   <img src={GoliothCreateDevice} alt="Golioth console device creation dialog"/>
-  <img src={GoliothDeviceCreateConfirm} alt="Golioth console device created confirmation"/>
 </FlexImage>
 
 ### Device name
@@ -63,11 +69,15 @@ now we'll leave these blank.
 
 ### Device credentials
 
-By default, a Pre-Shared Key (PSK) credential is automatically generated. This
-is a PSK-ID and PSK pair that will authenticate this device to the Golioth
-Cloud.
+In our new flow, you can choose to user our certificate generator or to
+choose a Pre-Shared Key (PSK) credential. The former is the more secure, but
+for on-boarding, we choose PSK-ID and PSK for simplicity. These are the
+credentials that will authenticate this device to the Golioth Cloud.
+
+
+![New device summary window](./assets/console/gettingstarted-console-createdevice-confirmation.png)
 
 ## That's it!
 
 It really is that simple, you have provisioned your first device! Let's
-provision a second device to get to know the console just a bit better.
+look at what we just created.
