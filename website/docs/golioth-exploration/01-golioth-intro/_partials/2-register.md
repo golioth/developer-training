@@ -12,7 +12,6 @@ import GoliothProjectCreate from './assets/console/console-quickstart-step1-crea
 
 import GoliothWizard2 from './assets/console/console-quickstart-step2-wizard.png';
 import GoliothCreateDevice from './assets/console/console-quickstart-step2-createdevice.png';
-import GoliothDeviceCreateConfirm from './assets/console/console-quickstart-step2-confirmation.png';
 
 ## Creating your Golioth account
 
