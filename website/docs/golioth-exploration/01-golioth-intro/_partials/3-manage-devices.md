@@ -1,8 +1,3 @@
----
-id: manage-devices
-title: Manage Devices and Credentials
----
-
 Let's use the Golioth Console to view our existing devices, which should only be
 the device you just created.
 
