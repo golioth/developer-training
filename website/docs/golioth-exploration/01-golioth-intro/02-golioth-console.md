@@ -12,8 +12,10 @@ This section guides you through the Golioth account creation process. You need
 an account in order to generate credentials so your device can authenticate with
 Golioth.
 
-With the Golioth Dev tier, your first 50 devices are free. There is a 'wizard'
-that will guide you through creating your first device on the platform.
+All Golioth accounts get $50 in free credits each month. See our [pricing page](https://golioth.io/pricing) to
+understand how we charge, but a single device (or a small fleet!) will have a hard 
+time using all of that credit in a single month. There is a 'wizard' that will
+guide you through creating your first device on the platform.
 
 * **Desired outcome(s)**
   1. Understand how to add a single device to the console
