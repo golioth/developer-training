@@ -157,7 +157,7 @@ Overview](devicetree-overview), DT definitions for our board already exist in th
 By convention, all Zephyr supported boards that have LEDs should alias those
 LEDs to `led0`, `led1`, `...`, `led<n>` in the Devicetree. Let's take the
 nRF9160 DK as an example. If we look at [the DTS file for this
-board](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/arm/nrf9160dk_nrf9160/nrf9160dk_nrf9160_common.dtsi)
+board](https://github.com/zephyrproject-rtos/zephyr/blob/main/boards/nordic/nrf9160dk/nrf9160dk_nrf9160_common.dtsi)
 we can find the relevant node information for the LED:
 
 ```
